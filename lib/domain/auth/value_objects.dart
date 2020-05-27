@@ -1,6 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter/foundation.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:shattered_star/domain/core/failures.dart';
 import 'package:shattered_star/domain/core/value_objects.dart';
 import 'package:shattered_star/domain/core/value_validators.dart';

@@ -1,5 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'package:shattered_star/domain/auth/value_objects.dart';
 import 'package:shattered_star/domain/core/failures.dart';
 
 Either<ValueFailure<String>, String> validateEmailAddress(String input) {
