@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
+import 'package:shattered_star/presentation/injection.dart';
 
 void main() {
+  configureInjection(Environment.prod);
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Shattered Star Player\'s Guide',
+    return const MaterialApp(
+      title: "Shattered Star Player's Guide",
       home: MyHomePage(title: 'Landing Page'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  const MyHomePage({Key key, this.title}) : super(key: key);
 
   final String title;
 
@@ -34,11 +37,11 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'I can\'t do that, Dave',
+            const Text(
+              "I can't do that, Dave",
             ),
-            SizedBox(),
-            Text('Why not?')
+            const SizedBox(),
+            const Text('Why not?')
           ],
         ),
       ),
