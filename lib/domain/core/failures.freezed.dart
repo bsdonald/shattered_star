@@ -12,13 +12,13 @@ T _$identity<T>(T value) => value;
 class _$ValueFailureTearOff {
   const _$ValueFailureTearOff();
 
-  InvalidEmail<T> invalidEmail<T>({@required String failedValue}) {
+  InvalidEmail<T> invalidEmail<T>({@required T failedValue}) {
     return InvalidEmail<T>(
       failedValue: failedValue,
     );
   }
 
-  ShortPassword<T> shortPassword<T>({@required String failedValue}) {
+  ShortPassword<T> shortPassword<T>({@required T failedValue}) {
     return ShortPassword<T>(
       failedValue: failedValue,
     );
@@ -29,17 +29,17 @@ class _$ValueFailureTearOff {
 const $ValueFailure = _$ValueFailureTearOff();
 
 mixin _$ValueFailure<T> {
-  String get failedValue;
+  T get failedValue;
 
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result invalidEmail(String failedValue),
-    @required Result shortPassword(String failedValue),
+    @required Result invalidEmail(T failedValue),
+    @required Result shortPassword(T failedValue),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result invalidEmail(String failedValue),
-    Result shortPassword(String failedValue),
+    Result invalidEmail(T failedValue),
+    Result shortPassword(T failedValue),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -61,7 +61,7 @@ abstract class $ValueFailureCopyWith<T, $Res> {
   factory $ValueFailureCopyWith(
           ValueFailure<T> value, $Res Function(ValueFailure<T>) then) =
       _$ValueFailureCopyWithImpl<T, $Res>;
-  $Res call({String failedValue});
+  $Res call({T failedValue});
 }
 
 class _$ValueFailureCopyWithImpl<T, $Res>
@@ -78,7 +78,7 @@ class _$ValueFailureCopyWithImpl<T, $Res>
   }) {
     return _then(_value.copyWith(
       failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as String,
+          failedValue == freezed ? _value.failedValue : failedValue as T,
     ));
   }
 }
@@ -89,7 +89,7 @@ abstract class $InvalidEmailCopyWith<T, $Res>
           InvalidEmail<T> value, $Res Function(InvalidEmail<T>) then) =
       _$InvalidEmailCopyWithImpl<T, $Res>;
   @override
-  $Res call({String failedValue});
+  $Res call({T failedValue});
 }
 
 class _$InvalidEmailCopyWithImpl<T, $Res>
@@ -108,7 +108,7 @@ class _$InvalidEmailCopyWithImpl<T, $Res>
   }) {
     return _then(InvalidEmail<T>(
       failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as String,
+          failedValue == freezed ? _value.failedValue : failedValue as T,
     ));
   }
 }
@@ -118,7 +118,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
       : assert(failedValue != null);
 
   @override
-  final String failedValue;
+  final T failedValue;
 
   @override
   String toString() {
@@ -145,8 +145,8 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result invalidEmail(String failedValue),
-    @required Result shortPassword(String failedValue),
+    @required Result invalidEmail(T failedValue),
+    @required Result shortPassword(T failedValue),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
@@ -156,8 +156,8 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result invalidEmail(String failedValue),
-    Result shortPassword(String failedValue),
+    Result invalidEmail(T failedValue),
+    Result shortPassword(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -194,11 +194,10 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
 }
 
 abstract class InvalidEmail<T> implements ValueFailure<T> {
-  const factory InvalidEmail({@required String failedValue}) =
-      _$InvalidEmail<T>;
+  const factory InvalidEmail({@required T failedValue}) = _$InvalidEmail<T>;
 
   @override
-  String get failedValue;
+  T get failedValue;
   @override
   $InvalidEmailCopyWith<T, InvalidEmail<T>> get copyWith;
 }
@@ -209,7 +208,7 @@ abstract class $ShortPasswordCopyWith<T, $Res>
           ShortPassword<T> value, $Res Function(ShortPassword<T>) then) =
       _$ShortPasswordCopyWithImpl<T, $Res>;
   @override
-  $Res call({String failedValue});
+  $Res call({T failedValue});
 }
 
 class _$ShortPasswordCopyWithImpl<T, $Res>
@@ -228,7 +227,7 @@ class _$ShortPasswordCopyWithImpl<T, $Res>
   }) {
     return _then(ShortPassword<T>(
       failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as String,
+          failedValue == freezed ? _value.failedValue : failedValue as T,
     ));
   }
 }
@@ -238,7 +237,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
       : assert(failedValue != null);
 
   @override
-  final String failedValue;
+  final T failedValue;
 
   @override
   String toString() {
@@ -265,8 +264,8 @@ class _$ShortPassword<T> implements ShortPassword<T> {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result invalidEmail(String failedValue),
-    @required Result shortPassword(String failedValue),
+    @required Result invalidEmail(T failedValue),
+    @required Result shortPassword(T failedValue),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
@@ -276,8 +275,8 @@ class _$ShortPassword<T> implements ShortPassword<T> {
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result invalidEmail(String failedValue),
-    Result shortPassword(String failedValue),
+    Result invalidEmail(T failedValue),
+    Result shortPassword(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -314,11 +313,10 @@ class _$ShortPassword<T> implements ShortPassword<T> {
 }
 
 abstract class ShortPassword<T> implements ValueFailure<T> {
-  const factory ShortPassword({@required String failedValue}) =
-      _$ShortPassword<T>;
+  const factory ShortPassword({@required T failedValue}) = _$ShortPassword<T>;
 
   @override
-  String get failedValue;
+  T get failedValue;
   @override
   $ShortPasswordCopyWith<T, ShortPassword<T>> get copyWith;
 }
