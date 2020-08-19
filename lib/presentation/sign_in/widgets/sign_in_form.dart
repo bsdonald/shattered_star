@@ -30,6 +30,7 @@ class SignInForm extends StatelessWidget {
         return Form(
           autovalidate: state.showErrorMessages,
           child: ListView(
+            physics: const NeverScrollableScrollPhysics(),
             children: <Widget>[
               Container(
                 padding: const EdgeInsets.symmetric(

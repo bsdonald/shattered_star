@@ -6,8 +6,11 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shattered_star/domain/auth/auth_failure.dart';
 import 'package:shattered_star/domain/auth/i_auth_facade.dart';
+import 'package:shattered_star/domain/auth/user.dart';
 import 'package:shattered_star/domain/auth/value_objects.dart';
 import 'package:shattered_star/domain/core/errors.dart';
+import 'package:shattered_star/domain/core/value_objects.dart';
+import './firebase_user_mapper.dart';
 
 @lazySingleton
 @RegisterAs(IAuthFacade)
@@ -19,6 +22,9 @@ class FirebaseAuthFacade implements IAuthFacade {
     this._firebaseAuth,
     this._googleSignIn,
   );
+
+  @override
+  Future<Option<User>> getSignedInUser() => _firebaseAuth.currentUser().then((firebaseUser) => optionOf(firebaseUser?.toDomain()));
 
   @override
   Future<Either<AuthFailure, Unit>> registerWithEmailAndPassword({
@@ -83,4 +89,10 @@ class FirebaseAuthFacade implements IAuthFacade {
       return left(const AuthFailure.serverError());
     }
   }
+
+  @override
+  Future<void> signOut() => Future.wait([
+        _googleSignIn.signOut(),
+        _firebaseAuth.signOut(),
+      ]);
 }
