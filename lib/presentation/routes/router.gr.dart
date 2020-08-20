@@ -9,13 +9,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:shattered_star/presentation/splash/splash_page.dart';
 import 'package:shattered_star/presentation/sign_in/sign_in_page.dart';
+import 'package:shattered_star/presentation/home/home_page.dart';
 
 abstract class Routes {
   static const splashPage = '/';
   static const signInPage = '/sign-in-page';
+  static const homePage = '/home-page';
   static const all = {
     splashPage,
     signInPage,
+    homePage,
   };
 }
 
@@ -40,6 +43,11 @@ class Router extends RouterBase {
           builder: (context) => SignInPage(),
           settings: settings,
         );
+      case Routes.homePage:
+        return MaterialPageRoute<dynamic>(
+          builder: (context) => HomePage(),
+          settings: settings,
+        );
       default:
         return unknownRoutePage(settings.name);
     }
@@ -54,4 +62,6 @@ extension RouterNavigationHelperMethods on ExtendedNavigatorState {
   Future pushSplashPage() => pushNamed(Routes.splashPage);
 
   Future pushSignInPage() => pushNamed(Routes.signInPage);
+
+  Future pushHomePage() => pushNamed(Routes.homePage);
 }
