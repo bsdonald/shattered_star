@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:kt_dart/collection.dart';
 import 'package:shattered_star/domain/core/value_objects.dart';
 import 'package:shattered_star/domain/notes/todo_item.dart';
 import 'package:shattered_star/domain/notes/value_objects.dart';
@@ -13,4 +14,11 @@ abstract class Note with _$Note{
     @required NoteColor color,
     @required List3<TodoItem> todos,
   }) = _Note;
+
+  factory Note.empty() => Note(
+    id: UniqueId(),
+    body: NoteBody(''),
+    color: NoteColor(NoteColor.predefinedColors[0]),
+    todos: List3(emptyList()),
+  );
 }
