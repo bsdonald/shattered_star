@@ -31,4 +31,6 @@ abstract class TodoItemDto implements _$TodoItemDto{
       done: done, 
     );
   }
-}
+
+  factory TodoItemDto.fromJson(Map<String, dynamic> json) => _$TodoItemDtoFromJson(json);
+} 

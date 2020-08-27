@@ -8,6 +8,9 @@ part of 'note_dtos.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+TodoItemDto _$TodoItemDtoFromJson(Map<String, dynamic> json) {
+  return _TodoItemDto.fromJson(json);
+}
 
 class _$TodoItemDtoTearOff {
   const _$TodoItemDtoTearOff();
@@ -30,6 +33,7 @@ mixin _$TodoItemDto {
   String get name;
   bool get done;
 
+  Map<String, dynamic> toJson();
   $TodoItemDtoCopyWith<TodoItemDto> get copyWith;
 }
 
@@ -93,6 +97,7 @@ class __$TodoItemDtoCopyWithImpl<$Res> extends _$TodoItemDtoCopyWithImpl<$Res>
   }
 }
 
+@JsonSerializable()
 class _$_TodoItemDto extends _TodoItemDto {
   const _$_TodoItemDto(
       {@required this.id, @required this.name, @required this.done})
@@ -100,6 +105,9 @@ class _$_TodoItemDto extends _TodoItemDto {
         assert(name != null),
         assert(done != null),
         super._();
+
+  factory _$_TodoItemDto.fromJson(Map<String, dynamic> json) =>
+      _$_$_TodoItemDtoFromJson(json);
 
   @override
   final String id;
@@ -135,6 +143,11 @@ class _$_TodoItemDto extends _TodoItemDto {
   @override
   _$TodoItemDtoCopyWith<_TodoItemDto> get copyWith =>
       __$TodoItemDtoCopyWithImpl<_TodoItemDto>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_TodoItemDtoToJson(this);
+  }
 }
 
 abstract class _TodoItemDto extends TodoItemDto {
@@ -143,6 +156,9 @@ abstract class _TodoItemDto extends TodoItemDto {
       {@required String id,
       @required String name,
       @required bool done}) = _$_TodoItemDto;
+
+  factory _TodoItemDto.fromJson(Map<String, dynamic> json) =
+      _$_TodoItemDto.fromJson;
 
   @override
   String get id;
