@@ -93,12 +93,13 @@ class __$TodoItemDtoCopyWithImpl<$Res> extends _$TodoItemDtoCopyWithImpl<$Res>
   }
 }
 
-class _$_TodoItemDto implements _TodoItemDto {
+class _$_TodoItemDto extends _TodoItemDto {
   const _$_TodoItemDto(
       {@required this.id, @required this.name, @required this.done})
       : assert(id != null),
         assert(name != null),
-        assert(done != null);
+        assert(done != null),
+        super._();
 
   @override
   final String id;
@@ -136,7 +137,8 @@ class _$_TodoItemDto implements _TodoItemDto {
       __$TodoItemDtoCopyWithImpl<_TodoItemDto>(this, _$identity);
 }
 
-abstract class _TodoItemDto implements TodoItemDto {
+abstract class _TodoItemDto extends TodoItemDto {
+  const _TodoItemDto._() : super._();
   const factory _TodoItemDto(
       {@required String id,
       @required String name,
