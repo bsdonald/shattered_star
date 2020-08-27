@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:shattered_star/domain/notes/note.dart';
 import 'package:shattered_star/domain/notes/note_failure.dart';
 
 part 'note_actor_event.dart';
