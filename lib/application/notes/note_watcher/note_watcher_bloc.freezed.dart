@@ -248,8 +248,8 @@ class _$NoteWatcherStateTearOff {
     return const _Initial();
   }
 
-  _LoadingInProgress loadingInProgress() {
-    return const _LoadingInProgress();
+  _LoadInProgress loadInProgress() {
+    return const _LoadInProgress();
   }
 
   _LoadSuccess loadSuccess(KtList<Note> notes) {
@@ -272,14 +272,14 @@ mixin _$NoteWatcherState {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
-    @required Result loadingInProgress(),
+    @required Result loadInProgress(),
     @required Result loadSuccess(KtList<Note> notes),
     @required Result loadFailure(NoteFailure noteFailure),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
-    Result loadingInProgress(),
+    Result loadInProgress(),
     Result loadSuccess(KtList<Note> notes),
     Result loadFailure(NoteFailure noteFailure),
     @required Result orElse(),
@@ -287,14 +287,14 @@ mixin _$NoteWatcherState {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initial(_Initial value),
-    @required Result loadingInProgress(_LoadingInProgress value),
+    @required Result loadInProgress(_LoadInProgress value),
     @required Result loadSuccess(_LoadSuccess value),
     @required Result loadFailure(_LoadFailure value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initial(_Initial value),
-    Result loadingInProgress(_LoadingInProgress value),
+    Result loadInProgress(_LoadInProgress value),
     Result loadSuccess(_LoadSuccess value),
     Result loadFailure(_LoadFailure value),
     @required Result orElse(),
@@ -350,12 +350,12 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
-    @required Result loadingInProgress(),
+    @required Result loadInProgress(),
     @required Result loadSuccess(KtList<Note> notes),
     @required Result loadFailure(NoteFailure noteFailure),
   }) {
     assert(initial != null);
-    assert(loadingInProgress != null);
+    assert(loadInProgress != null);
     assert(loadSuccess != null);
     assert(loadFailure != null);
     return initial();
@@ -365,7 +365,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
-    Result loadingInProgress(),
+    Result loadInProgress(),
     Result loadSuccess(KtList<Note> notes),
     Result loadFailure(NoteFailure noteFailure),
     @required Result orElse(),
@@ -381,12 +381,12 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initial(_Initial value),
-    @required Result loadingInProgress(_LoadingInProgress value),
+    @required Result loadInProgress(_LoadInProgress value),
     @required Result loadSuccess(_LoadSuccess value),
     @required Result loadFailure(_LoadFailure value),
   }) {
     assert(initial != null);
-    assert(loadingInProgress != null);
+    assert(loadInProgress != null);
     assert(loadSuccess != null);
     assert(loadFailure != null);
     return initial(this);
@@ -396,7 +396,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initial(_Initial value),
-    Result loadingInProgress(_LoadingInProgress value),
+    Result loadInProgress(_LoadInProgress value),
     Result loadSuccess(_LoadSuccess value),
     Result loadFailure(_LoadFailure value),
     @required Result orElse(),
@@ -413,34 +413,34 @@ abstract class _Initial implements NoteWatcherState {
   const factory _Initial() = _$_Initial;
 }
 
-abstract class _$LoadingInProgressCopyWith<$Res> {
-  factory _$LoadingInProgressCopyWith(
-          _LoadingInProgress value, $Res Function(_LoadingInProgress) then) =
-      __$LoadingInProgressCopyWithImpl<$Res>;
+abstract class _$LoadInProgressCopyWith<$Res> {
+  factory _$LoadInProgressCopyWith(
+          _LoadInProgress value, $Res Function(_LoadInProgress) then) =
+      __$LoadInProgressCopyWithImpl<$Res>;
 }
 
-class __$LoadingInProgressCopyWithImpl<$Res>
+class __$LoadInProgressCopyWithImpl<$Res>
     extends _$NoteWatcherStateCopyWithImpl<$Res>
-    implements _$LoadingInProgressCopyWith<$Res> {
-  __$LoadingInProgressCopyWithImpl(
-      _LoadingInProgress _value, $Res Function(_LoadingInProgress) _then)
-      : super(_value, (v) => _then(v as _LoadingInProgress));
+    implements _$LoadInProgressCopyWith<$Res> {
+  __$LoadInProgressCopyWithImpl(
+      _LoadInProgress _value, $Res Function(_LoadInProgress) _then)
+      : super(_value, (v) => _then(v as _LoadInProgress));
 
   @override
-  _LoadingInProgress get _value => super._value as _LoadingInProgress;
+  _LoadInProgress get _value => super._value as _LoadInProgress;
 }
 
-class _$_LoadingInProgress implements _LoadingInProgress {
-  const _$_LoadingInProgress();
+class _$_LoadInProgress implements _LoadInProgress {
+  const _$_LoadInProgress();
 
   @override
   String toString() {
-    return 'NoteWatcherState.loadingInProgress()';
+    return 'NoteWatcherState.loadInProgress()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _LoadingInProgress);
+    return identical(this, other) || (other is _LoadInProgress);
   }
 
   @override
@@ -450,29 +450,29 @@ class _$_LoadingInProgress implements _LoadingInProgress {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
-    @required Result loadingInProgress(),
+    @required Result loadInProgress(),
     @required Result loadSuccess(KtList<Note> notes),
     @required Result loadFailure(NoteFailure noteFailure),
   }) {
     assert(initial != null);
-    assert(loadingInProgress != null);
+    assert(loadInProgress != null);
     assert(loadSuccess != null);
     assert(loadFailure != null);
-    return loadingInProgress();
+    return loadInProgress();
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
-    Result loadingInProgress(),
+    Result loadInProgress(),
     Result loadSuccess(KtList<Note> notes),
     Result loadFailure(NoteFailure noteFailure),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (loadingInProgress != null) {
-      return loadingInProgress();
+    if (loadInProgress != null) {
+      return loadInProgress();
     }
     return orElse();
   }
@@ -481,36 +481,36 @@ class _$_LoadingInProgress implements _LoadingInProgress {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initial(_Initial value),
-    @required Result loadingInProgress(_LoadingInProgress value),
+    @required Result loadInProgress(_LoadInProgress value),
     @required Result loadSuccess(_LoadSuccess value),
     @required Result loadFailure(_LoadFailure value),
   }) {
     assert(initial != null);
-    assert(loadingInProgress != null);
+    assert(loadInProgress != null);
     assert(loadSuccess != null);
     assert(loadFailure != null);
-    return loadingInProgress(this);
+    return loadInProgress(this);
   }
 
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initial(_Initial value),
-    Result loadingInProgress(_LoadingInProgress value),
+    Result loadInProgress(_LoadInProgress value),
     Result loadSuccess(_LoadSuccess value),
     Result loadFailure(_LoadFailure value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (loadingInProgress != null) {
-      return loadingInProgress(this);
+    if (loadInProgress != null) {
+      return loadInProgress(this);
     }
     return orElse();
   }
 }
 
-abstract class _LoadingInProgress implements NoteWatcherState {
-  const factory _LoadingInProgress() = _$_LoadingInProgress;
+abstract class _LoadInProgress implements NoteWatcherState {
+  const factory _LoadInProgress() = _$_LoadInProgress;
 }
 
 abstract class _$LoadSuccessCopyWith<$Res> {
@@ -571,12 +571,12 @@ class _$_LoadSuccess implements _LoadSuccess {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
-    @required Result loadingInProgress(),
+    @required Result loadInProgress(),
     @required Result loadSuccess(KtList<Note> notes),
     @required Result loadFailure(NoteFailure noteFailure),
   }) {
     assert(initial != null);
-    assert(loadingInProgress != null);
+    assert(loadInProgress != null);
     assert(loadSuccess != null);
     assert(loadFailure != null);
     return loadSuccess(notes);
@@ -586,7 +586,7 @@ class _$_LoadSuccess implements _LoadSuccess {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
-    Result loadingInProgress(),
+    Result loadInProgress(),
     Result loadSuccess(KtList<Note> notes),
     Result loadFailure(NoteFailure noteFailure),
     @required Result orElse(),
@@ -602,12 +602,12 @@ class _$_LoadSuccess implements _LoadSuccess {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initial(_Initial value),
-    @required Result loadingInProgress(_LoadingInProgress value),
+    @required Result loadInProgress(_LoadInProgress value),
     @required Result loadSuccess(_LoadSuccess value),
     @required Result loadFailure(_LoadFailure value),
   }) {
     assert(initial != null);
-    assert(loadingInProgress != null);
+    assert(loadInProgress != null);
     assert(loadSuccess != null);
     assert(loadFailure != null);
     return loadSuccess(this);
@@ -617,7 +617,7 @@ class _$_LoadSuccess implements _LoadSuccess {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initial(_Initial value),
-    Result loadingInProgress(_LoadingInProgress value),
+    Result loadInProgress(_LoadInProgress value),
     Result loadSuccess(_LoadSuccess value),
     Result loadFailure(_LoadFailure value),
     @required Result orElse(),
@@ -708,12 +708,12 @@ class _$_LoadFailure implements _LoadFailure {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
-    @required Result loadingInProgress(),
+    @required Result loadInProgress(),
     @required Result loadSuccess(KtList<Note> notes),
     @required Result loadFailure(NoteFailure noteFailure),
   }) {
     assert(initial != null);
-    assert(loadingInProgress != null);
+    assert(loadInProgress != null);
     assert(loadSuccess != null);
     assert(loadFailure != null);
     return loadFailure(noteFailure);
@@ -723,7 +723,7 @@ class _$_LoadFailure implements _LoadFailure {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
-    Result loadingInProgress(),
+    Result loadInProgress(),
     Result loadSuccess(KtList<Note> notes),
     Result loadFailure(NoteFailure noteFailure),
     @required Result orElse(),
@@ -739,12 +739,12 @@ class _$_LoadFailure implements _LoadFailure {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initial(_Initial value),
-    @required Result loadingInProgress(_LoadingInProgress value),
+    @required Result loadInProgress(_LoadInProgress value),
     @required Result loadSuccess(_LoadSuccess value),
     @required Result loadFailure(_LoadFailure value),
   }) {
     assert(initial != null);
-    assert(loadingInProgress != null);
+    assert(loadInProgress != null);
     assert(loadSuccess != null);
     assert(loadFailure != null);
     return loadFailure(this);
@@ -754,7 +754,7 @@ class _$_LoadFailure implements _LoadFailure {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initial(_Initial value),
-    Result loadingInProgress(_LoadingInProgress value),
+    Result loadInProgress(_LoadInProgress value),
     Result loadSuccess(_LoadSuccess value),
     Result loadFailure(_LoadFailure value),
     @required Result orElse(),
