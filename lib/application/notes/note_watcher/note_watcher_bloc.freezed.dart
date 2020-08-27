@@ -19,6 +19,13 @@ class _$NoteWatcherEventTearOff {
   _WatchUncompletedStarted watchUncompletedStarted() {
     return const _WatchUncompletedStarted();
   }
+
+  _NotesReceived notesReceived(
+      Either<NoteFailure, KtList<Note>> failureOrNotes) {
+    return _NotesReceived(
+      failureOrNotes,
+    );
+  }
 }
 
 // ignore: unused_element
@@ -29,22 +36,27 @@ mixin _$NoteWatcherEvent {
   Result when<Result extends Object>({
     @required Result watchAllStarted(),
     @required Result watchUncompletedStarted(),
+    @required
+        Result notesReceived(Either<NoteFailure, KtList<Note>> failureOrNotes),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result watchAllStarted(),
     Result watchUncompletedStarted(),
+    Result notesReceived(Either<NoteFailure, KtList<Note>> failureOrNotes),
     @required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result watchAllStarted(_WatchAllStarted value),
     @required Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    @required Result notesReceived(_NotesReceived value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result watchAllStarted(_WatchAllStarted value),
     Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    Result notesReceived(_NotesReceived value),
     @required Result orElse(),
   });
 }
@@ -102,9 +114,12 @@ class _$_WatchAllStarted implements _WatchAllStarted {
   Result when<Result extends Object>({
     @required Result watchAllStarted(),
     @required Result watchUncompletedStarted(),
+    @required
+        Result notesReceived(Either<NoteFailure, KtList<Note>> failureOrNotes),
   }) {
     assert(watchAllStarted != null);
     assert(watchUncompletedStarted != null);
+    assert(notesReceived != null);
     return watchAllStarted();
   }
 
@@ -113,6 +128,7 @@ class _$_WatchAllStarted implements _WatchAllStarted {
   Result maybeWhen<Result extends Object>({
     Result watchAllStarted(),
     Result watchUncompletedStarted(),
+    Result notesReceived(Either<NoteFailure, KtList<Note>> failureOrNotes),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -127,9 +143,11 @@ class _$_WatchAllStarted implements _WatchAllStarted {
   Result map<Result extends Object>({
     @required Result watchAllStarted(_WatchAllStarted value),
     @required Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    @required Result notesReceived(_NotesReceived value),
   }) {
     assert(watchAllStarted != null);
     assert(watchUncompletedStarted != null);
+    assert(notesReceived != null);
     return watchAllStarted(this);
   }
 
@@ -138,6 +156,7 @@ class _$_WatchAllStarted implements _WatchAllStarted {
   Result maybeMap<Result extends Object>({
     Result watchAllStarted(_WatchAllStarted value),
     Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    Result notesReceived(_NotesReceived value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -191,9 +210,12 @@ class _$_WatchUncompletedStarted implements _WatchUncompletedStarted {
   Result when<Result extends Object>({
     @required Result watchAllStarted(),
     @required Result watchUncompletedStarted(),
+    @required
+        Result notesReceived(Either<NoteFailure, KtList<Note>> failureOrNotes),
   }) {
     assert(watchAllStarted != null);
     assert(watchUncompletedStarted != null);
+    assert(notesReceived != null);
     return watchUncompletedStarted();
   }
 
@@ -202,6 +224,7 @@ class _$_WatchUncompletedStarted implements _WatchUncompletedStarted {
   Result maybeWhen<Result extends Object>({
     Result watchAllStarted(),
     Result watchUncompletedStarted(),
+    Result notesReceived(Either<NoteFailure, KtList<Note>> failureOrNotes),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -216,9 +239,11 @@ class _$_WatchUncompletedStarted implements _WatchUncompletedStarted {
   Result map<Result extends Object>({
     @required Result watchAllStarted(_WatchAllStarted value),
     @required Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    @required Result notesReceived(_NotesReceived value),
   }) {
     assert(watchAllStarted != null);
     assert(watchUncompletedStarted != null);
+    assert(notesReceived != null);
     return watchUncompletedStarted(this);
   }
 
@@ -227,6 +252,7 @@ class _$_WatchUncompletedStarted implements _WatchUncompletedStarted {
   Result maybeMap<Result extends Object>({
     Result watchAllStarted(_WatchAllStarted value),
     Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    Result notesReceived(_NotesReceived value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -239,6 +265,130 @@ class _$_WatchUncompletedStarted implements _WatchUncompletedStarted {
 
 abstract class _WatchUncompletedStarted implements NoteWatcherEvent {
   const factory _WatchUncompletedStarted() = _$_WatchUncompletedStarted;
+}
+
+abstract class _$NotesReceivedCopyWith<$Res> {
+  factory _$NotesReceivedCopyWith(
+          _NotesReceived value, $Res Function(_NotesReceived) then) =
+      __$NotesReceivedCopyWithImpl<$Res>;
+  $Res call({Either<NoteFailure, KtList<Note>> failureOrNotes});
+}
+
+class __$NotesReceivedCopyWithImpl<$Res>
+    extends _$NoteWatcherEventCopyWithImpl<$Res>
+    implements _$NotesReceivedCopyWith<$Res> {
+  __$NotesReceivedCopyWithImpl(
+      _NotesReceived _value, $Res Function(_NotesReceived) _then)
+      : super(_value, (v) => _then(v as _NotesReceived));
+
+  @override
+  _NotesReceived get _value => super._value as _NotesReceived;
+
+  @override
+  $Res call({
+    Object failureOrNotes = freezed,
+  }) {
+    return _then(_NotesReceived(
+      failureOrNotes == freezed
+          ? _value.failureOrNotes
+          : failureOrNotes as Either<NoteFailure, KtList<Note>>,
+    ));
+  }
+}
+
+class _$_NotesReceived implements _NotesReceived {
+  const _$_NotesReceived(this.failureOrNotes) : assert(failureOrNotes != null);
+
+  @override
+  final Either<NoteFailure, KtList<Note>> failureOrNotes;
+
+  @override
+  String toString() {
+    return 'NoteWatcherEvent.notesReceived(failureOrNotes: $failureOrNotes)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _NotesReceived &&
+            (identical(other.failureOrNotes, failureOrNotes) ||
+                const DeepCollectionEquality()
+                    .equals(other.failureOrNotes, failureOrNotes)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(failureOrNotes);
+
+  @override
+  _$NotesReceivedCopyWith<_NotesReceived> get copyWith =>
+      __$NotesReceivedCopyWithImpl<_NotesReceived>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result watchAllStarted(),
+    @required Result watchUncompletedStarted(),
+    @required
+        Result notesReceived(Either<NoteFailure, KtList<Note>> failureOrNotes),
+  }) {
+    assert(watchAllStarted != null);
+    assert(watchUncompletedStarted != null);
+    assert(notesReceived != null);
+    return notesReceived(failureOrNotes);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result watchAllStarted(),
+    Result watchUncompletedStarted(),
+    Result notesReceived(Either<NoteFailure, KtList<Note>> failureOrNotes),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (notesReceived != null) {
+      return notesReceived(failureOrNotes);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result watchAllStarted(_WatchAllStarted value),
+    @required Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    @required Result notesReceived(_NotesReceived value),
+  }) {
+    assert(watchAllStarted != null);
+    assert(watchUncompletedStarted != null);
+    assert(notesReceived != null);
+    return notesReceived(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result watchAllStarted(_WatchAllStarted value),
+    Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    Result notesReceived(_NotesReceived value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (notesReceived != null) {
+      return notesReceived(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NotesReceived implements NoteWatcherEvent {
+  const factory _NotesReceived(
+      Either<NoteFailure, KtList<Note>> failureOrNotes) = _$_NotesReceived;
+
+  Either<NoteFailure, KtList<Note>> get failureOrNotes;
+  _$NotesReceivedCopyWith<_NotesReceived> get copyWith;
 }
 
 class _$NoteWatcherStateTearOff {

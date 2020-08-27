@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
+import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:kt_dart/collection.dart';
@@ -25,16 +26,26 @@ class NoteWatcherBloc extends Bloc<NoteWatcherEvent, NoteWatcherState> {
     yield* event.map(
       watchAllStarted: (e) async* {
         yield const NoteWatcherState.loadInProgress();
-        yield* _noteRepository.watchAll().map(
-              (failureOrNotes) => failureOrNotes.fold(
-                (f) => NoteWatcherState.loadFailure(f),
-                (notes) => NoteWatcherState.loadSuccess(notes),
-              ),
+        _noteRepository
+            .watchAll()
+            .listen(
+              (failureOrNotes) => add(NoteWatcherEvent.notesReceived(failureOrNotes)),
             );
+            
+            
+            
+            
+            // .map(
+            //   (failureOrNotes) => failureOrNotes.fold(
+            //     (f) => NoteWatcherState.loadFailure(f),
+            //     (notes) => NoteWatcherState.loadSuccess(notes),
+            //   ),
+            // );
       },
       watchUncompletedStarted: (e) async* {
         // yield const NoteWatcherState.loadInProgress();
       },
+      notesReceived: (e) async* {},
     );
   }
 }
