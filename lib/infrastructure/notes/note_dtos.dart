@@ -20,7 +20,7 @@ abstract class NoteDto implements _$NoteDto {
     @required String body,
     @required int color,
     @required List<TodoItemDto> todos,
-    @required FieldValue serverTimeStamp,
+    @required @ServerTimeStampConverter() FieldValue serverTimeStamp,
   }) = _NoteDto;
 
   factory NoteDto.fromDomain(Note note) {
@@ -43,6 +43,22 @@ abstract class NoteDto implements _$NoteDto {
   }
 
   factory NoteDto.fromJson(Map<String, dynamic> json) => _$NoteDtoFromJson(json);
+
+  factory NoteDto.fromFirestore(DocumentSnapshot doc) {
+    return NoteDto.fromJson(doc.data).copyWith(id: doc.documentID); 
+  }
+}
+
+class ServerTimeStampConverter implements JsonConverter<FieldValue, Object> {
+  const ServerTimeStampConverter();
+
+  @override
+  FieldValue fromJson(Object json) {
+    return FieldValue.serverTimestamp();
+
+  }
+    @override
+    Object toJson(FieldValue fieldValue) => fieldValue;
 }
 
 @freezed
