@@ -12,15 +12,42 @@ T _$identity<T>(T value) => value;
 class _$NoteWatcherEventTearOff {
   const _$NoteWatcherEventTearOff();
 
-  _Started started() {
-    return const _Started();
+  _WatchAllStarted watchAllStarted() {
+    return const _WatchAllStarted();
+  }
+
+  _WatchUncompletedStarted watchUncompletedStarted() {
+    return const _WatchUncompletedStarted();
   }
 }
 
 // ignore: unused_element
 const $NoteWatcherEvent = _$NoteWatcherEventTearOff();
 
-mixin _$NoteWatcherEvent {}
+mixin _$NoteWatcherEvent {
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result watchAllStarted(),
+    @required Result watchUncompletedStarted(),
+  });
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result watchAllStarted(),
+    Result watchUncompletedStarted(),
+    @required Result orElse(),
+  });
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result watchAllStarted(_WatchAllStarted value),
+    @required Result watchUncompletedStarted(_WatchUncompletedStarted value),
+  });
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result watchAllStarted(_WatchAllStarted value),
+    Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    @required Result orElse(),
+  });
+}
 
 abstract class $NoteWatcherEventCopyWith<$Res> {
   factory $NoteWatcherEventCopyWith(
@@ -37,39 +64,181 @@ class _$NoteWatcherEventCopyWithImpl<$Res>
   final $Res Function(NoteWatcherEvent) _then;
 }
 
-abstract class _$StartedCopyWith<$Res> {
-  factory _$StartedCopyWith(_Started value, $Res Function(_Started) then) =
-      __$StartedCopyWithImpl<$Res>;
+abstract class _$WatchAllStartedCopyWith<$Res> {
+  factory _$WatchAllStartedCopyWith(
+          _WatchAllStarted value, $Res Function(_WatchAllStarted) then) =
+      __$WatchAllStartedCopyWithImpl<$Res>;
 }
 
-class __$StartedCopyWithImpl<$Res> extends _$NoteWatcherEventCopyWithImpl<$Res>
-    implements _$StartedCopyWith<$Res> {
-  __$StartedCopyWithImpl(_Started _value, $Res Function(_Started) _then)
-      : super(_value, (v) => _then(v as _Started));
+class __$WatchAllStartedCopyWithImpl<$Res>
+    extends _$NoteWatcherEventCopyWithImpl<$Res>
+    implements _$WatchAllStartedCopyWith<$Res> {
+  __$WatchAllStartedCopyWithImpl(
+      _WatchAllStarted _value, $Res Function(_WatchAllStarted) _then)
+      : super(_value, (v) => _then(v as _WatchAllStarted));
 
   @override
-  _Started get _value => super._value as _Started;
+  _WatchAllStarted get _value => super._value as _WatchAllStarted;
 }
 
-class _$_Started implements _Started {
-  const _$_Started();
+class _$_WatchAllStarted implements _WatchAllStarted {
+  const _$_WatchAllStarted();
 
   @override
   String toString() {
-    return 'NoteWatcherEvent.started()';
+    return 'NoteWatcherEvent.watchAllStarted()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Started);
+    return identical(this, other) || (other is _WatchAllStarted);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result watchAllStarted(),
+    @required Result watchUncompletedStarted(),
+  }) {
+    assert(watchAllStarted != null);
+    assert(watchUncompletedStarted != null);
+    return watchAllStarted();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result watchAllStarted(),
+    Result watchUncompletedStarted(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (watchAllStarted != null) {
+      return watchAllStarted();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result watchAllStarted(_WatchAllStarted value),
+    @required Result watchUncompletedStarted(_WatchUncompletedStarted value),
+  }) {
+    assert(watchAllStarted != null);
+    assert(watchUncompletedStarted != null);
+    return watchAllStarted(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result watchAllStarted(_WatchAllStarted value),
+    Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (watchAllStarted != null) {
+      return watchAllStarted(this);
+    }
+    return orElse();
+  }
 }
 
-abstract class _Started implements NoteWatcherEvent {
-  const factory _Started() = _$_Started;
+abstract class _WatchAllStarted implements NoteWatcherEvent {
+  const factory _WatchAllStarted() = _$_WatchAllStarted;
+}
+
+abstract class _$WatchUncompletedStartedCopyWith<$Res> {
+  factory _$WatchUncompletedStartedCopyWith(_WatchUncompletedStarted value,
+          $Res Function(_WatchUncompletedStarted) then) =
+      __$WatchUncompletedStartedCopyWithImpl<$Res>;
+}
+
+class __$WatchUncompletedStartedCopyWithImpl<$Res>
+    extends _$NoteWatcherEventCopyWithImpl<$Res>
+    implements _$WatchUncompletedStartedCopyWith<$Res> {
+  __$WatchUncompletedStartedCopyWithImpl(_WatchUncompletedStarted _value,
+      $Res Function(_WatchUncompletedStarted) _then)
+      : super(_value, (v) => _then(v as _WatchUncompletedStarted));
+
+  @override
+  _WatchUncompletedStarted get _value =>
+      super._value as _WatchUncompletedStarted;
+}
+
+class _$_WatchUncompletedStarted implements _WatchUncompletedStarted {
+  const _$_WatchUncompletedStarted();
+
+  @override
+  String toString() {
+    return 'NoteWatcherEvent.watchUncompletedStarted()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _WatchUncompletedStarted);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result watchAllStarted(),
+    @required Result watchUncompletedStarted(),
+  }) {
+    assert(watchAllStarted != null);
+    assert(watchUncompletedStarted != null);
+    return watchUncompletedStarted();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result watchAllStarted(),
+    Result watchUncompletedStarted(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (watchUncompletedStarted != null) {
+      return watchUncompletedStarted();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result watchAllStarted(_WatchAllStarted value),
+    @required Result watchUncompletedStarted(_WatchUncompletedStarted value),
+  }) {
+    assert(watchAllStarted != null);
+    assert(watchUncompletedStarted != null);
+    return watchUncompletedStarted(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result watchAllStarted(_WatchAllStarted value),
+    Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (watchUncompletedStarted != null) {
+      return watchUncompletedStarted(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _WatchUncompletedStarted implements NoteWatcherEvent {
+  const factory _WatchUncompletedStarted() = _$_WatchUncompletedStarted;
 }
 
 class _$NoteWatcherStateTearOff {
