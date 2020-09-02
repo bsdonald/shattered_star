@@ -28,19 +28,38 @@ class NoteRepository implements INoteRepository {
           (snapshot) => right<NoteFailure, KtList<Note>>(
             snapshot.documents.map((doc) => NoteDto.fromFirestore(doc).toDomain()).toImmutableList(),
           ),
-        ).onErrorReturnWith((e) {
-          if (e is PlatformException && e.message.contains('PERMISSION_DENIED')) {
-            return left(const NoteFailure.insuffucientPermission());
-          } else {
-            return left(const NoteFailure.unexpected());
-          }
-        });
+        )
+        .onErrorReturnWith((e) {
+      if (e is PlatformException && e.message.contains('PERMISSION_DENIED')) {
+        return left(const NoteFailure.insuffucientPermission());
+      } else {
+        return left(const NoteFailure.unexpected());
+      }
+    });
   }
 
   @override
-  Stream<Either<NoteFailure, KtList<Note>>> watchUncompleted() {
-    // TODO: implement watchUncompleted
-    throw UnimplementedError();
+  Stream<Either<NoteFailure, KtList<Note>>> watchUncompleted() async* {
+    final userDoc = await _firestore.userDocument();
+    yield* userDoc.noteCollection
+        .orderBy(
+          'serverTimeStamp',
+          descending: true,
+        )
+        .snapshots()
+        .map(
+          (snapshot) => snapshot.documents.map((doc) => NoteDto.fromFirestore(doc).toDomain()),
+        )
+        .map((notes) => right<NoteFailure, KtList<Note>>(
+              notes.where((note) => note.todos.getOrCrash().any((todoItem) => !todoItem.done)).toImmutableList(),
+            ))
+        .onErrorReturnWith((e) {
+      if (e is PlatformException && e.message.contains('PERMISSION_DENIED')) {
+        return left(const NoteFailure.insuffucientPermission());
+      } else {
+        return left(const NoteFailure.unexpected());
+      }
+    });
   }
 
   @override
