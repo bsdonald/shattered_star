@@ -10,3 +10,7 @@ extension FirestoreX on Firestore {
     return Firestore.instance.collection('users').document(user.id.getOrCrash());
   }
 }
+
+extension DocumentReferenceX on DocumentReference {
+  CollectionReference get noteCollection => collection('notes');
+}
