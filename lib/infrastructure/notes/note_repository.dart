@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 import 'package:dartz/dartz.dart';
 import 'package:kt_dart/kt.dart';
@@ -7,6 +8,7 @@ import 'package:shattered_star/domain/notes/note_failure.dart';
 import 'package:shattered_star/domain/notes/note.dart';
 import 'package:shattered_star/infrastructure/core/firestore_helpers.dart';
 import 'package:shattered_star/infrastructure/notes/note_dtos.dart';
+import 'package:rxdart/rxdart.dart';
 
 @LazySingleton(as: INoteRepository)
 class NoteRepository implements INoteRepository {
@@ -26,8 +28,13 @@ class NoteRepository implements INoteRepository {
           (snapshot) => right(
             snapshot.documents.map((doc) => NoteDto.fromFirestore(doc).toDomain()).toImmutableList(),
           ),
-        );
-    throw UnimplementedError();
+        ).onErrorReturnWith((e) {
+          if (e is PlatformException && e.message.contains('PERMISSION_DENIED')) {
+            return left(const NoteFailure.insuffucientPermission());
+          } else {
+            return left(const NoteFailure.unexpected());
+          }
+        });
   }
 
   @override
