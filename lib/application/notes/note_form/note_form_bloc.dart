@@ -33,7 +33,9 @@ class NoteFormBloc extends Bloc<NoteFormEvent, NoteFormState> {
           ),
         );
       },
-      bodyChanged: (e) async* {},
+      bodyChanged: (e) async* {
+        yield state.copyWith
+      },
       colorChanged: (e) async* {},
       todosChanged: (e) async* {},
       saved: (e) async* {},
