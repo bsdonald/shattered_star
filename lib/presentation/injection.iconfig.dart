@@ -15,6 +15,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:shattered_star/application/notes/note_actor/note_actor_bloc.dart';
 import 'package:shattered_star/application/notes/note_form/note_form_bloc.dart';
 import 'package:shattered_star/application/notes/note_watcher/note_watcher_bloc.dart';
+import 'package:shattered_star/presentation/core/ss_colors.dart';
 import 'package:shattered_star/application/auth/sign_in_form/sign_in_form_bloc.dart';
 import 'package:shattered_star/application/auth/auth_bloc.dart';
 import 'package:get_it/get_it.dart';
@@ -33,6 +34,7 @@ void $initGetIt(GetIt g, {String environment}) {
   g.registerFactory<NoteFormBloc>(() => NoteFormBloc(g<INoteRepository>()));
   g.registerFactory<NoteWatcherBloc>(
       () => NoteWatcherBloc(g<INoteRepository>()));
+  g.registerFactory<SSColors>(() => SSColors());
   g.registerFactory<SignInFormBloc>(() => SignInFormBloc(g<IAuthFacade>()));
   g.registerFactory<AuthBloc>(() => AuthBloc(g<IAuthFacade>()));
 }
