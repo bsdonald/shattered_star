@@ -64,24 +64,38 @@ class NoteRepository implements INoteRepository {
 
   @override
   Future<Either<NoteFailure, Unit>> create(Note note) async {
-try{
-    final userDoc = await _firestore.userDocument();
-    final noteDto = NoteDto.fromDomain(note);
+    try {
+      final userDoc = await _firestore.userDocument();
+      final noteDto = NoteDto.fromDomain(note);
 
-    await userDoc.noteCollection.document(noteDto.id).setData(noteDto.toJson());
+      await userDoc.noteCollection.document(noteDto.id).setData(noteDto.toJson());
 
-    return right(unit);
-} on PlatformException catch (e) {
-  if (e.message.contains('PERMISSION_DENIED')) {
+      return right(unit);
+    } on PlatformException catch (e) {
+      if (e.message.contains('PERMISSION_DENIED')) {
         return left(const NoteFailure.insuffucientPermission());
-  }
-}
+      } else {
+        return left(const NoteFailure.unexpected());
+      }
+    }
   }
 
   @override
   Future<Either<NoteFailure, Unit>> update(Note note) async {
-    // TODO: implement update
-    throw UnimplementedError();
+    try {
+      final userDoc = await _firestore.userDocument();
+      final noteDto = NoteDto.fromDomain(note);
+
+      await userDoc.noteCollection.document(noteDto.id).updateData(noteDto.toJson());
+
+      return right(unit);
+    } on PlatformException catch (e) {
+      if (e.message.contains('PERMISSION_DENIED')) {
+        return left(const NoteFailure.insuffucientPermission());
+      } else {
+        return left(const NoteFailure.unexpected());
+      }
+    }
   }
 
   @override
