@@ -46,7 +46,14 @@ class NoteFormBloc extends Bloc<NoteFormEvent, NoteFormState> {
           saveFailureOrSuccessOption: none(),
         );
       },
-      todosChanged: (e) async* {},
+      todosChanged: (e) async* {
+        yield state.copyWith(
+          note: state.note.copyWith(
+            todos: List3(e.todos.map((primitive) => primitive.toDomain())),
+          ),
+          saveFailureOrSuccessOption: none(),
+        );
+      },
       saved: (e) async* {},
     );
   }
