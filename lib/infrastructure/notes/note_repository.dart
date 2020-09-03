@@ -102,7 +102,21 @@ class NoteRepository implements INoteRepository {
 
   @override
   Future<Either<NoteFailure, Unit>> delete(Note note) async {
-    // TODO: implement delete
-    throw UnimplementedError();
+    try {
+      final userDoc = await _firestore.userDocument();
+      final noteId = note.id.getOrCrash();
+
+      await userDoc.noteCollection.document(noteId).delete();
+
+      return right(unit);
+    } on PlatformException catch (e) {
+      if (e.message.contains('PERMISSION_DENIED')) {
+        return left(const NoteFailure.insuffucientPermission());
+      } else if (e.message.contains('NOT_FOUND')) {
+        return left(const NoteFailure.unableToUpdate());
+      } else {
+        return left(const NoteFailure.unexpected());
+      }
+    }
   }
 }
