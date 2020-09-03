@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:kt_dart/kt.dart';
 import 'package:shattered_star/domain/notes/i_note_repository.dart';
 import 'package:shattered_star/domain/notes/note.dart';
@@ -15,6 +16,7 @@ part 'note_form_event.dart';
 part 'note_form_state.dart';
 part 'note_form_bloc.freezed.dart';
 
+@injectable
 class NoteFormBloc extends Bloc<NoteFormEvent, NoteFormState> {
   final INoteRepository _noteRepository;
 
@@ -54,7 +56,26 @@ class NoteFormBloc extends Bloc<NoteFormEvent, NoteFormState> {
           saveFailureOrSuccessOption: none(),
         );
       },
-      saved: (e) async* {},
+      saved: (e) async* {
+        Either<NoteFailure, Unit> failureOrSuccess;
+
+        yield state.copyWith(
+          isSaving: true,
+          saveFailureOrSuccessOption: none(),
+        );
+
+        if (state.note.failureOption.isNone()) {
+          failureOrSuccess = state.isEditing 
+          ? await _noteRepository.update(state.note) 
+          : await _noteRepository.create(state.note);
+        }
+
+        yield state.copyWith(
+          isSaving: false,
+          showErrorMessages: true,
+          saveFailureOrSuccessOption: optionOf(failureOrSuccess),
+        );
+      },
     );
   }
 }
