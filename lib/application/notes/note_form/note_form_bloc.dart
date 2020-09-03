@@ -15,7 +15,7 @@ part 'note_form_state.dart';
 part 'note_form_bloc.freezed.dart';
 
 class NoteFormBloc extends Bloc<NoteFormEvent, NoteFormState> {
-    final INoteRepository _noteRepository;
+  final INoteRepository _noteRepository;
 
   NoteFormBloc(this._noteRepository) : super(NoteFormState.initial());
 
@@ -23,6 +23,20 @@ class NoteFormBloc extends Bloc<NoteFormEvent, NoteFormState> {
   Stream<NoteFormState> mapEventToState(
     NoteFormEvent event,
   ) async* {
-    // TODO: implement mapEventToState
+    yield* event.map(
+      initialized: (e) async* {
+        yield e.initialNoteOption.fold(
+          () => state,
+          (initialNote) => state.copyWith(
+            note: initialNote,
+            isEditing: true,
+          ),
+        );
+      },
+      bodyChanged: (e) async* {},
+      colorChanged: (e) async* {},
+      todosChanged: (e) async* {},
+      saved: (e) async* {},
+    );
   }
 }
