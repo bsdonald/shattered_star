@@ -18,15 +18,15 @@ class _$NoteFormEventTearOff {
     );
   }
 
-  _ColorChanged colorChanged(Color bodyStr) {
+  _ColorChanged colorChanged(Color color) {
     return _ColorChanged(
-      bodyStr,
+      color,
     );
   }
 
-  _TodosChanged todosChanged(Color bodyStr) {
+  _TodosChanged todosChanged(KtList<TodoItemPrimitive> todos) {
     return _TodosChanged(
-      bodyStr,
+      todos,
     );
   }
 }
@@ -38,14 +38,14 @@ mixin _$NoteFormEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result bodyChanged(String bodyStr),
-    @required Result colorChanged(Color bodyStr),
-    @required Result todosChanged(Color bodyStr),
+    @required Result colorChanged(Color color),
+    @required Result todosChanged(KtList<TodoItemPrimitive> todos),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result bodyChanged(String bodyStr),
-    Result colorChanged(Color bodyStr),
-    Result todosChanged(Color bodyStr),
+    Result colorChanged(Color color),
+    Result todosChanged(KtList<TodoItemPrimitive> todos),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -104,23 +104,15 @@ class __$BodyChangedCopyWithImpl<$Res> extends _$NoteFormEventCopyWithImpl<$Res>
   }
 }
 
-class _$_BodyChanged with DiagnosticableTreeMixin implements _BodyChanged {
+class _$_BodyChanged implements _BodyChanged {
   const _$_BodyChanged(this.bodyStr) : assert(bodyStr != null);
 
   @override
   final String bodyStr;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'NoteFormEvent.bodyChanged(bodyStr: $bodyStr)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'NoteFormEvent.bodyChanged'))
-      ..add(DiagnosticsProperty('bodyStr', bodyStr));
   }
 
   @override
@@ -143,8 +135,8 @@ class _$_BodyChanged with DiagnosticableTreeMixin implements _BodyChanged {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result bodyChanged(String bodyStr),
-    @required Result colorChanged(Color bodyStr),
-    @required Result todosChanged(Color bodyStr),
+    @required Result colorChanged(Color color),
+    @required Result todosChanged(KtList<TodoItemPrimitive> todos),
   }) {
     assert(bodyChanged != null);
     assert(colorChanged != null);
@@ -156,8 +148,8 @@ class _$_BodyChanged with DiagnosticableTreeMixin implements _BodyChanged {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result bodyChanged(String bodyStr),
-    Result colorChanged(Color bodyStr),
-    Result todosChanged(Color bodyStr),
+    Result colorChanged(Color color),
+    Result todosChanged(KtList<TodoItemPrimitive> todos),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -207,7 +199,7 @@ abstract class _$ColorChangedCopyWith<$Res> {
   factory _$ColorChangedCopyWith(
           _ColorChanged value, $Res Function(_ColorChanged) then) =
       __$ColorChangedCopyWithImpl<$Res>;
-  $Res call({Color bodyStr});
+  $Res call({Color color});
 }
 
 class __$ColorChangedCopyWithImpl<$Res>
@@ -222,44 +214,36 @@ class __$ColorChangedCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object bodyStr = freezed,
+    Object color = freezed,
   }) {
     return _then(_ColorChanged(
-      bodyStr == freezed ? _value.bodyStr : bodyStr as Color,
+      color == freezed ? _value.color : color as Color,
     ));
   }
 }
 
-class _$_ColorChanged with DiagnosticableTreeMixin implements _ColorChanged {
-  const _$_ColorChanged(this.bodyStr) : assert(bodyStr != null);
+class _$_ColorChanged implements _ColorChanged {
+  const _$_ColorChanged(this.color) : assert(color != null);
 
   @override
-  final Color bodyStr;
+  final Color color;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'NoteFormEvent.colorChanged(bodyStr: $bodyStr)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'NoteFormEvent.colorChanged'))
-      ..add(DiagnosticsProperty('bodyStr', bodyStr));
+  String toString() {
+    return 'NoteFormEvent.colorChanged(color: $color)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _ColorChanged &&
-            (identical(other.bodyStr, bodyStr) ||
-                const DeepCollectionEquality().equals(other.bodyStr, bodyStr)));
+            (identical(other.color, color) ||
+                const DeepCollectionEquality().equals(other.color, color)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(bodyStr);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(color);
 
   @override
   _$ColorChangedCopyWith<_ColorChanged> get copyWith =>
@@ -269,26 +253,26 @@ class _$_ColorChanged with DiagnosticableTreeMixin implements _ColorChanged {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result bodyChanged(String bodyStr),
-    @required Result colorChanged(Color bodyStr),
-    @required Result todosChanged(Color bodyStr),
+    @required Result colorChanged(Color color),
+    @required Result todosChanged(KtList<TodoItemPrimitive> todos),
   }) {
     assert(bodyChanged != null);
     assert(colorChanged != null);
     assert(todosChanged != null);
-    return colorChanged(bodyStr);
+    return colorChanged(color);
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result bodyChanged(String bodyStr),
-    Result colorChanged(Color bodyStr),
-    Result todosChanged(Color bodyStr),
+    Result colorChanged(Color color),
+    Result todosChanged(KtList<TodoItemPrimitive> todos),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (colorChanged != null) {
-      return colorChanged(bodyStr);
+      return colorChanged(color);
     }
     return orElse();
   }
@@ -323,9 +307,9 @@ class _$_ColorChanged with DiagnosticableTreeMixin implements _ColorChanged {
 }
 
 abstract class _ColorChanged implements NoteFormEvent {
-  const factory _ColorChanged(Color bodyStr) = _$_ColorChanged;
+  const factory _ColorChanged(Color color) = _$_ColorChanged;
 
-  Color get bodyStr;
+  Color get color;
   _$ColorChangedCopyWith<_ColorChanged> get copyWith;
 }
 
@@ -333,7 +317,7 @@ abstract class _$TodosChangedCopyWith<$Res> {
   factory _$TodosChangedCopyWith(
           _TodosChanged value, $Res Function(_TodosChanged) then) =
       __$TodosChangedCopyWithImpl<$Res>;
-  $Res call({Color bodyStr});
+  $Res call({KtList<TodoItemPrimitive> todos});
 }
 
 class __$TodosChangedCopyWithImpl<$Res>
@@ -348,44 +332,36 @@ class __$TodosChangedCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object bodyStr = freezed,
+    Object todos = freezed,
   }) {
     return _then(_TodosChanged(
-      bodyStr == freezed ? _value.bodyStr : bodyStr as Color,
+      todos == freezed ? _value.todos : todos as KtList<TodoItemPrimitive>,
     ));
   }
 }
 
-class _$_TodosChanged with DiagnosticableTreeMixin implements _TodosChanged {
-  const _$_TodosChanged(this.bodyStr) : assert(bodyStr != null);
+class _$_TodosChanged implements _TodosChanged {
+  const _$_TodosChanged(this.todos) : assert(todos != null);
 
   @override
-  final Color bodyStr;
+  final KtList<TodoItemPrimitive> todos;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'NoteFormEvent.todosChanged(bodyStr: $bodyStr)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'NoteFormEvent.todosChanged'))
-      ..add(DiagnosticsProperty('bodyStr', bodyStr));
+  String toString() {
+    return 'NoteFormEvent.todosChanged(todos: $todos)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _TodosChanged &&
-            (identical(other.bodyStr, bodyStr) ||
-                const DeepCollectionEquality().equals(other.bodyStr, bodyStr)));
+            (identical(other.todos, todos) ||
+                const DeepCollectionEquality().equals(other.todos, todos)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(bodyStr);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(todos);
 
   @override
   _$TodosChangedCopyWith<_TodosChanged> get copyWith =>
@@ -395,26 +371,26 @@ class _$_TodosChanged with DiagnosticableTreeMixin implements _TodosChanged {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result bodyChanged(String bodyStr),
-    @required Result colorChanged(Color bodyStr),
-    @required Result todosChanged(Color bodyStr),
+    @required Result colorChanged(Color color),
+    @required Result todosChanged(KtList<TodoItemPrimitive> todos),
   }) {
     assert(bodyChanged != null);
     assert(colorChanged != null);
     assert(todosChanged != null);
-    return todosChanged(bodyStr);
+    return todosChanged(todos);
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result bodyChanged(String bodyStr),
-    Result colorChanged(Color bodyStr),
-    Result todosChanged(Color bodyStr),
+    Result colorChanged(Color color),
+    Result todosChanged(KtList<TodoItemPrimitive> todos),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (todosChanged != null) {
-      return todosChanged(bodyStr);
+      return todosChanged(todos);
     }
     return orElse();
   }
@@ -449,9 +425,10 @@ class _$_TodosChanged with DiagnosticableTreeMixin implements _TodosChanged {
 }
 
 abstract class _TodosChanged implements NoteFormEvent {
-  const factory _TodosChanged(Color bodyStr) = _$_TodosChanged;
+  const factory _TodosChanged(KtList<TodoItemPrimitive> todos) =
+      _$_TodosChanged;
 
-  Color get bodyStr;
+  KtList<TodoItemPrimitive> get todos;
   _$TodosChangedCopyWith<_TodosChanged> get copyWith;
 }
 
@@ -497,18 +474,12 @@ class __$InitialCopyWithImpl<$Res> extends _$NoteFormStateCopyWithImpl<$Res>
   _Initial get _value => super._value as _Initial;
 }
 
-class _$_Initial with DiagnosticableTreeMixin implements _Initial {
+class _$_Initial implements _Initial {
   const _$_Initial();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'NoteFormState.initial()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'NoteFormState.initial'));
   }
 
   @override
