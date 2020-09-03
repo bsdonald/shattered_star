@@ -12,4 +12,10 @@ abstract class TodoItemPrimitive implements _$TodoItemPrimitive {
     @required String name,
     @required bool done,
   }) = _TodoItemPrimitive;
+
+  factory TodoItemPrimitive.empty() => TodoItemPrimitive(
+    id: UniqueId(),
+    name: '',
+    done: false,
+  );
 }
