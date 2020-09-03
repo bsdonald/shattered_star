@@ -29,6 +29,10 @@ class _$NoteFormEventTearOff {
       todos,
     );
   }
+
+  _Saved saved() {
+    return const _Saved();
+  }
 }
 
 // ignore: unused_element
@@ -40,12 +44,14 @@ mixin _$NoteFormEvent {
     @required Result bodyChanged(String bodyStr),
     @required Result colorChanged(Color color),
     @required Result todosChanged(KtList<TodoItemPrimitive> todos),
+    @required Result saved(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result bodyChanged(String bodyStr),
     Result colorChanged(Color color),
     Result todosChanged(KtList<TodoItemPrimitive> todos),
+    Result saved(),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -53,12 +59,14 @@ mixin _$NoteFormEvent {
     @required Result bodyChanged(_BodyChanged value),
     @required Result colorChanged(_ColorChanged value),
     @required Result todosChanged(_TodosChanged value),
+    @required Result saved(_Saved value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result bodyChanged(_BodyChanged value),
     Result colorChanged(_ColorChanged value),
     Result todosChanged(_TodosChanged value),
+    Result saved(_Saved value),
     @required Result orElse(),
   });
 }
@@ -137,10 +145,12 @@ class _$_BodyChanged implements _BodyChanged {
     @required Result bodyChanged(String bodyStr),
     @required Result colorChanged(Color color),
     @required Result todosChanged(KtList<TodoItemPrimitive> todos),
+    @required Result saved(),
   }) {
     assert(bodyChanged != null);
     assert(colorChanged != null);
     assert(todosChanged != null);
+    assert(saved != null);
     return bodyChanged(bodyStr);
   }
 
@@ -150,6 +160,7 @@ class _$_BodyChanged implements _BodyChanged {
     Result bodyChanged(String bodyStr),
     Result colorChanged(Color color),
     Result todosChanged(KtList<TodoItemPrimitive> todos),
+    Result saved(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -165,10 +176,12 @@ class _$_BodyChanged implements _BodyChanged {
     @required Result bodyChanged(_BodyChanged value),
     @required Result colorChanged(_ColorChanged value),
     @required Result todosChanged(_TodosChanged value),
+    @required Result saved(_Saved value),
   }) {
     assert(bodyChanged != null);
     assert(colorChanged != null);
     assert(todosChanged != null);
+    assert(saved != null);
     return bodyChanged(this);
   }
 
@@ -178,6 +191,7 @@ class _$_BodyChanged implements _BodyChanged {
     Result bodyChanged(_BodyChanged value),
     Result colorChanged(_ColorChanged value),
     Result todosChanged(_TodosChanged value),
+    Result saved(_Saved value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -255,10 +269,12 @@ class _$_ColorChanged implements _ColorChanged {
     @required Result bodyChanged(String bodyStr),
     @required Result colorChanged(Color color),
     @required Result todosChanged(KtList<TodoItemPrimitive> todos),
+    @required Result saved(),
   }) {
     assert(bodyChanged != null);
     assert(colorChanged != null);
     assert(todosChanged != null);
+    assert(saved != null);
     return colorChanged(color);
   }
 
@@ -268,6 +284,7 @@ class _$_ColorChanged implements _ColorChanged {
     Result bodyChanged(String bodyStr),
     Result colorChanged(Color color),
     Result todosChanged(KtList<TodoItemPrimitive> todos),
+    Result saved(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -283,10 +300,12 @@ class _$_ColorChanged implements _ColorChanged {
     @required Result bodyChanged(_BodyChanged value),
     @required Result colorChanged(_ColorChanged value),
     @required Result todosChanged(_TodosChanged value),
+    @required Result saved(_Saved value),
   }) {
     assert(bodyChanged != null);
     assert(colorChanged != null);
     assert(todosChanged != null);
+    assert(saved != null);
     return colorChanged(this);
   }
 
@@ -296,6 +315,7 @@ class _$_ColorChanged implements _ColorChanged {
     Result bodyChanged(_BodyChanged value),
     Result colorChanged(_ColorChanged value),
     Result todosChanged(_TodosChanged value),
+    Result saved(_Saved value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -373,10 +393,12 @@ class _$_TodosChanged implements _TodosChanged {
     @required Result bodyChanged(String bodyStr),
     @required Result colorChanged(Color color),
     @required Result todosChanged(KtList<TodoItemPrimitive> todos),
+    @required Result saved(),
   }) {
     assert(bodyChanged != null);
     assert(colorChanged != null);
     assert(todosChanged != null);
+    assert(saved != null);
     return todosChanged(todos);
   }
 
@@ -386,6 +408,7 @@ class _$_TodosChanged implements _TodosChanged {
     Result bodyChanged(String bodyStr),
     Result colorChanged(Color color),
     Result todosChanged(KtList<TodoItemPrimitive> todos),
+    Result saved(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -401,10 +424,12 @@ class _$_TodosChanged implements _TodosChanged {
     @required Result bodyChanged(_BodyChanged value),
     @required Result colorChanged(_ColorChanged value),
     @required Result todosChanged(_TodosChanged value),
+    @required Result saved(_Saved value),
   }) {
     assert(bodyChanged != null);
     assert(colorChanged != null);
     assert(todosChanged != null);
+    assert(saved != null);
     return todosChanged(this);
   }
 
@@ -414,6 +439,7 @@ class _$_TodosChanged implements _TodosChanged {
     Result bodyChanged(_BodyChanged value),
     Result colorChanged(_ColorChanged value),
     Result todosChanged(_TodosChanged value),
+    Result saved(_Saved value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -430,6 +456,103 @@ abstract class _TodosChanged implements NoteFormEvent {
 
   KtList<TodoItemPrimitive> get todos;
   _$TodosChangedCopyWith<_TodosChanged> get copyWith;
+}
+
+abstract class _$SavedCopyWith<$Res> {
+  factory _$SavedCopyWith(_Saved value, $Res Function(_Saved) then) =
+      __$SavedCopyWithImpl<$Res>;
+}
+
+class __$SavedCopyWithImpl<$Res> extends _$NoteFormEventCopyWithImpl<$Res>
+    implements _$SavedCopyWith<$Res> {
+  __$SavedCopyWithImpl(_Saved _value, $Res Function(_Saved) _then)
+      : super(_value, (v) => _then(v as _Saved));
+
+  @override
+  _Saved get _value => super._value as _Saved;
+}
+
+class _$_Saved implements _Saved {
+  const _$_Saved();
+
+  @override
+  String toString() {
+    return 'NoteFormEvent.saved()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _Saved);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result bodyChanged(String bodyStr),
+    @required Result colorChanged(Color color),
+    @required Result todosChanged(KtList<TodoItemPrimitive> todos),
+    @required Result saved(),
+  }) {
+    assert(bodyChanged != null);
+    assert(colorChanged != null);
+    assert(todosChanged != null);
+    assert(saved != null);
+    return saved();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result bodyChanged(String bodyStr),
+    Result colorChanged(Color color),
+    Result todosChanged(KtList<TodoItemPrimitive> todos),
+    Result saved(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (saved != null) {
+      return saved();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result bodyChanged(_BodyChanged value),
+    @required Result colorChanged(_ColorChanged value),
+    @required Result todosChanged(_TodosChanged value),
+    @required Result saved(_Saved value),
+  }) {
+    assert(bodyChanged != null);
+    assert(colorChanged != null);
+    assert(todosChanged != null);
+    assert(saved != null);
+    return saved(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result bodyChanged(_BodyChanged value),
+    Result colorChanged(_ColorChanged value),
+    Result todosChanged(_TodosChanged value),
+    Result saved(_Saved value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (saved != null) {
+      return saved(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Saved implements NoteFormEvent {
+  const factory _Saved() = _$_Saved;
 }
 
 class _$NoteFormStateTearOff {
