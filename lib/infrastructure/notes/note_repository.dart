@@ -92,6 +92,8 @@ class NoteRepository implements INoteRepository {
     } on PlatformException catch (e) {
       if (e.message.contains('PERMISSION_DENIED')) {
         return left(const NoteFailure.insuffucientPermission());
+      } else if (e.message.contains('NOT_FOUND')) {
+        return left(const NoteFailure.unableToUpdate());
       } else {
         return left(const NoteFailure.unexpected());
       }
