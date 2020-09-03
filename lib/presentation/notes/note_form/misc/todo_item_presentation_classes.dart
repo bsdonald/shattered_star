@@ -1,5 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:shattered_star/domain/core/value_objects.dart';
+import 'package:shattered_star/domain/notes/todo_item.dart';
+import 'package:shattered_star/domain/notes/value_objects.dart';
 
 part 'todo_item_presentation_classes.freezed.dart';
 
@@ -18,4 +20,20 @@ abstract class TodoItemPrimitive implements _$TodoItemPrimitive {
     name: '',
     done: false,
   );
+
+  factory TodoItemPrimitive.fromDomain(TodoItem todoItem) {
+    return TodoItemPrimitive(
+      id: todoItem.id,
+      name: todoItem.name.getOrCrash(),
+      done: todoItem.done,
+    );
+  }
+
+  TodoItem toDomain() {
+    return TodoItem(
+      id: id,
+      name: TodoName(name),
+      done: done,
+    );
+  } 
 }
