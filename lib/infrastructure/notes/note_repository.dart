@@ -31,7 +31,7 @@ class NoteRepository implements INoteRepository {
         )
         .onErrorReturnWith((e) {
       if (e is PlatformException && e.message.contains('PERMISSION_DENIED')) {
-        return left(const NoteFailure.insuffucientPermission());
+        return left(const NoteFailure.insufficientPermission());
       } else {
         return left(const NoteFailure.unexpected());
       }
@@ -55,7 +55,7 @@ class NoteRepository implements INoteRepository {
             ))
         .onErrorReturnWith((e) {
       if (e is PlatformException && e.message.contains('PERMISSION_DENIED')) {
-        return left(const NoteFailure.insuffucientPermission());
+        return left(const NoteFailure.insufficientPermission());
       } else {
         return left(const NoteFailure.unexpected());
       }
@@ -73,7 +73,7 @@ class NoteRepository implements INoteRepository {
       return right(unit);
     } on PlatformException catch (e) {
       if (e.message.contains('PERMISSION_DENIED')) {
-        return left(const NoteFailure.insuffucientPermission());
+        return left(const NoteFailure.insufficientPermission());
       } else {
         return left(const NoteFailure.unexpected());
       }
@@ -91,7 +91,7 @@ class NoteRepository implements INoteRepository {
       return right(unit);
     } on PlatformException catch (e) {
       if (e.message.contains('PERMISSION_DENIED')) {
-        return left(const NoteFailure.insuffucientPermission());
+        return left(const NoteFailure.insufficientPermission());
       } else if (e.message.contains('NOT_FOUND')) {
         return left(const NoteFailure.unableToUpdate());
       } else {
@@ -111,7 +111,7 @@ class NoteRepository implements INoteRepository {
       return right(unit);
     } on PlatformException catch (e) {
       if (e.message.contains('PERMISSION_DENIED')) {
-        return left(const NoteFailure.insuffucientPermission());
+        return left(const NoteFailure.insufficientPermission());
       } else if (e.message.contains('NOT_FOUND')) {
         return left(const NoteFailure.unableToUpdate());
       } else {
