@@ -6,6 +6,7 @@ import 'package:shattered_star/application/auth/auth_bloc.dart';
 import 'package:shattered_star/application/notes/note_actor/note_actor_bloc.dart';
 import 'package:shattered_star/application/notes/note_watcher/note_watcher_bloc.dart';
 import 'package:shattered_star/injection.dart';
+import 'package:shattered_star/presentation/notes/notes_overview.dart/widgets/notes_overview_body.dart';
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 class NotesOverviewPage extends StatelessWidget {
@@ -64,7 +65,7 @@ class NotesOverviewPage extends StatelessWidget {
               ),
             ],
           ),
-          // body: ,
+          body: NotesOverviewBody(),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
               //TODO: Navigate to NoteFormPage
