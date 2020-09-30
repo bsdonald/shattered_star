@@ -27,12 +27,13 @@ class AppWidget extends StatelessWidget {
         ),
         theme: ThemeData.light().copyWith(
           primaryColor: colors.primary,
+          accentColor: colors.secondary,
+          backgroundColor: colors.background,
+          cardColor: colors.tertiary,
+
           floatingActionButtonTheme: FloatingActionButtonThemeData(
             backgroundColor: colors.secondary
           ),
-          // primaryColor: Colors.orange[200],
-
-          accentColor: colors.secondary,
           inputDecorationTheme: InputDecorationTheme(
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),

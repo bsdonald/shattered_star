@@ -5,6 +5,8 @@ import 'package:injectable/injectable.dart';
 class SSColors {
   Color get primary =>  Colors.lightBlueAccent[100];
   Color get secondary => Colors.orangeAccent;
+  Color get tertiary => Colors.lightGreen;
+  Color get background => Colors.lightGreen[50];
   // Color get onPrimary => offWhite1;
   // Color get onPrimaryLight => grayDark1;
 
