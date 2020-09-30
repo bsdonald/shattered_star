@@ -10,8 +10,7 @@ import 'package:shattered_star/presentation/sign_in/sign_in_page.dart';
 class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-  final SSColors colors = getIt<SSColors>();
-
+    final SSColors colors = getIt<SSColors>();
 
     return MultiBlocProvider(
       providers: [
@@ -30,9 +29,14 @@ class AppWidget extends StatelessWidget {
           accentColor: colors.secondary,
           backgroundColor: colors.background,
           cardColor: colors.tertiary,
-
+          cardTheme: const CardTheme(
+            elevation: 8,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(8)),
+            ),
+          ),
           floatingActionButtonTheme: FloatingActionButtonThemeData(
-            backgroundColor: colors.secondary
+            backgroundColor: colors.secondary,
           ),
           inputDecorationTheme: InputDecorationTheme(
             border: OutlineInputBorder(
