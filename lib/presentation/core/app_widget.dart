@@ -27,7 +27,7 @@ class AppWidget extends StatelessWidget {
         theme: ThemeData.light().copyWith(
           primaryColor: colors.primary,
           accentColor: colors.secondary,
-          backgroundColor: colors.background,
+          scaffoldBackgroundColor: colors.background,
           cardColor: colors.tertiary,
           cardTheme: const CardTheme(
             elevation: 8,
