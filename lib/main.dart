@@ -7,5 +7,3 @@ void main() {
   configureInjection(Environment.prod);
   runApp(AppWidget());
 }
-
-

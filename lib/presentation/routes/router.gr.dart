@@ -12,15 +12,18 @@ import 'package:flutter/material.dart';
 import '../notes/notes_overview.dart/notes_overview_page.dart';
 import '../sign_in/sign_in_page.dart';
 import '../splash/splash_page.dart';
+import '../test/test.dart';
 
 class Routes {
   static const String splashPage = '/';
   static const String signInPage = '/sign-in-page';
   static const String notesOverviewPage = '/notes-overview-page';
+  static const String test = '/Test';
   static const all = <String>{
     splashPage,
     signInPage,
     notesOverviewPage,
+    test,
   };
 }
 
@@ -31,6 +34,7 @@ class Router extends RouterBase {
     RouteDef(Routes.splashPage, page: SplashPage),
     RouteDef(Routes.signInPage, page: SignInPage),
     RouteDef(Routes.notesOverviewPage, page: NotesOverviewPage),
+    RouteDef(Routes.test, page: Test),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -53,6 +57,12 @@ class Router extends RouterBase {
         settings: data,
       );
     },
+    Test: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => Test(),
+        settings: data,
+      );
+    },
   };
 }
 
@@ -67,4 +77,6 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
 
   Future<dynamic> pushNotesOverviewPage() =>
       push<dynamic>(Routes.notesOverviewPage);
+
+  Future<dynamic> pushTest() => push<dynamic>(Routes.test);
 }

@@ -3,6 +3,7 @@ import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shattered_star/application/auth/auth_bloc.dart';
+import 'package:shattered_star/application/home/bloc/home_page_bloc.dart';
 import 'package:shattered_star/application/notes/note_actor/note_actor_bloc.dart';
 import 'package:shattered_star/application/notes/note_watcher/note_watcher_bloc.dart';
 import 'package:shattered_star/injection.dart';
@@ -11,7 +12,6 @@ import 'package:shattered_star/presentation/notes/notes_overview.dart/widgets/no
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 class NotesOverviewPage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -67,12 +67,9 @@ class NotesOverviewPage extends StatelessWidget {
               ),
             ],
           ),
-          body: NotesOverviewBody(),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {
-              //TODO: Navigate to NoteFormPage
-            },
-            child: Icon(Icons.add),
+          body: BlocProvider(
+            create: (context) => HomePageBloc(),
+            child: NotesOverviewBody(),
           ),
         ),
       ),
