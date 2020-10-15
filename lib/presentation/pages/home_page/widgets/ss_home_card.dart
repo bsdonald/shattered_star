@@ -56,10 +56,12 @@ class _SSHomeCardState extends State<SSHomeCard> {
                         textAlign: TextAlign.center,
                       ),
                     ),
-              child: Image.asset(
-                widget.image,
-                fit: BoxFit.contain,
-                height: 10,
+              child: Ink(
+                child: Image.asset(
+                  widget.image,
+                  fit: BoxFit.contain,
+                  height: 10,
+                ),
               ),
             ),
           ),

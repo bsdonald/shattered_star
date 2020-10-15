@@ -50,6 +50,7 @@ class _HomeBodyState extends State<HomeBody> {
             characterWis: 18,
             characterCha: 13,
             backgroundGradient: myGradient,
+            textColor: paletteGenerator.lightMutedColor.color
           ),
         ),
         Expanded(
@@ -102,6 +103,5 @@ class _HomeBodyState extends State<HomeBody> {
       maximumColorCount: 20,
     );
     setState(() {});
-    print(paletteGenerator.colors);
   }
 }
