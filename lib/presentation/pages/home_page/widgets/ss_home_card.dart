@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:shattered_star/application/home/bloc/home_page_bloc.dart';
 
 class SSHomeCard extends StatefulWidget {
