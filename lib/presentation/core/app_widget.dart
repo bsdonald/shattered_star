@@ -25,10 +25,10 @@ class AppWidget extends StatelessWidget {
           router: Router(),
         ),
         theme: ThemeData.light().copyWith(
-          primaryColor: colors.primary,
-          accentColor: colors.secondary,
-          scaffoldBackgroundColor: colors.background,
-          cardColor: colors.tertiary,
+          primaryColor: colors.lightBlue,
+          accentColor: colors.darkOrange,
+          scaffoldBackgroundColor: colors.lightGrey,
+          cardColor: colors.blueGreen,
           cardTheme: const CardTheme(
             elevation: 8,
             shape: RoundedRectangleBorder(
@@ -36,7 +36,7 @@ class AppWidget extends StatelessWidget {
             ),
           ),
           floatingActionButtonTheme: FloatingActionButtonThemeData(
-            backgroundColor: colors.secondary,
+            backgroundColor: colors.lightOrange,
           ),
           inputDecorationTheme: InputDecorationTheme(
             border: OutlineInputBorder(

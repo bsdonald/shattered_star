@@ -7,11 +7,13 @@ class SSHomeCard extends StatefulWidget {
   final String title;
   final String image;
   final Function onTap;
+  final Alignment gradientAlignment;
 
   SSHomeCard({
     @required this.title,
     @required this.image,
     @required this.onTap,
+    @required this.gradientAlignment,
   });
 
   @override
@@ -57,6 +59,19 @@ class _SSHomeCardState extends State<SSHomeCard> {
                       ),
                     ),
               child: Ink(
+                decoration: BoxDecoration(
+                  gradient: RadialGradient(
+                    colors: [
+                      Theme.of(context).scaffoldBackgroundColor,
+                      Theme.of(context).cardColor,
+                      Theme.of(context).accentColor,
+                    ],
+                    center: widget.gradientAlignment,
+                    radius: 1,
+                    tileMode: TileMode.mirror
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                ),
                 child: Image.asset(
                   widget.image,
                   fit: BoxFit.contain,

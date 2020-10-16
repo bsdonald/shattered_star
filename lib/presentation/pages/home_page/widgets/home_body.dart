@@ -18,8 +18,8 @@ class _HomeBodyState extends State<HomeBody> {
   String characterImage = 'assets/images/Reily.png';
   @override
   void initState() {
-    _generatePalette(characterImage);
     super.initState();
+    _generatePalette(characterImage);
   }
 
   @override
@@ -66,28 +66,28 @@ class _HomeBodyState extends State<HomeBody> {
                 title: 'Inventory',
                 onTap: () {
                   ExtendedNavigator.of(context).push(Routes.test);
-                },
+                }, gradientAlignment: Alignment.bottomRight,
               ),
               SSHomeCard(
                 image: 'assets/images/quest_items.png',
                 title: 'Quest Items',
                 onTap: () {
                   ExtendedNavigator.of(context).push(Routes.test);
-                },
+                }, gradientAlignment: Alignment.bottomLeft,
               ),
               SSHomeCard(
                 image: 'assets/images/characters_npcs.png',
                 title: 'Characters/NPCs',
                 onTap: () {
                   ExtendedNavigator.of(context).push(Routes.test);
-                },
+                }, gradientAlignment: Alignment.topRight,
               ),
               SSHomeCard(
                 image: 'assets/images/journal1.png',
                 title: 'Journal',
                 onTap: () {
                   ExtendedNavigator.of(context).push(Routes.test);
-                },
+                }, gradientAlignment: Alignment.topLeft,
               ),
             ],
           ),
