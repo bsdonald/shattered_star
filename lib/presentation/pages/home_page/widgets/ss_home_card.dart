@@ -63,12 +63,12 @@ class _SSHomeCardState extends State<SSHomeCard> {
                   gradient: RadialGradient(
                     colors: [
                       Theme.of(context).scaffoldBackgroundColor,
+                      Theme.of(context).primaryColor,
                       Theme.of(context).cardColor,
-                      Theme.of(context).accentColor,
                     ],
                     center: widget.gradientAlignment,
-                    radius: 1,
-                    tileMode: TileMode.mirror
+                    radius: 1.75,
+                    tileMode: TileMode.clamp
                   ),
                   borderRadius: BorderRadius.all(Radius.circular(8.0)),
                 ),
