@@ -10,7 +10,7 @@ import 'package:shattered_star/domain/notes/i_note_repository.dart';
 import 'package:shattered_star/domain/notes/note.dart';
 import 'package:shattered_star/domain/notes/note_failure.dart';
 import 'package:shattered_star/domain/notes/value_objects.dart';
-import 'package:shattered_star/presentation/notes/note_form/misc/todo_item_presentation_classes.dart';
+import 'package:shattered_star/presentation/pages/note_form/misc/todo_item_presentation_classes.dart';
 
 part 'note_form_event.dart';
 part 'note_form_state.dart';

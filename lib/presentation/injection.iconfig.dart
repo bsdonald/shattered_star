@@ -8,6 +8,7 @@ import 'package:shattered_star/infrastructure/core/firebase_injectable_module.da
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:shattered_star/application/home/bloc/home_page_bloc.dart';
 import 'package:shattered_star/infrastructure/auth/firebase_auth_facade.dart';
 import 'package:shattered_star/domain/auth/i_auth_facade.dart';
 import 'package:shattered_star/infrastructure/notes/note_repository.dart';
@@ -27,6 +28,7 @@ void $initGetIt(GetIt g, {String environment}) {
   g.registerLazySingleton<Firestore>(() => firebaseInjectableModule.firestore);
   g.registerLazySingleton<GoogleSignIn>(
       () => firebaseInjectableModule.googleSignIn);
+  g.registerFactory<HomePageBloc>(() => HomePageBloc());
   g.registerLazySingleton<IAuthFacade>(
       () => FirebaseAuthFacade(g<FirebaseAuth>(), g<GoogleSignIn>()));
   g.registerLazySingleton<INoteRepository>(

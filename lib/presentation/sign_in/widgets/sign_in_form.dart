@@ -24,7 +24,7 @@ class SignInForm extends StatelessWidget {
               )).show(context);
             },
             (_) {
-              ExtendedNavigator.of(context).replace(Routes.notesOverviewPage);
+              ExtendedNavigator.of(context).replace(Routes.homePage);
               context.bloc<AuthBloc>().add(const AuthEvent.authCheckRequested());
             },
           ),
@@ -41,7 +41,7 @@ class SignInForm extends StatelessWidget {
                   vertical: 16,
                 ),
                 height: 250,
-                child: Image.asset('assets/images/shatteredstar.png'),
+                child: Image.asset('assets/images/shattered_star_logo.png'),
               ),
               const SizedBox(height: 8),
               TextFormField(
