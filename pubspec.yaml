@@ -71,6 +71,8 @@ flutter:
     - assets/images/characters_npcs.png
     - assets/images/Reily.png
     - assets/images/IMG_2211.JPG
+    - assets/images/rapunzel.png
+    - assets/images/tiana.png
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

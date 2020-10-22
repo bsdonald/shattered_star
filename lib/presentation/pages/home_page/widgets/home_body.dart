@@ -29,7 +29,7 @@ class _HomeBodyState extends State<HomeBody> {
       end: Alignment.bottomRight,
       colors: [
         paletteGenerator.lightMutedColor.color,
-        paletteGenerator.darkVibrantColor.color,
+        paletteGenerator.dominantColor.color,
         paletteGenerator.darkMutedColor.color,
       ],
     );
@@ -50,7 +50,7 @@ class _HomeBodyState extends State<HomeBody> {
             characterWis: 18,
             characterCha: 13,
             backgroundGradient: myGradient,
-            textColor: paletteGenerator.lightMutedColor.color
+            statBlocTextColor: paletteGenerator.lightMutedColor.color
           ),
         ),
         Expanded(

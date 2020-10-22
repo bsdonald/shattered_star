@@ -14,7 +14,9 @@ class CharacterCard extends StatelessWidget {
   final int characterWis;
   final int characterCha;
   final LinearGradient backgroundGradient;
-  final Color textColor;
+  final Color statBlocTextColor;
+  // final Color charDetailTextColor;
+  // final Color charDetailBackgroundColor;
 
   const CharacterCard({
     @required this.characterImagePath,
@@ -29,78 +31,88 @@ class CharacterCard extends StatelessWidget {
     @required this.characterInt,
     @required this.characterWis,
     @required this.characterCha,
-    @required this.textColor,
+    @required this.statBlocTextColor,
+    // @required this.charDetailTextColor,
+    // @required this.charDetailBackgroundColor,
   });
 
   @override
   Widget build(BuildContext context) {
     return Card(
-        elevation: 10,
-        child: Ink(
-    decoration: BoxDecoration(
-      gradient: backgroundGradient,
-      borderRadius: BorderRadius.all(Radius.circular(8.0)),
-    ),
-    child: DefaultTextStyle(
-      style: TextStyle(
-      color: textColor,
-      fontWeight: FontWeight.bold,
-    ),
-            child: Row(
-        children: <Widget>[
-          Expanded(
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: Image.asset(
-                  characterImagePath,
-                  fit: BoxFit.scaleDown,
-                  height: 175,
+      elevation: 10,
+      child: Ink(
+        decoration: BoxDecoration(
+          gradient: backgroundGradient,
+          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+        ),
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Image.asset(
+                    characterImagePath,
+                    fit: BoxFit.scaleDown,
+                    height: 175,
+                  ),
                 ),
               ),
             ),
-          ),
-          Expanded(
-            child: Column(
-              children: <Widget>[
-                Text(characterName),
-                  SizedBox(height: 8),
-                Text('$characterRace $characterClass'),
-                  SizedBox(height: 8),
-                Text('level: $characterLevel'),
-                  SizedBox(height: 8),
-              ],
-            ),
-          ),
-          Expanded(
-            child: Align(
-              alignment: Alignment.centerRight,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
+            Expanded(
+              child: DefaultTextStyle(
+                style: TextStyle(
+                  // backgroundColor: charDetailBackgroundColor,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
-                    Text('$characterStr STR'),
+                    Text(characterName),
                     SizedBox(height: 8),
-                    Text('$characterDex DEX'),
+                    Text('$characterRace $characterClass'),
                     SizedBox(height: 8),
-                    Text('$characterCon CON'),
+                    Text('level: $characterLevel'),
                     SizedBox(height: 8),
-                    Text('$characterInt INT'),
-                    SizedBox(height: 8),
-                    Text('$characterWis WIS'),
-                    SizedBox(height: 8),
-                    Text('$characterCha CHA'),
                   ],
                 ),
               ),
             ),
-          ),
-        ],
-      ),
-    ),
+            Expanded(
+              child: Align(
+                alignment: Alignment.centerRight,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: DefaultTextStyle(
+                    style: TextStyle(
+                      color: statBlocTextColor,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: <Widget>[
+                        Text('$characterStr STR'),
+                        SizedBox(height: 8),
+                        Text('$characterDex DEX'),
+                        SizedBox(height: 8),
+                        Text('$characterCon CON'),
+                        SizedBox(height: 8),
+                        Text('$characterInt INT'),
+                        SizedBox(height: 8),
+                        Text('$characterWis WIS'),
+                        SizedBox(height: 8),
+                        Text('$characterCha CHA'),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
-      );
+      ),
+    );
   }
 }
