@@ -9,7 +9,7 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).accentColor,
+        // backgroundColor: Theme.of(context).accentColor,
         title: const Text('Sign In'),
       ),
       body: BlocProvider(
