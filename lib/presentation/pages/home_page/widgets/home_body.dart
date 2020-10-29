@@ -15,7 +15,7 @@ class HomeBody extends StatefulWidget {
 
 class _HomeBodyState extends State<HomeBody> {
   PaletteGenerator paletteGenerator;
-  String characterImage = 'assets/images/Reily.png';
+  String characterImage = 'assets/images/reily.png';
   @override
   void initState() {
     super.initState();
@@ -38,20 +38,19 @@ class _HomeBodyState extends State<HomeBody> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: CharacterCard(
-            characterImagePath: characterImage,
-            characterName: 'Reily',
-            characterLevel: 2,
-            characterRace: 'Aasimar',
-            characterClass: 'Monk',
-            characterStr: 20,
-            characterDex: 15,
-            characterCon: 12,
-            characterInt: 12,
-            characterWis: 18,
-            characterCha: 13,
-            backgroundGradient: myGradient,
-            statBlocTextColor: paletteGenerator.lightMutedColor.color
-          ),
+              characterImagePath: characterImage,
+              characterName: 'Reily',
+              characterLevel: 2,
+              characterRace: 'Aasimar',
+              characterClass: 'Monk',
+              characterStr: 20,
+              characterDex: 15,
+              characterCon: 12,
+              characterInt: 12,
+              characterWis: 18,
+              characterCha: 13,
+              backgroundGradient: myGradient,
+              statBlocTextColor: paletteGenerator.lightMutedColor.color),
         ),
         Expanded(
           child: GridView.count(
@@ -66,28 +65,32 @@ class _HomeBodyState extends State<HomeBody> {
                 title: 'Inventory',
                 onTap: () {
                   ExtendedNavigator.of(context).push(Routes.test);
-                }, gradientAlignment: Alignment.bottomRight,
+                },
+                gradientAlignment: Alignment.bottomRight,
               ),
               SSHomeCard(
                 image: 'assets/images/quest_items.png',
                 title: 'Quest Items',
                 onTap: () {
                   ExtendedNavigator.of(context).push(Routes.test);
-                }, gradientAlignment: Alignment.bottomLeft,
+                },
+                gradientAlignment: Alignment.bottomLeft,
               ),
               SSHomeCard(
                 image: 'assets/images/characters_npcs.png',
                 title: 'Characters/NPCs',
                 onTap: () {
                   ExtendedNavigator.of(context).push(Routes.test);
-                }, gradientAlignment: Alignment.topRight,
+                },
+                gradientAlignment: Alignment.topRight,
               ),
               SSHomeCard(
                 image: 'assets/images/journal1.png',
                 title: 'Journal',
                 onTap: () {
                   ExtendedNavigator.of(context).push(Routes.test);
-                }, gradientAlignment: Alignment.topLeft,
+                },
+                gradientAlignment: Alignment.topLeft,
               ),
             ],
           ),

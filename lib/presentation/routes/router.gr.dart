@@ -9,6 +9,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../pages/character_sheet/character_sheet.dart';
 import '../pages/home_page/home_page.dart';
 import '../sign_in/sign_in_page.dart';
 import '../splash/splash_page.dart';
@@ -19,11 +20,13 @@ class Routes {
   static const String signInPage = '/sign-in-page';
   static const String homePage = '/home-page';
   static const String test = '/Test';
+  static const String reilySheet = '/reily-sheet';
   static const all = <String>{
     splashPage,
     signInPage,
     homePage,
     test,
+    reilySheet,
   };
 }
 
@@ -35,6 +38,7 @@ class Router extends RouterBase {
     RouteDef(Routes.signInPage, page: SignInPage),
     RouteDef(Routes.homePage, page: HomePage),
     RouteDef(Routes.test, page: Test),
+    RouteDef(Routes.reilySheet, page: ReilySheet),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -63,6 +67,12 @@ class Router extends RouterBase {
         settings: data,
       );
     },
+    ReilySheet: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => ReilySheet(),
+        settings: data,
+      );
+    },
   };
 }
 
@@ -78,4 +88,6 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
   Future<dynamic> pushHomePage() => push<dynamic>(Routes.homePage);
 
   Future<dynamic> pushTest() => push<dynamic>(Routes.test);
+
+  Future<dynamic> pushReilySheet() => push<dynamic>(Routes.reilySheet);
 }
