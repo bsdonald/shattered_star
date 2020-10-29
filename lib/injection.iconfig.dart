@@ -25,14 +25,15 @@ void $initGetIt(GetIt g, {String environment}) {
   final firebaseInjectableModule = _$FirebaseInjectableModule();
   g.registerLazySingleton<FirebaseAuth>(
       () => firebaseInjectableModule.firebaseAuth);
-  g.registerLazySingleton<Firestore>(() => firebaseInjectableModule.firestore);
+  g.registerLazySingleton<FirebaseFirestore>(
+      () => firebaseInjectableModule.firestore);
   g.registerLazySingleton<GoogleSignIn>(
       () => firebaseInjectableModule.googleSignIn);
   g.registerFactory<HomePageBloc>(() => HomePageBloc());
   g.registerLazySingleton<IAuthFacade>(
       () => FirebaseAuthFacade(g<FirebaseAuth>(), g<GoogleSignIn>()));
   g.registerLazySingleton<INoteRepository>(
-      () => NoteRepository(g<Firestore>()));
+      () => NoteRepository(g<FirebaseFirestore>()));
   g.registerFactory<NoteActorBloc>(() => NoteActorBloc(g<INoteRepository>()));
   g.registerFactory<NoteFormBloc>(() => NoteFormBloc(g<INoteRepository>()));
   g.registerFactory<NoteWatcherBloc>(
