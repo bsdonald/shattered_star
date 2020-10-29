@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shattered_star/application/auth/auth_bloc.dart';
 import 'package:shattered_star/injection.dart';
 import 'package:shattered_star/presentation/core/ss_colors.dart';
-import 'package:shattered_star/presentation/routes/router.gr.dart';
+import 'package:shattered_star/presentation/routes/router.gr.dart' as app_router;
 import 'package:shattered_star/presentation/sign_in/sign_in_page.dart';
 
 class AppWidget extends StatelessWidget {
@@ -21,9 +21,7 @@ class AppWidget extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: "Shattered Star Player's Guide",
-        builder: ExtendedNavigator(
-          router: Router(),
-        ),
+        builder: ExtendedNavigator.builder(router: app_router.Router()),
         theme: ThemeData.light().copyWith(
           primaryColor: colors.lightBlue,
           accentColor: colors.darkOrange,

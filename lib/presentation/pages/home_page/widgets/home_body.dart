@@ -15,7 +15,7 @@ class HomeBody extends StatefulWidget {
 
 class _HomeBodyState extends State<HomeBody> {
   PaletteGenerator paletteGenerator;
-  String characterImage = 'assets/images/Reily.png';
+  String characterImage = 'assets/images/IMG_2211.JPG';
   @override
   void initState() {
     super.initState();
