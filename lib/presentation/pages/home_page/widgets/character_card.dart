@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:palette_generator/palette_generator.dart';
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
+//TODO: CONSIDER RENAMING
 class CharacterCard extends StatelessWidget {
   final String characterImagePath;
   final String characterName;
@@ -42,7 +43,7 @@ class CharacterCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-                  ExtendedNavigator.of(context).push(Routes.reilySheet);
+                  ExtendedNavigator.of(context).push(Routes.characterDetailsPage);
                 },
           child: Card(
         elevation: 10,
