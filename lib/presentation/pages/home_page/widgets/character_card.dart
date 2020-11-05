@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:palette_generator/palette_generator.dart';
+import 'package:shattered_star/presentation/pages/character_details_page/widgets/pc_card.dart';
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 //TODO: CONSIDER RENAMING
@@ -43,9 +44,47 @@ class CharacterCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-                  ExtendedNavigator.of(context).push(Routes.characterDetailsPage);
-                },
-          child: Card(
+        // ExtendedNavigator.of(context).push(Routes.characterDetailsPage);
+        showDialog(
+          context: context,
+          builder: (_) => PCCard(
+            name: characterName,
+            favoredClass: characterClass,
+            level: characterLevel,
+            race: characterRace,
+            gender: 'Female',
+            age: 24,
+            feet: 5,
+            inches: 4,
+            weight: 125,
+            home: 'Magnimar',
+            alignment: 'Lawful Good',
+            diety: 'Iori',
+            languages: 'Common, Celetsial, Elven',
+            characterStr: characterStr,
+            characterDex: characterDex,
+            characterCon: characterCon,
+            characterInt: characterInt,
+            characterWis: characterWis,
+            characterCha: characterCha,
+            characterMaxHP: 22,
+            characterAC: 18,
+            characterFort: '+4',
+            characterRef: '+5',
+            characterWill: '+4',
+            characterMelee: '+7',
+            characterRanged: '+4',
+            characterCMD: '+23',
+            characterCMB: '+7',
+            imagePath: 'assets/images/reily.png',
+            bio:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n \n'
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n \n'
+                'this is a test',
+          ),
+        );
+      },
+      child: Card(
         elevation: 10,
         child: Ink(
           decoration: BoxDecoration(
@@ -68,22 +107,29 @@ class CharacterCard extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: DefaultTextStyle(
-                  style: TextStyle(
-                    // backgroundColor: charDetailBackgroundColor,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                  ),
-                  child: Column(
-                    children: <Widget>[
-                      Text(characterName),
-                      SizedBox(height: 8),
-                      Text('$characterRace $characterClass'),
-                      SizedBox(height: 8),
-                      Text('level: $characterLevel'),
-                      SizedBox(height: 8),
-                    ],
+                flex: 2,
+                child: Align(
+                  alignment: Alignment.center,
+                  child: DefaultTextStyle(
+                    style: TextStyle(
+                      // backgroundColor: charDetailBackgroundColor,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                    child: Column(
+                      children: <Widget>[
+                        Text(characterName),
+                        SizedBox(height: 8),
+                        Text(
+                          '$characterRace $characterClass',
+                          maxLines: 1,
+                        ),
+                        SizedBox(height: 8),
+                        Text('level: $characterLevel'),
+                        SizedBox(height: 8),
+                      ],
+                    ),
                   ),
                 ),
               ),

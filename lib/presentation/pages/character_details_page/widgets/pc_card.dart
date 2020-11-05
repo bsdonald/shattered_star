@@ -3,24 +3,23 @@ import 'package:flutter/material.dart';
 class PCCard extends StatelessWidget {
   final String name;
   final String favoredClass;
-  final String level;
+  final int level;
   final String race;
   final String gender;
-  final String age;
-  final String height;
-  final String weight;
+  final int age;
+  final int weight;
   final String home;
   final String alignment;
   final String diety;
   final String languages;
-  final String characterStr;
-  final String characterDex;
-  final String characterCon;
-  final String characterInt;
-  final String characterWis;
-  final String characterCha;
-  final String characterMaxHP;
-  final String characterAC;
+  final int characterStr;
+  final int characterDex;
+  final int characterCon;
+  final int characterInt;
+  final int characterWis;
+  final int characterCha;
+  final int characterMaxHP;
+  final int characterAC;
   final String characterFort;
   final String characterRef;
   final String characterWill;
@@ -30,6 +29,8 @@ class PCCard extends StatelessWidget {
   final String characterCMB;
   final String imagePath;
   final String bio;
+  final int feet;
+  final int inches;
 
   const PCCard({
     this.name,
@@ -38,7 +39,6 @@ class PCCard extends StatelessWidget {
     this.race,
     this.gender,
     this.age,
-    this.height,
     this.weight,
     this.home,
     this.alignment,
@@ -61,15 +61,25 @@ class PCCard extends StatelessWidget {
     this.characterCMB,
     this.imagePath,
     this.bio,
+    this.feet,
+    this.inches,
   });
+
+  void show(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (_) => this,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     var backgroundImage = 'assets/images/forest.jpg';
     var _imagePath = imagePath ?? '';
 
-    return Card(
-      margin: EdgeInsets.all(8),
+    return Dialog(
+      // margin: EdgeInsets.all(8),
+      insetPadding: EdgeInsets.all(8),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
       ),
@@ -155,7 +165,7 @@ class PCCard extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text('Level:'),
-                                    Text(level ?? ''),
+                                    Text('${level ?? ''}'),
                                   ],
                                 ),
                                 SizedBox(
@@ -175,7 +185,7 @@ class PCCard extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text('Age:'),
-                                    Text(age ?? ''),
+                                    Text('${age ?? ''}'),
                                   ],
                                 ),
                                 SizedBox(
@@ -185,7 +195,7 @@ class PCCard extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text('Height:'),
-                                    Text(height ?? ''),
+                                    Text('$feet\'$inches"' ?? ''),
                                   ],
                                 ),
                                 SizedBox(
@@ -195,7 +205,7 @@ class PCCard extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text('Weight:'),
-                                    Text(weight ?? ''),
+                                    Text('$weight lbs' ?? ''),
                                   ],
                                 ),
                                 SizedBox(
@@ -274,44 +284,20 @@ class PCCard extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                Text('STR:'),
-                                Text(characterStr ?? ''),
+                                Text('STR: '),
+                                Text('${characterStr ?? ''}'),
                               ],
                             ),
                             Row(
                               children: [
-                                Text('DEX:'),
-                                Text(characterDex ?? ''),
+                                Text('DEX: '),
+                                Text('${characterDex ?? ''}'),
                               ],
                             ),
                             Row(
                               children: [
-                                Text('CON:'),
-                                Text(characterCon ?? ''),
-                              ],
-                            ),
-                          ],
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Row(
-                              children: [
-                                Text('INT:'),
-                                Text(characterInt ?? ''),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Text('WIS:'),
-                                Text(characterWis ?? ''),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Text('CHA:'),
-                                Text(characterCha ?? ''),
+                                Text('CON: '),
+                                Text('${characterCon ?? ''}'),
                               ],
                             ),
                           ],
@@ -322,19 +308,43 @@ class PCCard extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                Text('Max HP:'),
-                                Text(characterMaxHP ?? ''),
+                                Text('INT: '),
+                                Text('${characterInt ?? ''}'),
                               ],
                             ),
                             Row(
                               children: [
-                                Text('AC:'),
-                                Text(characterAC ?? ''),
+                                Text('WIS: '),
+                                Text('${characterWis ?? ''}'),
                               ],
                             ),
                             Row(
                               children: [
-                                Text('CMD:'),
+                                Text('CHA: '),
+                                Text('${characterCha ?? ''}'),
+                              ],
+                            ),
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Row(
+                              children: [
+                                Text('Max HP: '),
+                                Text('${characterMaxHP ?? ''}'),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text('AC: '),
+                                Text('${characterAC ?? ''}'),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text('CMD: '),
                                 Text(characterCMD ?? ''),
                               ],
                             ),
@@ -346,19 +356,19 @@ class PCCard extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                Text('Melee:'),
+                                Text('Melee: '),
                                 Text(characterMelee ?? ''),
                               ],
                             ),
                             Row(
                               children: [
-                                Text('Ranged:'),
+                                Text('Ranged: '),
                                 Text(characterRanged ?? ''),
                               ],
                             ),
                             Row(
                               children: [
-                                Text('CMB:'),
+                                Text('CMB: '),
                                 Text(characterCMB ?? ''),
                               ],
                             ),
@@ -400,7 +410,7 @@ class PCCard extends StatelessWidget {
                         ),
                         Container(
                           child: Text(
-                            bio?? '',
+                            bio ?? '',
                             textAlign: TextAlign.left,
                           ),
                         ),

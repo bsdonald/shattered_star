@@ -77,7 +77,7 @@ class SignInForm extends StatelessWidget {
                 autocorrect: false,
                 obscureText: true,
               ),
-              const SizedBox(height: 8), 
+              const SizedBox(height: 8),
               Row(
                 children: [
                   Expanded(
@@ -120,6 +120,12 @@ class SignInForm extends StatelessWidget {
                   ),
                 ),
               ),
+              if (state.isSubmitting) ...[
+                const SizedBox(height: 8),
+                const LinearProgressIndicator(
+                  value: null,
+                ),
+              ]
             ],
           ),
         );
