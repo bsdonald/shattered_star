@@ -60,6 +60,24 @@ Either<ValueFailure<String>, String> validateEmailAddress(String input) {
   }
 }
 
+Either<ValueFailure<String>, String> validateStatNumber(String input) {
+  const numericRegex = r'\b(0?[1-9]|1[0-9]|2[0-0])\b';
+  if (RegExp(numericRegex).hasMatch(input)) {
+    return right(input);
+  } else {
+    return left(ValueFailure.invalidNumber(failedValue: input));
+  }
+}
+
+Either<ValueFailure<String>, String> validateIsNumber(String input) {
+  const numericRegex = r'^-?[0-9]+$';
+  if (RegExp(numericRegex).hasMatch(input)) {
+    return right(input);
+  } else {
+    return left(ValueFailure.invalidNumber(failedValue: input));
+  }
+}
+
 Either<ValueFailure<String>, String> validatePassword(String input) {
   if (input.length >= 6) {
     return right(input);

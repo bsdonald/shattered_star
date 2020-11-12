@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:palette_generator/palette_generator.dart';
 import 'package:shattered_star/application/home/bloc/home_page_bloc.dart';
+import 'package:shattered_star/dummy_data/Reily.dart';
 import 'package:shattered_star/injection.dart';
 import 'package:shattered_star/presentation/pages/character_details_page/widgets/pc_card.dart';
 import 'package:shattered_star/presentation/pages/home_page/widgets/character_card.dart';
@@ -16,7 +17,7 @@ class HomeBody extends StatefulWidget {
 
 class _HomeBodyState extends State<HomeBody> {
   PaletteGenerator paletteGenerator;
-  String characterImage = 'assets/images/reily.png';
+   String characterImage = 'assets/images/reily.png';
   @override
   void initState() {
     super.initState();
@@ -25,13 +26,17 @@ class _HomeBodyState extends State<HomeBody> {
 
   @override
   Widget build(BuildContext context) {
+    var paletteColor1 = paletteGenerator?.lightMutedColor?.color ?? Theme.of(context).scaffoldBackgroundColor;
+    var paletteColor2 = paletteGenerator?.dominantColor?.color ?? Theme.of(context).primaryColor;
+    var paletteColor3 = paletteGenerator?.darkMutedColor?.color ?? Theme.of(context).cardColor;
+    var statBlocTextColor = paletteGenerator?.lightMutedColor?.color ?? Colors.white;
     var myGradient = LinearGradient(
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
       colors: [
-        paletteGenerator.lightMutedColor.color,
-        paletteGenerator.dominantColor.color,
-        paletteGenerator.darkMutedColor.color,
+        paletteColor1,
+        paletteColor2,
+        paletteColor3,
       ],
     );
     return Column(
@@ -51,7 +56,7 @@ class _HomeBodyState extends State<HomeBody> {
               characterWis: 18,
               characterCha: 13,
               backgroundGradient: myGradient,
-              statBlocTextColor: paletteGenerator.lightMutedColor.color),
+              statBlocTextColor: statBlocTextColor),
         ),
         Expanded(
           child: GridView.count(
@@ -101,11 +106,15 @@ class _HomeBodyState extends State<HomeBody> {
   }
 
   Future<void> _generatePalette(String imagePath) async {
-    paletteGenerator = await PaletteGenerator.fromImageProvider(
-      AssetImage(imagePath),
-      // size: Size(110, 150),
-      maximumColorCount: 20,
-    );
-    setState(() {});
+    if (imagePath.isNotEmpty) {
+      paletteGenerator = await PaletteGenerator.fromImageProvider(
+        AssetImage(imagePath),
+        // size: Size(110, 150),
+        maximumColorCount: 20,
+      );
+      setState(() {});
+    } else {
+      setState(() {});
+    }
   }
 }

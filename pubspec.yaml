@@ -46,6 +46,9 @@ dependencies:
   palette_generator: ^0.2.3
 
 dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mockito: ^4.1.1
   build_runner: null
   freezed: ^0.10.9
   lint: ^1.2.0
