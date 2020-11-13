@@ -30,7 +30,7 @@ class _$CharacterTearOff {
       @required Strength strength,
       @required Dexterity dexterity,
       @required Constitution constitution,
-      @required Intellegence intellegence,
+      @required Intelligence intelligence,
       @required Wisdom wisdom,
       @required Charisma charisma,
       @required MaxHP maxHP,
@@ -58,7 +58,7 @@ class _$CharacterTearOff {
       strength: strength,
       dexterity: dexterity,
       constitution: constitution,
-      intellegence: intellegence,
+      intelligence: intelligence,
       wisdom: wisdom,
       charisma: charisma,
       maxHP: maxHP,
@@ -93,7 +93,7 @@ mixin _$Character {
   Strength get strength;
   Dexterity get dexterity;
   Constitution get constitution;
-  Intellegence get intellegence;
+  Intelligence get intelligence;
   Wisdom get wisdom;
   Charisma get charisma;
   MaxHP get maxHP;
@@ -128,7 +128,7 @@ abstract class $CharacterCopyWith<$Res> {
       Strength strength,
       Dexterity dexterity,
       Constitution constitution,
-      Intellegence intellegence,
+      Intelligence intelligence,
       Wisdom wisdom,
       Charisma charisma,
       MaxHP maxHP,
@@ -166,7 +166,7 @@ class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
     Object strength = freezed,
     Object dexterity = freezed,
     Object constitution = freezed,
-    Object intellegence = freezed,
+    Object intelligence = freezed,
     Object wisdom = freezed,
     Object charisma = freezed,
     Object maxHP = freezed,
@@ -205,9 +205,9 @@ class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
       constitution: constitution == freezed
           ? _value.constitution
           : constitution as Constitution,
-      intellegence: intellegence == freezed
-          ? _value.intellegence
-          : intellegence as Intellegence,
+      intelligence: intelligence == freezed
+          ? _value.intelligence
+          : intelligence as Intelligence,
       wisdom: wisdom == freezed ? _value.wisdom : wisdom as Wisdom,
       charisma: charisma == freezed ? _value.charisma : charisma as Charisma,
       maxHP: maxHP == freezed ? _value.maxHP : maxHP as MaxHP,
@@ -252,7 +252,7 @@ abstract class _$CharacterCopyWith<$Res> implements $CharacterCopyWith<$Res> {
       Strength strength,
       Dexterity dexterity,
       Constitution constitution,
-      Intellegence intellegence,
+      Intelligence intelligence,
       Wisdom wisdom,
       Charisma charisma,
       MaxHP maxHP,
@@ -291,7 +291,7 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
     Object strength = freezed,
     Object dexterity = freezed,
     Object constitution = freezed,
-    Object intellegence = freezed,
+    Object intelligence = freezed,
     Object wisdom = freezed,
     Object charisma = freezed,
     Object maxHP = freezed,
@@ -330,9 +330,9 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
       constitution: constitution == freezed
           ? _value.constitution
           : constitution as Constitution,
-      intellegence: intellegence == freezed
-          ? _value.intellegence
-          : intellegence as Intellegence,
+      intelligence: intelligence == freezed
+          ? _value.intelligence
+          : intelligence as Intelligence,
       wisdom: wisdom == freezed ? _value.wisdom : wisdom as Wisdom,
       charisma: charisma == freezed ? _value.charisma : charisma as Charisma,
       maxHP: maxHP == freezed ? _value.maxHP : maxHP as MaxHP,
@@ -373,7 +373,7 @@ class _$_Character extends _Character {
       @required this.strength,
       @required this.dexterity,
       @required this.constitution,
-      @required this.intellegence,
+      @required this.intelligence,
       @required this.wisdom,
       @required this.charisma,
       @required this.maxHP,
@@ -400,7 +400,7 @@ class _$_Character extends _Character {
         assert(strength != null),
         assert(dexterity != null),
         assert(constitution != null),
-        assert(intellegence != null),
+        assert(intelligence != null),
         assert(wisdom != null),
         assert(charisma != null),
         assert(maxHP != null),
@@ -447,7 +447,7 @@ class _$_Character extends _Character {
   @override
   final Constitution constitution;
   @override
-  final Intellegence intellegence;
+  final Intelligence intelligence;
   @override
   final Wisdom wisdom;
   @override
@@ -469,7 +469,7 @@ class _$_Character extends _Character {
 
   @override
   String toString() {
-    return 'Character(userId: $userId, name: $name, race: $race, favoredClass: $favoredClass, level: $level, gender: $gender, age: $age, heightFeet: $heightFeet, heightInches: $heightInches, weight: $weight, home: $home, alignment: $alignment, deity: $deity, languages: $languages, strength: $strength, dexterity: $dexterity, constitution: $constitution, intellegence: $intellegence, wisdom: $wisdom, charisma: $charisma, maxHP: $maxHP, armorClass: $armorClass, combatManeuverDefense: $combatManeuverDefense, meleeMod: $meleeMod, rangedMod: $rangedMod, combatManeuverBonus: $combatManeuverBonus, description: $description)';
+    return 'Character(userId: $userId, name: $name, race: $race, favoredClass: $favoredClass, level: $level, gender: $gender, age: $age, heightFeet: $heightFeet, heightInches: $heightInches, weight: $weight, home: $home, alignment: $alignment, deity: $deity, languages: $languages, strength: $strength, dexterity: $dexterity, constitution: $constitution, intelligence: $intelligence, wisdom: $wisdom, charisma: $charisma, maxHP: $maxHP, armorClass: $armorClass, combatManeuverDefense: $combatManeuverDefense, meleeMod: $meleeMod, rangedMod: $rangedMod, combatManeuverBonus: $combatManeuverBonus, description: $description)';
   }
 
   @override
@@ -518,9 +518,9 @@ class _$_Character extends _Character {
             (identical(other.constitution, constitution) ||
                 const DeepCollectionEquality()
                     .equals(other.constitution, constitution)) &&
-            (identical(other.intellegence, intellegence) ||
+            (identical(other.intelligence, intelligence) ||
                 const DeepCollectionEquality()
-                    .equals(other.intellegence, intellegence)) &&
+                    .equals(other.intelligence, intelligence)) &&
             (identical(other.wisdom, wisdom) ||
                 const DeepCollectionEquality().equals(other.wisdom, wisdom)) &&
             (identical(other.charisma, charisma) ||
@@ -567,7 +567,7 @@ class _$_Character extends _Character {
       const DeepCollectionEquality().hash(strength) ^
       const DeepCollectionEquality().hash(dexterity) ^
       const DeepCollectionEquality().hash(constitution) ^
-      const DeepCollectionEquality().hash(intellegence) ^
+      const DeepCollectionEquality().hash(intelligence) ^
       const DeepCollectionEquality().hash(wisdom) ^
       const DeepCollectionEquality().hash(charisma) ^
       const DeepCollectionEquality().hash(maxHP) ^
@@ -603,7 +603,7 @@ abstract class _Character extends Character {
       @required Strength strength,
       @required Dexterity dexterity,
       @required Constitution constitution,
-      @required Intellegence intellegence,
+      @required Intelligence intelligence,
       @required Wisdom wisdom,
       @required Charisma charisma,
       @required MaxHP maxHP,
@@ -649,7 +649,7 @@ abstract class _Character extends Character {
   @override
   Constitution get constitution;
   @override
-  Intellegence get intellegence;
+  Intelligence get intelligence;
   @override
   Wisdom get wisdom;
   @override

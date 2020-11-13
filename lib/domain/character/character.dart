@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:shattered_star/domain/core/value_objects.dart';
-import 'package:shattered_star/domain/characters/value_objects.dart';
+import 'package:shattered_star/domain/character/value_objects.dart';
 
 part 'character.freezed.dart';
 
@@ -26,7 +26,7 @@ abstract class Character implements _$Character {
     @required Strength strength,
     @required Dexterity dexterity,
     @required Constitution constitution,
-    @required Intellegence intellegence,
+    @required Intelligence intelligence,
     @required Wisdom wisdom,
     @required Charisma charisma,
     @required MaxHP maxHP,
@@ -56,7 +56,7 @@ abstract class Character implements _$Character {
         strength: Strength(''),
         dexterity: Dexterity(''),
         constitution: Constitution(''),
-        intellegence: Intellegence(''),
+        intelligence: Intelligence(''),
         wisdom: Wisdom(''),
         charisma: Charisma(''),
         maxHP: MaxHP(''),
@@ -65,6 +65,6 @@ abstract class Character implements _$Character {
         meleeMod: MeleeMod(''),
         rangedMod: RangedMod(''),
         combatManeuverBonus: CombatManeuverBonus(''),
-        description: Description('input'),
+        description: Description(''),
       );
 }

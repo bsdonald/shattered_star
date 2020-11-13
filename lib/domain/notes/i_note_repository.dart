@@ -9,7 +9,7 @@ abstract class INoteRepository {
 
   //CRUD
 
-  //watch notes
+  // watch notes
   Stream<Either<NoteFailure, KtList<Note>>> watchAll();
   //watch uncompleted notes
   Stream<Either<NoteFailure, KtList<Note>>> watchUncompleted();

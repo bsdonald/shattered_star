@@ -244,18 +244,18 @@ class Constitution extends ValueObject<String> {
   const Constitution._(this.value);
 }
 
-class Intellegence extends ValueObject<String> {
+class Intelligence extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
 
-  factory Intellegence(String input) {
+  factory Intelligence(String input) {
     assert(input != null);
-    return Intellegence._(
+    return Intelligence._(
       validateStatNumber(input),
         );
   }
 
-  const Intellegence._(this.value);
+  const Intelligence._(this.value);
 }
 
 class Wisdom extends ValueObject<String> {
