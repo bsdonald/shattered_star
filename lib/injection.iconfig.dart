@@ -21,6 +21,8 @@ import 'package:shattered_star/application/notes/note_watcher/note_watcher_bloc.
 import 'package:shattered_star/presentation/core/ss_colors.dart';
 import 'package:shattered_star/application/auth/sign_in_form/sign_in_form_bloc.dart';
 import 'package:shattered_star/application/auth/auth_bloc.dart';
+import 'package:shattered_star/application/characters/character_actor/character_actor_bloc.dart';
+import 'package:shattered_star/application/characters/character_watcher/character_watcher_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 void $initGetIt(GetIt g, {String environment}) {
@@ -45,6 +47,10 @@ void $initGetIt(GetIt g, {String environment}) {
   g.registerFactory<SSColors>(() => SSColors());
   g.registerFactory<SignInFormBloc>(() => SignInFormBloc(g<IAuthFacade>()));
   g.registerFactory<AuthBloc>(() => AuthBloc(g<IAuthFacade>()));
+  g.registerFactory<CharacterActorBloc>(
+      () => CharacterActorBloc(g<ICharacterRepository>()));
+  g.registerFactory<CharacterWatcherBloc>(
+      () => CharacterWatcherBloc(g<ICharacterRepository>()));
 }
 
 class _$FirebaseInjectableModule extends FirebaseInjectableModule {}
