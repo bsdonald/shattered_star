@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 
 import '../pages/character/character_details_page/character_details_page.dart';
 import '../pages/character/character_home_page/character_home_page.dart';
+import '../pages/character/character_overview_page/character_overview_page.dart';
 import '../sign_in/sign_in_page.dart';
 import '../splash/splash_page.dart';
 import '../test/test.dart';
@@ -21,12 +22,14 @@ class Routes {
   static const String homePage = '/home-page';
   static const String test = '/Test';
   static const String characterDetailsPage = '/character-details-page';
+  static const String characterOverviewPage = '/character-overview-page';
   static const all = <String>{
     splashPage,
     signInPage,
     homePage,
     test,
     characterDetailsPage,
+    characterOverviewPage,
   };
 }
 
@@ -39,6 +42,7 @@ class Router extends RouterBase {
     RouteDef(Routes.homePage, page: HomePage),
     RouteDef(Routes.test, page: Test),
     RouteDef(Routes.characterDetailsPage, page: CharacterDetailsPage),
+    RouteDef(Routes.characterOverviewPage, page: CharacterOverviewPage),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -73,6 +77,12 @@ class Router extends RouterBase {
         settings: data,
       );
     },
+    CharacterOverviewPage: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => CharacterOverviewPage(),
+        settings: data,
+      );
+    },
   };
 }
 
@@ -91,4 +101,7 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
 
   Future<dynamic> pushCharacterDetailsPage() =>
       push<dynamic>(Routes.characterDetailsPage);
+
+  Future<dynamic> pushCharacterOverviewPage() =>
+      push<dynamic>(Routes.characterOverviewPage);
 }

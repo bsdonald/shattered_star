@@ -26,7 +26,6 @@ class _SSHomeCardState extends State<SSHomeCard> {
 
   @override
   Widget build(BuildContext context) {
-    print('test $test');
 
     return BlocBuilder<HomePageBloc, HomePageState>(
       builder: (context, state) {
@@ -34,13 +33,10 @@ class _SSHomeCardState extends State<SSHomeCard> {
           onTapDown: (details) {
             test = true;
             context.bloc<HomePageBloc>().add(HomePageEvent.cardPressed());
-            print('test $test');
           },
           onTapUp: (details) {
             test = false;
-            print('test $test');
             context.bloc<HomePageBloc>().add(HomePageEvent.cardReleased());
-            print(state);
           },
           onTapCancel: () {
             test = false;
@@ -60,16 +56,11 @@ class _SSHomeCardState extends State<SSHomeCard> {
                     ),
               child: Ink(
                 decoration: BoxDecoration(
-                  gradient: RadialGradient(
-                    colors: [
-                      Theme.of(context).scaffoldBackgroundColor,
-                      Theme.of(context).primaryColor,
-                      Theme.of(context).cardColor,
-                    ],
-                    center: widget.gradientAlignment,
-                    radius: 1.75,
-                    tileMode: TileMode.clamp
-                  ),
+                  gradient: RadialGradient(colors: [
+                    Theme.of(context).scaffoldBackgroundColor,
+                    Theme.of(context).primaryColor,
+                    Theme.of(context).cardColor,
+                  ], center: widget.gradientAlignment, radius: 1.75, tileMode: TileMode.clamp),
                   borderRadius: BorderRadius.all(Radius.circular(8.0)),
                 ),
                 child: Image.asset(

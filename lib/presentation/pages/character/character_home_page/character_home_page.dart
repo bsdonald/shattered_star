@@ -16,12 +16,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider<NoteWatcherBloc>(
-          create: (context) => getIt<NoteWatcherBloc>()..add(const NoteWatcherEvent.watchAllStarted()),
-        ),
-        BlocProvider<NoteActorBloc>(
-          create: (context) => getIt<NoteActorBloc>(),
-        ),
+        BlocProvider<HomePageBloc>(
+          create: (context) => HomePageBloc(),
+        )
       ],
       child: MultiBlocListener(
         listeners: [
@@ -33,23 +30,6 @@ class HomePage extends StatelessWidget {
               );
             },
           ),
-          BlocListener<NoteActorBloc, NoteActorState>(
-            listener: (context, state) {
-              state.maybeMap(
-                deleteFailure: (state) {
-                  FlushbarHelper.createError(
-                    duration: const Duration(seconds: 5),
-                    message: state.noteFailure.map(
-                      unexpected: (_) => 'Unexpected error occured while deleting, please contact support.',
-                      insufficientPermission: (_) => 'Insufficient permissions ❌',
-                      unableToUpdate: (_) => 'Impossible error',
-                    ),
-                  ).show(context);
-                },
-                orElse: () {},
-              );
-            },
-          ),
         ],
         child: Scaffold(
           appBar: AppBar(
@@ -57,7 +37,7 @@ class HomePage extends StatelessWidget {
             leading: IconButton(
               icon: Icon(Icons.exit_to_app),
               onPressed: () {
-                context.bloc<AuthBloc>().add(const AuthEvent.signedOut());
+                ExtendedNavigator.of(context).replace(Routes.characterOverviewPage);
               },
             ),
             actions: <Widget>[
@@ -67,10 +47,7 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-          body: BlocProvider(
-            create: (context) => HomePageBloc(),
-            child: HomeBody(),
-          ),
+          body: HomeBody(),
         ),
       ),
     );
