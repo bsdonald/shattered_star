@@ -10,7 +10,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../pages/character_details_page/character_details_page.dart';
-import '../pages/home_page/home_page.dart';
+import '../pages/character_home_page/character_home_page.dart';
 import '../sign_in/sign_in_page.dart';
 import '../splash/splash_page.dart';
 import '../test/test.dart';
