@@ -1,4 +1,6 @@
+import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:shattered_star/domain/core/failures.dart';
 import 'package:shattered_star/domain/core/value_objects.dart';
 import 'package:shattered_star/domain/character/value_objects.dart';
 
@@ -16,8 +18,7 @@ abstract class Character implements _$Character {
     @required Level level,
     @required Gender gender,
     @required Age age,
-    @required HeightFeet heightFeet,
-    @required HeightInches heightInches,
+    @required Height height,
     @required Weight weight,
     @required Home home,
     @required Alignment alignment,
@@ -36,6 +37,7 @@ abstract class Character implements _$Character {
     @required RangedMod rangedMod,
     @required CombatManeuverBonus combatManeuverBonus,
     @required Description description,
+    @required ImagePath imagePath,
   }) = _Character;
 
   factory Character.empty() => Character(
@@ -46,8 +48,7 @@ abstract class Character implements _$Character {
         level: Level(''),
         gender: Gender(''),
         age: Age(''),
-        heightFeet: HeightFeet(''),
-        heightInches: HeightInches(''),
+        height: Height(''),
         weight: Weight(''),
         home: Home(''),
         alignment: Alignment(''),
@@ -66,5 +67,35 @@ abstract class Character implements _$Character {
         rangedMod: RangedMod(''),
         combatManeuverBonus: CombatManeuverBonus(''),
         description: Description(''),
+        imagePath: ImagePath(''),
       );
+  Option<ValueFailure<dynamic>> get failureOption {
+    return name.failureOrUnit
+        .andThen(race.failureOrUnit)
+        .andThen(favoredClass.failureOrUnit)
+        .andThen(level.failureOrUnit)
+        .andThen(gender.failureOrUnit)
+        .andThen(age.failureOrUnit)
+        .andThen(height.failureOrUnit)
+        .andThen(weight.failureOrUnit)
+        .andThen(home.failureOrUnit)
+        .andThen(alignment.failureOrUnit)
+        .andThen(deity.failureOrUnit)
+        .andThen(languages.failureOrUnit)
+        .andThen(strength.failureOrUnit)
+        .andThen(dexterity.failureOrUnit)
+        .andThen(constitution.failureOrUnit)
+        .andThen(intelligence.failureOrUnit)
+        .andThen(wisdom.failureOrUnit)
+        .andThen(charisma.failureOrUnit)
+        .andThen(maxHP.failureOrUnit)
+        .andThen(armorClass.failureOrUnit)
+        .andThen(combatManeuverDefense.failureOrUnit)
+        .andThen(meleeMod.failureOrUnit)
+        .andThen(rangedMod.failureOrUnit)
+        .andThen(combatManeuverBonus.failureOrUnit)
+        .andThen(description.failureOrUnit)
+        .andThen(imagePath.failureOrUnit)
+        .fold((f) => some(f), (r) => none());
+  }
 }

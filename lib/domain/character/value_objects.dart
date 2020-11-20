@@ -95,42 +95,35 @@ class Age extends ValueObject<String> {
   const Age._(this.value);
 }
 
-class HeightFeet extends ValueObject<String> {
+class Height extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
 
-  factory HeightFeet(String input) {
+    static const maxLength = 8;
+
+
+  factory Height(String input) {
     assert(input != null);
-    return HeightFeet._(
-      validateIsNumber(input),
+    return Height._(
+      validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty).flatMap(validateSingleLine),
     );
   }
 
-  const HeightFeet._(this.value);
+  const Height._(this.value);
 }
 
-class HeightInches extends ValueObject<String> {
-  @override
-  final Either<ValueFailure<String>, String> value;
-
-  factory HeightInches(String input) {
-    assert(input != null);
-    return HeightInches._(
-      validateIsNumber(input),
-    );
-  }
-
-  const HeightInches._(this.value);
-}
 
 class Weight extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
 
+      static const maxLength = 10;
+
+
   factory Weight(String input) {
     assert(input != null);
     return Weight._(
-      validateIsNumber(input),
+      validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty).flatMap(validateSingleLine),
     );
   }
 
@@ -189,7 +182,7 @@ class Languages extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
 
-    static const maxLength = 25;
+    static const maxLength = 100;
 
   factory Languages(String input) {
     assert(input != null);
@@ -384,4 +377,20 @@ class Description extends ValueObject<String> {
   }
 
   const Description._(this.value);
+}
+
+class ImagePath extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+
+  static const maxLength = 1000;
+
+  factory ImagePath(String input) {
+    assert(input != null);
+    return ImagePath._(
+      validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty),
+    );
+  }
+
+  const ImagePath._(this.value);
 }

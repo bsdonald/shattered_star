@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route_annotations.dart';
 import 'package:shattered_star/presentation/pages/character/character_details_page/character_details_page.dart';
+import 'package:shattered_star/presentation/pages/character/character_form_page/character_form_page.dart';
 import 'package:shattered_star/presentation/pages/character/character_home_page/character_home_page.dart';
 import 'package:shattered_star/presentation/pages/character/character_overview_page/character_overview_page.dart';
 import 'package:shattered_star/presentation/sign_in/sign_in_page.dart';
@@ -15,6 +16,7 @@ import 'package:shattered_star/presentation/test/test.dart';
     MaterialRoute(page: Test),
     MaterialRoute(page: CharacterDetailsPage),
     MaterialRoute(page: CharacterOverviewPage),
+    MaterialRoute(page: CharacterFormPage, fullscreenDialog: true),
   ],
 )
 class $Router {}

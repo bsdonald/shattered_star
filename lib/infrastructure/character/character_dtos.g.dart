@@ -14,8 +14,7 @@ _$_Character _$_$_CharacterFromJson(Map<String, dynamic> json) {
     level: json['level'] as String,
     gender: json['gender'] as String,
     age: json['age'] as String,
-    heightFeet: json['heightFeet'] as String,
-    heightInches: json['heightInches'] as String,
+    height: json['height'] as String,
     weight: json['weight'] as String,
     home: json['home'] as String,
     alignment: json['alignment'] as String,
@@ -34,8 +33,7 @@ _$_Character _$_$_CharacterFromJson(Map<String, dynamic> json) {
     rangedMod: json['rangedMod'] as String,
     combatManeuverBonus: json['combatManeuverBonus'] as String,
     description: json['description'] as String,
-    serverTimeStamp:
-        const ServerTimeStampConverter().fromJson(json['serverTimeStamp']),
+    imagePath: json['imagePath'] as String,
   );
 }
 
@@ -47,8 +45,7 @@ Map<String, dynamic> _$_$_CharacterToJson(_$_Character instance) =>
       'level': instance.level,
       'gender': instance.gender,
       'age': instance.age,
-      'heightFeet': instance.heightFeet,
-      'heightInches': instance.heightInches,
+      'height': instance.height,
       'weight': instance.weight,
       'home': instance.home,
       'alignment': instance.alignment,
@@ -67,6 +64,5 @@ Map<String, dynamic> _$_$_CharacterToJson(_$_Character instance) =>
       'rangedMod': instance.rangedMod,
       'combatManeuverBonus': instance.combatManeuverBonus,
       'description': instance.description,
-      'serverTimeStamp':
-          const ServerTimeStampConverter().toJson(instance.serverTimeStamp),
+      'imagePath': instance.imagePath,
     };

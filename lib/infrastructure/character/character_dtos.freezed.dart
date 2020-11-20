@@ -23,8 +23,7 @@ class _$CharacterDtoTearOff {
       @required String level,
       @required String gender,
       @required String age,
-      @required String heightFeet,
-      @required String heightInches,
+      @required String height,
       @required String weight,
       @required String home,
       @required String alignment,
@@ -43,7 +42,7 @@ class _$CharacterDtoTearOff {
       @required String rangedMod,
       @required String combatManeuverBonus,
       @required String description,
-      @required @ServerTimeStampConverter() FieldValue serverTimeStamp}) {
+      @required String imagePath}) {
     return _Character(
       userId: userId,
       name: name,
@@ -52,8 +51,7 @@ class _$CharacterDtoTearOff {
       level: level,
       gender: gender,
       age: age,
-      heightFeet: heightFeet,
-      heightInches: heightInches,
+      height: height,
       weight: weight,
       home: home,
       alignment: alignment,
@@ -72,7 +70,7 @@ class _$CharacterDtoTearOff {
       rangedMod: rangedMod,
       combatManeuverBonus: combatManeuverBonus,
       description: description,
-      serverTimeStamp: serverTimeStamp,
+      imagePath: imagePath,
     );
   }
 }
@@ -89,8 +87,7 @@ mixin _$CharacterDto {
   String get level;
   String get gender;
   String get age;
-  String get heightFeet;
-  String get heightInches;
+  String get height;
   String get weight;
   String get home;
   String get alignment;
@@ -109,8 +106,7 @@ mixin _$CharacterDto {
   String get rangedMod;
   String get combatManeuverBonus;
   String get description;
-  @ServerTimeStampConverter()
-  FieldValue get serverTimeStamp;
+  String get imagePath;
 
   Map<String, dynamic> toJson();
   $CharacterDtoCopyWith<CharacterDto> get copyWith;
@@ -128,8 +124,7 @@ abstract class $CharacterDtoCopyWith<$Res> {
       String level,
       String gender,
       String age,
-      String heightFeet,
-      String heightInches,
+      String height,
       String weight,
       String home,
       String alignment,
@@ -148,7 +143,7 @@ abstract class $CharacterDtoCopyWith<$Res> {
       String rangedMod,
       String combatManeuverBonus,
       String description,
-      @ServerTimeStampConverter() FieldValue serverTimeStamp});
+      String imagePath});
 }
 
 class _$CharacterDtoCopyWithImpl<$Res> implements $CharacterDtoCopyWith<$Res> {
@@ -167,8 +162,7 @@ class _$CharacterDtoCopyWithImpl<$Res> implements $CharacterDtoCopyWith<$Res> {
     Object level = freezed,
     Object gender = freezed,
     Object age = freezed,
-    Object heightFeet = freezed,
-    Object heightInches = freezed,
+    Object height = freezed,
     Object weight = freezed,
     Object home = freezed,
     Object alignment = freezed,
@@ -187,7 +181,7 @@ class _$CharacterDtoCopyWithImpl<$Res> implements $CharacterDtoCopyWith<$Res> {
     Object rangedMod = freezed,
     Object combatManeuverBonus = freezed,
     Object description = freezed,
-    Object serverTimeStamp = freezed,
+    Object imagePath = freezed,
   }) {
     return _then(_value.copyWith(
       userId: userId == freezed ? _value.userId : userId as String,
@@ -199,11 +193,7 @@ class _$CharacterDtoCopyWithImpl<$Res> implements $CharacterDtoCopyWith<$Res> {
       level: level == freezed ? _value.level : level as String,
       gender: gender == freezed ? _value.gender : gender as String,
       age: age == freezed ? _value.age : age as String,
-      heightFeet:
-          heightFeet == freezed ? _value.heightFeet : heightFeet as String,
-      heightInches: heightInches == freezed
-          ? _value.heightInches
-          : heightInches as String,
+      height: height == freezed ? _value.height : height as String,
       weight: weight == freezed ? _value.weight : weight as String,
       home: home == freezed ? _value.home : home as String,
       alignment: alignment == freezed ? _value.alignment : alignment as String,
@@ -232,9 +222,7 @@ class _$CharacterDtoCopyWithImpl<$Res> implements $CharacterDtoCopyWith<$Res> {
           : combatManeuverBonus as String,
       description:
           description == freezed ? _value.description : description as String,
-      serverTimeStamp: serverTimeStamp == freezed
-          ? _value.serverTimeStamp
-          : serverTimeStamp as FieldValue,
+      imagePath: imagePath == freezed ? _value.imagePath : imagePath as String,
     ));
   }
 }
@@ -253,8 +241,7 @@ abstract class _$CharacterCopyWith<$Res>
       String level,
       String gender,
       String age,
-      String heightFeet,
-      String heightInches,
+      String height,
       String weight,
       String home,
       String alignment,
@@ -273,7 +260,7 @@ abstract class _$CharacterCopyWith<$Res>
       String rangedMod,
       String combatManeuverBonus,
       String description,
-      @ServerTimeStampConverter() FieldValue serverTimeStamp});
+      String imagePath});
 }
 
 class __$CharacterCopyWithImpl<$Res> extends _$CharacterDtoCopyWithImpl<$Res>
@@ -293,8 +280,7 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterDtoCopyWithImpl<$Res>
     Object level = freezed,
     Object gender = freezed,
     Object age = freezed,
-    Object heightFeet = freezed,
-    Object heightInches = freezed,
+    Object height = freezed,
     Object weight = freezed,
     Object home = freezed,
     Object alignment = freezed,
@@ -313,7 +299,7 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterDtoCopyWithImpl<$Res>
     Object rangedMod = freezed,
     Object combatManeuverBonus = freezed,
     Object description = freezed,
-    Object serverTimeStamp = freezed,
+    Object imagePath = freezed,
   }) {
     return _then(_Character(
       userId: userId == freezed ? _value.userId : userId as String,
@@ -325,11 +311,7 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterDtoCopyWithImpl<$Res>
       level: level == freezed ? _value.level : level as String,
       gender: gender == freezed ? _value.gender : gender as String,
       age: age == freezed ? _value.age : age as String,
-      heightFeet:
-          heightFeet == freezed ? _value.heightFeet : heightFeet as String,
-      heightInches: heightInches == freezed
-          ? _value.heightInches
-          : heightInches as String,
+      height: height == freezed ? _value.height : height as String,
       weight: weight == freezed ? _value.weight : weight as String,
       home: home == freezed ? _value.home : home as String,
       alignment: alignment == freezed ? _value.alignment : alignment as String,
@@ -358,9 +340,7 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterDtoCopyWithImpl<$Res>
           : combatManeuverBonus as String,
       description:
           description == freezed ? _value.description : description as String,
-      serverTimeStamp: serverTimeStamp == freezed
-          ? _value.serverTimeStamp
-          : serverTimeStamp as FieldValue,
+      imagePath: imagePath == freezed ? _value.imagePath : imagePath as String,
     ));
   }
 }
@@ -375,8 +355,7 @@ class _$_Character extends _Character {
       @required this.level,
       @required this.gender,
       @required this.age,
-      @required this.heightFeet,
-      @required this.heightInches,
+      @required this.height,
       @required this.weight,
       @required this.home,
       @required this.alignment,
@@ -395,15 +374,14 @@ class _$_Character extends _Character {
       @required this.rangedMod,
       @required this.combatManeuverBonus,
       @required this.description,
-      @required @ServerTimeStampConverter() this.serverTimeStamp})
+      @required this.imagePath})
       : assert(name != null),
         assert(race != null),
         assert(favoredClass != null),
         assert(level != null),
         assert(gender != null),
         assert(age != null),
-        assert(heightFeet != null),
-        assert(heightInches != null),
+        assert(height != null),
         assert(weight != null),
         assert(home != null),
         assert(alignment != null),
@@ -422,7 +400,7 @@ class _$_Character extends _Character {
         assert(rangedMod != null),
         assert(combatManeuverBonus != null),
         assert(description != null),
-        assert(serverTimeStamp != null),
+        assert(imagePath != null),
         super._();
 
   factory _$_Character.fromJson(Map<String, dynamic> json) =>
@@ -444,9 +422,7 @@ class _$_Character extends _Character {
   @override
   final String age;
   @override
-  final String heightFeet;
-  @override
-  final String heightInches;
+  final String height;
   @override
   final String weight;
   @override
@@ -484,12 +460,11 @@ class _$_Character extends _Character {
   @override
   final String description;
   @override
-  @ServerTimeStampConverter()
-  final FieldValue serverTimeStamp;
+  final String imagePath;
 
   @override
   String toString() {
-    return 'CharacterDto(userId: $userId, name: $name, race: $race, favoredClass: $favoredClass, level: $level, gender: $gender, age: $age, heightFeet: $heightFeet, heightInches: $heightInches, weight: $weight, home: $home, alignment: $alignment, deity: $deity, languages: $languages, strength: $strength, dexterity: $dexterity, constitution: $constitution, intelligence: $intelligence, wisdom: $wisdom, charisma: $charisma, maxHP: $maxHP, armorClass: $armorClass, combatManeuverDefense: $combatManeuverDefense, meleeMod: $meleeMod, rangedMod: $rangedMod, combatManeuverBonus: $combatManeuverBonus, description: $description, serverTimeStamp: $serverTimeStamp)';
+    return 'CharacterDto(userId: $userId, name: $name, race: $race, favoredClass: $favoredClass, level: $level, gender: $gender, age: $age, height: $height, weight: $weight, home: $home, alignment: $alignment, deity: $deity, languages: $languages, strength: $strength, dexterity: $dexterity, constitution: $constitution, intelligence: $intelligence, wisdom: $wisdom, charisma: $charisma, maxHP: $maxHP, armorClass: $armorClass, combatManeuverDefense: $combatManeuverDefense, meleeMod: $meleeMod, rangedMod: $rangedMod, combatManeuverBonus: $combatManeuverBonus, description: $description, imagePath: $imagePath)';
   }
 
   @override
@@ -511,12 +486,8 @@ class _$_Character extends _Character {
                 const DeepCollectionEquality().equals(other.gender, gender)) &&
             (identical(other.age, age) ||
                 const DeepCollectionEquality().equals(other.age, age)) &&
-            (identical(other.heightFeet, heightFeet) ||
-                const DeepCollectionEquality()
-                    .equals(other.heightFeet, heightFeet)) &&
-            (identical(other.heightInches, heightInches) ||
-                const DeepCollectionEquality()
-                    .equals(other.heightInches, heightInches)) &&
+            (identical(other.height, height) ||
+                const DeepCollectionEquality().equals(other.height, height)) &&
             (identical(other.weight, weight) ||
                 const DeepCollectionEquality().equals(other.weight, weight)) &&
             (identical(other.home, home) ||
@@ -564,8 +535,11 @@ class _$_Character extends _Character {
                 const DeepCollectionEquality()
                     .equals(other.combatManeuverBonus, combatManeuverBonus)) &&
             (identical(other.description, description) ||
-                const DeepCollectionEquality().equals(other.description, description)) &&
-            (identical(other.serverTimeStamp, serverTimeStamp) || const DeepCollectionEquality().equals(other.serverTimeStamp, serverTimeStamp)));
+                const DeepCollectionEquality()
+                    .equals(other.description, description)) &&
+            (identical(other.imagePath, imagePath) ||
+                const DeepCollectionEquality()
+                    .equals(other.imagePath, imagePath)));
   }
 
   @override
@@ -578,8 +552,7 @@ class _$_Character extends _Character {
       const DeepCollectionEquality().hash(level) ^
       const DeepCollectionEquality().hash(gender) ^
       const DeepCollectionEquality().hash(age) ^
-      const DeepCollectionEquality().hash(heightFeet) ^
-      const DeepCollectionEquality().hash(heightInches) ^
+      const DeepCollectionEquality().hash(height) ^
       const DeepCollectionEquality().hash(weight) ^
       const DeepCollectionEquality().hash(home) ^
       const DeepCollectionEquality().hash(alignment) ^
@@ -598,7 +571,7 @@ class _$_Character extends _Character {
       const DeepCollectionEquality().hash(rangedMod) ^
       const DeepCollectionEquality().hash(combatManeuverBonus) ^
       const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(serverTimeStamp);
+      const DeepCollectionEquality().hash(imagePath);
 
   @override
   _$CharacterCopyWith<_Character> get copyWith =>
@@ -613,35 +586,33 @@ class _$_Character extends _Character {
 abstract class _Character extends CharacterDto {
   const _Character._() : super._();
   const factory _Character(
-          {@JsonKey(ignore: true) String userId,
-          @required String name,
-          @required String race,
-          @required String favoredClass,
-          @required String level,
-          @required String gender,
-          @required String age,
-          @required String heightFeet,
-          @required String heightInches,
-          @required String weight,
-          @required String home,
-          @required String alignment,
-          @required String deity,
-          @required String languages,
-          @required String strength,
-          @required String dexterity,
-          @required String constitution,
-          @required String intelligence,
-          @required String wisdom,
-          @required String charisma,
-          @required String maxHP,
-          @required String armorClass,
-          @required String combatManeuverDefense,
-          @required String meleeMod,
-          @required String rangedMod,
-          @required String combatManeuverBonus,
-          @required String description,
-          @required @ServerTimeStampConverter() FieldValue serverTimeStamp}) =
-      _$_Character;
+      {@JsonKey(ignore: true) String userId,
+      @required String name,
+      @required String race,
+      @required String favoredClass,
+      @required String level,
+      @required String gender,
+      @required String age,
+      @required String height,
+      @required String weight,
+      @required String home,
+      @required String alignment,
+      @required String deity,
+      @required String languages,
+      @required String strength,
+      @required String dexterity,
+      @required String constitution,
+      @required String intelligence,
+      @required String wisdom,
+      @required String charisma,
+      @required String maxHP,
+      @required String armorClass,
+      @required String combatManeuverDefense,
+      @required String meleeMod,
+      @required String rangedMod,
+      @required String combatManeuverBonus,
+      @required String description,
+      @required String imagePath}) = _$_Character;
 
   factory _Character.fromJson(Map<String, dynamic> json) =
       _$_Character.fromJson;
@@ -662,9 +633,7 @@ abstract class _Character extends CharacterDto {
   @override
   String get age;
   @override
-  String get heightFeet;
-  @override
-  String get heightInches;
+  String get height;
   @override
   String get weight;
   @override
@@ -702,8 +671,7 @@ abstract class _Character extends CharacterDto {
   @override
   String get description;
   @override
-  @ServerTimeStampConverter()
-  FieldValue get serverTimeStamp;
+  String get imagePath;
   @override
   _$CharacterCopyWith<_Character> get copyWith;
 }

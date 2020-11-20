@@ -6,6 +6,7 @@ import 'package:shattered_star/application/auth/auth_bloc.dart';
 import 'package:shattered_star/application/characters/character_actor/character_actor_bloc.dart';
 import 'package:shattered_star/application/characters/character_watcher/character_watcher_bloc.dart';
 import 'package:shattered_star/injection.dart';
+import 'package:shattered_star/presentation/pages/character/character_overview_page/widgets/character_overview_body.dart';
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 class CharacterOverviewPage extends StatelessWidget {
@@ -58,11 +59,14 @@ class CharacterOverviewPage extends StatelessWidget {
             ),
             actions: <Widget>[
               IconButton(
-                icon: Icon(Icons.indeterminate_check_box),
-                onPressed: () {},
+                icon: Icon(Icons.person_add_rounded),
+                onPressed: () {
+                  ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: null);
+                },
               ),
             ],
           ),
+          body: CharacterOverviewBody(),
         ),
       ),
     );

@@ -20,8 +20,7 @@ class _$CharacterTearOff {
       @required Level level,
       @required Gender gender,
       @required Age age,
-      @required HeightFeet heightFeet,
-      @required HeightInches heightInches,
+      @required Height height,
       @required Weight weight,
       @required Home home,
       @required Alignment alignment,
@@ -39,7 +38,8 @@ class _$CharacterTearOff {
       @required MeleeMod meleeMod,
       @required RangedMod rangedMod,
       @required CombatManeuverBonus combatManeuverBonus,
-      @required Description description}) {
+      @required Description description,
+      @required ImagePath imagePath}) {
     return _Character(
       userId: userId,
       name: name,
@@ -48,8 +48,7 @@ class _$CharacterTearOff {
       level: level,
       gender: gender,
       age: age,
-      heightFeet: heightFeet,
-      heightInches: heightInches,
+      height: height,
       weight: weight,
       home: home,
       alignment: alignment,
@@ -68,6 +67,7 @@ class _$CharacterTearOff {
       rangedMod: rangedMod,
       combatManeuverBonus: combatManeuverBonus,
       description: description,
+      imagePath: imagePath,
     );
   }
 }
@@ -83,8 +83,7 @@ mixin _$Character {
   Level get level;
   Gender get gender;
   Age get age;
-  HeightFeet get heightFeet;
-  HeightInches get heightInches;
+  Height get height;
   Weight get weight;
   Home get home;
   Alignment get alignment;
@@ -103,6 +102,7 @@ mixin _$Character {
   RangedMod get rangedMod;
   CombatManeuverBonus get combatManeuverBonus;
   Description get description;
+  ImagePath get imagePath;
 
   $CharacterCopyWith<Character> get copyWith;
 }
@@ -118,8 +118,7 @@ abstract class $CharacterCopyWith<$Res> {
       Level level,
       Gender gender,
       Age age,
-      HeightFeet heightFeet,
-      HeightInches heightInches,
+      Height height,
       Weight weight,
       Home home,
       Alignment alignment,
@@ -137,7 +136,8 @@ abstract class $CharacterCopyWith<$Res> {
       MeleeMod meleeMod,
       RangedMod rangedMod,
       CombatManeuverBonus combatManeuverBonus,
-      Description description});
+      Description description,
+      ImagePath imagePath});
 }
 
 class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
@@ -156,8 +156,7 @@ class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
     Object level = freezed,
     Object gender = freezed,
     Object age = freezed,
-    Object heightFeet = freezed,
-    Object heightInches = freezed,
+    Object height = freezed,
     Object weight = freezed,
     Object home = freezed,
     Object alignment = freezed,
@@ -176,6 +175,7 @@ class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
     Object rangedMod = freezed,
     Object combatManeuverBonus = freezed,
     Object description = freezed,
+    Object imagePath = freezed,
   }) {
     return _then(_value.copyWith(
       userId: userId == freezed ? _value.userId : userId as UniqueId,
@@ -187,11 +187,7 @@ class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
       level: level == freezed ? _value.level : level as Level,
       gender: gender == freezed ? _value.gender : gender as Gender,
       age: age == freezed ? _value.age : age as Age,
-      heightFeet:
-          heightFeet == freezed ? _value.heightFeet : heightFeet as HeightFeet,
-      heightInches: heightInches == freezed
-          ? _value.heightInches
-          : heightInches as HeightInches,
+      height: height == freezed ? _value.height : height as Height,
       weight: weight == freezed ? _value.weight : weight as Weight,
       home: home == freezed ? _value.home : home as Home,
       alignment:
@@ -225,6 +221,8 @@ class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
       description: description == freezed
           ? _value.description
           : description as Description,
+      imagePath:
+          imagePath == freezed ? _value.imagePath : imagePath as ImagePath,
     ));
   }
 }
@@ -242,8 +240,7 @@ abstract class _$CharacterCopyWith<$Res> implements $CharacterCopyWith<$Res> {
       Level level,
       Gender gender,
       Age age,
-      HeightFeet heightFeet,
-      HeightInches heightInches,
+      Height height,
       Weight weight,
       Home home,
       Alignment alignment,
@@ -261,7 +258,8 @@ abstract class _$CharacterCopyWith<$Res> implements $CharacterCopyWith<$Res> {
       MeleeMod meleeMod,
       RangedMod rangedMod,
       CombatManeuverBonus combatManeuverBonus,
-      Description description});
+      Description description,
+      ImagePath imagePath});
 }
 
 class __$CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
@@ -281,8 +279,7 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
     Object level = freezed,
     Object gender = freezed,
     Object age = freezed,
-    Object heightFeet = freezed,
-    Object heightInches = freezed,
+    Object height = freezed,
     Object weight = freezed,
     Object home = freezed,
     Object alignment = freezed,
@@ -301,6 +298,7 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
     Object rangedMod = freezed,
     Object combatManeuverBonus = freezed,
     Object description = freezed,
+    Object imagePath = freezed,
   }) {
     return _then(_Character(
       userId: userId == freezed ? _value.userId : userId as UniqueId,
@@ -312,11 +310,7 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
       level: level == freezed ? _value.level : level as Level,
       gender: gender == freezed ? _value.gender : gender as Gender,
       age: age == freezed ? _value.age : age as Age,
-      heightFeet:
-          heightFeet == freezed ? _value.heightFeet : heightFeet as HeightFeet,
-      heightInches: heightInches == freezed
-          ? _value.heightInches
-          : heightInches as HeightInches,
+      height: height == freezed ? _value.height : height as Height,
       weight: weight == freezed ? _value.weight : weight as Weight,
       home: home == freezed ? _value.home : home as Home,
       alignment:
@@ -350,6 +344,8 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
       description: description == freezed
           ? _value.description
           : description as Description,
+      imagePath:
+          imagePath == freezed ? _value.imagePath : imagePath as ImagePath,
     ));
   }
 }
@@ -363,8 +359,7 @@ class _$_Character extends _Character {
       @required this.level,
       @required this.gender,
       @required this.age,
-      @required this.heightFeet,
-      @required this.heightInches,
+      @required this.height,
       @required this.weight,
       @required this.home,
       @required this.alignment,
@@ -382,7 +377,8 @@ class _$_Character extends _Character {
       @required this.meleeMod,
       @required this.rangedMod,
       @required this.combatManeuverBonus,
-      @required this.description})
+      @required this.description,
+      @required this.imagePath})
       : assert(userId != null),
         assert(name != null),
         assert(race != null),
@@ -390,8 +386,7 @@ class _$_Character extends _Character {
         assert(level != null),
         assert(gender != null),
         assert(age != null),
-        assert(heightFeet != null),
-        assert(heightInches != null),
+        assert(height != null),
         assert(weight != null),
         assert(home != null),
         assert(alignment != null),
@@ -410,6 +405,7 @@ class _$_Character extends _Character {
         assert(rangedMod != null),
         assert(combatManeuverBonus != null),
         assert(description != null),
+        assert(imagePath != null),
         super._();
 
   @override
@@ -427,9 +423,7 @@ class _$_Character extends _Character {
   @override
   final Age age;
   @override
-  final HeightFeet heightFeet;
-  @override
-  final HeightInches heightInches;
+  final Height height;
   @override
   final Weight weight;
   @override
@@ -466,10 +460,12 @@ class _$_Character extends _Character {
   final CombatManeuverBonus combatManeuverBonus;
   @override
   final Description description;
+  @override
+  final ImagePath imagePath;
 
   @override
   String toString() {
-    return 'Character(userId: $userId, name: $name, race: $race, favoredClass: $favoredClass, level: $level, gender: $gender, age: $age, heightFeet: $heightFeet, heightInches: $heightInches, weight: $weight, home: $home, alignment: $alignment, deity: $deity, languages: $languages, strength: $strength, dexterity: $dexterity, constitution: $constitution, intelligence: $intelligence, wisdom: $wisdom, charisma: $charisma, maxHP: $maxHP, armorClass: $armorClass, combatManeuverDefense: $combatManeuverDefense, meleeMod: $meleeMod, rangedMod: $rangedMod, combatManeuverBonus: $combatManeuverBonus, description: $description)';
+    return 'Character(userId: $userId, name: $name, race: $race, favoredClass: $favoredClass, level: $level, gender: $gender, age: $age, height: $height, weight: $weight, home: $home, alignment: $alignment, deity: $deity, languages: $languages, strength: $strength, dexterity: $dexterity, constitution: $constitution, intelligence: $intelligence, wisdom: $wisdom, charisma: $charisma, maxHP: $maxHP, armorClass: $armorClass, combatManeuverDefense: $combatManeuverDefense, meleeMod: $meleeMod, rangedMod: $rangedMod, combatManeuverBonus: $combatManeuverBonus, description: $description, imagePath: $imagePath)';
   }
 
   @override
@@ -491,12 +487,8 @@ class _$_Character extends _Character {
                 const DeepCollectionEquality().equals(other.gender, gender)) &&
             (identical(other.age, age) ||
                 const DeepCollectionEquality().equals(other.age, age)) &&
-            (identical(other.heightFeet, heightFeet) ||
-                const DeepCollectionEquality()
-                    .equals(other.heightFeet, heightFeet)) &&
-            (identical(other.heightInches, heightInches) ||
-                const DeepCollectionEquality()
-                    .equals(other.heightInches, heightInches)) &&
+            (identical(other.height, height) ||
+                const DeepCollectionEquality().equals(other.height, height)) &&
             (identical(other.weight, weight) ||
                 const DeepCollectionEquality().equals(other.weight, weight)) &&
             (identical(other.home, home) ||
@@ -544,7 +536,11 @@ class _$_Character extends _Character {
                 const DeepCollectionEquality()
                     .equals(other.combatManeuverBonus, combatManeuverBonus)) &&
             (identical(other.description, description) ||
-                const DeepCollectionEquality().equals(other.description, description)));
+                const DeepCollectionEquality()
+                    .equals(other.description, description)) &&
+            (identical(other.imagePath, imagePath) ||
+                const DeepCollectionEquality()
+                    .equals(other.imagePath, imagePath)));
   }
 
   @override
@@ -557,8 +553,7 @@ class _$_Character extends _Character {
       const DeepCollectionEquality().hash(level) ^
       const DeepCollectionEquality().hash(gender) ^
       const DeepCollectionEquality().hash(age) ^
-      const DeepCollectionEquality().hash(heightFeet) ^
-      const DeepCollectionEquality().hash(heightInches) ^
+      const DeepCollectionEquality().hash(height) ^
       const DeepCollectionEquality().hash(weight) ^
       const DeepCollectionEquality().hash(home) ^
       const DeepCollectionEquality().hash(alignment) ^
@@ -576,7 +571,8 @@ class _$_Character extends _Character {
       const DeepCollectionEquality().hash(meleeMod) ^
       const DeepCollectionEquality().hash(rangedMod) ^
       const DeepCollectionEquality().hash(combatManeuverBonus) ^
-      const DeepCollectionEquality().hash(description);
+      const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(imagePath);
 
   @override
   _$CharacterCopyWith<_Character> get copyWith =>
@@ -593,8 +589,7 @@ abstract class _Character extends Character {
       @required Level level,
       @required Gender gender,
       @required Age age,
-      @required HeightFeet heightFeet,
-      @required HeightInches heightInches,
+      @required Height height,
       @required Weight weight,
       @required Home home,
       @required Alignment alignment,
@@ -612,7 +607,8 @@ abstract class _Character extends Character {
       @required MeleeMod meleeMod,
       @required RangedMod rangedMod,
       @required CombatManeuverBonus combatManeuverBonus,
-      @required Description description}) = _$_Character;
+      @required Description description,
+      @required ImagePath imagePath}) = _$_Character;
 
   @override
   UniqueId get userId;
@@ -629,9 +625,7 @@ abstract class _Character extends Character {
   @override
   Age get age;
   @override
-  HeightFeet get heightFeet;
-  @override
-  HeightInches get heightInches;
+  Height get height;
   @override
   Weight get weight;
   @override
@@ -668,6 +662,8 @@ abstract class _Character extends Character {
   CombatManeuverBonus get combatManeuverBonus;
   @override
   Description get description;
+  @override
+  ImagePath get imagePath;
   @override
   _$CharacterCopyWith<_Character> get copyWith;
 }

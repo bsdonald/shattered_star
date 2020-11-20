@@ -22,6 +22,7 @@ import 'package:shattered_star/presentation/core/ss_colors.dart';
 import 'package:shattered_star/application/auth/sign_in_form/sign_in_form_bloc.dart';
 import 'package:shattered_star/application/auth/auth_bloc.dart';
 import 'package:shattered_star/application/characters/character_actor/character_actor_bloc.dart';
+import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
 import 'package:shattered_star/application/characters/character_watcher/character_watcher_bloc.dart';
 import 'package:get_it/get_it.dart';
 
@@ -49,6 +50,8 @@ void $initGetIt(GetIt g, {String environment}) {
   g.registerFactory<AuthBloc>(() => AuthBloc(g<IAuthFacade>()));
   g.registerFactory<CharacterActorBloc>(
       () => CharacterActorBloc(g<ICharacterRepository>()));
+  g.registerFactory<CharacterFormBloc>(
+      () => CharacterFormBloc(g<ICharacterRepository>()));
   g.registerFactory<CharacterWatcherBloc>(
       () => CharacterWatcherBloc(g<ICharacterRepository>()));
 }

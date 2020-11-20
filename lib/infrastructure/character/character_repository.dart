@@ -20,7 +20,7 @@ class CharacterRepository implements ICharacterRepository {
     final userDoc = await _firestore.userDocument();
     yield* userDoc.characterCollection
         .orderBy(
-          'serverTimeStamp',
+          'name',
           descending: true,
         )
         .snapshots()

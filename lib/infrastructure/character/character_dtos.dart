@@ -21,8 +21,7 @@ abstract class CharacterDto implements _$CharacterDto {
     @required String level,
     @required String gender,
     @required String age,
-    @required String heightFeet,
-    @required String heightInches,
+    @required String height,
     @required String weight,
     @required String home,
     @required String alignment,
@@ -41,7 +40,7 @@ abstract class CharacterDto implements _$CharacterDto {
     @required String rangedMod,
     @required String combatManeuverBonus,
     @required String description,
-    @required @ServerTimeStampConverter() FieldValue serverTimeStamp,
+    @required String imagePath,
   }) = _Character;
 
   factory CharacterDto.fromDomain(Character character) {
@@ -53,8 +52,7 @@ abstract class CharacterDto implements _$CharacterDto {
       level: character.level.getOrCrash(),
       gender: character.gender.getOrCrash(),
       age: character.age.getOrCrash(),
-      heightFeet: character.heightFeet.getOrCrash(),
-      heightInches: character.heightInches.getOrCrash(),
+      height: character.height.getOrCrash(),
       weight: character.weight.getOrCrash(),
       home: character.home.getOrCrash(),
       alignment: character.alignment.getOrCrash(),
@@ -73,7 +71,7 @@ abstract class CharacterDto implements _$CharacterDto {
       rangedMod: character.rangedMod.getOrCrash(),
       combatManeuverBonus: character.combatManeuverBonus.getOrCrash(),
       description: character.description.getOrCrash(),
-      serverTimeStamp: FieldValue.serverTimestamp(),
+      imagePath: character.imagePath.getOrCrash(),
     );
   }
 
@@ -86,8 +84,7 @@ abstract class CharacterDto implements _$CharacterDto {
       level: Level(level),
       gender: Gender(gender),
       age: Age(age),
-      heightFeet: HeightFeet(heightFeet),
-      heightInches: HeightInches(heightInches),
+      height: Height(height),
       weight: Weight(weight),
       home: Home(home),
       alignment: Alignment(alignment),
@@ -106,6 +103,7 @@ abstract class CharacterDto implements _$CharacterDto {
       rangedMod: RangedMod(rangedMod),
       combatManeuverBonus: CombatManeuverBonus(combatManeuverBonus),
       description:Description(description),
+      imagePath: ImagePath(imagePath),
    );
  }
 
@@ -116,14 +114,3 @@ abstract class CharacterDto implements _$CharacterDto {
   }
 }
 
-class ServerTimeStampConverter implements JsonConverter<FieldValue, Object> {
-  const ServerTimeStampConverter();
-
-  @override
-  FieldValue fromJson(Object json) {
-    return FieldValue.serverTimestamp();
-
-  }
-    @override
-    Object toJson(FieldValue fieldValue) => fieldValue;
-}

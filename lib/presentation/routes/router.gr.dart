@@ -9,7 +9,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../../domain/character/character.dart';
 import '../pages/character/character_details_page/character_details_page.dart';
+import '../pages/character/character_form_page/character_form_page.dart';
 import '../pages/character/character_home_page/character_home_page.dart';
 import '../pages/character/character_overview_page/character_overview_page.dart';
 import '../sign_in/sign_in_page.dart';
@@ -23,6 +25,7 @@ class Routes {
   static const String test = '/Test';
   static const String characterDetailsPage = '/character-details-page';
   static const String characterOverviewPage = '/character-overview-page';
+  static const String characterFormPage = '/character-form-page';
   static const all = <String>{
     splashPage,
     signInPage,
@@ -30,6 +33,7 @@ class Routes {
     test,
     characterDetailsPage,
     characterOverviewPage,
+    characterFormPage,
   };
 }
 
@@ -43,6 +47,7 @@ class Router extends RouterBase {
     RouteDef(Routes.test, page: Test),
     RouteDef(Routes.characterDetailsPage, page: CharacterDetailsPage),
     RouteDef(Routes.characterOverviewPage, page: CharacterOverviewPage),
+    RouteDef(Routes.characterFormPage, page: CharacterFormPage),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -83,6 +88,19 @@ class Router extends RouterBase {
         settings: data,
       );
     },
+    CharacterFormPage: (data) {
+      final args = data.getArgs<CharacterFormPageArguments>(
+        orElse: () => CharacterFormPageArguments(),
+      );
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => CharacterFormPage(
+          key: args.key,
+          editedCharacter: args.editedCharacter,
+        ),
+        settings: data,
+        fullscreenDialog: true,
+      );
+    },
   };
 }
 
@@ -104,4 +122,25 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
 
   Future<dynamic> pushCharacterOverviewPage() =>
       push<dynamic>(Routes.characterOverviewPage);
+
+  Future<dynamic> pushCharacterFormPage({
+    Key key,
+    Character editedCharacter,
+  }) =>
+      push<dynamic>(
+        Routes.characterFormPage,
+        arguments: CharacterFormPageArguments(
+            key: key, editedCharacter: editedCharacter),
+      );
+}
+
+/// ************************************************************************
+/// Arguments holder classes
+/// *************************************************************************
+
+/// CharacterFormPage arguments holder class
+class CharacterFormPageArguments {
+  final Key key;
+  final Character editedCharacter;
+  CharacterFormPageArguments({this.key, this.editedCharacter});
 }
