@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
+import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/character/value_objects.dart';
 
 class NamePlate extends StatelessWidget {
   final bool isEditing;
+  final Character character;
 
   const NamePlate({
     Key key,
-    this.isEditing,
+    @required this.isEditing,
+    @required this.character,
   }) : super(key: key);
 
   @override
@@ -55,7 +59,7 @@ class NamePlate extends StatelessWidget {
               ),
             )
           : Text(
-              'Reily Vanderale',
+              character.name.getOrCrash(),
               textAlign: TextAlign.center,
             ),
     );

@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
+import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/character/value_objects.dart' as char;
 
 class ImageField extends StatelessWidget {
   final bool isEditing;
+  final Character character;
   const ImageField({
     Key key,
-    this.isEditing,
+    @required this.character,
+    @required this.isEditing,
   }) : super(key: key);
 
   @override
@@ -55,7 +58,7 @@ class ImageField extends StatelessWidget {
               minLines: 1,
               maxLines: 8,
             )
-          : Image.network('https://firebasestorage.googleapis.com/v0/b/shattered-star.appspot.com/o/player_characters%2Freily.png?alt=media&token=9c93fcdf-5c04-4b8b-b62f-a5fc72e30b81'),
+          : Image.network(character.imagePath.getOrCrash()),
     );
   }
 }

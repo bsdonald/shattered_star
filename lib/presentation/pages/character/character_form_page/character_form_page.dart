@@ -129,7 +129,7 @@ class CharacterFormScaffold extends StatelessWidget {
         builder: (context, state) {
           return Form(
             autovalidate: state.showErrorMessages,
-            child: PlayerCharacterCard(isEditing: true),
+            child: PlayerCharacterCard(isEditing: true, character: null),
           );
         },
       ),

@@ -1,42 +1,23 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:palette_generator/palette_generator.dart';
+import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/presentation/pages/character/character_details_page/widgets/pc_card.dart';
 import 'package:shattered_star/presentation/pages/character/widgets/player_character_card/player_character_card.dart';
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 //TODO: CONSIDER RENAMING
 class CharacterCard extends StatelessWidget {
-  final String characterImagePath;
-  final String characterName;
-  final int characterLevel;
-  final String characterClass;
-  final String characterRace;
-  final int characterStr;
-  final int characterDex;
-  final int characterCon;
-  final int characterInt;
-  final int characterWis;
-  final int characterCha;
+  final Character character;
   final LinearGradient backgroundGradient;
   final Color statBlocTextColor;
   // final Color charDetailTextColor;
   // final Color charDetailBackgroundColor;
 
   const CharacterCard({
-    @required this.characterImagePath,
-    @required this.characterName,
-    @required this.characterLevel,
     @required this.backgroundGradient,
-    @required this.characterRace,
-    @required this.characterClass,
-    @required this.characterStr,
-    @required this.characterDex,
-    @required this.characterCon,
-    @required this.characterInt,
-    @required this.characterWis,
-    @required this.characterCha,
     @required this.statBlocTextColor,
+    @required this.character,
     // @required this.charDetailTextColor,
     // @required this.charDetailBackgroundColor,
   });
@@ -54,7 +35,7 @@ class CharacterCard extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
-            child: PlayerCharacterCard(isEditing: false),
+            child: PlayerCharacterCard(isEditing: false, character: character),
           ),
         );
       },
@@ -72,10 +53,10 @@ class CharacterCard extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8),
-                    child: characterImagePath.isEmpty
+                    child: character.imagePath.getOrCrash().isEmpty
                         ? Container()
-                        : Image.asset(
-                            characterImagePath,
+                        : Image.network(
+                            character.imagePath.getOrCrash(),
                             fit: BoxFit.scaleDown,
                             height: 175,
                           ),
@@ -95,14 +76,14 @@ class CharacterCard extends StatelessWidget {
                     ),
                     child: Column(
                       children: <Widget>[
-                        Text(characterName),
+                        Text(character.name.getOrCrash()),
                         SizedBox(height: 8),
                         Text(
-                          '$characterRace $characterClass',
+                          '${character.race.getOrCrash()} ${character.favoredClass.getOrCrash()}',
                           maxLines: 1,
                         ),
                         SizedBox(height: 8),
-                        Text('level: $characterLevel'),
+                        Text('level: ${character.level.getOrCrash()}'),
                         SizedBox(height: 8),
                       ],
                     ),
@@ -122,17 +103,17 @@ class CharacterCard extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: <Widget>[
-                          Text('$characterStr STR'),
+                          Text('${character.strength.getOrCrash()} STR'),
                           SizedBox(height: 8),
-                          Text('$characterDex DEX'),
+                          Text('${character.dexterity.getOrCrash()} DEX'),
                           SizedBox(height: 8),
-                          Text('$characterCon CON'),
+                          Text('${character.constitution.getOrCrash()} CON'),
                           SizedBox(height: 8),
-                          Text('$characterInt INT'),
+                          Text('${character.intelligence.getOrCrash()} INT'),
                           SizedBox(height: 8),
-                          Text('$characterWis WIS'),
+                          Text('${character.wisdom.getOrCrash()} WIS'),
                           SizedBox(height: 8),
-                          Text('$characterCha CHA'),
+                          Text('${character.charisma.getOrCrash()} CHA'),
                         ],
                       ),
                     ),

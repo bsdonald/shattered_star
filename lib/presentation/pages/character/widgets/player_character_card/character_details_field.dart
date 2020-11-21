@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
+import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/character/value_objects.dart' as char;
 
 class CharacterDetailsField extends StatelessWidget {
   final bool isEditing;
+  final Character character;
 
   const CharacterDetailsField({
     Key key,
-    this.isEditing,
+    @required this.isEditing,
+    @required this.character,
   }) : super(key: key);
 
   @override
@@ -37,14 +40,15 @@ class CharacterDetailsField extends StatelessWidget {
                           ),
                           (r) => null,
                         ),
-                    maxLength: char.Race.maxLength, label: 'Race:',
+                    maxLength: char.Race.maxLength,
+                    label: 'Race:',
                   )
                 : Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(child: Text('Race:')),
-                      Text('Aasimar'),
+                      Text(character.race.getOrCrash()),
                     ],
                   ),
             SizedBox(
@@ -63,13 +67,14 @@ class CharacterDetailsField extends StatelessWidget {
                           ),
                           (r) => null,
                         ),
-                    maxLength: char.FavoredClass.maxLength, label: 'Favored Class:',
+                    maxLength: char.FavoredClass.maxLength,
+                    label: 'Favored Class:',
                   )
                 : Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('Favored Class:'),
-                      Text('Monk'),
+                      Text(character.favoredClass.getOrCrash()),
                     ],
                   ),
             SizedBox(
@@ -87,13 +92,14 @@ class CharacterDetailsField extends StatelessWidget {
                             orElse: () => null,
                           ),
                           (r) => null,
-                        ), label: 'Level:',
+                        ),
+                    label: 'Level:',
                   )
                 : Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('Level:'),
-                      Text('2'),
+                      Text(character.level.getOrCrash()),
                     ],
                   ),
             SizedBox(
@@ -112,13 +118,14 @@ class CharacterDetailsField extends StatelessWidget {
                           ),
                           (r) => null,
                         ),
-                    maxLength: char.Gender.maxLength, label: 'Gender:',
+                    maxLength: char.Gender.maxLength,
+                    label: 'Gender:',
                   )
                 : Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('Gender:'),
-                      Text('Female'),
+                      Text(character.gender.getOrCrash()),
                     ],
                   ),
             SizedBox(
@@ -136,13 +143,14 @@ class CharacterDetailsField extends StatelessWidget {
                             orElse: () => null,
                           ),
                           (r) => null,
-                        ), label: 'Age:',
+                        ),
+                    label: 'Age:',
                   )
                 : Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('Age:'),
-                      Text('24'),
+                      Text(character.age.getOrCrash()),
                     ],
                   ),
             SizedBox(
@@ -161,13 +169,14 @@ class CharacterDetailsField extends StatelessWidget {
                           ),
                           (r) => null,
                         ),
-                    maxLength: char.Height.maxLength, label: 'Height (ft\'in\"):',
+                    maxLength: char.Height.maxLength,
+                    label: 'Height (ft\'in\"):',
                   )
                 : Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('Height:'),
-                      Text('5\'4\"'),
+                      Text(character.height.getOrCrash()),
                     ],
                   ),
             SizedBox(
@@ -186,13 +195,14 @@ class CharacterDetailsField extends StatelessWidget {
                           ),
                           (r) => null,
                         ),
-                    maxLength: char.Weight.maxLength, label: 'Weight:',
+                    maxLength: char.Weight.maxLength,
+                    label: 'Weight:',
                   )
                 : Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('Weight:'),
-                      Text('125 lbs'),
+                      Text(character.weight.getOrCrash()),
                     ],
                   ),
             SizedBox(
@@ -211,13 +221,14 @@ class CharacterDetailsField extends StatelessWidget {
                           ),
                           (r) => null,
                         ),
-                    maxLength: char.Home.maxLength, label: 'Home:',
+                    maxLength: char.Home.maxLength,
+                    label: 'Home:',
                   )
                 : Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('Home:'),
-                      Text('Magnimar'),
+                      Text(character.home.getOrCrash()),
                     ],
                   ),
             SizedBox(
@@ -236,13 +247,14 @@ class CharacterDetailsField extends StatelessWidget {
                           ),
                           (r) => null,
                         ),
-                    maxLength: char.Alignment.maxLength, label: 'Alignment:',
+                    maxLength: char.Alignment.maxLength,
+                    label: 'Alignment:',
                   )
                 : Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('Alignment:'),
-                      Text('Lawful Good'),
+                      Text(character.alignment.getOrCrash()),
                     ],
                   ),
             SizedBox(
@@ -261,13 +273,14 @@ class CharacterDetailsField extends StatelessWidget {
                           ),
                           (r) => null,
                         ),
-                    maxLength: char.Deity.maxLength, label: 'Deity:',
+                    maxLength: char.Deity.maxLength,
+                    label: 'Deity:',
                   )
                 : Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('Deity:'),
-                      Text('Deity'),
+                      Text(character.deity.getOrCrash()),
                     ],
                   ),
             SizedBox(
@@ -286,7 +299,8 @@ class CharacterDetailsField extends StatelessWidget {
                           ),
                           (r) => null,
                         ),
-                    maxLength: char.Languages.maxLength, label: 'Langauges:',
+                    maxLength: char.Languages.maxLength,
+                    label: 'Langauges:',
                     maxLines: 8,
                   )
                 : Row(
@@ -296,7 +310,7 @@ class CharacterDetailsField extends StatelessWidget {
                       Text('Languages:'),
                       Flexible(
                         child: Text(
-                          'Common, Celestial, Elven',
+                          character.languages.getOrCrash(),
                           textAlign: TextAlign.end,
                           // maxLines: 8,
                           // overflow: TextOverflow.clip,
@@ -333,7 +347,6 @@ class DetailsFormField extends StatelessWidget {
       child: TextFormField(
         textAlign: TextAlign.center,
         decoration: InputDecoration(
-        
           contentPadding: EdgeInsets.all(0),
           labelText: label,
           counterText: '',

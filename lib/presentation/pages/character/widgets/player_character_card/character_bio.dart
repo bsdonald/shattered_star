@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
+import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/character/value_objects.dart' as char;
 
 class CharacterBio extends StatelessWidget {
   final bool isEditing;
+  final Character character;
 
   const CharacterBio({
     Key key,
-    this.isEditing,
+    @required this.isEditing,
+    @required this.character,
   }) : super(key: key);
 
   @override
@@ -51,7 +54,7 @@ class CharacterBio extends StatelessWidget {
                       ),
                       (r) => null,
                     ),
-                maxLength: char.Gender.maxLength,
+                maxLength: char.Description.maxLength,
                 minLines: 6,
                 maxLines: 8,
               )
@@ -70,7 +73,7 @@ class CharacterBio extends StatelessWidget {
                   ),
                   Container(
                     child: Text(
-                      'Reily is twin and is kind of hot headed',
+                      character.description.getOrCrash(),
                       textAlign: TextAlign.left,
                     ),
                   ),

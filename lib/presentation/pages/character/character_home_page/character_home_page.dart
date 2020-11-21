@@ -6,12 +6,16 @@ import 'package:shattered_star/application/auth/auth_bloc.dart';
 import 'package:shattered_star/application/home/bloc/home_page_bloc.dart';
 import 'package:shattered_star/application/notes/note_actor/note_actor_bloc.dart';
 import 'package:shattered_star/application/notes/note_watcher/note_watcher_bloc.dart';
+import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/injection.dart';
 import 'package:shattered_star/presentation/core/ss_colors.dart';
 import 'package:shattered_star/presentation/pages//character/character_home_page/widgets/home_body.dart';
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 class HomePage extends StatelessWidget {
+  final Character character;
+
+  const HomePage({Key key, @required this.character}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -47,7 +51,7 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-          body: HomeBody(),
+          body: HomeBody(character: character),
         ),
       ),
     );

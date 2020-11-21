@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:palette_generator/palette_generator.dart';
 import 'package:shattered_star/application/home/bloc/home_page_bloc.dart';
+import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/dummy_data/Reily.dart';
 import 'package:shattered_star/injection.dart';
 import 'package:shattered_star/presentation/pages/character/character_details_page/widgets/pc_card.dart';
@@ -11,6 +12,9 @@ import 'package:shattered_star/presentation/pages/character/character_home_page/
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 class HomeBody extends StatefulWidget {
+  final Character character;
+
+  const HomeBody({Key key, @required this.character}) : super(key: key);
   @override
   _HomeBodyState createState() => _HomeBodyState();
 }
@@ -21,7 +25,7 @@ class _HomeBodyState extends State<HomeBody> {
   @override
   void initState() {
     super.initState();
-    _generatePalette(characterImage);
+    _generatePalette(widget.character.imagePath.getOrCrash());
   }
 
   @override
@@ -44,17 +48,7 @@ class _HomeBodyState extends State<HomeBody> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: CharacterCard(
-              characterImagePath: characterImage,
-              characterName: 'Reily',
-              characterLevel: 2,
-              characterRace: 'Aasimar',
-              characterClass: 'Monk',
-              characterStr: 20,
-              characterDex: 15,
-              characterCon: 12,
-              characterInt: 12,
-              characterWis: 18,
-              characterCha: 13,
+              character: widget.character,
               backgroundGradient: myGradient,
               statBlocTextColor: statBlocTextColor),
         ),
@@ -108,7 +102,7 @@ class _HomeBodyState extends State<HomeBody> {
   Future<void> _generatePalette(String imagePath) async {
     if (imagePath.isNotEmpty) {
       paletteGenerator = await PaletteGenerator.fromImageProvider(
-        AssetImage(imagePath),
+        NetworkImage(imagePath),
         // size: Size(110, 150),
         maximumColorCount: 20,
       );

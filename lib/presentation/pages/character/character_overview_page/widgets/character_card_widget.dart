@@ -15,45 +15,10 @@ class CharacterCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        ExtendedNavigator.of(context).push(Routes.homePage);
-        // showDialog(
-        //   context: context,
-        //   builder: (_) => PCCard(
-        //     name: characterName,
-        //     favoredClass: characterClass,
-        //     level: characterLevel,
-        //     race: characterRace,
-        //     gender: 'Female',
-        //     age: 24,
-        //     feet: 5,
-        //     inches: 4,
-        //     weight: 125,
-        //     home: 'Magnimar',
-        //     alignment: 'Lawful Good',
-        //     diety: 'Iori',
-        //     languages: 'Common, Celetsial, Elven',
-        //     characterStr: characterStr,
-        //     characterDex: characterDex,
-        //     characterCon: characterCon,
-        //     characterInt: characterInt,
-        //     characterWis: characterWis,
-        //     characterCha: characterCha,
-        //     characterMaxHP: 22,
-        //     characterAC: 18,
-        //     characterFort: '+4',
-        //     characterRef: '+5',
-        //     characterWill: '+4',
-        //     characterMelee: '+7',
-        //     characterRanged: '+4',
-        //     characterCMD: '+23',
-        //     characterCMB: '+7',
-        //     imagePath: characterImagePath,
-        //     bio:
-        //         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n \n'
-        //         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n \n'
-        //         'this is a test',
-        //   ),
-        // );
+        ExtendedNavigator.of(context).pushHomePage(character: character);
+      },
+      onLongPress: () {
+        ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character);
       },
       child: Card(
         elevation: 10,

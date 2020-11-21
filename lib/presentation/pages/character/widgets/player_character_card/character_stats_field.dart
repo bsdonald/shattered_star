@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
+import 'package:shattered_star/domain/character/character.dart';
 
 class CharacterStatsField extends StatelessWidget {
   final bool isEditing;
+  final Character character;
 
   const CharacterStatsField({
     Key key,
-    this.isEditing,
+    @required this.isEditing,
+    @required this.character,
   }) : super(key: key);
 
   @override
@@ -15,12 +18,19 @@ class CharacterStatsField extends StatelessWidget {
     return Container(
       // width: 900,
       color: Colors.amber,
-      child: isEditing ? StatBlocForm() : StatBlocGrid(),
+      child: isEditing ? StatBlocForm() : StatBlocGrid(character: character),
     );
   }
 }
 
 class StatBlocGrid extends StatelessWidget {
+  final Character character;
+
+  const StatBlocGrid({
+    Key key,
+    @required this.character,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -30,48 +40,48 @@ class StatBlocGrid extends StatelessWidget {
         children: <Widget>[
           Container(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-              Text('STR: 20'),
-              Text('DEX: 15'),
-              Text('CON: 12'),
+              Text('STR: ${character.strength.getOrCrash()}'),
+              Text('DEX: ${character.dexterity.getOrCrash()}'),
+              Text('CON: ${character.constitution.getOrCrash()}'),
             ],
           )
               // height: 600,
               ),
           Container(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-              Text('INT: 12'),
-              Text('WIS: 18'),
-              Text('CHA: 13'),
+              Text('INT: ${character.intelligence.getOrCrash()}'),
+              Text('WIS: ${character.wisdom.getOrCrash()}'),
+              Text('CHA: ${character.charisma.getOrCrash()}'),
             ],
           )
               // height: 600,
               ),
           Container(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-              Text('Max HP: 22'),
-              Text('AC: 18'),
-              Text('CMD: +23'),
+              Text('Max HP: ${character.maxHP.getOrCrash()}'),
+              Text('AC: ${character.armorClass.getOrCrash()}'),
+              Text('CMD: ${character.combatManeuverDefense.getOrCrash()}'),
             ],
           )
               // height: 600,
               ),
           Container(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-              Text('Melee: +7'),
-              Text('Ranged: +4'),
-              Text('CMB: +7'),
+              Text('Melee: ${character.meleeMod.getOrCrash()}'),
+              Text('Ranged: ${character.rangedMod.getOrCrash()}'),
+              Text('CMB: ${character.combatManeuverBonus.getOrCrash()}'),
             ],
           )
               // height: 600,

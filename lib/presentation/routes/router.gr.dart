@@ -65,8 +65,12 @@ class Router extends RouterBase {
       );
     },
     HomePage: (data) {
+      final args = data.getArgs<HomePageArguments>(nullOk: false);
       return MaterialPageRoute<dynamic>(
-        builder: (context) => HomePage(),
+        builder: (context) => HomePage(
+          key: args.key,
+          character: args.character,
+        ),
         settings: data,
       );
     },
@@ -113,7 +117,14 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
 
   Future<dynamic> pushSignInPage() => push<dynamic>(Routes.signInPage);
 
-  Future<dynamic> pushHomePage() => push<dynamic>(Routes.homePage);
+  Future<dynamic> pushHomePage({
+    Key key,
+    @required Character character,
+  }) =>
+      push<dynamic>(
+        Routes.homePage,
+        arguments: HomePageArguments(key: key, character: character),
+      );
 
   Future<dynamic> pushTest() => push<dynamic>(Routes.test);
 
@@ -137,6 +148,13 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
 /// ************************************************************************
 /// Arguments holder classes
 /// *************************************************************************
+
+/// HomePage arguments holder class
+class HomePageArguments {
+  final Key key;
+  final Character character;
+  HomePageArguments({this.key, @required this.character});
+}
 
 /// CharacterFormPage arguments holder class
 class CharacterFormPageArguments {
