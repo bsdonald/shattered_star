@@ -59,7 +59,8 @@ class CharacterCard extends StatelessWidget {
                       children: <Widget>[
                         FittedBox(
                           fit: BoxFit.scaleDown,
-                          child: Text(character.name.getOrCrash())),
+                          child: Text(character.name.getOrCrash()),
+                          ),
                         SizedBox(height: 8),
                         FittedBox(
                           fit: BoxFit.scaleDown,
