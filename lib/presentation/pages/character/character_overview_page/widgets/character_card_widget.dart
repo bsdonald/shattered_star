@@ -57,11 +57,16 @@ class CharacterCard extends StatelessWidget {
                     ),
                     child: Column(
                       children: <Widget>[
-                        Text(character.name.getOrCrash()),
+                        FittedBox(
+                          fit: BoxFit.scaleDown,
+                          child: Text(character.name.getOrCrash())),
                         SizedBox(height: 8),
-                        Text(
-                          '${character.race.getOrCrash()} ${character.favoredClass.getOrCrash()}',
-                          maxLines: 1,
+                        FittedBox(
+                          fit: BoxFit.scaleDown,
+                          child: Text(
+                            '${character.race.getOrCrash()} ${character.favoredClass.getOrCrash()}',
+                            maxLines: 1,
+                          ),
                         ),
                         SizedBox(height: 8),
                         Text('level: ${character.level.getOrCrash()}'),
