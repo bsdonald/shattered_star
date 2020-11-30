@@ -29,43 +29,44 @@ class CharacterBio extends HookWidget {
           bottomRight: Radius.circular(20),
         ),
       ),
-      child: BlocListener<CharacterFormBloc, CharacterFormState>(
-         listenWhen: (p, c) => p.isEditing != c.isEditing,
-        listener: (context, state) {
-          textEditingController.text = state.character.description.getOrCrash();
-        },
-        child: SingleChildScrollView(
+      child: SingleChildScrollView(
         child: isEditing
-            ? TextFormField(
-              controller: textEditingController,
-                textAlign: TextAlign.center,
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.all(0),
-                  labelText: 'Bio:',
-                  counterText: '',
-                  fillColor: Colors.white,
-                  filled: true,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20),
+            ? BlocListener<CharacterFormBloc, CharacterFormState>(
+                listenWhen: (p, c) => p.isEditing != c.isEditing,
+                listener: (context, state) {
+                  textEditingController.text = state.character.description.getOrCrash();
+                },
+                child: TextFormField(
+                  controller: textEditingController,
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.all(0),
+                    labelText: 'Bio:',
+                    counterText: '',
+                    fillColor: Colors.white,
+                    filled: true,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20),
+                      ),
                     ),
                   ),
-                ),
-                onChanged: (value) => context.bloc<CharacterFormBloc>().add(
-                      CharacterFormEvent.descriptionChanged(value),
-                    ),
-                validator: (_) => context.bloc<CharacterFormBloc>().state.character.description.value.fold(
-                      (f) => f.maybeMap(
-                        empty: (f) => 'cannot be empty',
-                        exceedingLength: (f) => 'Exceeding length, max: ${f.max}',
-                        orElse: () => null,
+                  onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                        CharacterFormEvent.descriptionChanged(value),
                       ),
-                      (r) => null,
-                    ),
-                maxLength: char.Description.maxLength,
-                minLines: 6,
-                maxLines: 8,
+                  validator: (_) => context.bloc<CharacterFormBloc>().state.character.description.value.fold(
+                        (f) => f.maybeMap(
+                          empty: (f) => 'cannot be empty',
+                          exceedingLength: (f) => 'Exceeding length, max: ${f.max}',
+                          orElse: () => null,
+                        ),
+                        (r) => null,
+                      ),
+                  maxLength: char.Description.maxLength,
+                  minLines: 6,
+                  maxLines: 8,
+                ),
               )
             : Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,7 +89,7 @@ class CharacterBio extends HookWidget {
                   ),
                 ],
               ),
-      ),),
+      ),
     );
   }
 }
