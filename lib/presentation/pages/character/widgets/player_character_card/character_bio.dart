@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
 import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/character/value_objects.dart' as char;
 
-class CharacterBio extends StatelessWidget {
+class CharacterBio extends HookWidget {
   final bool isEditing;
   final Character character;
 
@@ -16,6 +17,8 @@ class CharacterBio extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textEditingController = useTextEditingController();
+
     return Container(
       padding: EdgeInsets.all(8),
       constraints: BoxConstraints.expand(height: 290),
@@ -26,9 +29,15 @@ class CharacterBio extends StatelessWidget {
           bottomRight: Radius.circular(20),
         ),
       ),
-      child: SingleChildScrollView(
+      child: BlocListener<CharacterFormBloc, CharacterFormState>(
+         listenWhen: (p, c) => p.isEditing != c.isEditing,
+        listener: (context, state) {
+          textEditingController.text = state.character.description.getOrCrash();
+        },
+        child: SingleChildScrollView(
         child: isEditing
             ? TextFormField(
+              controller: textEditingController,
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.all(0),
@@ -79,7 +88,7 @@ class CharacterBio extends StatelessWidget {
                   ),
                 ],
               ),
-      ),
+      ),),
     );
   }
 }

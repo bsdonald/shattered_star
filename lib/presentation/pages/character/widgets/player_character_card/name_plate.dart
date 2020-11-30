@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
 import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/character/value_objects.dart';
 
-class NamePlate extends StatelessWidget {
+class NamePlate extends HookWidget {
   final bool isEditing;
   final Character character;
 
@@ -17,6 +18,7 @@ class NamePlate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textEditingController = useTextEditingController();
     return Container(
       // height: 24,
       constraints: !isEditing ? BoxConstraints.expand(height: 42) : null,
@@ -28,9 +30,15 @@ class NamePlate extends StatelessWidget {
         ),
       ),
       child: isEditing
-          ? Padding(
+          ? BlocListener<CharacterFormBloc, CharacterFormState>(
+            listenWhen: (p, c) => p.isEditing != c.isEditing,
+            listener: (context, state) {
+              textEditingController.text = state.character.name.getOrCrash();
+            },
+              child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
+                controller: textEditingController,
                 textAlign: TextAlign.center,
                 decoration: const InputDecoration(
                   counterText: '',
@@ -57,7 +65,7 @@ class NamePlate extends StatelessWidget {
                     ),
                 maxLength: Name.maxLength,
               ),
-            )
+            ))
           : Text(
               character.name.getOrCrash(),
               textAlign: TextAlign.center,
