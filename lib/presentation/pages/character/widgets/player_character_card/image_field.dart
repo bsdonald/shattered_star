@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
@@ -23,18 +24,18 @@ class ImageField extends StatefulWidget {
 class _ImageFieldState extends State<ImageField> {
   var backgroundImage = 'assets/images/forest.jpg';
   File image;
+  final _storage = FirebaseStorage.instance;
 
   @override
   Widget build(BuildContext context) {
-    // var _imagePath = imagePath ?? '';
+    
 
     return widget.isEditing
         ? Column(
             children: [
               (image != null)
                   ? Container(
-                    height: 215,
-                    width: double.maxFinite,
+
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage(backgroundImage),
@@ -45,55 +46,17 @@ class _ImageFieldState extends State<ImageField> {
                       // width: 150,
                       child: Image.file(image),
                     )
-                  : Stack(
-                      children: <Widget>[
-                        Image(
+                  : Container(
+                      child: Image(
                           image: AssetImage(backgroundImage),
                           fit: BoxFit.cover,
                           height: 215,
                         ),
-                        Positioned(
-                          left: 5,
-                          right: 5,
-                          top: 180,
-                          bottom: 5,
-                          child: RaisedButton(
+                      
+                    ),RaisedButton(
                             child: Text('Select Image'),
                             onPressed: () => pickImage(),
                           ),
-                        ),
-                      ],
-                    ),
-              TextFormField(
-                textAlign: TextAlign.center,
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.all(0),
-                  labelText: 'Image Link:',
-                  counterText: '',
-                  fillColor: Colors.white,
-                  filled: true,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20),
-                    ),
-                  ),
-                ),
-                onChanged: (value) => context.bloc<CharacterFormBloc>().add(
-                      CharacterFormEvent.imageChanged(value),
-                    ),
-                validator: (_) => context.bloc<CharacterFormBloc>().state.character.imagePath.value.fold(
-                      (f) => f.maybeMap(
-                        empty: (f) => 'cannot be empty',
-                        exceedingLength: (f) => 'Exceeding length, max: ${f.max}',
-                        orElse: () => null,
-                      ),
-                      (r) => null,
-                    ),
-                maxLength: char.ImagePath.maxLength,
-                minLines: 1,
-                maxLines: 8,
-              ),
             ],
           )
         : Container(
@@ -115,9 +78,70 @@ class _ImageFieldState extends State<ImageField> {
 
     pickedImage = await _picker.getImage(source: ImageSource.gallery);
     var file = File(pickedImage.path);
+    var _reference = _storage.ref().child('player_characters/${pickedImage.path.split('/').last}');
 
-    setState(() {
-      image = file;
-    });
+    image = file;
+
+    if (image != null) {
+      //upload to firebase
+      UploadTask task = _reference.putFile(image);
+
+// Optional
+      task.snapshotEvents.listen((TaskSnapshot snapshot) {
+        print('Snapshot state: ${snapshot.state}'); // paused, running, complete
+        print('Progress: ${(snapshot.bytesTransferred / snapshot.totalBytes) * 100} %');
+      }, onError: (Object e) {
+        print(e); // FirebaseException
+      });
+
+// Optional
+      task.then((TaskSnapshot snapshot) async {
+        print('Upload complete!');
+    String downloadURL = await _reference.getDownloadURL();
+    context.bloc<CharacterFormBloc>().add(
+          CharacterFormEvent.imageChanged(downloadURL),
+        );
+      }).catchError((Object e) {
+        print(e); // FirebaseException
+      });
+    } else {
+      print('No Path Recieved');
+    }
+
+
+
+    setState(() {});
   }
 }
+
+
+// TextFormField(
+              //   textAlign: TextAlign.center,
+              //   decoration: InputDecoration(
+              //     contentPadding: EdgeInsets.all(0),
+              //     labelText: 'Image Link:',
+              //     counterText: '',
+              //     fillColor: Colors.white,
+              //     filled: true,
+              //     border: OutlineInputBorder(
+              //       borderRadius: BorderRadius.only(
+              //         bottomLeft: Radius.circular(20),
+              //         bottomRight: Radius.circular(20),
+              //       ),
+              //     ),
+              //   ),
+              //   onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+              //         CharacterFormEvent.imageChanged(value),
+              //       ),
+              //   validator: (_) => context.bloc<CharacterFormBloc>().state.character.imagePath.value.fold(
+              //         (f) => f.maybeMap(
+              //           empty: (f) => 'cannot be empty',
+              //           exceedingLength: (f) => 'Exceeding length, max: ${f.max}',
+              //           orElse: () => null,
+              //         ),
+              //         (r) => null,
+              //       ),
+              //   maxLength: char.ImagePath.maxLength,
+              //   minLines: 1,
+              //   maxLines: 8,
+              // ),

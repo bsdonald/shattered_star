@@ -214,7 +214,7 @@ class StatBlocForm extends HookWidget {
                     onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                           CharacterFormEvent.wisdomChanged(value),
                         ),
-                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.strength.value.fold(
+                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.wisdom.value.fold(
                           (f) => f.maybeMap(
                             empty: (f) => 'cannot be empty',
                             invalidNumber: (f) => 'Please enter a number',
@@ -229,7 +229,7 @@ class StatBlocForm extends HookWidget {
                     onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                           CharacterFormEvent.charismaChanged(value),
                         ),
-                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.strength.value.fold(
+                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.charisma.value.fold(
                           (f) => f.maybeMap(
                             empty: (f) => 'cannot be empty',
                             invalidNumber: (f) => 'Please enter a number',
