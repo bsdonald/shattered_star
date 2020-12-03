@@ -25,40 +25,47 @@ class _ImageFieldState extends State<ImageField> {
   var backgroundImage = 'assets/images/forest.jpg';
   File image;
   final _storage = FirebaseStorage.instance;
+  String imagePath;
 
   @override
   Widget build(BuildContext context) {
-    
-
     return widget.isEditing
-        ? Column(
-            children: [
-              (image != null)
-                  ? Container(
-
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage(backgroundImage),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      // height: 180,
-                      // width: 150,
-                      child: Image.file(image),
-                    )
-                  : Container(
-                      child: Image(
-                          image: AssetImage(backgroundImage),
-                          fit: BoxFit.cover,
+        ? BlocConsumer<CharacterFormBloc, CharacterFormState>(
+            listenWhen: (p, c) => p.isEditing != c.isEditing,
+            listener: (context, state) {
+              imagePath = state.character.imagePath.getOrCrash();
+            },
+            builder: (context, state) {
+              return Column(
+                children: [
+                  (imagePath != null)
+                      ? Container(
                           height: 215,
-                        ),
-                      
-                    ),RaisedButton(
-                            child: Text('Select Image'),
-                            onPressed: () => pickImage(),
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(backgroundImage),
+                              fit: BoxFit.cover,
+                            ),
                           ),
-            ],
-          )
+                          // height: 180,
+                          // width: 150,
+                          child: Image.network(imagePath),
+                        )
+                      : Container(
+                          child: Image(
+                            image: AssetImage(backgroundImage),
+                            fit: BoxFit.cover,
+                            height: 215,
+                          ),
+                        ),
+                  RaisedButton(
+                    child: Text('Select Image'),
+                    onPressed: () => pickImage(),
+                  ),
+                ],
+              );
+            })
         : Container(
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -75,6 +82,7 @@ class _ImageFieldState extends State<ImageField> {
   pickImage() async {
     final _picker = ImagePicker();
     PickedFile pickedImage;
+    String downloadURL;
 
     pickedImage = await _picker.getImage(source: ImageSource.gallery);
     var file = File(pickedImage.path);
@@ -97,10 +105,11 @@ class _ImageFieldState extends State<ImageField> {
 // Optional
       task.then((TaskSnapshot snapshot) async {
         print('Upload complete!');
-    String downloadURL = await _reference.getDownloadURL();
-    context.bloc<CharacterFormBloc>().add(
-          CharacterFormEvent.imageChanged(downloadURL),
-        );
+        downloadURL = await _reference.getDownloadURL();
+        context.bloc<CharacterFormBloc>().add(
+              CharacterFormEvent.imageChanged(downloadURL),
+            );
+        imagePath = downloadURL;
       }).catchError((Object e) {
         print(e); // FirebaseException
       });
@@ -108,40 +117,37 @@ class _ImageFieldState extends State<ImageField> {
       print('No Path Recieved');
     }
 
-
-
     setState(() {});
   }
 }
 
-
 // TextFormField(
-              //   textAlign: TextAlign.center,
-              //   decoration: InputDecoration(
-              //     contentPadding: EdgeInsets.all(0),
-              //     labelText: 'Image Link:',
-              //     counterText: '',
-              //     fillColor: Colors.white,
-              //     filled: true,
-              //     border: OutlineInputBorder(
-              //       borderRadius: BorderRadius.only(
-              //         bottomLeft: Radius.circular(20),
-              //         bottomRight: Radius.circular(20),
-              //       ),
-              //     ),
-              //   ),
-              //   onChanged: (value) => context.bloc<CharacterFormBloc>().add(
-              //         CharacterFormEvent.imageChanged(value),
-              //       ),
-              //   validator: (_) => context.bloc<CharacterFormBloc>().state.character.imagePath.value.fold(
-              //         (f) => f.maybeMap(
-              //           empty: (f) => 'cannot be empty',
-              //           exceedingLength: (f) => 'Exceeding length, max: ${f.max}',
-              //           orElse: () => null,
-              //         ),
-              //         (r) => null,
-              //       ),
-              //   maxLength: char.ImagePath.maxLength,
-              //   minLines: 1,
-              //   maxLines: 8,
-              // ),
+//   textAlign: TextAlign.center,
+//   decoration: InputDecoration(
+//     contentPadding: EdgeInsets.all(0),
+//     labelText: 'Image Link:',
+//     counterText: '',
+//     fillColor: Colors.white,
+//     filled: true,
+//     border: OutlineInputBorder(
+//       borderRadius: BorderRadius.only(
+//         bottomLeft: Radius.circular(20),
+//         bottomRight: Radius.circular(20),
+//       ),
+//     ),
+//   ),
+//   onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+//         CharacterFormEvent.imageChanged(value),
+//       ),
+//   validator: (_) => context.bloc<CharacterFormBloc>().state.character.imagePath.value.fold(
+//         (f) => f.maybeMap(
+//           empty: (f) => 'cannot be empty',
+//           exceedingLength: (f) => 'Exceeding length, max: ${f.max}',
+//           orElse: () => null,
+//         ),
+//         (r) => null,
+//       ),
+//   maxLength: char.ImagePath.maxLength,
+//   minLines: 1,
+//   maxLines: 8,
+// ),

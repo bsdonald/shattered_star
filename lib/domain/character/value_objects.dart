@@ -39,7 +39,7 @@ class FavoredClass extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
 
-  static const maxLength = 10;
+  static const maxLength = 20;
 
   factory FavoredClass(String input) {
     assert(input != null);
