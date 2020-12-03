@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
 import 'package:shattered_star/domain/character/character.dart';
 
@@ -92,228 +93,271 @@ class StatBlocGrid extends StatelessWidget {
   }
 }
 
-class StatBlocForm extends StatelessWidget {
+class StatBlocForm extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Row(
-        // mainAxisSize: MainAxisSize.min,
-        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Flexible(
-            child: Container(
-                // // width: 75,
-                child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: <Widget>[
-                StatsFormField(
-                  onChanged: (value) => context.bloc<CharacterFormBloc>().add(
-                        CharacterFormEvent.strengthChanged(value),
-                      ),
-                  validator: (_) => context.bloc<CharacterFormBloc>().state.character.strength.value.fold(
-                        (f) => f.maybeMap(
-                          empty: (f) => 'cannot be empty',
-                          invalidNumber: (f) => 'Please enter a number',
-                          orElse: () => null,
+    final strengthEditingController = useTextEditingController();
+    final dexterityEditingController = useTextEditingController();
+    final constitutionEditingController = useTextEditingController();
+    final intelligenceEditingController = useTextEditingController();
+    final wisdomEditingController = useTextEditingController();
+    final charismaEditingController = useTextEditingController();
+    final maxHPEditingController = useTextEditingController();
+    final armorClassEditingController = useTextEditingController();
+    final combatManeuverDefenseEditingController = useTextEditingController();
+    final meleeModEditingController = useTextEditingController();
+    final rangedModEditingController = useTextEditingController();
+    final combatManeuverBonusEditingController = useTextEditingController();
+
+
+    return BlocListener<CharacterFormBloc, CharacterFormState>(
+        listenWhen: (p, c) => p.isEditing != c.isEditing,
+        listener: (context, state) {
+          strengthEditingController.text = state.character.strength.getOrCrash();
+          dexterityEditingController.text = state.character.dexterity.getOrCrash();
+          constitutionEditingController.text = state.character.constitution.getOrCrash();
+          intelligenceEditingController.text = state.character.intelligence.getOrCrash();
+          wisdomEditingController.text = state.character.wisdom.getOrCrash();
+          charismaEditingController.text = state.character.charisma.getOrCrash();
+          maxHPEditingController.text = state.character.maxHP.getOrCrash();
+          armorClassEditingController.text = state.character.armorClass.getOrCrash();
+          combatManeuverDefenseEditingController.text = state.character.combatManeuverDefense.getOrCrash();
+          meleeModEditingController.text = state.character.meleeMod.getOrCrash();
+          rangedModEditingController.text = state.character.rangedMod.getOrCrash();
+          combatManeuverBonusEditingController.text = state.character.combatManeuverBonus.getOrCrash();
+        },
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          // mainAxisSize: MainAxisSize.min,
+          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Flexible(
+              child: Container(
+                  // // width: 75,
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  StatsFormField(
+                    controller: strengthEditingController,
+                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                          CharacterFormEvent.strengthChanged(value),
                         ),
-                        (r) => null,
-                      ),
-                  label: 'STR:',
-                ),
-                StatsFormField(
-                  onChanged: (value) => context.bloc<CharacterFormBloc>().add(
-                        CharacterFormEvent.dexterityChanged(value),
-                      ),
-                  validator: (_) => context.bloc<CharacterFormBloc>().state.character.dexterity.value.fold(
-                        (f) => f.maybeMap(
-                          empty: (f) => 'cannot be empty',
-                          invalidNumber: (f) => 'Please enter a number',
-                          orElse: () => null,
+                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.strength.value.fold(
+                          (f) => f.maybeMap(
+                            empty: (f) => 'cannot be empty',
+                            invalidNumber: (f) => 'Please enter a number',
+                            orElse: () => null,
+                          ),
+                          (r) => null,
                         ),
-                        (r) => null,
-                      ),
-                  label: 'DEX:',
-                ),
-                StatsFormField(
-                  onChanged: (value) => context.bloc<CharacterFormBloc>().add(
-                        CharacterFormEvent.constitutionChanged(value),
-                      ),
-                  validator: (_) => context.bloc<CharacterFormBloc>().state.character.constitution.value.fold(
-                        (f) => f.maybeMap(
-                          empty: (f) => 'cannot be empty',
-                          invalidNumber: (f) => 'Please enter a number',
-                          orElse: () => null,
+                    label: 'STR:',
+                  ),
+                  StatsFormField(
+                    controller: dexterityEditingController,
+                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                          CharacterFormEvent.dexterityChanged(value),
                         ),
-                        (r) => null,
-                      ),
-                  label: 'CON:',
-                ),
-              ],
-            )
-                // height: 600,
-                ),
-          ),
-          Flexible(
-            child: Container(
-                // width: 75,
-                child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: <Widget>[
-                StatsFormField(
-                  onChanged: (value) => context.bloc<CharacterFormBloc>().add(
-                        CharacterFormEvent.intelligenceChanged(value),
-                      ),
-                  validator: (_) => context.bloc<CharacterFormBloc>().state.character.intelligence.value.fold(
-                        (f) => f.maybeMap(
-                          empty: (f) => 'cannot be empty',
-                          invalidNumber: (f) => 'Please enter a number',
-                          orElse: () => null,
+                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.dexterity.value.fold(
+                          (f) => f.maybeMap(
+                            empty: (f) => 'cannot be empty',
+                            invalidNumber: (f) => 'Please enter a number',
+                            orElse: () => null,
+                          ),
+                          (r) => null,
                         ),
-                        (r) => null,
-                      ),
-                  label: 'INT:',
-                ),
-                StatsFormField(
-                  onChanged: (value) => context.bloc<CharacterFormBloc>().add(
-                        CharacterFormEvent.wisdomChanged(value),
-                      ),
-                  validator: (_) => context.bloc<CharacterFormBloc>().state.character.strength.value.fold(
-                        (f) => f.maybeMap(
-                          empty: (f) => 'cannot be empty',
-                          invalidNumber: (f) => 'Please enter a number',
-                          orElse: () => null,
+                    label: 'DEX:',
+                  ),
+                  StatsFormField(
+                    controller: constitutionEditingController,
+                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                          CharacterFormEvent.constitutionChanged(value),
                         ),
-                        (r) => null,
-                      ),
-                  label: 'WIS:',
-                ),
-                StatsFormField(
-                  onChanged: (value) => context.bloc<CharacterFormBloc>().add(
-                        CharacterFormEvent.charismaChanged(value),
-                      ),
-                  validator: (_) => context.bloc<CharacterFormBloc>().state.character.strength.value.fold(
-                        (f) => f.maybeMap(
-                          empty: (f) => 'cannot be empty',
-                          invalidNumber: (f) => 'Please enter a number',
-                          orElse: () => null,
+                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.constitution.value.fold(
+                          (f) => f.maybeMap(
+                            empty: (f) => 'cannot be empty',
+                            invalidNumber: (f) => 'Please enter a number',
+                            orElse: () => null,
+                          ),
+                          (r) => null,
                         ),
-                        (r) => null,
-                      ),
-                  label: 'CHA:',
-                ),
-              ],
-            )
-                // height: 600,
-                ),
-          ),
-          Flexible(
-            child: Container(
-                // width: 75,
-                child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: <Widget>[
-                StatsFormField(
-                  onChanged: (value) => context.bloc<CharacterFormBloc>().add(
-                        CharacterFormEvent.maxHPChanged(value),
-                      ),
-                  validator: (_) => context.bloc<CharacterFormBloc>().state.character.maxHP.value.fold(
-                        (f) => f.maybeMap(
-                          empty: (f) => 'cannot be empty',
-                          invalidNumber: (f) => 'Please enter a number',
-                          orElse: () => null,
+                    label: 'CON:',
+                  ),
+                ],
+              )
+                  // height: 600,
+                  ),
+            ),
+            Flexible(
+              child: Container(
+                  // width: 75,
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  StatsFormField(
+                    controller: intelligenceEditingController,
+                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                          CharacterFormEvent.intelligenceChanged(value),
                         ),
-                        (r) => null,
-                      ),
-                  label: 'Max HP:',
-                ),
-                StatsFormField(
-                  onChanged: (value) => context.bloc<CharacterFormBloc>().add(
-                        CharacterFormEvent.armorClassChanged(value),
-                      ),
-                  validator: (_) => context.bloc<CharacterFormBloc>().state.character.armorClass.value.fold(
-                        (f) => f.maybeMap(
-                          empty: (f) => 'cannot be empty',
-                          invalidNumber: (f) => 'Please enter a number',
-                          orElse: () => null,
+                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.intelligence.value.fold(
+                          (f) => f.maybeMap(
+                            empty: (f) => 'cannot be empty',
+                            invalidNumber: (f) => 'Please enter a number',
+                            orElse: () => null,
+                          ),
+                          (r) => null,
                         ),
-                        (r) => null,
-                      ),
-                  label: 'AC:',
-                ),
-                StatsFormField(
-                  onChanged: (value) => context.bloc<CharacterFormBloc>().add(
-                        CharacterFormEvent.combatManeuverDefenseChanged(value),
-                      ),
-                  validator: (_) => context.bloc<CharacterFormBloc>().state.character.combatManeuverDefense.value.fold(
-                        (f) => f.maybeMap(
-                          empty: (f) => 'cannot be empty',
-                          invalidNumber: (f) => 'Please enter a number',
-                          orElse: () => null,
+                    label: 'INT:',
+                  ),
+                  StatsFormField(
+                    controller: wisdomEditingController,
+                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                          CharacterFormEvent.wisdomChanged(value),
                         ),
-                        (r) => null,
-                      ),
-                  label: 'CMD:',
-                ),
-              ],
-            )
-                // height: 600,
-                ),
-          ),
-          Flexible(
-            child: Container(
-                // width: 75,
-                child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: <Widget>[
-                StatsFormField(
-                  onChanged: (value) => context.bloc<CharacterFormBloc>().add(
-                        CharacterFormEvent.meleeModChanged(value),
-                      ),
-                  validator: (_) => context.bloc<CharacterFormBloc>().state.character.meleeMod.value.fold(
-                        (f) => f.maybeMap(
-                          empty: (f) => 'cannot be empty',
-                          invalidNumber: (f) => 'Please enter a number',
-                          orElse: () => null,
+                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.wisdom.value.fold(
+                          (f) => f.maybeMap(
+                            empty: (f) => 'cannot be empty',
+                            invalidNumber: (f) => 'Please enter a number',
+                            orElse: () => null,
+                          ),
+                          (r) => null,
                         ),
-                        (r) => null,
-                      ),
-                  label: 'Melee:',
-                ),
-                StatsFormField(
-                  onChanged: (value) => context.bloc<CharacterFormBloc>().add(
-                        CharacterFormEvent.rangedModChanged(value),
-                      ),
-                  validator: (_) => context.bloc<CharacterFormBloc>().state.character.rangedMod.value.fold(
-                        (f) => f.maybeMap(
-                          empty: (f) => 'cannot be empty',
-                          invalidNumber: (f) => 'Please enter a number',
-                          orElse: () => null,
+                    label: 'WIS:',
+                  ),
+                  StatsFormField(
+                    controller: charismaEditingController,
+                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                          CharacterFormEvent.charismaChanged(value),
                         ),
-                        (r) => null,
-                      ),
-                  label: 'Ranged:',
-                ),
-                StatsFormField(
-                  onChanged: (value) => context.bloc<CharacterFormBloc>().add(
-                        CharacterFormEvent.combatManeuverBonusChanged(value),
-                      ),
-                  validator: (_) => context.bloc<CharacterFormBloc>().state.character.combatManeuverBonus.value.fold(
-                        (f) => f.maybeMap(
-                          empty: (f) => 'cannot be empty',
-                          invalidNumber: (f) => 'Please enter a number',
-                          orElse: () => null,
+                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.charisma.value.fold(
+                          (f) => f.maybeMap(
+                            empty: (f) => 'cannot be empty',
+                            invalidNumber: (f) => 'Please enter a number',
+                            orElse: () => null,
+                          ),
+                          (r) => null,
                         ),
-                        (r) => null,
-                      ),
-                  label: 'CMB:',
-                ),
-              ],
-            )
-                // height: 600,
-                ),
-          ),
-        ],
+                    label: 'CHA:',
+                  ),
+                ],
+              )
+                  // height: 600,
+                  ),
+            ),
+            Flexible(
+              child: Container(
+                  // width: 75,
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  StatsFormField(
+                    controller: maxHPEditingController,
+                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                          CharacterFormEvent.maxHPChanged(value),
+                        ),
+                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.maxHP.value.fold(
+                          (f) => f.maybeMap(
+                            empty: (f) => 'cannot be empty',
+                            invalidNumber: (f) => 'Please enter a number',
+                            orElse: () => null,
+                          ),
+                          (r) => null,
+                        ),
+                    label: 'Max HP:',
+                  ),
+                  StatsFormField(
+                    controller: armorClassEditingController,
+                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                          CharacterFormEvent.armorClassChanged(value),
+                        ),
+                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.armorClass.value.fold(
+                          (f) => f.maybeMap(
+                            empty: (f) => 'cannot be empty',
+                            invalidNumber: (f) => 'Please enter a number',
+                            orElse: () => null,
+                          ),
+                          (r) => null,
+                        ),
+                    label: 'AC:',
+                  ),
+                  StatsFormField(
+                    controller: combatManeuverDefenseEditingController,
+                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                          CharacterFormEvent.combatManeuverDefenseChanged(value),
+                        ),
+                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.combatManeuverDefense.value.fold(
+                          (f) => f.maybeMap(
+                            empty: (f) => 'cannot be empty',
+                            invalidNumber: (f) => 'Please enter a number',
+                            orElse: () => null,
+                          ),
+                          (r) => null,
+                        ),
+                    label: 'CMD:',
+                  ),
+                ],
+              )
+                  // height: 600,
+                  ),
+            ),
+            Flexible(
+              child: Container(
+                  // width: 75,
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  StatsFormField(
+                    controller: meleeModEditingController,
+                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                          CharacterFormEvent.meleeModChanged(value),
+                        ),
+                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.meleeMod.value.fold(
+                          (f) => f.maybeMap(
+                            empty: (f) => 'cannot be empty',
+                            invalidNumber: (f) => 'Please enter a number',
+                            orElse: () => null,
+                          ),
+                          (r) => null,
+                        ),
+                    label: 'Melee:',
+                  ),
+                  StatsFormField(
+                    controller: rangedModEditingController,
+                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                          CharacterFormEvent.rangedModChanged(value),
+                        ),
+                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.rangedMod.value.fold(
+                          (f) => f.maybeMap(
+                            empty: (f) => 'cannot be empty',
+                            invalidNumber: (f) => 'Please enter a number',
+                            orElse: () => null,
+                          ),
+                          (r) => null,
+                        ),
+                    label: 'Ranged:',
+                  ),
+                  StatsFormField(
+                    controller: combatManeuverBonusEditingController,
+                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                          CharacterFormEvent.combatManeuverBonusChanged(value),
+                        ),
+                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.combatManeuverBonus.value.fold(
+                          (f) => f.maybeMap(
+                            empty: (f) => 'cannot be empty',
+                            invalidNumber: (f) => 'Please enter a number',
+                            orElse: () => null,
+                          ),
+                          (r) => null,
+                        ),
+                    label: 'CMB:',
+                  ),
+                ],
+              )
+                  // height: 600,
+                  ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -325,11 +369,14 @@ class StatsFormField extends StatelessWidget {
   final String label;
   final int maxLength;
   final int maxLines;
-  const StatsFormField({
+  final TextEditingController controller;
+  const StatsFormField(
+    {
     Key key,
     @required this.onChanged,
     @required this.validator,
     @required this.label,
+    @required this.controller,
     this.maxLines = 1,
     this.maxLength,
   }) : super(key: key);
@@ -341,6 +388,7 @@ class StatsFormField extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(4.0),
         child: TextFormField(
+          controller: controller,
           textAlign: TextAlign.end,
           decoration: InputDecoration(
             contentPadding: EdgeInsets.all(0),
