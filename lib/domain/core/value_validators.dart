@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dartz/dartz.dart';
 import 'package:kt_dart/collection.dart';
 import 'package:shattered_star/domain/core/failures.dart';
@@ -83,5 +85,13 @@ Either<ValueFailure<String>, String> validatePassword(String input) {
     return right(input);
   } else {
     return left(ValueFailure.shortPassword(failedValue: input));
+  }
+}
+
+Either<ValueFailure<File>, File> validateImage(File input) {
+  if (input != null) {
+    return right(input);
+  } else {
+    return left(ValueFailure.invalidImage(failedValue: input));
   }
 }
