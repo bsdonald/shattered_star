@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:dartz/dartz.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/character/character_failure.dart';
@@ -12,12 +13,16 @@ import 'package:shattered_star/infrastructure/core/storage_helpers.dart';
 @LazySingleton(as: ICharacterBucket)
 class CharacterBucket implements ICharacterBucket {
   final FirebaseStorage _storage;
-  final File file;
+  final _picker = ImagePicker();
 
-  CharacterBucket(this._storage, this.file);
+  CharacterBucket(this._storage);
   @override
   Future<Either<CharacterFailure, Unit>> upload(Character character) async {
     try {
+      var pickedImage = await _picker.getImage(source: ImageSource.gallery);
+      var file = File(pickedImage.path);
+      
+      
       final userBucket = await _storage.userDirectory();
       final characterDto = CharacterDto.fromDomain(character);
 

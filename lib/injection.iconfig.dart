@@ -12,6 +12,8 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:shattered_star/application/home/bloc/home_page_bloc.dart';
 import 'package:shattered_star/infrastructure/auth/firebase_auth_facade.dart';
 import 'package:shattered_star/domain/auth/i_auth_facade.dart';
+import 'package:shattered_star/infrastructure/character/character_bucket.dart';
+import 'package:shattered_star/domain/character/i_character_bucket.dart';
 import 'package:shattered_star/infrastructure/character/character_repository.dart';
 import 'package:shattered_star/domain/character/i_character_repository.dart';
 import 'package:shattered_star/infrastructure/notes/note_repository.dart';
@@ -40,6 +42,8 @@ void $initGetIt(GetIt g, {String environment}) {
   g.registerFactory<HomePageBloc>(() => HomePageBloc());
   g.registerLazySingleton<IAuthFacade>(
       () => FirebaseAuthFacade(g<FirebaseAuth>(), g<GoogleSignIn>()));
+  g.registerLazySingleton<ICharacterBucket>(
+      () => CharacterBucket(g<FirebaseStorage>()));
   g.registerLazySingleton<ICharacterRepository>(
       () => CharacterRepository(g<FirebaseFirestore>()));
   g.registerLazySingleton<INoteRepository>(
