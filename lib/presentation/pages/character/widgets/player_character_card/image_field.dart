@@ -5,8 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
+import 'package:shattered_star/domain/auth/i_auth_facade.dart';
 import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/character/value_objects.dart' as char;
+import 'package:shattered_star/domain/core/errors.dart';
+import 'package:shattered_star/injection.dart';
 
 class ImageField extends StatefulWidget {
   final bool isEditing;
@@ -80,13 +83,15 @@ class _ImageFieldState extends State<ImageField> {
   }
 
   pickImage() async {
+    final userOption = await getIt<IAuthFacade>().getSignedInUser();
+    final user = userOption.getOrElse(() => throw NotAuthenticatedError());
     final _picker = ImagePicker();
     PickedFile pickedImage;
     String downloadURL;
 
     pickedImage = await _picker.getImage(source: ImageSource.gallery);
     var file = File(pickedImage.path);
-    var _reference = _storage.ref().child('player_characters/${pickedImage.path.split('/').last}');
+    var _reference = _storage.ref().child('users/${user.id.getOrCrash()}/player_characters/${pickedImage.path.split('/').last}');
 
     image = file;
 
