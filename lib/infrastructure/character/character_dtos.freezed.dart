@@ -16,7 +16,7 @@ class _$CharacterDtoTearOff {
   const _$CharacterDtoTearOff();
 
   _Character call(
-      {@JsonKey(ignore: true) String userId,
+      {@JsonKey(ignore: true) String id,
       @required String name,
       @required String race,
       @required String favoredClass,
@@ -44,7 +44,7 @@ class _$CharacterDtoTearOff {
       @required String description,
       @required String imagePath}) {
     return _Character(
-      userId: userId,
+      id: id,
       name: name,
       race: race,
       favoredClass: favoredClass,
@@ -80,7 +80,7 @@ const $CharacterDto = _$CharacterDtoTearOff();
 
 mixin _$CharacterDto {
   @JsonKey(ignore: true)
-  String get userId;
+  String get id;
   String get name;
   String get race;
   String get favoredClass;
@@ -117,7 +117,7 @@ abstract class $CharacterDtoCopyWith<$Res> {
           CharacterDto value, $Res Function(CharacterDto) then) =
       _$CharacterDtoCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(ignore: true) String userId,
+      {@JsonKey(ignore: true) String id,
       String name,
       String race,
       String favoredClass,
@@ -155,7 +155,7 @@ class _$CharacterDtoCopyWithImpl<$Res> implements $CharacterDtoCopyWith<$Res> {
 
   @override
   $Res call({
-    Object userId = freezed,
+    Object id = freezed,
     Object name = freezed,
     Object race = freezed,
     Object favoredClass = freezed,
@@ -184,7 +184,7 @@ class _$CharacterDtoCopyWithImpl<$Res> implements $CharacterDtoCopyWith<$Res> {
     Object imagePath = freezed,
   }) {
     return _then(_value.copyWith(
-      userId: userId == freezed ? _value.userId : userId as String,
+      id: id == freezed ? _value.id : id as String,
       name: name == freezed ? _value.name : name as String,
       race: race == freezed ? _value.race : race as String,
       favoredClass: favoredClass == freezed
@@ -234,7 +234,7 @@ abstract class _$CharacterCopyWith<$Res>
       __$CharacterCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(ignore: true) String userId,
+      {@JsonKey(ignore: true) String id,
       String name,
       String race,
       String favoredClass,
@@ -273,7 +273,7 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterDtoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object userId = freezed,
+    Object id = freezed,
     Object name = freezed,
     Object race = freezed,
     Object favoredClass = freezed,
@@ -302,7 +302,7 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterDtoCopyWithImpl<$Res>
     Object imagePath = freezed,
   }) {
     return _then(_Character(
-      userId: userId == freezed ? _value.userId : userId as String,
+      id: id == freezed ? _value.id : id as String,
       name: name == freezed ? _value.name : name as String,
       race: race == freezed ? _value.race : race as String,
       favoredClass: favoredClass == freezed
@@ -348,7 +348,7 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterDtoCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Character extends _Character {
   const _$_Character(
-      {@JsonKey(ignore: true) this.userId,
+      {@JsonKey(ignore: true) this.id,
       @required this.name,
       @required this.race,
       @required this.favoredClass,
@@ -408,7 +408,7 @@ class _$_Character extends _Character {
 
   @override
   @JsonKey(ignore: true)
-  final String userId;
+  final String id;
   @override
   final String name;
   @override
@@ -464,15 +464,15 @@ class _$_Character extends _Character {
 
   @override
   String toString() {
-    return 'CharacterDto(userId: $userId, name: $name, race: $race, favoredClass: $favoredClass, level: $level, gender: $gender, age: $age, height: $height, weight: $weight, home: $home, alignment: $alignment, deity: $deity, languages: $languages, strength: $strength, dexterity: $dexterity, constitution: $constitution, intelligence: $intelligence, wisdom: $wisdom, charisma: $charisma, maxHP: $maxHP, armorClass: $armorClass, combatManeuverDefense: $combatManeuverDefense, meleeMod: $meleeMod, rangedMod: $rangedMod, combatManeuverBonus: $combatManeuverBonus, description: $description, imagePath: $imagePath)';
+    return 'CharacterDto(id: $id, name: $name, race: $race, favoredClass: $favoredClass, level: $level, gender: $gender, age: $age, height: $height, weight: $weight, home: $home, alignment: $alignment, deity: $deity, languages: $languages, strength: $strength, dexterity: $dexterity, constitution: $constitution, intelligence: $intelligence, wisdom: $wisdom, charisma: $charisma, maxHP: $maxHP, armorClass: $armorClass, combatManeuverDefense: $combatManeuverDefense, meleeMod: $meleeMod, rangedMod: $rangedMod, combatManeuverBonus: $combatManeuverBonus, description: $description, imagePath: $imagePath)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Character &&
-            (identical(other.userId, userId) ||
-                const DeepCollectionEquality().equals(other.userId, userId)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.race, race) ||
@@ -545,7 +545,7 @@ class _$_Character extends _Character {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(userId) ^
+      const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(race) ^
       const DeepCollectionEquality().hash(favoredClass) ^
@@ -586,7 +586,7 @@ class _$_Character extends _Character {
 abstract class _Character extends CharacterDto {
   const _Character._() : super._();
   const factory _Character(
-      {@JsonKey(ignore: true) String userId,
+      {@JsonKey(ignore: true) String id,
       @required String name,
       @required String race,
       @required String favoredClass,
@@ -619,7 +619,7 @@ abstract class _Character extends CharacterDto {
 
   @override
   @JsonKey(ignore: true)
-  String get userId;
+  String get id;
   @override
   String get name;
   @override

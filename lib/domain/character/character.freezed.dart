@@ -13,7 +13,7 @@ class _$CharacterTearOff {
   const _$CharacterTearOff();
 
   _Character call(
-      {@required UniqueId userId,
+      {@required UniqueId id,
       @required Name name,
       @required Race race,
       @required FavoredClass favoredClass,
@@ -41,7 +41,7 @@ class _$CharacterTearOff {
       @required Description description,
       @required ImagePath imagePath}) {
     return _Character(
-      userId: userId,
+      id: id,
       name: name,
       race: race,
       favoredClass: favoredClass,
@@ -76,7 +76,7 @@ class _$CharacterTearOff {
 const $Character = _$CharacterTearOff();
 
 mixin _$Character {
-  UniqueId get userId;
+  UniqueId get id;
   Name get name;
   Race get race;
   FavoredClass get favoredClass;
@@ -111,7 +111,7 @@ abstract class $CharacterCopyWith<$Res> {
   factory $CharacterCopyWith(Character value, $Res Function(Character) then) =
       _$CharacterCopyWithImpl<$Res>;
   $Res call(
-      {UniqueId userId,
+      {UniqueId id,
       Name name,
       Race race,
       FavoredClass favoredClass,
@@ -149,7 +149,7 @@ class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
 
   @override
   $Res call({
-    Object userId = freezed,
+    Object id = freezed,
     Object name = freezed,
     Object race = freezed,
     Object favoredClass = freezed,
@@ -178,7 +178,7 @@ class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
     Object imagePath = freezed,
   }) {
     return _then(_value.copyWith(
-      userId: userId == freezed ? _value.userId : userId as UniqueId,
+      id: id == freezed ? _value.id : id as UniqueId,
       name: name == freezed ? _value.name : name as Name,
       race: race == freezed ? _value.race : race as Race,
       favoredClass: favoredClass == freezed
@@ -233,7 +233,7 @@ abstract class _$CharacterCopyWith<$Res> implements $CharacterCopyWith<$Res> {
       __$CharacterCopyWithImpl<$Res>;
   @override
   $Res call(
-      {UniqueId userId,
+      {UniqueId id,
       Name name,
       Race race,
       FavoredClass favoredClass,
@@ -272,7 +272,7 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object userId = freezed,
+    Object id = freezed,
     Object name = freezed,
     Object race = freezed,
     Object favoredClass = freezed,
@@ -301,7 +301,7 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
     Object imagePath = freezed,
   }) {
     return _then(_Character(
-      userId: userId == freezed ? _value.userId : userId as UniqueId,
+      id: id == freezed ? _value.id : id as UniqueId,
       name: name == freezed ? _value.name : name as Name,
       race: race == freezed ? _value.race : race as Race,
       favoredClass: favoredClass == freezed
@@ -352,7 +352,7 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
 
 class _$_Character extends _Character {
   const _$_Character(
-      {@required this.userId,
+      {@required this.id,
       @required this.name,
       @required this.race,
       @required this.favoredClass,
@@ -379,7 +379,7 @@ class _$_Character extends _Character {
       @required this.combatManeuverBonus,
       @required this.description,
       @required this.imagePath})
-      : assert(userId != null),
+      : assert(id != null),
         assert(name != null),
         assert(race != null),
         assert(favoredClass != null),
@@ -409,7 +409,7 @@ class _$_Character extends _Character {
         super._();
 
   @override
-  final UniqueId userId;
+  final UniqueId id;
   @override
   final Name name;
   @override
@@ -465,15 +465,15 @@ class _$_Character extends _Character {
 
   @override
   String toString() {
-    return 'Character(userId: $userId, name: $name, race: $race, favoredClass: $favoredClass, level: $level, gender: $gender, age: $age, height: $height, weight: $weight, home: $home, alignment: $alignment, deity: $deity, languages: $languages, strength: $strength, dexterity: $dexterity, constitution: $constitution, intelligence: $intelligence, wisdom: $wisdom, charisma: $charisma, maxHP: $maxHP, armorClass: $armorClass, combatManeuverDefense: $combatManeuverDefense, meleeMod: $meleeMod, rangedMod: $rangedMod, combatManeuverBonus: $combatManeuverBonus, description: $description, imagePath: $imagePath)';
+    return 'Character(id: $id, name: $name, race: $race, favoredClass: $favoredClass, level: $level, gender: $gender, age: $age, height: $height, weight: $weight, home: $home, alignment: $alignment, deity: $deity, languages: $languages, strength: $strength, dexterity: $dexterity, constitution: $constitution, intelligence: $intelligence, wisdom: $wisdom, charisma: $charisma, maxHP: $maxHP, armorClass: $armorClass, combatManeuverDefense: $combatManeuverDefense, meleeMod: $meleeMod, rangedMod: $rangedMod, combatManeuverBonus: $combatManeuverBonus, description: $description, imagePath: $imagePath)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Character &&
-            (identical(other.userId, userId) ||
-                const DeepCollectionEquality().equals(other.userId, userId)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.race, race) ||
@@ -546,7 +546,7 @@ class _$_Character extends _Character {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(userId) ^
+      const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(race) ^
       const DeepCollectionEquality().hash(favoredClass) ^
@@ -582,7 +582,7 @@ class _$_Character extends _Character {
 abstract class _Character extends Character {
   const _Character._() : super._();
   const factory _Character(
-      {@required UniqueId userId,
+      {@required UniqueId id,
       @required Name name,
       @required Race race,
       @required FavoredClass favoredClass,
@@ -611,7 +611,7 @@ abstract class _Character extends Character {
       @required ImagePath imagePath}) = _$_Character;
 
   @override
-  UniqueId get userId;
+  UniqueId get id;
   @override
   Name get name;
   @override

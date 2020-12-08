@@ -11,7 +11,7 @@ abstract class Character implements _$Character {
   const Character._();
 
   const factory Character({
-    @required UniqueId userId,
+    @required UniqueId id,
     @required Name name,
     @required Race race,
     @required FavoredClass favoredClass,
@@ -41,7 +41,7 @@ abstract class Character implements _$Character {
   }) = _Character;
 
   factory Character.empty() => Character(
-        userId: UniqueId(),
+        id: UniqueId(),
         name: Name(''),
         race: Race(''),
         favoredClass: FavoredClass(''),

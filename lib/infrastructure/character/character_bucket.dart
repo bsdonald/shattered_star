@@ -26,7 +26,7 @@ class CharacterBucket implements ICharacterBucket {
 
       final userBucket = await _storage.userDirectory();
       final characterDto = CharacterDto.fromDomain(character);
-      final _reference = userBucket.child('characters/${characterDto.userId}');
+      final _reference = userBucket.child('characters/${characterDto.id}');
 
       UploadTask task = _reference.putFile(file);
 
@@ -58,7 +58,7 @@ class CharacterBucket implements ICharacterBucket {
   Future<Either<CharacterFailure, Unit>> delete(Character character) async {
     try {
       final userBucket = await _storage.userDirectory();
-      final characterId = character.userId.getOrCrash();
+      final characterId = character.id.getOrCrash();
 
       await userBucket.child('characters/$characterId').delete();
 
