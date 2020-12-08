@@ -10,23 +10,39 @@ import 'package:shattered_star/domain/character/i_character_bucket.dart';
 import 'package:shattered_star/infrastructure/character/character_dtos.dart';
 import 'package:shattered_star/infrastructure/core/storage_helpers.dart';
 
-@LazySingleton(as: ICharacterBucket)
+// @LazySingleton(as: ICharacterBucket)
 class CharacterBucket implements ICharacterBucket {
   final FirebaseStorage _storage;
   final _picker = ImagePicker();
+  String imagePath;
 
-  CharacterBucket(this._storage);
+  CharacterBucket(this._storage, this.imagePath);
   @override
   Future<Either<CharacterFailure, Unit>> upload(Character character) async {
     try {
       var pickedImage = await _picker.getImage(source: ImageSource.gallery);
       var file = File(pickedImage.path);
-      
-      
+      String downloadURL;
+
       final userBucket = await _storage.userDirectory();
       final characterDto = CharacterDto.fromDomain(character);
+      final _reference = userBucket.child('characters/${characterDto.userId}');
 
-      await userBucket.child('characters/${characterDto.userId}').putFile(file);
+      UploadTask task = _reference.putFile(file);
+
+      task.snapshotEvents.listen((TaskSnapshot snapshot) {
+        print('Snapshot state: ${snapshot.state}'); // paused, running, complete
+        print('Progress: ${(snapshot.bytesTransferred / snapshot.totalBytes) * 100} %');
+      });
+
+      task.then((TaskSnapshot snapshot) async {
+        print('Upload complete!');
+        downloadURL = await _reference.getDownloadURL();
+        // context.bloc<CharacterFormBloc>().add(
+        //       CharacterFormEvent.imageChanged(downloadURL),
+      // );
+        imagePath = downloadURL;
+      });
 
       return right(unit);
     } on FirebaseException catch (e) {
@@ -37,6 +53,7 @@ class CharacterBucket implements ICharacterBucket {
       }
     }
   }
+
   @override
   Future<Either<CharacterFailure, Unit>> delete(Character character) async {
     try {
