@@ -14,7 +14,7 @@ abstract class CharacterDto implements _$CharacterDto {
   const CharacterDto._();
 
   const factory CharacterDto({
-    @JsonKey(ignore: true) String userId,
+    @JsonKey(ignore: true) String id,
     @required String name,
     @required String race,
     @required String favoredClass,
@@ -45,7 +45,7 @@ abstract class CharacterDto implements _$CharacterDto {
 
   factory CharacterDto.fromDomain(Character character) {
     return CharacterDto(
-      userId: character.userId.getOrCrash(),
+      id: character.id.getOrCrash(),
       name: character.name.getOrCrash(),
       race: character.race.getOrCrash(),
       favoredClass: character.favoredClass.getOrCrash(),
@@ -77,7 +77,7 @@ abstract class CharacterDto implements _$CharacterDto {
 
  Character toDomain() {
    return Character(
-     userId: UniqueId.fromUniqueString(userId),
+     id: UniqueId.fromUniqueString(id),
       name: Name(name),
       race: Race(race),
       favoredClass: FavoredClass(favoredClass),
@@ -110,7 +110,7 @@ abstract class CharacterDto implements _$CharacterDto {
   factory CharacterDto.fromJson(Map<String, dynamic> json) => _$CharacterDtoFromJson(json);
 
   factory CharacterDto.fromFirestore(DocumentSnapshot doc) {
-    return CharacterDto.fromJson(doc.data()).copyWith(userId: doc.id);
+    return CharacterDto.fromJson(doc.data()).copyWith(id: doc.id);
   }
 }
 

@@ -44,7 +44,7 @@ class CharacterRepository implements ICharacterRepository {
       final userDoc = await _firestore.userDocument();
       final characterDto = CharacterDto.fromDomain(character);
 
-      await userDoc.characterCollection.doc(characterDto.userId).set(characterDto.toJson());
+      await userDoc.characterCollection.doc(characterDto.id).set(characterDto.toJson());
 
       return right(unit);
     } on FirebaseException catch (e) {
@@ -62,7 +62,7 @@ class CharacterRepository implements ICharacterRepository {
       final userDoc = await _firestore.userDocument();
       final characterDto = CharacterDto.fromDomain(character);
 
-      await userDoc.characterCollection.doc(characterDto.userId).update(characterDto.toJson());
+      await userDoc.characterCollection.doc(characterDto.id).update(characterDto.toJson());
 
       return right(unit);
     } on FirebaseException catch (e) {
@@ -80,7 +80,7 @@ class CharacterRepository implements ICharacterRepository {
   Future<Either<CharacterFailure, Unit>> delete(Character character) async {
     try {
       final userDoc = await _firestore.userDocument();
-      final characterId = character.userId.getOrCrash();
+      final characterId = character.id.getOrCrash();
 
       await userDoc.characterCollection.doc(characterId).delete();
 
