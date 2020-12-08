@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shattered_star/application/characters/character_actor/character_actor_bloc.dart';
 import 'package:shattered_star/application/characters/character_watcher/character_watcher_bloc.dart';
 import 'package:shattered_star/presentation/pages/character/character_overview_page/widgets/character_card_widget.dart';
 import 'package:shattered_star/presentation/pages/character/character_overview_page/widgets/critical_failure_display.dart';
@@ -24,7 +25,17 @@ class CharacterOverviewBody extends StatelessWidget {
                     width: 100,
                   );
                 } else {
-                  return CharacterCard(character: character);
+                  return Dismissible(
+                    key: Key(character.id.getOrCrash()),
+                    child: CharacterCard(character: character),
+                    onDismissed: (direction) {
+              context.bloc<CharacterActorBloc>().add(CharacterActorEvent.deleted(character));
+                    },
+                    background: Container(
+                      color: Colors.red,
+                      child: Icon(Icons.delete_forever),
+                    ),
+                  );
                 }
               },
               itemCount: state.characters.size,
