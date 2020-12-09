@@ -25,17 +25,7 @@ class CharacterOverviewBody extends StatelessWidget {
                     width: 100,
                   );
                 } else {
-                  return Dismissible(
-                    key: Key(character.id.getOrCrash()),
-                    child: CharacterCard(character: character),
-                    onDismissed: (direction) {
-              context.bloc<CharacterActorBloc>().add(CharacterActorEvent.deleted(character));
-                    },
-                    background: Container(
-                      color: Colors.red,
-                      child: Icon(Icons.delete_forever),
-                    ),
-                  );
+                  return CharacterCard(character: character);
                 }
               },
               itemCount: state.characters.size,
