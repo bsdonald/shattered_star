@@ -1,3 +1,4 @@
+import 'package:firestore_ui/animated_firestore_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shattered_star/application/characters/character_actor/character_actor_bloc.dart';
@@ -15,8 +16,9 @@ class CharacterOverviewBody extends StatelessWidget {
           loadInProgress: (_) => const Center(child: CircularProgressIndicator()),
           loadSuccess: (state) {
             print('size ${state.characters.size}');
-            return ListView.builder(
-              itemBuilder: (context, index) {
+            return FirestoreAnimatedList(
+              query: null,
+              itemBuilder: (context, snapshot, animation, index) {
                 final character = state.characters[index];
                 if (character.failureOption.isSome()) {
                   return Container(
@@ -28,7 +30,7 @@ class CharacterOverviewBody extends StatelessWidget {
                   return CharacterCard(character: character);
                 }
               },
-              itemCount: state.characters.size,
+              // itemCount: state.characters.size,
             );
           },
           loadFailure: (state) {
