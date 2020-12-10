@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -64,7 +65,7 @@ class CharacterCard extends StatelessWidget {
                     context: context,
                     builder: (context) => AlertDialog(
                       title: Text('Are you sure?'),
-                      content: Text('Do you want to delete this character?'),
+                      content: Text('Do you really want to delete ${character.name.getOrCrash()}?'),
                       actions: <Widget>[
                         FlatButton(
                           onPressed: () {
@@ -88,6 +89,7 @@ class CharacterCard extends StatelessWidget {
                   if (confirmDelete != true) {
                   } else {
                     context.bloc<CharacterActorBloc>().add(CharacterActorEvent.deleted(character));
+                    await FlushbarHelper.createInformation(message: '${character.name.getOrCrash()} has been deleted').show(context);
                   }
                 },
               ),
