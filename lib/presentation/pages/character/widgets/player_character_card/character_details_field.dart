@@ -417,15 +417,17 @@ class DetailsFormField extends StatelessWidget {
   final int maxLength;
   final int maxLines;
   final TextEditingController controller;
+  final String initialValue;
 
   const DetailsFormField({
     Key key,
     @required this.onChanged,
     @required this.validator,
     @required this.label,
-    @required this.controller,
-    this.maxLines = 1,
     this.maxLength,
+    this.maxLines = 1,
+    this.controller,
+    this.initialValue,
   }) : super(key: key);
 
   @override
@@ -434,6 +436,7 @@ class DetailsFormField extends StatelessWidget {
       // constraints: BoxConstraints.expand(height: 24),
       child: TextFormField(
         controller: controller,
+        initialValue: initialValue,
         textAlign: TextAlign.center,
         decoration: InputDecoration(
           contentPadding: EdgeInsets.all(0),

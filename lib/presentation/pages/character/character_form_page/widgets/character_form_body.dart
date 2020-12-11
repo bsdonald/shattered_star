@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
+import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/character/value_objects.dart';
 import 'package:shattered_star/domain/enum/form_block.dart';
+import 'package:shattered_star/presentation/pages/character/character_form_page/widgets/details_form.dart';
+import 'package:shattered_star/presentation/pages/character/character_form_page/widgets/name_form.dart';
 
 class CharacterFormBody extends StatelessWidget {
   const CharacterFormBody({Key key}) : super(key: key);
@@ -20,45 +23,7 @@ class CharacterFormBody extends StatelessWidget {
   Widget buildSwitch(BuildContext context, formBlock) {
     switch (formBlock) {
       case FormBlock.NameBlock:
-        return Center(
-          child: Column(
-            children: <Widget>[
-              Text('Enter your Character\'s Name'),
-              TextFormField(
-                // controller: textEditingController,
-                textAlign: TextAlign.center,
-                decoration: const InputDecoration(
-                  counterText: '',
-                  labelText: 'Name:',
-                  fillColor: Colors.white,
-                  filled: true,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20),
-                    ),
-                  ),
-                ),
-                onChanged: (value) => context.bloc<CharacterFormBloc>().add(
-                      CharacterFormEvent.nameChanged(value),
-                    ),
-                validator: (_) => context.bloc<CharacterFormBloc>().state.character.name.value.fold(
-                      (f) => f.maybeMap(
-                        empty: (f) => 'cannot be empty',
-                        exceedingLength: (f) => 'Exceeding length, max: ${f.max}',
-                        orElse: () => null,
-                      ),
-                      (r) => null,
-                    ),
-                maxLength: Name.maxLength,
-              ),
-              ElevatedButton(
-                onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.nextButtonPressed()),
-                child: Text('Next'),
-              )
-            ],
-          ),
-        );
+        return NameForm();
         break;
       case FormBlock.StatBlock:
         return Center(
@@ -96,12 +61,12 @@ class CharacterFormBody extends StatelessWidget {
               Row(
                 children: <Widget>[
                   ElevatedButton(
-                    onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.backButtonPressed()),
-                    child: Text('Back'),
+                    // onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.backButtonPressed()),
+                    onPressed: () {}, child: Text('Back'),
                   ),
                   ElevatedButton(
-                    onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.nextButtonPressed()),
-                    child: Text('Next'),
+                    // onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.nextButtonPressed()),
+                    onPressed: () {}, child: Text('Next'),
                   ),
                 ],
               ),
@@ -110,53 +75,7 @@ class CharacterFormBody extends StatelessWidget {
         );
         break;
       case FormBlock.DetailBlock:
-        return Center(
-          child: Column(
-            children: <Widget>[
-              Text('Enter your Character\'s Details'),
-              TextFormField(
-                // controller: textEditingController,
-                textAlign: TextAlign.center,
-                decoration: const InputDecoration(
-                  counterText: '',
-                  labelText: 'Name:',
-                  fillColor: Colors.white,
-                  filled: true,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20),
-                    ),
-                  ),
-                ),
-                onChanged: (value) => context.bloc<CharacterFormBloc>().add(
-                      CharacterFormEvent.nameChanged(value),
-                    ),
-                validator: (_) => context.bloc<CharacterFormBloc>().state.character.name.value.fold(
-                      (f) => f.maybeMap(
-                        empty: (f) => 'cannot be empty',
-                        exceedingLength: (f) => 'Exceeding length, max: ${f.max}',
-                        orElse: () => null,
-                      ),
-                      (r) => null,
-                    ),
-                maxLength: Name.maxLength,
-              ),
-              Row(
-                children: <Widget>[
-                  ElevatedButton(
-                    onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.backButtonPressed()),
-                    child: Text('Back'),
-                  ),
-                  ElevatedButton(
-                    onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.nextButtonPressed()),
-                    child: Text('Next'),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        );
+        return DetailsForm();
         break;
       case FormBlock.BioBlock:
         return Center(
@@ -194,12 +113,12 @@ class CharacterFormBody extends StatelessWidget {
               Row(
                 children: <Widget>[
                   ElevatedButton(
-                    onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.backButtonPressed()),
-                    child: Text('Back'),
+                    // onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.backButtonPressed()),
+                    onPressed: () {}, child: Text('Back'),
                   ),
                   ElevatedButton(
-                    onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.nextButtonPressed()),
-                    child: Text('Next'),
+                    // onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.nextButtonPressed()),
+                    onPressed: () {}, child: Text('Next'),
                   ),
                 ],
               ),
@@ -243,12 +162,12 @@ class CharacterFormBody extends StatelessWidget {
               Row(
                 children: <Widget>[
                   ElevatedButton(
-                    onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.backButtonPressed()),
-                    child: Text('Back'),
+                    // onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.backButtonPressed()),
+                    onPressed: () {}, child: Text('Back'),
                   ),
                   ElevatedButton(
-                    onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.saved()),
-                    child: Text('Finish'),
+                    // onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.saved()),
+                    onPressed: () {}, child: Text('Finish'),
                   ),
                 ],
               ),

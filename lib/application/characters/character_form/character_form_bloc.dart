@@ -53,6 +53,7 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
           character: state.character.copyWith(name: Name(e.nameStr)),
           saveFailureOrSuccessOption: none(),
         );
+        print(state.character.name.getOrCrash());
       },
       raceChanged: (e) async* {
         yield state.copyWith(
@@ -224,15 +225,17 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
       },
       backButtonPressed: (e) async* {
         _counter--;
-        print(_counter);
-        yield state.copyWith(formBlock: formList.elementAt(_counter));
-        print(_counter);
+        yield state.copyWith(
+          formBlock: formList.elementAt(_counter),
+          isEditing: true,
+        );
       },
       nextButtonPressed: (e) async* {
         _counter++;
-        print(_counter);
-        yield state.copyWith(formBlock: formList.elementAt(_counter));
-        print(_counter);
+        yield state.copyWith(
+          formBlock: formList.elementAt(_counter),
+          isEditing: true,
+        );
       },
     );
   }

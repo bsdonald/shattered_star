@@ -8876,6 +8876,8 @@ class _$CharacterFormStateTearOff {
       @required
           bool isEditing,
       @required
+          bool isNew,
+      @required
           bool isSaving,
       @required
           FormBlock formBlock,
@@ -8887,6 +8889,7 @@ class _$CharacterFormStateTearOff {
       character: character,
       showErrorMessages: showErrorMessages,
       isEditing: isEditing,
+      isNew: isNew,
       isSaving: isSaving,
       formBlock: formBlock,
       counter: counter,
@@ -8902,6 +8905,7 @@ mixin _$CharacterFormState {
   Character get character;
   bool get showErrorMessages;
   bool get isEditing;
+  bool get isNew;
   bool get isSaving;
   FormBlock get formBlock;
   int get counter;
@@ -8918,6 +8922,7 @@ abstract class $CharacterFormStateCopyWith<$Res> {
       {Character character,
       bool showErrorMessages,
       bool isEditing,
+      bool isNew,
       bool isSaving,
       FormBlock formBlock,
       int counter,
@@ -8939,6 +8944,7 @@ class _$CharacterFormStateCopyWithImpl<$Res>
     Object character = freezed,
     Object showErrorMessages = freezed,
     Object isEditing = freezed,
+    Object isNew = freezed,
     Object isSaving = freezed,
     Object formBlock = freezed,
     Object counter = freezed,
@@ -8951,6 +8957,7 @@ class _$CharacterFormStateCopyWithImpl<$Res>
           ? _value.showErrorMessages
           : showErrorMessages as bool,
       isEditing: isEditing == freezed ? _value.isEditing : isEditing as bool,
+      isNew: isNew == freezed ? _value.isNew : isNew as bool,
       isSaving: isSaving == freezed ? _value.isSaving : isSaving as bool,
       formBlock:
           formBlock == freezed ? _value.formBlock : formBlock as FormBlock,
@@ -8983,6 +8990,7 @@ abstract class _$CharacterFormStateCopyWith<$Res>
       {Character character,
       bool showErrorMessages,
       bool isEditing,
+      bool isNew,
       bool isSaving,
       FormBlock formBlock,
       int counter,
@@ -9007,6 +9015,7 @@ class __$CharacterFormStateCopyWithImpl<$Res>
     Object character = freezed,
     Object showErrorMessages = freezed,
     Object isEditing = freezed,
+    Object isNew = freezed,
     Object isSaving = freezed,
     Object formBlock = freezed,
     Object counter = freezed,
@@ -9019,6 +9028,7 @@ class __$CharacterFormStateCopyWithImpl<$Res>
           ? _value.showErrorMessages
           : showErrorMessages as bool,
       isEditing: isEditing == freezed ? _value.isEditing : isEditing as bool,
+      isNew: isNew == freezed ? _value.isNew : isNew as bool,
       isSaving: isSaving == freezed ? _value.isSaving : isSaving as bool,
       formBlock:
           formBlock == freezed ? _value.formBlock : formBlock as FormBlock,
@@ -9036,6 +9046,7 @@ class _$_CharacterFormState implements _CharacterFormState {
       {@required this.character,
       @required this.showErrorMessages,
       @required this.isEditing,
+      @required this.isNew,
       @required this.isSaving,
       @required this.formBlock,
       @required this.counter,
@@ -9043,6 +9054,7 @@ class _$_CharacterFormState implements _CharacterFormState {
       : assert(character != null),
         assert(showErrorMessages != null),
         assert(isEditing != null),
+        assert(isNew != null),
         assert(isSaving != null),
         assert(formBlock != null),
         assert(counter != null),
@@ -9055,6 +9067,8 @@ class _$_CharacterFormState implements _CharacterFormState {
   @override
   final bool isEditing;
   @override
+  final bool isNew;
+  @override
   final bool isSaving;
   @override
   final FormBlock formBlock;
@@ -9065,7 +9079,7 @@ class _$_CharacterFormState implements _CharacterFormState {
 
   @override
   String toString() {
-    return 'CharacterFormState(character: $character, showErrorMessages: $showErrorMessages, isEditing: $isEditing, isSaving: $isSaving, formBlock: $formBlock, counter: $counter, saveFailureOrSuccessOption: $saveFailureOrSuccessOption)';
+    return 'CharacterFormState(character: $character, showErrorMessages: $showErrorMessages, isEditing: $isEditing, isNew: $isNew, isSaving: $isSaving, formBlock: $formBlock, counter: $counter, saveFailureOrSuccessOption: $saveFailureOrSuccessOption)';
   }
 
   @override
@@ -9081,6 +9095,8 @@ class _$_CharacterFormState implements _CharacterFormState {
             (identical(other.isEditing, isEditing) ||
                 const DeepCollectionEquality()
                     .equals(other.isEditing, isEditing)) &&
+            (identical(other.isNew, isNew) ||
+                const DeepCollectionEquality().equals(other.isNew, isNew)) &&
             (identical(other.isSaving, isSaving) ||
                 const DeepCollectionEquality()
                     .equals(other.isSaving, isSaving)) &&
@@ -9103,6 +9119,7 @@ class _$_CharacterFormState implements _CharacterFormState {
       const DeepCollectionEquality().hash(character) ^
       const DeepCollectionEquality().hash(showErrorMessages) ^
       const DeepCollectionEquality().hash(isEditing) ^
+      const DeepCollectionEquality().hash(isNew) ^
       const DeepCollectionEquality().hash(isSaving) ^
       const DeepCollectionEquality().hash(formBlock) ^
       const DeepCollectionEquality().hash(counter) ^
@@ -9122,6 +9139,8 @@ abstract class _CharacterFormState implements CharacterFormState {
       @required
           bool isEditing,
       @required
+          bool isNew,
+      @required
           bool isSaving,
       @required
           FormBlock formBlock,
@@ -9137,6 +9156,8 @@ abstract class _CharacterFormState implements CharacterFormState {
   bool get showErrorMessages;
   @override
   bool get isEditing;
+  @override
+  bool get isNew;
   @override
   bool get isSaving;
   @override
