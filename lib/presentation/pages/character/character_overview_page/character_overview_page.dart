@@ -61,7 +61,7 @@ class CharacterOverviewPage extends StatelessWidget {
               IconButton(
                 icon: Icon(Icons.person_add_rounded),
                 onPressed: () {
-                  ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: null);
+                  ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: null, newCharacter: true);
                 },
               ),
             ],

@@ -7,15 +7,19 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
 import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/injection.dart';
+import 'package:shattered_star/presentation/pages/character/character_form_page/scaffolds/edited_character_form_scaffold.dart';
+import 'package:shattered_star/presentation/pages/character/character_form_page/scaffolds/new_character_form_scaffold.dart';
 import 'package:shattered_star/presentation/pages/character/widgets/player_character_card/player_character_card.dart';
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 class CharacterFormPage extends StatelessWidget {
   final Character editedCharacter;
+  final bool newCharacter;
 
   const CharacterFormPage({
     Key key,
     this.editedCharacter,
+    this.newCharacter,
   }) : super(key: key);
 
   @override
@@ -51,7 +55,7 @@ class CharacterFormPage extends StatelessWidget {
         builder: (context, state) {
           return Stack(
             children: <Widget>[
-              const CharacterFormScaffold(),
+              newCharacter ? const NewCharacterFormScaffold() : const EditedCharacterFormScaffold(),
               SavingInProgressOverlay(isSaving: state.isSaving),
             ],
           );
@@ -96,43 +100,6 @@ class SavingInProgressOverlay extends StatelessWidget {
               ],
             ),
           )),
-    );
-  }
-}
-
-class CharacterFormScaffold extends StatelessWidget {
-  const CharacterFormScaffold({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: BlocBuilder<CharacterFormBloc, CharacterFormState>(
-          buildWhen: (p, c) => p.isEditing != c.isEditing,
-          builder: (context, state) {
-            return Text(state.isEditing ? 'Edit Character' : 'Create Character');
-          },
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.check),
-            onPressed: () {
-              context.bloc<CharacterFormBloc>().add(const CharacterFormEvent.saved());
-            },
-          ),
-        ],
-      ),
-      body: BlocBuilder<CharacterFormBloc, CharacterFormState>(
-        buildWhen: (p, c) => p.showErrorMessages != c.showErrorMessages,
-        builder: (context, state) {
-          return Form(
-            autovalidate: state.showErrorMessages,
-            child: PlayerCharacterCard(isEditing: true, character: null),
-          );
-        },
-      ),
     );
   }
 }

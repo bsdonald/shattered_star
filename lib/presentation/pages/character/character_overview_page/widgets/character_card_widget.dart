@@ -42,7 +42,7 @@ class CharacterCard extends StatelessWidget {
                 color: Theme.of(context).primaryColor.withOpacity(0),
                 icon: Icons.edit,
                 onTap: () {
-                  ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character);
+                  ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character, newCharacter: false);
                 },
               ),
             ),
@@ -101,7 +101,7 @@ class CharacterCard extends StatelessWidget {
             ExtendedNavigator.of(context).pushHomePage(character: character);
           },
           onLongPress: () {
-            ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character);
+            ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character, newCharacter: false);
           },
           child: Card(
             elevation: 10,

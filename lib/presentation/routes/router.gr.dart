@@ -100,6 +100,7 @@ class Router extends RouterBase {
         builder: (context) => CharacterFormPage(
           key: args.key,
           editedCharacter: args.editedCharacter,
+          newCharacter: args.newCharacter,
         ),
         settings: data,
         fullscreenDialog: true,
@@ -137,11 +138,14 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
   Future<dynamic> pushCharacterFormPage({
     Key key,
     Character editedCharacter,
+    bool newCharacter,
   }) =>
       push<dynamic>(
         Routes.characterFormPage,
         arguments: CharacterFormPageArguments(
-            key: key, editedCharacter: editedCharacter),
+            key: key,
+            editedCharacter: editedCharacter,
+            newCharacter: newCharacter),
       );
 }
 
@@ -160,5 +164,7 @@ class HomePageArguments {
 class CharacterFormPageArguments {
   final Key key;
   final Character editedCharacter;
-  CharacterFormPageArguments({this.key, this.editedCharacter});
+  final bool newCharacter;
+  CharacterFormPageArguments(
+      {this.key, this.editedCharacter, this.newCharacter});
 }

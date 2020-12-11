@@ -10,6 +10,7 @@ import 'package:shattered_star/domain/character/i_character_repository.dart';
 import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/character/character_failure.dart';
 import 'package:shattered_star/domain/character/value_objects.dart';
+import 'package:shattered_star/domain/enum/form_block.dart';
 
 part 'character_form_event.dart';
 part 'character_form_state.dart';
@@ -18,8 +19,17 @@ part 'character_form_bloc.freezed.dart';
 @injectable
 class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
   final ICharacterRepository _characterRepository;
+  final List formList = [
+    FormBlock.NameBlock,
+    FormBlock.DetailBlock,
+    FormBlock.StatBlock,
+    FormBlock.BioBlock,
+    FormBlock.ImageBlock,
+  ];
 
   CharacterFormBloc(this._characterRepository) : super(CharacterFormState.initial());
+
+  int _counter = 0;
 
   @override
   Stream<CharacterFormState> mapEventToState(
@@ -28,7 +38,10 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
     yield* event.map(
       initialized: (e) async* {
         yield e.initialCharacterOption.fold(
-          () => state,
+          () => state.copyWith(
+            formBlock: formList.elementAt(_counter),
+            counter: _counter,
+          ),
           (initialCharacter) => state.copyWith(
             character: initialCharacter,
             isEditing: true,
@@ -77,7 +90,6 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
           saveFailureOrSuccessOption: none(),
         );
       },
-      
       weightChanged: (e) async* {
         yield state.copyWith(
           character: state.character.copyWith(weight: Weight(e.weightStr)),
@@ -209,6 +221,18 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
           showErrorMessages: true,
           saveFailureOrSuccessOption: optionOf(failureOrSuccess),
         );
+      },
+      backButtonPressed: (e) async* {
+        _counter--;
+        print(_counter);
+        yield state.copyWith(formBlock: formList.elementAt(_counter));
+        print(_counter);
+      },
+      nextButtonPressed: (e) async* {
+        _counter++;
+        print(_counter);
+        yield state.copyWith(formBlock: formList.elementAt(_counter));
+        print(_counter);
       },
     );
   }

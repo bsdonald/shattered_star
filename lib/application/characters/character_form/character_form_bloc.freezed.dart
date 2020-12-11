@@ -179,6 +179,14 @@ class _$CharacterFormEventTearOff {
   _Saved saved() {
     return const _Saved();
   }
+
+  _NextButtonPressed nextButtonPressed() {
+    return const _NextButtonPressed();
+  }
+
+  _BackButtonPressed backButtonPressed() {
+    return const _BackButtonPressed();
+  }
 }
 
 // ignore: unused_element
@@ -216,6 +224,8 @@ mixin _$CharacterFormEvent {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -247,6 +257,8 @@ mixin _$CharacterFormEvent {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -282,6 +294,8 @@ mixin _$CharacterFormEvent {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
@@ -313,6 +327,8 @@ mixin _$CharacterFormEvent {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   });
 }
@@ -423,6 +439,8 @@ class _$_Initialized implements _Initialized {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -452,6 +470,8 @@ class _$_Initialized implements _Initialized {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return initialized(initialCharacterOption);
   }
 
@@ -486,6 +506,8 @@ class _$_Initialized implements _Initialized {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -529,6 +551,8 @@ class _$_Initialized implements _Initialized {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -558,6 +582,8 @@ class _$_Initialized implements _Initialized {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return initialized(this);
   }
 
@@ -592,6 +618,8 @@ class _$_Initialized implements _Initialized {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -696,6 +724,8 @@ class _$_NameChanged implements _NameChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -725,6 +755,8 @@ class _$_NameChanged implements _NameChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return nameChanged(nameStr);
   }
 
@@ -759,6 +791,8 @@ class _$_NameChanged implements _NameChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -802,6 +836,8 @@ class _$_NameChanged implements _NameChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -831,6 +867,8 @@ class _$_NameChanged implements _NameChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return nameChanged(this);
   }
 
@@ -865,6 +903,8 @@ class _$_NameChanged implements _NameChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -968,6 +1008,8 @@ class _$_RaceChanged implements _RaceChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -997,6 +1039,8 @@ class _$_RaceChanged implements _RaceChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return raceChanged(raceStr);
   }
 
@@ -1031,6 +1075,8 @@ class _$_RaceChanged implements _RaceChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1074,6 +1120,8 @@ class _$_RaceChanged implements _RaceChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1103,6 +1151,8 @@ class _$_RaceChanged implements _RaceChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return raceChanged(this);
   }
 
@@ -1137,6 +1187,8 @@ class _$_RaceChanged implements _RaceChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1246,6 +1298,8 @@ class _$_FavoredClassChanged implements _FavoredClassChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1275,6 +1329,8 @@ class _$_FavoredClassChanged implements _FavoredClassChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return favoredClassChanged(favoredClassStr);
   }
 
@@ -1309,6 +1365,8 @@ class _$_FavoredClassChanged implements _FavoredClassChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1352,6 +1410,8 @@ class _$_FavoredClassChanged implements _FavoredClassChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1381,6 +1441,8 @@ class _$_FavoredClassChanged implements _FavoredClassChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return favoredClassChanged(this);
   }
 
@@ -1415,6 +1477,8 @@ class _$_FavoredClassChanged implements _FavoredClassChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1520,6 +1584,8 @@ class _$_LevelChanged implements _LevelChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1549,6 +1615,8 @@ class _$_LevelChanged implements _LevelChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return levelChanged(levelStr);
   }
 
@@ -1583,6 +1651,8 @@ class _$_LevelChanged implements _LevelChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1626,6 +1696,8 @@ class _$_LevelChanged implements _LevelChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1655,6 +1727,8 @@ class _$_LevelChanged implements _LevelChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return levelChanged(this);
   }
 
@@ -1689,6 +1763,8 @@ class _$_LevelChanged implements _LevelChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1793,6 +1869,8 @@ class _$_GenderChanged implements _GenderChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1822,6 +1900,8 @@ class _$_GenderChanged implements _GenderChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return genderChanged(genderStr);
   }
 
@@ -1856,6 +1936,8 @@ class _$_GenderChanged implements _GenderChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1899,6 +1981,8 @@ class _$_GenderChanged implements _GenderChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1928,6 +2012,8 @@ class _$_GenderChanged implements _GenderChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return genderChanged(this);
   }
 
@@ -1962,6 +2048,8 @@ class _$_GenderChanged implements _GenderChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2065,6 +2153,8 @@ class _$_AgeChanged implements _AgeChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2094,6 +2184,8 @@ class _$_AgeChanged implements _AgeChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return ageChanged(ageStr);
   }
 
@@ -2128,6 +2220,8 @@ class _$_AgeChanged implements _AgeChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2171,6 +2265,8 @@ class _$_AgeChanged implements _AgeChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2200,6 +2296,8 @@ class _$_AgeChanged implements _AgeChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return ageChanged(this);
   }
 
@@ -2234,6 +2332,8 @@ class _$_AgeChanged implements _AgeChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2338,6 +2438,8 @@ class _$_HeightChanged implements _HeightChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2367,6 +2469,8 @@ class _$_HeightChanged implements _HeightChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return heightChanged(heightStr);
   }
 
@@ -2401,6 +2505,8 @@ class _$_HeightChanged implements _HeightChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2444,6 +2550,8 @@ class _$_HeightChanged implements _HeightChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2473,6 +2581,8 @@ class _$_HeightChanged implements _HeightChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return heightChanged(this);
   }
 
@@ -2507,6 +2617,8 @@ class _$_HeightChanged implements _HeightChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2611,6 +2723,8 @@ class _$_WeightChanged implements _WeightChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2640,6 +2754,8 @@ class _$_WeightChanged implements _WeightChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return weightChanged(weightStr);
   }
 
@@ -2674,6 +2790,8 @@ class _$_WeightChanged implements _WeightChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2717,6 +2835,8 @@ class _$_WeightChanged implements _WeightChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2746,6 +2866,8 @@ class _$_WeightChanged implements _WeightChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return weightChanged(this);
   }
 
@@ -2780,6 +2902,8 @@ class _$_WeightChanged implements _WeightChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2883,6 +3007,8 @@ class _$_HomeChanged implements _HomeChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2912,6 +3038,8 @@ class _$_HomeChanged implements _HomeChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return homeChanged(homeStr);
   }
 
@@ -2946,6 +3074,8 @@ class _$_HomeChanged implements _HomeChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2989,6 +3119,8 @@ class _$_HomeChanged implements _HomeChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3018,6 +3150,8 @@ class _$_HomeChanged implements _HomeChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return homeChanged(this);
   }
 
@@ -3052,6 +3186,8 @@ class _$_HomeChanged implements _HomeChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3156,6 +3292,8 @@ class _$_AlignmentChanged implements _AlignmentChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3185,6 +3323,8 @@ class _$_AlignmentChanged implements _AlignmentChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return alignmentChanged(alignmentStr);
   }
 
@@ -3219,6 +3359,8 @@ class _$_AlignmentChanged implements _AlignmentChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3262,6 +3404,8 @@ class _$_AlignmentChanged implements _AlignmentChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3291,6 +3435,8 @@ class _$_AlignmentChanged implements _AlignmentChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return alignmentChanged(this);
   }
 
@@ -3325,6 +3471,8 @@ class _$_AlignmentChanged implements _AlignmentChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3429,6 +3577,8 @@ class _$_DeityChanged implements _DeityChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3458,6 +3608,8 @@ class _$_DeityChanged implements _DeityChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return deityChanged(deityStr);
   }
 
@@ -3492,6 +3644,8 @@ class _$_DeityChanged implements _DeityChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3535,6 +3689,8 @@ class _$_DeityChanged implements _DeityChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3564,6 +3720,8 @@ class _$_DeityChanged implements _DeityChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return deityChanged(this);
   }
 
@@ -3598,6 +3756,8 @@ class _$_DeityChanged implements _DeityChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3702,6 +3862,8 @@ class _$_LanguagesChanged implements _LanguagesChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3731,6 +3893,8 @@ class _$_LanguagesChanged implements _LanguagesChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return languagesChanged(languagesStr);
   }
 
@@ -3765,6 +3929,8 @@ class _$_LanguagesChanged implements _LanguagesChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3808,6 +3974,8 @@ class _$_LanguagesChanged implements _LanguagesChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3837,6 +4005,8 @@ class _$_LanguagesChanged implements _LanguagesChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return languagesChanged(this);
   }
 
@@ -3871,6 +4041,8 @@ class _$_LanguagesChanged implements _LanguagesChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3975,6 +4147,8 @@ class _$_StrengthChanged implements _StrengthChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4004,6 +4178,8 @@ class _$_StrengthChanged implements _StrengthChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return strengthChanged(strengthStr);
   }
 
@@ -4038,6 +4214,8 @@ class _$_StrengthChanged implements _StrengthChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4081,6 +4259,8 @@ class _$_StrengthChanged implements _StrengthChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4110,6 +4290,8 @@ class _$_StrengthChanged implements _StrengthChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return strengthChanged(this);
   }
 
@@ -4144,6 +4326,8 @@ class _$_StrengthChanged implements _StrengthChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4248,6 +4432,8 @@ class _$_DexterityChanged implements _DexterityChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4277,6 +4463,8 @@ class _$_DexterityChanged implements _DexterityChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return dexterityChanged(dexterityStr);
   }
 
@@ -4311,6 +4499,8 @@ class _$_DexterityChanged implements _DexterityChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4354,6 +4544,8 @@ class _$_DexterityChanged implements _DexterityChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4383,6 +4575,8 @@ class _$_DexterityChanged implements _DexterityChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return dexterityChanged(this);
   }
 
@@ -4417,6 +4611,8 @@ class _$_DexterityChanged implements _DexterityChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4526,6 +4722,8 @@ class _$_ConstitutionChanged implements _ConstitutionChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4555,6 +4753,8 @@ class _$_ConstitutionChanged implements _ConstitutionChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return constitutionChanged(constitutionStr);
   }
 
@@ -4589,6 +4789,8 @@ class _$_ConstitutionChanged implements _ConstitutionChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4632,6 +4834,8 @@ class _$_ConstitutionChanged implements _ConstitutionChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4661,6 +4865,8 @@ class _$_ConstitutionChanged implements _ConstitutionChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return constitutionChanged(this);
   }
 
@@ -4695,6 +4901,8 @@ class _$_ConstitutionChanged implements _ConstitutionChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4805,6 +5013,8 @@ class _$_IntelligenceChanged implements _IntelligenceChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4834,6 +5044,8 @@ class _$_IntelligenceChanged implements _IntelligenceChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return intelligenceChanged(intelligenceStr);
   }
 
@@ -4868,6 +5080,8 @@ class _$_IntelligenceChanged implements _IntelligenceChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4911,6 +5125,8 @@ class _$_IntelligenceChanged implements _IntelligenceChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4940,6 +5156,8 @@ class _$_IntelligenceChanged implements _IntelligenceChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return intelligenceChanged(this);
   }
 
@@ -4974,6 +5192,8 @@ class _$_IntelligenceChanged implements _IntelligenceChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5079,6 +5299,8 @@ class _$_WisdomChanged implements _WisdomChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5108,6 +5330,8 @@ class _$_WisdomChanged implements _WisdomChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return wisdomChanged(wisdomStr);
   }
 
@@ -5142,6 +5366,8 @@ class _$_WisdomChanged implements _WisdomChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5185,6 +5411,8 @@ class _$_WisdomChanged implements _WisdomChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5214,6 +5442,8 @@ class _$_WisdomChanged implements _WisdomChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return wisdomChanged(this);
   }
 
@@ -5248,6 +5478,8 @@ class _$_WisdomChanged implements _WisdomChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5352,6 +5584,8 @@ class _$_CharismaChanged implements _CharismaChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5381,6 +5615,8 @@ class _$_CharismaChanged implements _CharismaChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return charismaChanged(charismaStr);
   }
 
@@ -5415,6 +5651,8 @@ class _$_CharismaChanged implements _CharismaChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5458,6 +5696,8 @@ class _$_CharismaChanged implements _CharismaChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5487,6 +5727,8 @@ class _$_CharismaChanged implements _CharismaChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return charismaChanged(this);
   }
 
@@ -5521,6 +5763,8 @@ class _$_CharismaChanged implements _CharismaChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5625,6 +5869,8 @@ class _$_MaxHPChanged implements _MaxHPChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5654,6 +5900,8 @@ class _$_MaxHPChanged implements _MaxHPChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return maxHPChanged(maxHPStr);
   }
 
@@ -5688,6 +5936,8 @@ class _$_MaxHPChanged implements _MaxHPChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5731,6 +5981,8 @@ class _$_MaxHPChanged implements _MaxHPChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5760,6 +6012,8 @@ class _$_MaxHPChanged implements _MaxHPChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return maxHPChanged(this);
   }
 
@@ -5794,6 +6048,8 @@ class _$_MaxHPChanged implements _MaxHPChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5899,6 +6155,8 @@ class _$_ArmorClassChanged implements _ArmorClassChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5928,6 +6186,8 @@ class _$_ArmorClassChanged implements _ArmorClassChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return armorClassChanged(armorClassStr);
   }
 
@@ -5962,6 +6222,8 @@ class _$_ArmorClassChanged implements _ArmorClassChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6005,6 +6267,8 @@ class _$_ArmorClassChanged implements _ArmorClassChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6034,6 +6298,8 @@ class _$_ArmorClassChanged implements _ArmorClassChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return armorClassChanged(this);
   }
 
@@ -6068,6 +6334,8 @@ class _$_ArmorClassChanged implements _ArmorClassChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6181,6 +6449,8 @@ class _$_CombatManeuverDefenseChanged implements _CombatManeuverDefenseChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6210,6 +6480,8 @@ class _$_CombatManeuverDefenseChanged implements _CombatManeuverDefenseChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return combatManeuverDefenseChanged(combatManeuverDefenseStr);
   }
 
@@ -6244,6 +6516,8 @@ class _$_CombatManeuverDefenseChanged implements _CombatManeuverDefenseChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6287,6 +6561,8 @@ class _$_CombatManeuverDefenseChanged implements _CombatManeuverDefenseChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6316,6 +6592,8 @@ class _$_CombatManeuverDefenseChanged implements _CombatManeuverDefenseChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return combatManeuverDefenseChanged(this);
   }
 
@@ -6350,6 +6628,8 @@ class _$_CombatManeuverDefenseChanged implements _CombatManeuverDefenseChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6456,6 +6736,8 @@ class _$_MeleeModChanged implements _MeleeModChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6485,6 +6767,8 @@ class _$_MeleeModChanged implements _MeleeModChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return meleeModChanged(meleeModStr);
   }
 
@@ -6519,6 +6803,8 @@ class _$_MeleeModChanged implements _MeleeModChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6562,6 +6848,8 @@ class _$_MeleeModChanged implements _MeleeModChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6591,6 +6879,8 @@ class _$_MeleeModChanged implements _MeleeModChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return meleeModChanged(this);
   }
 
@@ -6625,6 +6915,8 @@ class _$_MeleeModChanged implements _MeleeModChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6729,6 +7021,8 @@ class _$_rangedModChanged implements _rangedModChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6758,6 +7052,8 @@ class _$_rangedModChanged implements _rangedModChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return rangedModChanged(rangedModStr);
   }
 
@@ -6792,6 +7088,8 @@ class _$_rangedModChanged implements _rangedModChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6835,6 +7133,8 @@ class _$_rangedModChanged implements _rangedModChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6864,6 +7164,8 @@ class _$_rangedModChanged implements _rangedModChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return rangedModChanged(this);
   }
 
@@ -6898,6 +7200,8 @@ class _$_rangedModChanged implements _rangedModChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7009,6 +7313,8 @@ class _$_CombatManeuverBonusChanged implements _CombatManeuverBonusChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7038,6 +7344,8 @@ class _$_CombatManeuverBonusChanged implements _CombatManeuverBonusChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return combatManeuverBonusChanged(combatManeuverBonusStr);
   }
 
@@ -7072,6 +7380,8 @@ class _$_CombatManeuverBonusChanged implements _CombatManeuverBonusChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7115,6 +7425,8 @@ class _$_CombatManeuverBonusChanged implements _CombatManeuverBonusChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7144,6 +7456,8 @@ class _$_CombatManeuverBonusChanged implements _CombatManeuverBonusChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return combatManeuverBonusChanged(this);
   }
 
@@ -7178,6 +7492,8 @@ class _$_CombatManeuverBonusChanged implements _CombatManeuverBonusChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7288,6 +7604,8 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7317,6 +7635,8 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return descriptionChanged(descriptionStr);
   }
 
@@ -7351,6 +7671,8 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7394,6 +7716,8 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7423,6 +7747,8 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return descriptionChanged(this);
   }
 
@@ -7457,6 +7783,8 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7562,6 +7890,8 @@ class _$_ImageChanged implements _ImageChanged {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7591,6 +7921,8 @@ class _$_ImageChanged implements _ImageChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return imageChanged(imageStr);
   }
 
@@ -7625,6 +7957,8 @@ class _$_ImageChanged implements _ImageChanged {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7668,6 +8002,8 @@ class _$_ImageChanged implements _ImageChanged {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7697,6 +8033,8 @@ class _$_ImageChanged implements _ImageChanged {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return imageChanged(this);
   }
 
@@ -7731,6 +8069,8 @@ class _$_ImageChanged implements _ImageChanged {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7810,6 +8150,8 @@ class _$_Saved implements _Saved {
     @required Result descriptionChanged(String descriptionStr),
     @required Result imageChanged(String imageStr),
     @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7839,6 +8181,8 @@ class _$_Saved implements _Saved {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return saved();
   }
 
@@ -7873,6 +8217,8 @@ class _$_Saved implements _Saved {
     Result descriptionChanged(String descriptionStr),
     Result imageChanged(String imageStr),
     Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7916,6 +8262,8 @@ class _$_Saved implements _Saved {
     @required Result descriptionChanged(_DescriptionChanged value),
     @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7945,6 +8293,8 @@ class _$_Saved implements _Saved {
     assert(descriptionChanged != null);
     assert(imageChanged != null);
     assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
     return saved(this);
   }
 
@@ -7979,6 +8329,8 @@ class _$_Saved implements _Saved {
     Result descriptionChanged(_DescriptionChanged value),
     Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7991,6 +8343,526 @@ class _$_Saved implements _Saved {
 
 abstract class _Saved implements CharacterFormEvent {
   const factory _Saved() = _$_Saved;
+}
+
+abstract class _$NextButtonPressedCopyWith<$Res> {
+  factory _$NextButtonPressedCopyWith(
+          _NextButtonPressed value, $Res Function(_NextButtonPressed) then) =
+      __$NextButtonPressedCopyWithImpl<$Res>;
+}
+
+class __$NextButtonPressedCopyWithImpl<$Res>
+    extends _$CharacterFormEventCopyWithImpl<$Res>
+    implements _$NextButtonPressedCopyWith<$Res> {
+  __$NextButtonPressedCopyWithImpl(
+      _NextButtonPressed _value, $Res Function(_NextButtonPressed) _then)
+      : super(_value, (v) => _then(v as _NextButtonPressed));
+
+  @override
+  _NextButtonPressed get _value => super._value as _NextButtonPressed;
+}
+
+class _$_NextButtonPressed implements _NextButtonPressed {
+  const _$_NextButtonPressed();
+
+  @override
+  String toString() {
+    return 'CharacterFormEvent.nextButtonPressed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _NextButtonPressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result initialized(Option<Character> initialCharacterOption),
+    @required Result nameChanged(String nameStr),
+    @required Result raceChanged(String raceStr),
+    @required Result favoredClassChanged(String favoredClassStr),
+    @required Result levelChanged(String levelStr),
+    @required Result genderChanged(String genderStr),
+    @required Result ageChanged(String ageStr),
+    @required Result heightChanged(String heightStr),
+    @required Result weightChanged(String weightStr),
+    @required Result homeChanged(String homeStr),
+    @required Result alignmentChanged(String alignmentStr),
+    @required Result deityChanged(String deityStr),
+    @required Result languagesChanged(String languagesStr),
+    @required Result strengthChanged(String strengthStr),
+    @required Result dexterityChanged(String dexterityStr),
+    @required Result constitutionChanged(String constitutionStr),
+    @required Result intelligenceChanged(String intelligenceStr),
+    @required Result wisdomChanged(String wisdomStr),
+    @required Result charismaChanged(String charismaStr),
+    @required Result maxHPChanged(String maxHPStr),
+    @required Result armorClassChanged(String armorClassStr),
+    @required
+        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required Result meleeModChanged(String meleeModStr),
+    @required Result rangedModChanged(String rangedModStr),
+    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required Result descriptionChanged(String descriptionStr),
+    @required Result imageChanged(String imageStr),
+    @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
+  }) {
+    assert(initialized != null);
+    assert(nameChanged != null);
+    assert(raceChanged != null);
+    assert(favoredClassChanged != null);
+    assert(levelChanged != null);
+    assert(genderChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
+    assert(homeChanged != null);
+    assert(alignmentChanged != null);
+    assert(deityChanged != null);
+    assert(languagesChanged != null);
+    assert(strengthChanged != null);
+    assert(dexterityChanged != null);
+    assert(constitutionChanged != null);
+    assert(intelligenceChanged != null);
+    assert(wisdomChanged != null);
+    assert(charismaChanged != null);
+    assert(maxHPChanged != null);
+    assert(armorClassChanged != null);
+    assert(combatManeuverDefenseChanged != null);
+    assert(meleeModChanged != null);
+    assert(rangedModChanged != null);
+    assert(combatManeuverBonusChanged != null);
+    assert(descriptionChanged != null);
+    assert(imageChanged != null);
+    assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
+    return nextButtonPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result initialized(Option<Character> initialCharacterOption),
+    Result nameChanged(String nameStr),
+    Result raceChanged(String raceStr),
+    Result favoredClassChanged(String favoredClassStr),
+    Result levelChanged(String levelStr),
+    Result genderChanged(String genderStr),
+    Result ageChanged(String ageStr),
+    Result heightChanged(String heightStr),
+    Result weightChanged(String weightStr),
+    Result homeChanged(String homeStr),
+    Result alignmentChanged(String alignmentStr),
+    Result deityChanged(String deityStr),
+    Result languagesChanged(String languagesStr),
+    Result strengthChanged(String strengthStr),
+    Result dexterityChanged(String dexterityStr),
+    Result constitutionChanged(String constitutionStr),
+    Result intelligenceChanged(String intelligenceStr),
+    Result wisdomChanged(String wisdomStr),
+    Result charismaChanged(String charismaStr),
+    Result maxHPChanged(String maxHPStr),
+    Result armorClassChanged(String armorClassStr),
+    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    Result meleeModChanged(String meleeModStr),
+    Result rangedModChanged(String rangedModStr),
+    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
+    Result descriptionChanged(String descriptionStr),
+    Result imageChanged(String imageStr),
+    Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (nextButtonPressed != null) {
+      return nextButtonPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result initialized(_Initialized value),
+    @required Result nameChanged(_NameChanged value),
+    @required Result raceChanged(_RaceChanged value),
+    @required Result favoredClassChanged(_FavoredClassChanged value),
+    @required Result levelChanged(_LevelChanged value),
+    @required Result genderChanged(_GenderChanged value),
+    @required Result ageChanged(_AgeChanged value),
+    @required Result heightChanged(_HeightChanged value),
+    @required Result weightChanged(_WeightChanged value),
+    @required Result homeChanged(_HomeChanged value),
+    @required Result alignmentChanged(_AlignmentChanged value),
+    @required Result deityChanged(_DeityChanged value),
+    @required Result languagesChanged(_LanguagesChanged value),
+    @required Result strengthChanged(_StrengthChanged value),
+    @required Result dexterityChanged(_DexterityChanged value),
+    @required Result constitutionChanged(_ConstitutionChanged value),
+    @required Result intelligenceChanged(_IntelligenceChanged value),
+    @required Result wisdomChanged(_WisdomChanged value),
+    @required Result charismaChanged(_CharismaChanged value),
+    @required Result maxHPChanged(_MaxHPChanged value),
+    @required Result armorClassChanged(_ArmorClassChanged value),
+    @required
+        Result combatManeuverDefenseChanged(
+            _CombatManeuverDefenseChanged value),
+    @required Result meleeModChanged(_MeleeModChanged value),
+    @required Result rangedModChanged(_rangedModChanged value),
+    @required
+        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required Result descriptionChanged(_DescriptionChanged value),
+    @required Result imageChanged(_ImageChanged value),
+    @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
+  }) {
+    assert(initialized != null);
+    assert(nameChanged != null);
+    assert(raceChanged != null);
+    assert(favoredClassChanged != null);
+    assert(levelChanged != null);
+    assert(genderChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
+    assert(homeChanged != null);
+    assert(alignmentChanged != null);
+    assert(deityChanged != null);
+    assert(languagesChanged != null);
+    assert(strengthChanged != null);
+    assert(dexterityChanged != null);
+    assert(constitutionChanged != null);
+    assert(intelligenceChanged != null);
+    assert(wisdomChanged != null);
+    assert(charismaChanged != null);
+    assert(maxHPChanged != null);
+    assert(armorClassChanged != null);
+    assert(combatManeuverDefenseChanged != null);
+    assert(meleeModChanged != null);
+    assert(rangedModChanged != null);
+    assert(combatManeuverBonusChanged != null);
+    assert(descriptionChanged != null);
+    assert(imageChanged != null);
+    assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
+    return nextButtonPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result initialized(_Initialized value),
+    Result nameChanged(_NameChanged value),
+    Result raceChanged(_RaceChanged value),
+    Result favoredClassChanged(_FavoredClassChanged value),
+    Result levelChanged(_LevelChanged value),
+    Result genderChanged(_GenderChanged value),
+    Result ageChanged(_AgeChanged value),
+    Result heightChanged(_HeightChanged value),
+    Result weightChanged(_WeightChanged value),
+    Result homeChanged(_HomeChanged value),
+    Result alignmentChanged(_AlignmentChanged value),
+    Result deityChanged(_DeityChanged value),
+    Result languagesChanged(_LanguagesChanged value),
+    Result strengthChanged(_StrengthChanged value),
+    Result dexterityChanged(_DexterityChanged value),
+    Result constitutionChanged(_ConstitutionChanged value),
+    Result intelligenceChanged(_IntelligenceChanged value),
+    Result wisdomChanged(_WisdomChanged value),
+    Result charismaChanged(_CharismaChanged value),
+    Result maxHPChanged(_MaxHPChanged value),
+    Result armorClassChanged(_ArmorClassChanged value),
+    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    Result meleeModChanged(_MeleeModChanged value),
+    Result rangedModChanged(_rangedModChanged value),
+    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    Result descriptionChanged(_DescriptionChanged value),
+    Result imageChanged(_ImageChanged value),
+    Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (nextButtonPressed != null) {
+      return nextButtonPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NextButtonPressed implements CharacterFormEvent {
+  const factory _NextButtonPressed() = _$_NextButtonPressed;
+}
+
+abstract class _$BackButtonPressedCopyWith<$Res> {
+  factory _$BackButtonPressedCopyWith(
+          _BackButtonPressed value, $Res Function(_BackButtonPressed) then) =
+      __$BackButtonPressedCopyWithImpl<$Res>;
+}
+
+class __$BackButtonPressedCopyWithImpl<$Res>
+    extends _$CharacterFormEventCopyWithImpl<$Res>
+    implements _$BackButtonPressedCopyWith<$Res> {
+  __$BackButtonPressedCopyWithImpl(
+      _BackButtonPressed _value, $Res Function(_BackButtonPressed) _then)
+      : super(_value, (v) => _then(v as _BackButtonPressed));
+
+  @override
+  _BackButtonPressed get _value => super._value as _BackButtonPressed;
+}
+
+class _$_BackButtonPressed implements _BackButtonPressed {
+  const _$_BackButtonPressed();
+
+  @override
+  String toString() {
+    return 'CharacterFormEvent.backButtonPressed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _BackButtonPressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result initialized(Option<Character> initialCharacterOption),
+    @required Result nameChanged(String nameStr),
+    @required Result raceChanged(String raceStr),
+    @required Result favoredClassChanged(String favoredClassStr),
+    @required Result levelChanged(String levelStr),
+    @required Result genderChanged(String genderStr),
+    @required Result ageChanged(String ageStr),
+    @required Result heightChanged(String heightStr),
+    @required Result weightChanged(String weightStr),
+    @required Result homeChanged(String homeStr),
+    @required Result alignmentChanged(String alignmentStr),
+    @required Result deityChanged(String deityStr),
+    @required Result languagesChanged(String languagesStr),
+    @required Result strengthChanged(String strengthStr),
+    @required Result dexterityChanged(String dexterityStr),
+    @required Result constitutionChanged(String constitutionStr),
+    @required Result intelligenceChanged(String intelligenceStr),
+    @required Result wisdomChanged(String wisdomStr),
+    @required Result charismaChanged(String charismaStr),
+    @required Result maxHPChanged(String maxHPStr),
+    @required Result armorClassChanged(String armorClassStr),
+    @required
+        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required Result meleeModChanged(String meleeModStr),
+    @required Result rangedModChanged(String rangedModStr),
+    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required Result descriptionChanged(String descriptionStr),
+    @required Result imageChanged(String imageStr),
+    @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
+  }) {
+    assert(initialized != null);
+    assert(nameChanged != null);
+    assert(raceChanged != null);
+    assert(favoredClassChanged != null);
+    assert(levelChanged != null);
+    assert(genderChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
+    assert(homeChanged != null);
+    assert(alignmentChanged != null);
+    assert(deityChanged != null);
+    assert(languagesChanged != null);
+    assert(strengthChanged != null);
+    assert(dexterityChanged != null);
+    assert(constitutionChanged != null);
+    assert(intelligenceChanged != null);
+    assert(wisdomChanged != null);
+    assert(charismaChanged != null);
+    assert(maxHPChanged != null);
+    assert(armorClassChanged != null);
+    assert(combatManeuverDefenseChanged != null);
+    assert(meleeModChanged != null);
+    assert(rangedModChanged != null);
+    assert(combatManeuverBonusChanged != null);
+    assert(descriptionChanged != null);
+    assert(imageChanged != null);
+    assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
+    return backButtonPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result initialized(Option<Character> initialCharacterOption),
+    Result nameChanged(String nameStr),
+    Result raceChanged(String raceStr),
+    Result favoredClassChanged(String favoredClassStr),
+    Result levelChanged(String levelStr),
+    Result genderChanged(String genderStr),
+    Result ageChanged(String ageStr),
+    Result heightChanged(String heightStr),
+    Result weightChanged(String weightStr),
+    Result homeChanged(String homeStr),
+    Result alignmentChanged(String alignmentStr),
+    Result deityChanged(String deityStr),
+    Result languagesChanged(String languagesStr),
+    Result strengthChanged(String strengthStr),
+    Result dexterityChanged(String dexterityStr),
+    Result constitutionChanged(String constitutionStr),
+    Result intelligenceChanged(String intelligenceStr),
+    Result wisdomChanged(String wisdomStr),
+    Result charismaChanged(String charismaStr),
+    Result maxHPChanged(String maxHPStr),
+    Result armorClassChanged(String armorClassStr),
+    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    Result meleeModChanged(String meleeModStr),
+    Result rangedModChanged(String rangedModStr),
+    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
+    Result descriptionChanged(String descriptionStr),
+    Result imageChanged(String imageStr),
+    Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (backButtonPressed != null) {
+      return backButtonPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result initialized(_Initialized value),
+    @required Result nameChanged(_NameChanged value),
+    @required Result raceChanged(_RaceChanged value),
+    @required Result favoredClassChanged(_FavoredClassChanged value),
+    @required Result levelChanged(_LevelChanged value),
+    @required Result genderChanged(_GenderChanged value),
+    @required Result ageChanged(_AgeChanged value),
+    @required Result heightChanged(_HeightChanged value),
+    @required Result weightChanged(_WeightChanged value),
+    @required Result homeChanged(_HomeChanged value),
+    @required Result alignmentChanged(_AlignmentChanged value),
+    @required Result deityChanged(_DeityChanged value),
+    @required Result languagesChanged(_LanguagesChanged value),
+    @required Result strengthChanged(_StrengthChanged value),
+    @required Result dexterityChanged(_DexterityChanged value),
+    @required Result constitutionChanged(_ConstitutionChanged value),
+    @required Result intelligenceChanged(_IntelligenceChanged value),
+    @required Result wisdomChanged(_WisdomChanged value),
+    @required Result charismaChanged(_CharismaChanged value),
+    @required Result maxHPChanged(_MaxHPChanged value),
+    @required Result armorClassChanged(_ArmorClassChanged value),
+    @required
+        Result combatManeuverDefenseChanged(
+            _CombatManeuverDefenseChanged value),
+    @required Result meleeModChanged(_MeleeModChanged value),
+    @required Result rangedModChanged(_rangedModChanged value),
+    @required
+        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required Result descriptionChanged(_DescriptionChanged value),
+    @required Result imageChanged(_ImageChanged value),
+    @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
+  }) {
+    assert(initialized != null);
+    assert(nameChanged != null);
+    assert(raceChanged != null);
+    assert(favoredClassChanged != null);
+    assert(levelChanged != null);
+    assert(genderChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
+    assert(homeChanged != null);
+    assert(alignmentChanged != null);
+    assert(deityChanged != null);
+    assert(languagesChanged != null);
+    assert(strengthChanged != null);
+    assert(dexterityChanged != null);
+    assert(constitutionChanged != null);
+    assert(intelligenceChanged != null);
+    assert(wisdomChanged != null);
+    assert(charismaChanged != null);
+    assert(maxHPChanged != null);
+    assert(armorClassChanged != null);
+    assert(combatManeuverDefenseChanged != null);
+    assert(meleeModChanged != null);
+    assert(rangedModChanged != null);
+    assert(combatManeuverBonusChanged != null);
+    assert(descriptionChanged != null);
+    assert(imageChanged != null);
+    assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
+    return backButtonPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result initialized(_Initialized value),
+    Result nameChanged(_NameChanged value),
+    Result raceChanged(_RaceChanged value),
+    Result favoredClassChanged(_FavoredClassChanged value),
+    Result levelChanged(_LevelChanged value),
+    Result genderChanged(_GenderChanged value),
+    Result ageChanged(_AgeChanged value),
+    Result heightChanged(_HeightChanged value),
+    Result weightChanged(_WeightChanged value),
+    Result homeChanged(_HomeChanged value),
+    Result alignmentChanged(_AlignmentChanged value),
+    Result deityChanged(_DeityChanged value),
+    Result languagesChanged(_LanguagesChanged value),
+    Result strengthChanged(_StrengthChanged value),
+    Result dexterityChanged(_DexterityChanged value),
+    Result constitutionChanged(_ConstitutionChanged value),
+    Result intelligenceChanged(_IntelligenceChanged value),
+    Result wisdomChanged(_WisdomChanged value),
+    Result charismaChanged(_CharismaChanged value),
+    Result maxHPChanged(_MaxHPChanged value),
+    Result armorClassChanged(_ArmorClassChanged value),
+    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    Result meleeModChanged(_MeleeModChanged value),
+    Result rangedModChanged(_rangedModChanged value),
+    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    Result descriptionChanged(_DescriptionChanged value),
+    Result imageChanged(_ImageChanged value),
+    Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (backButtonPressed != null) {
+      return backButtonPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _BackButtonPressed implements CharacterFormEvent {
+  const factory _BackButtonPressed() = _$_BackButtonPressed;
 }
 
 class _$CharacterFormStateTearOff {
@@ -8006,12 +8878,18 @@ class _$CharacterFormStateTearOff {
       @required
           bool isSaving,
       @required
+          FormBlock formBlock,
+      @required
+          int counter,
+      @required
           Option<Either<CharacterFailure, Unit>> saveFailureOrSuccessOption}) {
     return _CharacterFormState(
       character: character,
       showErrorMessages: showErrorMessages,
       isEditing: isEditing,
       isSaving: isSaving,
+      formBlock: formBlock,
+      counter: counter,
       saveFailureOrSuccessOption: saveFailureOrSuccessOption,
     );
   }
@@ -8025,6 +8903,8 @@ mixin _$CharacterFormState {
   bool get showErrorMessages;
   bool get isEditing;
   bool get isSaving;
+  FormBlock get formBlock;
+  int get counter;
   Option<Either<CharacterFailure, Unit>> get saveFailureOrSuccessOption;
 
   $CharacterFormStateCopyWith<CharacterFormState> get copyWith;
@@ -8039,6 +8919,8 @@ abstract class $CharacterFormStateCopyWith<$Res> {
       bool showErrorMessages,
       bool isEditing,
       bool isSaving,
+      FormBlock formBlock,
+      int counter,
       Option<Either<CharacterFailure, Unit>> saveFailureOrSuccessOption});
 
   $CharacterCopyWith<$Res> get character;
@@ -8058,6 +8940,8 @@ class _$CharacterFormStateCopyWithImpl<$Res>
     Object showErrorMessages = freezed,
     Object isEditing = freezed,
     Object isSaving = freezed,
+    Object formBlock = freezed,
+    Object counter = freezed,
     Object saveFailureOrSuccessOption = freezed,
   }) {
     return _then(_value.copyWith(
@@ -8068,6 +8952,9 @@ class _$CharacterFormStateCopyWithImpl<$Res>
           : showErrorMessages as bool,
       isEditing: isEditing == freezed ? _value.isEditing : isEditing as bool,
       isSaving: isSaving == freezed ? _value.isSaving : isSaving as bool,
+      formBlock:
+          formBlock == freezed ? _value.formBlock : formBlock as FormBlock,
+      counter: counter == freezed ? _value.counter : counter as int,
       saveFailureOrSuccessOption: saveFailureOrSuccessOption == freezed
           ? _value.saveFailureOrSuccessOption
           : saveFailureOrSuccessOption
@@ -8097,6 +8984,8 @@ abstract class _$CharacterFormStateCopyWith<$Res>
       bool showErrorMessages,
       bool isEditing,
       bool isSaving,
+      FormBlock formBlock,
+      int counter,
       Option<Either<CharacterFailure, Unit>> saveFailureOrSuccessOption});
 
   @override
@@ -8119,6 +9008,8 @@ class __$CharacterFormStateCopyWithImpl<$Res>
     Object showErrorMessages = freezed,
     Object isEditing = freezed,
     Object isSaving = freezed,
+    Object formBlock = freezed,
+    Object counter = freezed,
     Object saveFailureOrSuccessOption = freezed,
   }) {
     return _then(_CharacterFormState(
@@ -8129,6 +9020,9 @@ class __$CharacterFormStateCopyWithImpl<$Res>
           : showErrorMessages as bool,
       isEditing: isEditing == freezed ? _value.isEditing : isEditing as bool,
       isSaving: isSaving == freezed ? _value.isSaving : isSaving as bool,
+      formBlock:
+          formBlock == freezed ? _value.formBlock : formBlock as FormBlock,
+      counter: counter == freezed ? _value.counter : counter as int,
       saveFailureOrSuccessOption: saveFailureOrSuccessOption == freezed
           ? _value.saveFailureOrSuccessOption
           : saveFailureOrSuccessOption
@@ -8143,11 +9037,15 @@ class _$_CharacterFormState implements _CharacterFormState {
       @required this.showErrorMessages,
       @required this.isEditing,
       @required this.isSaving,
+      @required this.formBlock,
+      @required this.counter,
       @required this.saveFailureOrSuccessOption})
       : assert(character != null),
         assert(showErrorMessages != null),
         assert(isEditing != null),
         assert(isSaving != null),
+        assert(formBlock != null),
+        assert(counter != null),
         assert(saveFailureOrSuccessOption != null);
 
   @override
@@ -8159,11 +9057,15 @@ class _$_CharacterFormState implements _CharacterFormState {
   @override
   final bool isSaving;
   @override
+  final FormBlock formBlock;
+  @override
+  final int counter;
+  @override
   final Option<Either<CharacterFailure, Unit>> saveFailureOrSuccessOption;
 
   @override
   String toString() {
-    return 'CharacterFormState(character: $character, showErrorMessages: $showErrorMessages, isEditing: $isEditing, isSaving: $isSaving, saveFailureOrSuccessOption: $saveFailureOrSuccessOption)';
+    return 'CharacterFormState(character: $character, showErrorMessages: $showErrorMessages, isEditing: $isEditing, isSaving: $isSaving, formBlock: $formBlock, counter: $counter, saveFailureOrSuccessOption: $saveFailureOrSuccessOption)';
   }
 
   @override
@@ -8182,6 +9084,12 @@ class _$_CharacterFormState implements _CharacterFormState {
             (identical(other.isSaving, isSaving) ||
                 const DeepCollectionEquality()
                     .equals(other.isSaving, isSaving)) &&
+            (identical(other.formBlock, formBlock) ||
+                const DeepCollectionEquality()
+                    .equals(other.formBlock, formBlock)) &&
+            (identical(other.counter, counter) ||
+                const DeepCollectionEquality()
+                    .equals(other.counter, counter)) &&
             (identical(other.saveFailureOrSuccessOption,
                     saveFailureOrSuccessOption) ||
                 const DeepCollectionEquality().equals(
@@ -8196,6 +9104,8 @@ class _$_CharacterFormState implements _CharacterFormState {
       const DeepCollectionEquality().hash(showErrorMessages) ^
       const DeepCollectionEquality().hash(isEditing) ^
       const DeepCollectionEquality().hash(isSaving) ^
+      const DeepCollectionEquality().hash(formBlock) ^
+      const DeepCollectionEquality().hash(counter) ^
       const DeepCollectionEquality().hash(saveFailureOrSuccessOption);
 
   @override
@@ -8214,6 +9124,10 @@ abstract class _CharacterFormState implements CharacterFormState {
       @required
           bool isSaving,
       @required
+          FormBlock formBlock,
+      @required
+          int counter,
+      @required
           Option<Either<CharacterFailure, Unit>>
               saveFailureOrSuccessOption}) = _$_CharacterFormState;
 
@@ -8225,6 +9139,10 @@ abstract class _CharacterFormState implements CharacterFormState {
   bool get isEditing;
   @override
   bool get isSaving;
+  @override
+  FormBlock get formBlock;
+  @override
+  int get counter;
   @override
   Option<Either<CharacterFailure, Unit>> get saveFailureOrSuccessOption;
   @override
