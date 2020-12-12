@@ -5,6 +5,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
 import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/character/value_objects.dart' as char;
+import 'package:shattered_star/presentation/pages/character/character_form_page/widgets/character_form_field_widget.dart';
 
 class CharacterDetailsField extends HookWidget {
   final bool isEditing;
@@ -199,7 +200,7 @@ class DetailBlocForm extends HookWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          DetailsFormField(
+          CharacterFormField(
             controller: raceEditingController,
             onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                   CharacterFormEvent.raceChanged(value),
@@ -218,7 +219,7 @@ class DetailBlocForm extends HookWidget {
           SizedBox(
             height: 8,
           ),
-          DetailsFormField(
+          CharacterFormField(
             controller: favoredClassEditingController,
             onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                   CharacterFormEvent.favoredClassChanged(value),
@@ -237,7 +238,7 @@ class DetailBlocForm extends HookWidget {
           SizedBox(
             height: 8,
           ),
-          DetailsFormField(
+          CharacterFormField(
             controller: levelEditingController,
             onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                   CharacterFormEvent.levelChanged(value),
@@ -255,7 +256,7 @@ class DetailBlocForm extends HookWidget {
           SizedBox(
             height: 8,
           ),
-          DetailsFormField(
+          CharacterFormField(
             controller: genderEditingController,
             onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                   CharacterFormEvent.genderChanged(value),
@@ -274,7 +275,7 @@ class DetailBlocForm extends HookWidget {
           SizedBox(
             height: 8,
           ),
-          DetailsFormField(
+          CharacterFormField(
             controller: ageEditingController,
             onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                   CharacterFormEvent.ageChanged(value),
@@ -292,7 +293,7 @@ class DetailBlocForm extends HookWidget {
           SizedBox(
             height: 8,
           ),
-          DetailsFormField(
+          CharacterFormField(
             controller: heightEditingController,
             onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                   CharacterFormEvent.heightChanged(value),
@@ -311,7 +312,7 @@ class DetailBlocForm extends HookWidget {
           SizedBox(
             height: 8,
           ),
-          DetailsFormField(
+          CharacterFormField(
             controller: weightEditingController,
             onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                   CharacterFormEvent.weightChanged(value),
@@ -330,7 +331,7 @@ class DetailBlocForm extends HookWidget {
           SizedBox(
             height: 8,
           ),
-          DetailsFormField(
+          CharacterFormField(
             controller: homeEditingController,
             onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                   CharacterFormEvent.homeChanged(value),
@@ -349,7 +350,7 @@ class DetailBlocForm extends HookWidget {
           SizedBox(
             height: 8,
           ),
-          DetailsFormField(
+          CharacterFormField(
             controller: alignmentEditingController,
             onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                   CharacterFormEvent.alignmentChanged(value),
@@ -368,7 +369,7 @@ class DetailBlocForm extends HookWidget {
           SizedBox(
             height: 8,
           ),
-          DetailsFormField(
+          CharacterFormField(
             controller: deityEditingController,
             onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                   CharacterFormEvent.deityChanged(value),
@@ -387,7 +388,7 @@ class DetailBlocForm extends HookWidget {
           SizedBox(
             height: 8,
           ),
-          DetailsFormField(
+          CharacterFormField(
             controller: languagesEditingController,
             onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                   CharacterFormEvent.languagesChanged(value),
@@ -410,47 +411,4 @@ class DetailBlocForm extends HookWidget {
   }
 }
 
-class DetailsFormField extends StatelessWidget {
-  final Function onChanged;
-  final Function validator;
-  final String label;
-  final int maxLength;
-  final int maxLines;
-  final TextEditingController controller;
-  final String initialValue;
 
-  const DetailsFormField({
-    Key key,
-    @required this.onChanged,
-    @required this.validator,
-    @required this.label,
-    this.maxLength,
-    this.maxLines = 1,
-    this.controller,
-    this.initialValue,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      // constraints: BoxConstraints.expand(height: 24),
-      child: TextFormField(
-        controller: controller,
-        initialValue: initialValue,
-        textAlign: TextAlign.center,
-        decoration: InputDecoration(
-          contentPadding: EdgeInsets.all(0),
-          labelText: label,
-          counterText: '',
-          fillColor: Colors.white,
-          filled: true,
-        ),
-        onChanged: onChanged,
-        validator: validator,
-        maxLength: maxLength,
-        maxLines: maxLines,
-        minLines: 1,
-      ),
-    );
-  }
-}

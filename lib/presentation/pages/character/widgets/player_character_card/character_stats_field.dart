@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
 import 'package:shattered_star/domain/character/character.dart';
+import 'package:shattered_star/presentation/pages/character/character_form_page/widgets/character_form_field_widget.dart';
 
 class CharacterStatsField extends StatelessWidget {
   final bool isEditing;
@@ -138,7 +139,7 @@ class StatBlocForm extends HookWidget {
                   child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
-                  StatsFormField(
+                  CharacterFormField(
                     controller: strengthEditingController,
                     onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                           CharacterFormEvent.strengthChanged(value),
@@ -153,7 +154,7 @@ class StatBlocForm extends HookWidget {
                         ),
                     label: 'STR:',
                   ),
-                  StatsFormField(
+                  CharacterFormField(
                     controller: dexterityEditingController,
                     onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                           CharacterFormEvent.dexterityChanged(value),
@@ -168,7 +169,7 @@ class StatBlocForm extends HookWidget {
                         ),
                     label: 'DEX:',
                   ),
-                  StatsFormField(
+                  CharacterFormField(
                     controller: constitutionEditingController,
                     onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                           CharacterFormEvent.constitutionChanged(value),
@@ -194,7 +195,7 @@ class StatBlocForm extends HookWidget {
                   child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
-                  StatsFormField(
+                  CharacterFormField(
                     controller: intelligenceEditingController,
                     onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                           CharacterFormEvent.intelligenceChanged(value),
@@ -209,7 +210,7 @@ class StatBlocForm extends HookWidget {
                         ),
                     label: 'INT:',
                   ),
-                  StatsFormField(
+                  CharacterFormField(
                     controller: wisdomEditingController,
                     onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                           CharacterFormEvent.wisdomChanged(value),
@@ -224,7 +225,7 @@ class StatBlocForm extends HookWidget {
                         ),
                     label: 'WIS:',
                   ),
-                  StatsFormField(
+                  CharacterFormField(
                     controller: charismaEditingController,
                     onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                           CharacterFormEvent.charismaChanged(value),
@@ -250,7 +251,7 @@ class StatBlocForm extends HookWidget {
                   child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
-                  StatsFormField(
+                  CharacterFormField(
                     controller: maxHPEditingController,
                     onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                           CharacterFormEvent.maxHPChanged(value),
@@ -265,7 +266,7 @@ class StatBlocForm extends HookWidget {
                         ),
                     label: 'Max HP:',
                   ),
-                  StatsFormField(
+                  CharacterFormField(
                     controller: armorClassEditingController,
                     onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                           CharacterFormEvent.armorClassChanged(value),
@@ -280,7 +281,7 @@ class StatBlocForm extends HookWidget {
                         ),
                     label: 'AC:',
                   ),
-                  StatsFormField(
+                  CharacterFormField(
                     controller: combatManeuverDefenseEditingController,
                     onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                           CharacterFormEvent.combatManeuverDefenseChanged(value),
@@ -306,7 +307,7 @@ class StatBlocForm extends HookWidget {
                   child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
-                  StatsFormField(
+                  CharacterFormField(
                     controller: meleeModEditingController,
                     onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                           CharacterFormEvent.meleeModChanged(value),
@@ -321,7 +322,7 @@ class StatBlocForm extends HookWidget {
                         ),
                     label: 'Melee:',
                   ),
-                  StatsFormField(
+                  CharacterFormField(
                     controller: rangedModEditingController,
                     onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                           CharacterFormEvent.rangedModChanged(value),
@@ -336,7 +337,7 @@ class StatBlocForm extends HookWidget {
                         ),
                     label: 'Ranged:',
                   ),
-                  StatsFormField(
+                  CharacterFormField(
                     controller: combatManeuverBonusEditingController,
                     onChanged: (value) => context.bloc<CharacterFormBloc>().add(
                           CharacterFormEvent.combatManeuverBonusChanged(value),
@@ -357,51 +358,6 @@ class StatBlocForm extends HookWidget {
                   ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class StatsFormField extends StatelessWidget {
-  final Function onChanged;
-  final Function validator;
-  final String label;
-  final int maxLength;
-  final int maxLines;
-  final TextEditingController controller;
-  const StatsFormField(
-    {
-    Key key,
-    @required this.onChanged,
-    @required this.validator,
-    @required this.label,
-    @required this.controller,
-    this.maxLines = 1,
-    this.maxLength,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      // constraints: BoxConstraints.expand(width: 60, height: 24),
-      child: Padding(
-        padding: const EdgeInsets.all(4.0),
-        child: TextFormField(
-          controller: controller,
-          textAlign: TextAlign.end,
-          decoration: InputDecoration(
-            contentPadding: EdgeInsets.all(0),
-            labelText: label,
-            counterText: '',
-            filled: true,
-            fillColor: Colors.white,
-          ),
-          onChanged: onChanged,
-          validator: validator,
-          maxLength: maxLength,
-          maxLines: maxLines,
-          minLines: 1,
         ),
       ),
     );
