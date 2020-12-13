@@ -98,7 +98,7 @@ class _ImageFormState extends State<ImageForm> {
 
     pickedImage = await _picker.getImage(source: ImageSource.gallery);
     var file = File(pickedImage.path);
-    var _reference = _storage.ref().child('users/${user.id.getOrCrash()}/player_characters/test');
+    var _reference = _storage.ref().child('users/${user.id.getOrCrash()}/player_characters/$editedCharacterName');
 
     image = file;
 

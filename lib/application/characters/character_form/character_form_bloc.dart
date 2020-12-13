@@ -227,14 +227,12 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
         _counter--;
         yield state.copyWith(
           formBlock: formList.elementAt(_counter),
-          isEditing: true,
         );
       },
       nextButtonPressed: (e) async* {
         _counter++;
         yield state.copyWith(
           formBlock: formList.elementAt(_counter),
-          isEditing: true,
         );
       },
     );
