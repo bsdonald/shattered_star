@@ -30,6 +30,7 @@ class _ImageFieldState extends State<ImageField> {
   final _storage = FirebaseStorage.instance;
   String imagePath;
   String characterName;
+  String characterId;
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +40,7 @@ class _ImageFieldState extends State<ImageField> {
             listener: (context, state) {
               imagePath = state.character.imagePath.getOrCrash();
               characterName = state.character.name.getOrCrash();
+              characterId = state.character.id.getOrCrash();
             },
             builder: (context, state) {
               return Column(
@@ -93,7 +95,7 @@ class _ImageFieldState extends State<ImageField> {
 
     pickedImage = await _picker.getImage(source: ImageSource.gallery);
     var file = File(pickedImage.path);
-    var _reference = _storage.ref().child('users/${user.id.getOrCrash()}/player_characters/$characterName');
+    var _reference = _storage.ref().child('users/${user.id.getOrCrash()}/player_characters/$characterId');
 
     image = file;
 

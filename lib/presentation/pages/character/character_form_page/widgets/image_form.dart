@@ -26,6 +26,9 @@ class _ImageFormState extends State<ImageForm> {
   String imagePath;
   Character editedCharacter;
   String editedCharacterName;
+  bool imageLoading = false;
+  Widget imagePlaceholder;
+  int loadingPercentage;
 
   @override
   Widget build(BuildContext context) {
@@ -36,38 +39,31 @@ class _ImageFormState extends State<ImageForm> {
         builder: (context, state) {
           editedCharacter = state.character;
           editedCharacterName = editedCharacter.name.isValid() ? editedCharacter.name.getOrCrash() : 'your character';
-          imagePath = editedCharacter.imagePath.isValid() ? editedCharacter.imagePath.getOrCrash() : null;
+          imagePath = editedCharacter.imagePath.isValid() ? editedCharacter.imagePath.getOrCrash() : '';
 
           return Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text('Finally, we need you to pick an image for $editedCharacterName'),
               SizedBox(height: 16),
-              (imagePath != null)
-                  ? Container(
-                      height: 215,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage(backgroundImage),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      // height: 180,
-                      // width: 150,
-                      child: Image.network(imagePath),
-                    )
-                  : Container(
-                      child: Image(
-                        image: AssetImage(backgroundImage),
-                        fit: BoxFit.cover,
-                        height: 215,
-                      ),
-                    ),
+              Container(
+                height: 215,
+                width: 200,
+                decoration: BoxDecoration(color: Colors.white, border: Border.all()),
+                // height: 180,
+                // width: 150,
+                child: (imagePath == '' || imagePath == null)
+                    ? Text('Please select an image')
+                    : imageLoading
+                        ? Text('Progress $loadingPercentage %')
+                        : Image.network(imagePath),
+              ),
               RaisedButton(
                 child: Text('Select Image'),
-                onPressed: () => pickImage(),
+                onPressed: () {
+                  pickImage();
+                },
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -98,7 +94,7 @@ class _ImageFormState extends State<ImageForm> {
 
     pickedImage = await _picker.getImage(source: ImageSource.gallery);
     var file = File(pickedImage.path);
-    var _reference = _storage.ref().child('users/${user.id.getOrCrash()}/player_characters/$editedCharacterName');
+    var _reference = _storage.ref().child('users/${user.id.getOrCrash()}/player_characters/${editedCharacter.id.getOrCrash()}');
 
     image = file;
 
@@ -108,6 +104,13 @@ class _ImageFormState extends State<ImageForm> {
 
 // Optional
       task.snapshotEvents.listen((TaskSnapshot snapshot) {
+        setState(() {
+          imageLoading = true;
+          loadingPercentage = ((snapshot.bytesTransferred / snapshot.totalBytes) * 100).toInt();
+        });
+        // setState(() {
+        //   imagePlaceholder = Center(child: Text('Progress: ${(snapshot.bytesTransferred / snapshot.totalBytes) * 100} %'));
+        // });
         print('Snapshot state: ${snapshot.state}'); // paused, running, complete
         print('Progress: ${(snapshot.bytesTransferred / snapshot.totalBytes) * 100} %');
       }, onError: (Object e) {
@@ -121,14 +124,15 @@ class _ImageFormState extends State<ImageForm> {
         context.bloc<CharacterFormBloc>().add(
               CharacterFormEvent.imageChanged(downloadURL),
             );
-        imagePath = downloadURL;
+        setState(() {
+          imagePath = downloadURL;
+          imageLoading = false;
+        });
       }).catchError((Object e) {
         print(e); // FirebaseException
       });
     } else {
       print('No Path Recieved');
     }
-
-    setState(() {});
   }
 }
