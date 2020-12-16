@@ -22,7 +22,6 @@ class ImageForm extends StatefulWidget {
 class _ImageFormState extends State<ImageForm> {
   var backgroundImage = 'assets/images/forest.jpg';
   File image;
-  final _storage = FirebaseStorage.instance;
   String imagePath;
   Character editedCharacter;
   String editedCharacterName;
@@ -61,9 +60,7 @@ class _ImageFormState extends State<ImageForm> {
               ),
               RaisedButton(
                 child: Text('Select Image'),
-                onPressed: () {
-                  pickImage();
-                },
+                onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.uploadButtonPressed()),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -86,6 +83,8 @@ class _ImageFormState extends State<ImageForm> {
   }
 
   pickImage() async {
+    final _storage = FirebaseStorage.instance;
+
     final userOption = await getIt<IAuthFacade>().getSignedInUser();
     final user = userOption.getOrElse(() => throw NotAuthenticatedError());
     final _picker = ImagePicker();

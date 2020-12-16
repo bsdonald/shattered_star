@@ -187,6 +187,10 @@ class _$CharacterFormEventTearOff {
   _BackButtonPressed backButtonPressed() {
     return const _BackButtonPressed();
   }
+
+  _UploadButtonPressed uploadButtonPressed() {
+    return const _UploadButtonPressed();
+  }
 }
 
 // ignore: unused_element
@@ -226,6 +230,7 @@ mixin _$CharacterFormEvent {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -259,6 +264,7 @@ mixin _$CharacterFormEvent {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -296,6 +302,7 @@ mixin _$CharacterFormEvent {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
@@ -329,6 +336,7 @@ mixin _$CharacterFormEvent {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   });
 }
@@ -441,6 +449,7 @@ class _$_Initialized implements _Initialized {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -472,6 +481,7 @@ class _$_Initialized implements _Initialized {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return initialized(initialCharacterOption);
   }
 
@@ -508,6 +518,7 @@ class _$_Initialized implements _Initialized {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -553,6 +564,7 @@ class _$_Initialized implements _Initialized {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -584,6 +596,7 @@ class _$_Initialized implements _Initialized {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return initialized(this);
   }
 
@@ -620,6 +633,7 @@ class _$_Initialized implements _Initialized {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -726,6 +740,7 @@ class _$_NameChanged implements _NameChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -757,6 +772,7 @@ class _$_NameChanged implements _NameChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return nameChanged(nameStr);
   }
 
@@ -793,6 +809,7 @@ class _$_NameChanged implements _NameChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -838,6 +855,7 @@ class _$_NameChanged implements _NameChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -869,6 +887,7 @@ class _$_NameChanged implements _NameChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return nameChanged(this);
   }
 
@@ -905,6 +924,7 @@ class _$_NameChanged implements _NameChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1010,6 +1030,7 @@ class _$_RaceChanged implements _RaceChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1041,6 +1062,7 @@ class _$_RaceChanged implements _RaceChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return raceChanged(raceStr);
   }
 
@@ -1077,6 +1099,7 @@ class _$_RaceChanged implements _RaceChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1122,6 +1145,7 @@ class _$_RaceChanged implements _RaceChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1153,6 +1177,7 @@ class _$_RaceChanged implements _RaceChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return raceChanged(this);
   }
 
@@ -1189,6 +1214,7 @@ class _$_RaceChanged implements _RaceChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1300,6 +1326,7 @@ class _$_FavoredClassChanged implements _FavoredClassChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1331,6 +1358,7 @@ class _$_FavoredClassChanged implements _FavoredClassChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return favoredClassChanged(favoredClassStr);
   }
 
@@ -1367,6 +1395,7 @@ class _$_FavoredClassChanged implements _FavoredClassChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1412,6 +1441,7 @@ class _$_FavoredClassChanged implements _FavoredClassChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1443,6 +1473,7 @@ class _$_FavoredClassChanged implements _FavoredClassChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return favoredClassChanged(this);
   }
 
@@ -1479,6 +1510,7 @@ class _$_FavoredClassChanged implements _FavoredClassChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1586,6 +1618,7 @@ class _$_LevelChanged implements _LevelChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1617,6 +1650,7 @@ class _$_LevelChanged implements _LevelChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return levelChanged(levelStr);
   }
 
@@ -1653,6 +1687,7 @@ class _$_LevelChanged implements _LevelChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1698,6 +1733,7 @@ class _$_LevelChanged implements _LevelChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1729,6 +1765,7 @@ class _$_LevelChanged implements _LevelChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return levelChanged(this);
   }
 
@@ -1765,6 +1802,7 @@ class _$_LevelChanged implements _LevelChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1871,6 +1909,7 @@ class _$_GenderChanged implements _GenderChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1902,6 +1941,7 @@ class _$_GenderChanged implements _GenderChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return genderChanged(genderStr);
   }
 
@@ -1938,6 +1978,7 @@ class _$_GenderChanged implements _GenderChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1983,6 +2024,7 @@ class _$_GenderChanged implements _GenderChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2014,6 +2056,7 @@ class _$_GenderChanged implements _GenderChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return genderChanged(this);
   }
 
@@ -2050,6 +2093,7 @@ class _$_GenderChanged implements _GenderChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2155,6 +2199,7 @@ class _$_AgeChanged implements _AgeChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2186,6 +2231,7 @@ class _$_AgeChanged implements _AgeChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return ageChanged(ageStr);
   }
 
@@ -2222,6 +2268,7 @@ class _$_AgeChanged implements _AgeChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2267,6 +2314,7 @@ class _$_AgeChanged implements _AgeChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2298,6 +2346,7 @@ class _$_AgeChanged implements _AgeChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return ageChanged(this);
   }
 
@@ -2334,6 +2383,7 @@ class _$_AgeChanged implements _AgeChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2440,6 +2490,7 @@ class _$_HeightChanged implements _HeightChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2471,6 +2522,7 @@ class _$_HeightChanged implements _HeightChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return heightChanged(heightStr);
   }
 
@@ -2507,6 +2559,7 @@ class _$_HeightChanged implements _HeightChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2552,6 +2605,7 @@ class _$_HeightChanged implements _HeightChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2583,6 +2637,7 @@ class _$_HeightChanged implements _HeightChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return heightChanged(this);
   }
 
@@ -2619,6 +2674,7 @@ class _$_HeightChanged implements _HeightChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2725,6 +2781,7 @@ class _$_WeightChanged implements _WeightChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2756,6 +2813,7 @@ class _$_WeightChanged implements _WeightChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return weightChanged(weightStr);
   }
 
@@ -2792,6 +2850,7 @@ class _$_WeightChanged implements _WeightChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2837,6 +2896,7 @@ class _$_WeightChanged implements _WeightChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2868,6 +2928,7 @@ class _$_WeightChanged implements _WeightChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return weightChanged(this);
   }
 
@@ -2904,6 +2965,7 @@ class _$_WeightChanged implements _WeightChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3009,6 +3071,7 @@ class _$_HomeChanged implements _HomeChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3040,6 +3103,7 @@ class _$_HomeChanged implements _HomeChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return homeChanged(homeStr);
   }
 
@@ -3076,6 +3140,7 @@ class _$_HomeChanged implements _HomeChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3121,6 +3186,7 @@ class _$_HomeChanged implements _HomeChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3152,6 +3218,7 @@ class _$_HomeChanged implements _HomeChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return homeChanged(this);
   }
 
@@ -3188,6 +3255,7 @@ class _$_HomeChanged implements _HomeChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3294,6 +3362,7 @@ class _$_AlignmentChanged implements _AlignmentChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3325,6 +3394,7 @@ class _$_AlignmentChanged implements _AlignmentChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return alignmentChanged(alignmentStr);
   }
 
@@ -3361,6 +3431,7 @@ class _$_AlignmentChanged implements _AlignmentChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3406,6 +3477,7 @@ class _$_AlignmentChanged implements _AlignmentChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3437,6 +3509,7 @@ class _$_AlignmentChanged implements _AlignmentChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return alignmentChanged(this);
   }
 
@@ -3473,6 +3546,7 @@ class _$_AlignmentChanged implements _AlignmentChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3579,6 +3653,7 @@ class _$_DeityChanged implements _DeityChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3610,6 +3685,7 @@ class _$_DeityChanged implements _DeityChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return deityChanged(deityStr);
   }
 
@@ -3646,6 +3722,7 @@ class _$_DeityChanged implements _DeityChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3691,6 +3768,7 @@ class _$_DeityChanged implements _DeityChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3722,6 +3800,7 @@ class _$_DeityChanged implements _DeityChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return deityChanged(this);
   }
 
@@ -3758,6 +3837,7 @@ class _$_DeityChanged implements _DeityChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3864,6 +3944,7 @@ class _$_LanguagesChanged implements _LanguagesChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3895,6 +3976,7 @@ class _$_LanguagesChanged implements _LanguagesChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return languagesChanged(languagesStr);
   }
 
@@ -3931,6 +4013,7 @@ class _$_LanguagesChanged implements _LanguagesChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3976,6 +4059,7 @@ class _$_LanguagesChanged implements _LanguagesChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4007,6 +4091,7 @@ class _$_LanguagesChanged implements _LanguagesChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return languagesChanged(this);
   }
 
@@ -4043,6 +4128,7 @@ class _$_LanguagesChanged implements _LanguagesChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4149,6 +4235,7 @@ class _$_StrengthChanged implements _StrengthChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4180,6 +4267,7 @@ class _$_StrengthChanged implements _StrengthChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return strengthChanged(strengthStr);
   }
 
@@ -4216,6 +4304,7 @@ class _$_StrengthChanged implements _StrengthChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4261,6 +4350,7 @@ class _$_StrengthChanged implements _StrengthChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4292,6 +4382,7 @@ class _$_StrengthChanged implements _StrengthChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return strengthChanged(this);
   }
 
@@ -4328,6 +4419,7 @@ class _$_StrengthChanged implements _StrengthChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4434,6 +4526,7 @@ class _$_DexterityChanged implements _DexterityChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4465,6 +4558,7 @@ class _$_DexterityChanged implements _DexterityChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return dexterityChanged(dexterityStr);
   }
 
@@ -4501,6 +4595,7 @@ class _$_DexterityChanged implements _DexterityChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4546,6 +4641,7 @@ class _$_DexterityChanged implements _DexterityChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4577,6 +4673,7 @@ class _$_DexterityChanged implements _DexterityChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return dexterityChanged(this);
   }
 
@@ -4613,6 +4710,7 @@ class _$_DexterityChanged implements _DexterityChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4724,6 +4822,7 @@ class _$_ConstitutionChanged implements _ConstitutionChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4755,6 +4854,7 @@ class _$_ConstitutionChanged implements _ConstitutionChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return constitutionChanged(constitutionStr);
   }
 
@@ -4791,6 +4891,7 @@ class _$_ConstitutionChanged implements _ConstitutionChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4836,6 +4937,7 @@ class _$_ConstitutionChanged implements _ConstitutionChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4867,6 +4969,7 @@ class _$_ConstitutionChanged implements _ConstitutionChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return constitutionChanged(this);
   }
 
@@ -4903,6 +5006,7 @@ class _$_ConstitutionChanged implements _ConstitutionChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5015,6 +5119,7 @@ class _$_IntelligenceChanged implements _IntelligenceChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5046,6 +5151,7 @@ class _$_IntelligenceChanged implements _IntelligenceChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return intelligenceChanged(intelligenceStr);
   }
 
@@ -5082,6 +5188,7 @@ class _$_IntelligenceChanged implements _IntelligenceChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5127,6 +5234,7 @@ class _$_IntelligenceChanged implements _IntelligenceChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5158,6 +5266,7 @@ class _$_IntelligenceChanged implements _IntelligenceChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return intelligenceChanged(this);
   }
 
@@ -5194,6 +5303,7 @@ class _$_IntelligenceChanged implements _IntelligenceChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5301,6 +5411,7 @@ class _$_WisdomChanged implements _WisdomChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5332,6 +5443,7 @@ class _$_WisdomChanged implements _WisdomChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return wisdomChanged(wisdomStr);
   }
 
@@ -5368,6 +5480,7 @@ class _$_WisdomChanged implements _WisdomChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5413,6 +5526,7 @@ class _$_WisdomChanged implements _WisdomChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5444,6 +5558,7 @@ class _$_WisdomChanged implements _WisdomChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return wisdomChanged(this);
   }
 
@@ -5480,6 +5595,7 @@ class _$_WisdomChanged implements _WisdomChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5586,6 +5702,7 @@ class _$_CharismaChanged implements _CharismaChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5617,6 +5734,7 @@ class _$_CharismaChanged implements _CharismaChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return charismaChanged(charismaStr);
   }
 
@@ -5653,6 +5771,7 @@ class _$_CharismaChanged implements _CharismaChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5698,6 +5817,7 @@ class _$_CharismaChanged implements _CharismaChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5729,6 +5849,7 @@ class _$_CharismaChanged implements _CharismaChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return charismaChanged(this);
   }
 
@@ -5765,6 +5886,7 @@ class _$_CharismaChanged implements _CharismaChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5871,6 +5993,7 @@ class _$_MaxHPChanged implements _MaxHPChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5902,6 +6025,7 @@ class _$_MaxHPChanged implements _MaxHPChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return maxHPChanged(maxHPStr);
   }
 
@@ -5938,6 +6062,7 @@ class _$_MaxHPChanged implements _MaxHPChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5983,6 +6108,7 @@ class _$_MaxHPChanged implements _MaxHPChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6014,6 +6140,7 @@ class _$_MaxHPChanged implements _MaxHPChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return maxHPChanged(this);
   }
 
@@ -6050,6 +6177,7 @@ class _$_MaxHPChanged implements _MaxHPChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6157,6 +6285,7 @@ class _$_ArmorClassChanged implements _ArmorClassChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6188,6 +6317,7 @@ class _$_ArmorClassChanged implements _ArmorClassChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return armorClassChanged(armorClassStr);
   }
 
@@ -6224,6 +6354,7 @@ class _$_ArmorClassChanged implements _ArmorClassChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6269,6 +6400,7 @@ class _$_ArmorClassChanged implements _ArmorClassChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6300,6 +6432,7 @@ class _$_ArmorClassChanged implements _ArmorClassChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return armorClassChanged(this);
   }
 
@@ -6336,6 +6469,7 @@ class _$_ArmorClassChanged implements _ArmorClassChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6451,6 +6585,7 @@ class _$_CombatManeuverDefenseChanged implements _CombatManeuverDefenseChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6482,6 +6617,7 @@ class _$_CombatManeuverDefenseChanged implements _CombatManeuverDefenseChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return combatManeuverDefenseChanged(combatManeuverDefenseStr);
   }
 
@@ -6518,6 +6654,7 @@ class _$_CombatManeuverDefenseChanged implements _CombatManeuverDefenseChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6563,6 +6700,7 @@ class _$_CombatManeuverDefenseChanged implements _CombatManeuverDefenseChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6594,6 +6732,7 @@ class _$_CombatManeuverDefenseChanged implements _CombatManeuverDefenseChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return combatManeuverDefenseChanged(this);
   }
 
@@ -6630,6 +6769,7 @@ class _$_CombatManeuverDefenseChanged implements _CombatManeuverDefenseChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6738,6 +6878,7 @@ class _$_MeleeModChanged implements _MeleeModChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6769,6 +6910,7 @@ class _$_MeleeModChanged implements _MeleeModChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return meleeModChanged(meleeModStr);
   }
 
@@ -6805,6 +6947,7 @@ class _$_MeleeModChanged implements _MeleeModChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6850,6 +6993,7 @@ class _$_MeleeModChanged implements _MeleeModChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6881,6 +7025,7 @@ class _$_MeleeModChanged implements _MeleeModChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return meleeModChanged(this);
   }
 
@@ -6917,6 +7062,7 @@ class _$_MeleeModChanged implements _MeleeModChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7023,6 +7169,7 @@ class _$_rangedModChanged implements _rangedModChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7054,6 +7201,7 @@ class _$_rangedModChanged implements _rangedModChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return rangedModChanged(rangedModStr);
   }
 
@@ -7090,6 +7238,7 @@ class _$_rangedModChanged implements _rangedModChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7135,6 +7284,7 @@ class _$_rangedModChanged implements _rangedModChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7166,6 +7316,7 @@ class _$_rangedModChanged implements _rangedModChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return rangedModChanged(this);
   }
 
@@ -7202,6 +7353,7 @@ class _$_rangedModChanged implements _rangedModChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7315,6 +7467,7 @@ class _$_CombatManeuverBonusChanged implements _CombatManeuverBonusChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7346,6 +7499,7 @@ class _$_CombatManeuverBonusChanged implements _CombatManeuverBonusChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return combatManeuverBonusChanged(combatManeuverBonusStr);
   }
 
@@ -7382,6 +7536,7 @@ class _$_CombatManeuverBonusChanged implements _CombatManeuverBonusChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7427,6 +7582,7 @@ class _$_CombatManeuverBonusChanged implements _CombatManeuverBonusChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7458,6 +7614,7 @@ class _$_CombatManeuverBonusChanged implements _CombatManeuverBonusChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return combatManeuverBonusChanged(this);
   }
 
@@ -7494,6 +7651,7 @@ class _$_CombatManeuverBonusChanged implements _CombatManeuverBonusChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7606,6 +7764,7 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7637,6 +7796,7 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return descriptionChanged(descriptionStr);
   }
 
@@ -7673,6 +7833,7 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7718,6 +7879,7 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7749,6 +7911,7 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return descriptionChanged(this);
   }
 
@@ -7785,6 +7948,7 @@ class _$_DescriptionChanged implements _DescriptionChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7892,6 +8056,7 @@ class _$_ImageChanged implements _ImageChanged {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7923,6 +8088,7 @@ class _$_ImageChanged implements _ImageChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return imageChanged(imageStr);
   }
 
@@ -7959,6 +8125,7 @@ class _$_ImageChanged implements _ImageChanged {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8004,6 +8171,7 @@ class _$_ImageChanged implements _ImageChanged {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8035,6 +8203,7 @@ class _$_ImageChanged implements _ImageChanged {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return imageChanged(this);
   }
 
@@ -8071,6 +8240,7 @@ class _$_ImageChanged implements _ImageChanged {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8152,6 +8322,7 @@ class _$_Saved implements _Saved {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8183,6 +8354,7 @@ class _$_Saved implements _Saved {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return saved();
   }
 
@@ -8219,6 +8391,7 @@ class _$_Saved implements _Saved {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8264,6 +8437,7 @@ class _$_Saved implements _Saved {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8295,6 +8469,7 @@ class _$_Saved implements _Saved {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return saved(this);
   }
 
@@ -8331,6 +8506,7 @@ class _$_Saved implements _Saved {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8412,6 +8588,7 @@ class _$_NextButtonPressed implements _NextButtonPressed {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8443,6 +8620,7 @@ class _$_NextButtonPressed implements _NextButtonPressed {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return nextButtonPressed();
   }
 
@@ -8479,6 +8657,7 @@ class _$_NextButtonPressed implements _NextButtonPressed {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8524,6 +8703,7 @@ class _$_NextButtonPressed implements _NextButtonPressed {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8555,6 +8735,7 @@ class _$_NextButtonPressed implements _NextButtonPressed {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return nextButtonPressed(this);
   }
 
@@ -8591,6 +8772,7 @@ class _$_NextButtonPressed implements _NextButtonPressed {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8672,6 +8854,7 @@ class _$_BackButtonPressed implements _BackButtonPressed {
     @required Result saved(),
     @required Result nextButtonPressed(),
     @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8703,6 +8886,7 @@ class _$_BackButtonPressed implements _BackButtonPressed {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return backButtonPressed();
   }
 
@@ -8739,6 +8923,7 @@ class _$_BackButtonPressed implements _BackButtonPressed {
     Result saved(),
     Result nextButtonPressed(),
     Result backButtonPressed(),
+    Result uploadButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8784,6 +8969,7 @@ class _$_BackButtonPressed implements _BackButtonPressed {
     @required Result saved(_Saved value),
     @required Result nextButtonPressed(_NextButtonPressed value),
     @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8815,6 +9001,7 @@ class _$_BackButtonPressed implements _BackButtonPressed {
     assert(saved != null);
     assert(nextButtonPressed != null);
     assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
     return backButtonPressed(this);
   }
 
@@ -8851,6 +9038,7 @@ class _$_BackButtonPressed implements _BackButtonPressed {
     Result saved(_Saved value),
     Result nextButtonPressed(_NextButtonPressed value),
     Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8863,6 +9051,272 @@ class _$_BackButtonPressed implements _BackButtonPressed {
 
 abstract class _BackButtonPressed implements CharacterFormEvent {
   const factory _BackButtonPressed() = _$_BackButtonPressed;
+}
+
+abstract class _$UploadButtonPressedCopyWith<$Res> {
+  factory _$UploadButtonPressedCopyWith(_UploadButtonPressed value,
+          $Res Function(_UploadButtonPressed) then) =
+      __$UploadButtonPressedCopyWithImpl<$Res>;
+}
+
+class __$UploadButtonPressedCopyWithImpl<$Res>
+    extends _$CharacterFormEventCopyWithImpl<$Res>
+    implements _$UploadButtonPressedCopyWith<$Res> {
+  __$UploadButtonPressedCopyWithImpl(
+      _UploadButtonPressed _value, $Res Function(_UploadButtonPressed) _then)
+      : super(_value, (v) => _then(v as _UploadButtonPressed));
+
+  @override
+  _UploadButtonPressed get _value => super._value as _UploadButtonPressed;
+}
+
+class _$_UploadButtonPressed implements _UploadButtonPressed {
+  const _$_UploadButtonPressed();
+
+  @override
+  String toString() {
+    return 'CharacterFormEvent.uploadButtonPressed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _UploadButtonPressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result initialized(Option<Character> initialCharacterOption),
+    @required Result nameChanged(String nameStr),
+    @required Result raceChanged(String raceStr),
+    @required Result favoredClassChanged(String favoredClassStr),
+    @required Result levelChanged(String levelStr),
+    @required Result genderChanged(String genderStr),
+    @required Result ageChanged(String ageStr),
+    @required Result heightChanged(String heightStr),
+    @required Result weightChanged(String weightStr),
+    @required Result homeChanged(String homeStr),
+    @required Result alignmentChanged(String alignmentStr),
+    @required Result deityChanged(String deityStr),
+    @required Result languagesChanged(String languagesStr),
+    @required Result strengthChanged(String strengthStr),
+    @required Result dexterityChanged(String dexterityStr),
+    @required Result constitutionChanged(String constitutionStr),
+    @required Result intelligenceChanged(String intelligenceStr),
+    @required Result wisdomChanged(String wisdomStr),
+    @required Result charismaChanged(String charismaStr),
+    @required Result maxHPChanged(String maxHPStr),
+    @required Result armorClassChanged(String armorClassStr),
+    @required
+        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required Result meleeModChanged(String meleeModStr),
+    @required Result rangedModChanged(String rangedModStr),
+    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required Result descriptionChanged(String descriptionStr),
+    @required Result imageChanged(String imageStr),
+    @required Result saved(),
+    @required Result nextButtonPressed(),
+    @required Result backButtonPressed(),
+    @required Result uploadButtonPressed(),
+  }) {
+    assert(initialized != null);
+    assert(nameChanged != null);
+    assert(raceChanged != null);
+    assert(favoredClassChanged != null);
+    assert(levelChanged != null);
+    assert(genderChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
+    assert(homeChanged != null);
+    assert(alignmentChanged != null);
+    assert(deityChanged != null);
+    assert(languagesChanged != null);
+    assert(strengthChanged != null);
+    assert(dexterityChanged != null);
+    assert(constitutionChanged != null);
+    assert(intelligenceChanged != null);
+    assert(wisdomChanged != null);
+    assert(charismaChanged != null);
+    assert(maxHPChanged != null);
+    assert(armorClassChanged != null);
+    assert(combatManeuverDefenseChanged != null);
+    assert(meleeModChanged != null);
+    assert(rangedModChanged != null);
+    assert(combatManeuverBonusChanged != null);
+    assert(descriptionChanged != null);
+    assert(imageChanged != null);
+    assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
+    return uploadButtonPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result initialized(Option<Character> initialCharacterOption),
+    Result nameChanged(String nameStr),
+    Result raceChanged(String raceStr),
+    Result favoredClassChanged(String favoredClassStr),
+    Result levelChanged(String levelStr),
+    Result genderChanged(String genderStr),
+    Result ageChanged(String ageStr),
+    Result heightChanged(String heightStr),
+    Result weightChanged(String weightStr),
+    Result homeChanged(String homeStr),
+    Result alignmentChanged(String alignmentStr),
+    Result deityChanged(String deityStr),
+    Result languagesChanged(String languagesStr),
+    Result strengthChanged(String strengthStr),
+    Result dexterityChanged(String dexterityStr),
+    Result constitutionChanged(String constitutionStr),
+    Result intelligenceChanged(String intelligenceStr),
+    Result wisdomChanged(String wisdomStr),
+    Result charismaChanged(String charismaStr),
+    Result maxHPChanged(String maxHPStr),
+    Result armorClassChanged(String armorClassStr),
+    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    Result meleeModChanged(String meleeModStr),
+    Result rangedModChanged(String rangedModStr),
+    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
+    Result descriptionChanged(String descriptionStr),
+    Result imageChanged(String imageStr),
+    Result saved(),
+    Result nextButtonPressed(),
+    Result backButtonPressed(),
+    Result uploadButtonPressed(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (uploadButtonPressed != null) {
+      return uploadButtonPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result initialized(_Initialized value),
+    @required Result nameChanged(_NameChanged value),
+    @required Result raceChanged(_RaceChanged value),
+    @required Result favoredClassChanged(_FavoredClassChanged value),
+    @required Result levelChanged(_LevelChanged value),
+    @required Result genderChanged(_GenderChanged value),
+    @required Result ageChanged(_AgeChanged value),
+    @required Result heightChanged(_HeightChanged value),
+    @required Result weightChanged(_WeightChanged value),
+    @required Result homeChanged(_HomeChanged value),
+    @required Result alignmentChanged(_AlignmentChanged value),
+    @required Result deityChanged(_DeityChanged value),
+    @required Result languagesChanged(_LanguagesChanged value),
+    @required Result strengthChanged(_StrengthChanged value),
+    @required Result dexterityChanged(_DexterityChanged value),
+    @required Result constitutionChanged(_ConstitutionChanged value),
+    @required Result intelligenceChanged(_IntelligenceChanged value),
+    @required Result wisdomChanged(_WisdomChanged value),
+    @required Result charismaChanged(_CharismaChanged value),
+    @required Result maxHPChanged(_MaxHPChanged value),
+    @required Result armorClassChanged(_ArmorClassChanged value),
+    @required
+        Result combatManeuverDefenseChanged(
+            _CombatManeuverDefenseChanged value),
+    @required Result meleeModChanged(_MeleeModChanged value),
+    @required Result rangedModChanged(_rangedModChanged value),
+    @required
+        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required Result descriptionChanged(_DescriptionChanged value),
+    @required Result imageChanged(_ImageChanged value),
+    @required Result saved(_Saved value),
+    @required Result nextButtonPressed(_NextButtonPressed value),
+    @required Result backButtonPressed(_BackButtonPressed value),
+    @required Result uploadButtonPressed(_UploadButtonPressed value),
+  }) {
+    assert(initialized != null);
+    assert(nameChanged != null);
+    assert(raceChanged != null);
+    assert(favoredClassChanged != null);
+    assert(levelChanged != null);
+    assert(genderChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
+    assert(homeChanged != null);
+    assert(alignmentChanged != null);
+    assert(deityChanged != null);
+    assert(languagesChanged != null);
+    assert(strengthChanged != null);
+    assert(dexterityChanged != null);
+    assert(constitutionChanged != null);
+    assert(intelligenceChanged != null);
+    assert(wisdomChanged != null);
+    assert(charismaChanged != null);
+    assert(maxHPChanged != null);
+    assert(armorClassChanged != null);
+    assert(combatManeuverDefenseChanged != null);
+    assert(meleeModChanged != null);
+    assert(rangedModChanged != null);
+    assert(combatManeuverBonusChanged != null);
+    assert(descriptionChanged != null);
+    assert(imageChanged != null);
+    assert(saved != null);
+    assert(nextButtonPressed != null);
+    assert(backButtonPressed != null);
+    assert(uploadButtonPressed != null);
+    return uploadButtonPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result initialized(_Initialized value),
+    Result nameChanged(_NameChanged value),
+    Result raceChanged(_RaceChanged value),
+    Result favoredClassChanged(_FavoredClassChanged value),
+    Result levelChanged(_LevelChanged value),
+    Result genderChanged(_GenderChanged value),
+    Result ageChanged(_AgeChanged value),
+    Result heightChanged(_HeightChanged value),
+    Result weightChanged(_WeightChanged value),
+    Result homeChanged(_HomeChanged value),
+    Result alignmentChanged(_AlignmentChanged value),
+    Result deityChanged(_DeityChanged value),
+    Result languagesChanged(_LanguagesChanged value),
+    Result strengthChanged(_StrengthChanged value),
+    Result dexterityChanged(_DexterityChanged value),
+    Result constitutionChanged(_ConstitutionChanged value),
+    Result intelligenceChanged(_IntelligenceChanged value),
+    Result wisdomChanged(_WisdomChanged value),
+    Result charismaChanged(_CharismaChanged value),
+    Result maxHPChanged(_MaxHPChanged value),
+    Result armorClassChanged(_ArmorClassChanged value),
+    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    Result meleeModChanged(_MeleeModChanged value),
+    Result rangedModChanged(_rangedModChanged value),
+    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    Result descriptionChanged(_DescriptionChanged value),
+    Result imageChanged(_ImageChanged value),
+    Result saved(_Saved value),
+    Result nextButtonPressed(_NextButtonPressed value),
+    Result backButtonPressed(_BackButtonPressed value),
+    Result uploadButtonPressed(_UploadButtonPressed value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (uploadButtonPressed != null) {
+      return uploadButtonPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UploadButtonPressed implements CharacterFormEvent {
+  const factory _UploadButtonPressed() = _$_UploadButtonPressed;
 }
 
 class _$CharacterFormStateTearOff {

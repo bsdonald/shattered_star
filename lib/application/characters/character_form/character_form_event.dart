@@ -32,4 +32,5 @@ abstract class CharacterFormEvent with _$CharacterFormEvent {
   const factory CharacterFormEvent.saved() = _Saved;
   const factory CharacterFormEvent.nextButtonPressed() = _NextButtonPressed;
   const factory CharacterFormEvent.backButtonPressed() = _BackButtonPressed;
+  const factory CharacterFormEvent.uploadButtonPressed() = _UploadButtonPressed;
 }

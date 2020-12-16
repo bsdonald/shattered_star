@@ -68,7 +68,7 @@ class _ImageFieldState extends State<ImageField> {
                         ),
                   RaisedButton(
                     child: Text('Select Image'),
-                    onPressed: () => pickImage(),
+                onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.uploadButtonPressed()),
                   ),
                 ],
               );
@@ -118,15 +118,15 @@ class _ImageFieldState extends State<ImageField> {
         context.bloc<CharacterFormBloc>().add(
               CharacterFormEvent.imageChanged(downloadURL),
             );
-        imagePath = downloadURL;
+        setState(() {
+          imagePath = downloadURL;
+        });
       }).catchError((Object e) {
         print(e); // FirebaseException
       });
     } else {
       print('No Path Recieved');
     }
-
-    setState(() {});
   }
 }
 

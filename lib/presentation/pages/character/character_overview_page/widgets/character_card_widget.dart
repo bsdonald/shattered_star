@@ -1,11 +1,15 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:shattered_star/application/characters/character_actor/character_actor_bloc.dart';
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
+import 'package:shattered_star/domain/auth/i_auth_facade.dart';
 import 'package:shattered_star/domain/character/character.dart';
+import 'package:shattered_star/domain/core/errors.dart';
+import 'package:shattered_star/injection.dart';
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
@@ -21,6 +25,7 @@ class CharacterCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final SlidableController slidableController = SlidableController();
     bool confirmDelete = false;
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4),
       child: Slidable(
@@ -89,6 +94,7 @@ class CharacterCard extends StatelessWidget {
                   if (confirmDelete != true) {
                   } else {
                     context.bloc<CharacterActorBloc>().add(CharacterActorEvent.deleted(character));
+                    // deleteImage();
                     await FlushbarHelper.createInformation(message: '${character.name.getOrCrash()} has been deleted').show(context);
                   }
                 },
@@ -197,5 +203,14 @@ class CharacterCard extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  deleteImage() async {
+    final _storage = FirebaseStorage.instance;
+    final userOption = await getIt<IAuthFacade>().getSignedInUser();
+    final user = userOption.getOrElse(() => throw NotAuthenticatedError());
+    var _reference = _storage.ref().child('users/${user.id.getOrCrash()}/player_characters/${character.id.getOrCrash()}');
+
+    await _reference.delete();
   }
 }
