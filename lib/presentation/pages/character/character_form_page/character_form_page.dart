@@ -3,13 +3,11 @@ import 'package:dartz/dartz.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
 import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/injection.dart';
 import 'package:shattered_star/presentation/pages/character/character_form_page/scaffolds/edited_character_form_scaffold.dart';
 import 'package:shattered_star/presentation/pages/character/character_form_page/scaffolds/new_character_form_scaffold.dart';
-import 'package:shattered_star/presentation/pages/character/widgets/player_character_card/player_character_card.dart';
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 class CharacterFormPage extends StatelessWidget {
@@ -44,7 +42,7 @@ class CharacterFormPage extends StatelessWidget {
                 },
                 (_) {
                   ExtendedNavigator.of(context).popUntil(
-                    (route) => route.settings.name == Routes.characterOverviewPage,
+                    (route) => route.settings.name == Routes.characterListPage,
                   );
                 },
               );

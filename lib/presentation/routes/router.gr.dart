@@ -13,9 +13,9 @@ import '../../domain/character/character.dart';
 import '../pages/character/character_details_page/character_details_page.dart';
 import '../pages/character/character_form_page/character_form_page.dart';
 import '../pages/character/character_home_page/character_home_page.dart';
-import '../pages/character/character_overview_page/character_overview_page.dart';
-import '../sign_in/sign_in_page.dart';
-import '../splash/splash_page.dart';
+import '../pages/character/character_list_page/character_list_page.dart';
+import '../pages/sign_in/sign_in_page.dart';
+import '../pages/splash/splash_page.dart';
 import '../test/test.dart';
 
 class Routes {
@@ -24,7 +24,7 @@ class Routes {
   static const String homePage = '/home-page';
   static const String test = '/Test';
   static const String characterDetailsPage = '/character-details-page';
-  static const String characterOverviewPage = '/character-overview-page';
+  static const String characterListPage = '/character-list-page';
   static const String characterFormPage = '/character-form-page';
   static const all = <String>{
     splashPage,
@@ -32,7 +32,7 @@ class Routes {
     homePage,
     test,
     characterDetailsPage,
-    characterOverviewPage,
+    characterListPage,
     characterFormPage,
   };
 }
@@ -46,7 +46,7 @@ class Router extends RouterBase {
     RouteDef(Routes.homePage, page: HomePage),
     RouteDef(Routes.test, page: Test),
     RouteDef(Routes.characterDetailsPage, page: CharacterDetailsPage),
-    RouteDef(Routes.characterOverviewPage, page: CharacterOverviewPage),
+    RouteDef(Routes.characterListPage, page: CharacterListPage),
     RouteDef(Routes.characterFormPage, page: CharacterFormPage),
   ];
   @override
@@ -86,9 +86,9 @@ class Router extends RouterBase {
         settings: data,
       );
     },
-    CharacterOverviewPage: (data) {
+    CharacterListPage: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => CharacterOverviewPage(),
+        builder: (context) => CharacterListPage(),
         settings: data,
       );
     },
@@ -132,8 +132,8 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
   Future<dynamic> pushCharacterDetailsPage() =>
       push<dynamic>(Routes.characterDetailsPage);
 
-  Future<dynamic> pushCharacterOverviewPage() =>
-      push<dynamic>(Routes.characterOverviewPage);
+  Future<dynamic> pushCharacterListPage() =>
+      push<dynamic>(Routes.characterListPage);
 
   Future<dynamic> pushCharacterFormPage({
     Key key,

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shattered_star/application/characters/character_actor/character_actor_bloc.dart';
 import 'package:shattered_star/application/characters/character_watcher/character_watcher_bloc.dart';
-import 'package:shattered_star/presentation/pages/character/character_overview_page/widgets/character_card_widget.dart';
-import 'package:shattered_star/presentation/pages/character/character_overview_page/widgets/critical_failure_display.dart';
+import 'package:shattered_star/presentation/pages/character/character_list_page/widgets/character_card_widget.dart';
+import 'package:shattered_star/presentation/pages/character/character_list_page/widgets/critical_failure_display.dart';
 
-class CharacterOverviewBody extends StatelessWidget {
+class CharacterListBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<CharacterWatcherBloc, CharacterWatcherState>(

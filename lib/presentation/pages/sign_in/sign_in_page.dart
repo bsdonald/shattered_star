@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shattered_star/application/auth/sign_in_form/sign_in_form_bloc.dart';
 import 'package:shattered_star/injection.dart';
-import 'package:shattered_star/presentation/sign_in/widgets/sign_in_form.dart';
+import 'package:shattered_star/presentation/pages/sign_in/widgets/sign_in_form.dart';
 
 class SignInPage extends StatelessWidget {
   @override

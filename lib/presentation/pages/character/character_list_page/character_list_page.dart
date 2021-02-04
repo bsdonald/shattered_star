@@ -6,10 +6,10 @@ import 'package:shattered_star/application/auth/auth_bloc.dart';
 import 'package:shattered_star/application/characters/character_actor/character_actor_bloc.dart';
 import 'package:shattered_star/application/characters/character_watcher/character_watcher_bloc.dart';
 import 'package:shattered_star/injection.dart';
-import 'package:shattered_star/presentation/pages/character/character_overview_page/widgets/character_overview_body.dart';
+import 'package:shattered_star/presentation/pages/character/character_list_page/widgets/character_list_body.dart';
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
-class CharacterOverviewPage extends StatelessWidget {
+class CharacterListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -66,7 +66,7 @@ class CharacterOverviewPage extends StatelessWidget {
               ),
             ],
           ),
-          body: CharacterOverviewBody(),
+          body: CharacterListBody(),
         ),
       ),
     );
