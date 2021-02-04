@@ -3,15 +3,13 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:shattered_star/application/characters/character_actor/character_actor_bloc.dart';
-import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
 import 'package:shattered_star/domain/auth/i_auth_facade.dart';
 import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/core/errors.dart';
 import 'package:shattered_star/injection.dart';
 import 'package:shattered_star/presentation/routes/router.gr.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
 
 class CharacterCard extends StatelessWidget {
   final Character character;
@@ -47,7 +45,7 @@ class CharacterCard extends StatelessWidget {
                 color: Theme.of(context).primaryColor.withOpacity(0),
                 icon: Icons.edit,
                 onTap: () {
-                  ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character, newCharacter: false);
+                  ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character);
                 },
               ),
             ),
@@ -107,7 +105,7 @@ class CharacterCard extends StatelessWidget {
             ExtendedNavigator.of(context).pushHomePage(character: character);
           },
           onLongPress: () {
-            ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character, newCharacter: false);
+            ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character);
           },
           child: Card(
             elevation: 10,
