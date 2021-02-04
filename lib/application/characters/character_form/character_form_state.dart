@@ -8,8 +8,6 @@ abstract class CharacterFormState with _$CharacterFormState {
     @required bool isEditing,
     @required bool isNew,
     @required bool isSaving,
-    @required FormBlock formBlock,
-    @required int counter,
     @required Option<Either<CharacterFailure, Unit>> saveFailureOrSuccessOption,
   }) = _CharacterFormState;
 
@@ -20,7 +18,5 @@ abstract class CharacterFormState with _$CharacterFormState {
     isNew: false,
     isSaving: false,
     saveFailureOrSuccessOption: none(),
-    formBlock: FormBlock.Card,
-    counter: 0,
   );
 }
