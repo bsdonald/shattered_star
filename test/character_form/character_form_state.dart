@@ -14,7 +14,7 @@ abstract class CharacterFormState with _$CharacterFormState {
 
   factory CharacterFormState.initial() => CharacterFormState(
     character: Character.empty(),
-    characterImage: Image.asset('assets/images/transparent.png'),
+    characterImage: null,
     showErrorMessages: false,
     isEditing: false,
     isSaving: false,

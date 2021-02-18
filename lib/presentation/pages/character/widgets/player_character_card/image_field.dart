@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -21,7 +19,7 @@ class ImageField extends StatefulWidget {
 
 class _ImageFieldState extends State<ImageField> {
   var backgroundImage = 'assets/images/forest.jpg';
-  File image;
+  Image image;
   final _storage = FirebaseStorage.instance;
   String imagePath;
   String characterName;
@@ -31,39 +29,33 @@ class _ImageFieldState extends State<ImageField> {
   Widget build(BuildContext context) {
     return widget.isEditing
         ? BlocConsumer<CharacterFormBloc, CharacterFormState>(
-            listenWhen: (p, c) => p.isEditing != c.isEditing,
+            listenWhen: (p, c) => p.isEditing || p.imageLoading != c.isEditing || c.imageLoading,
             listener: (context, state) {
-              imagePath = state.character.imagePath.getOrCrash();
+              image = state.characterImage;
+              imagePath = state.character.imagePath.toString();
               characterName = state.character.name.getOrCrash();
               characterId = state.character.id.getOrCrash();
             },
             builder: (context, state) {
+              print('image: $image');
               return Column(
                 children: [
-                  (imagePath != null)
-                      ? Container(
-                          height: 215,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(backgroundImage),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          // height: 180,
-                          // width: 150,
-                          child: Image.network(imagePath),
-                        )
-                      : Container(
-                          child: Image(
-                            image: AssetImage(backgroundImage),
-                            fit: BoxFit.cover,
-                            height: 215,
-                          ),
-                        ),
+                  Container(
+                    height: 215,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(backgroundImage),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    // height: 180,
+                    // width: 150,
+                    child: image ?? Text('Failed to load image'),
+                  ),
                   RaisedButton(
                     child: Text('Select Image'),
-                    onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.uploadButtonPressed()),
+                    onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed()),
                   ),
                 ],
               );
@@ -77,7 +69,7 @@ class _ImageFieldState extends State<ImageField> {
             ),
             // height: 180,
             // width: 150,
-            child: Image.network(widget.character.imagePath.getOrCrash()),
+            child: image,
           );
   }
 }

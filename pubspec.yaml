@@ -37,7 +37,7 @@ dependencies:
   freezed_annotation: ^0.7.1
   get_it: ^4.0.2
   google_sign_in: ^4.5.1
-  image_picker: ^0.6.7+14
+  image_picker: ^0.6.7+22
   injectable: ^0.4.0+1
   json_annotation: ^3.0.1
   kt_dart: ^0.7.0+1
@@ -79,6 +79,7 @@ flutter:
     - assets/images/rapunzel.png
     - assets/images/tiana.png
     - assets/images/forest.jpg
+    - assets/images/transparent.png
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

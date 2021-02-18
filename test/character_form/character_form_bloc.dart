@@ -1,13 +1,10 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart' hide Alignment;
+import 'package:flutter/material.dart' show Image;
 // import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/character/character_failure.dart';
@@ -36,7 +33,7 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
           () => state.copyWith(),
           (initialCharacter) => state.copyWith(
             character: initialCharacter,
-            characterImage: Image.network(initialCharacter.imagePath.getOrCrash()),
+            characterImage: Image.network('${initialCharacter.imagePath}'),
             isEditing: true,
           ),
         );
@@ -46,6 +43,7 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
           character: state.character.copyWith(name: Name(e.nameStr)),
           saveFailureOrSuccessOption: none(),
         );
+        print(state.character.name.getOrCrash());
       },
       raceChanged: (e) async* {
         yield state.copyWith(
@@ -199,29 +197,21 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
       },
       imageButtonPressed: (e) async* {
         String downloadUrl;
-        final _picker = ImagePicker();
-        File _image;
-
-        Future getImage() async {
-          final pickedFile = await _picker.getImage(source: ImageSource.gallery);
-
-          if (pickedFile != null) {
-            _image = File(pickedFile.path);
-          } else {
-            print('No image selected');
-          }
-        }
 
         yield state.copyWith(
           imageLoading: true,
           saveFailureOrSuccessOption: none(),
         );
 
-        await getImage();
+        var pickedImage = await _characterBucket.getImage();
 
+        // await _characterBucket.upload(state.character.id.getOrCrash());
+
+        // downloadUrl = await _characterBucket.getDownloadUrl(state.character.id.getOrCrash());
+        // print(downloadUrl);
         yield state.copyWith(
           imageLoading: false,
-          characterImage: Image.file(_image),
+          characterImage: Image.file(pickedImage),
           saveFailureOrSuccessOption: none(),
         );
       },
