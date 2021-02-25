@@ -23,9 +23,11 @@ class CharacterBucket implements ICharacterBucket {
   }
 
   @override
-  Future<Either<CharacterFailure, Unit>> upload(String characterId, File file) async {
+  Future<Either<CharacterFailure, Unit>> upload(String characterId) async {
     try {
-      // String downloadURL;
+      var pickedImage = await _picker.getImage(source: ImageSource.gallery);
+      var file = File(pickedImage.path);
+      String downloadURL;
 
       final userBucket = await _storage.userDirectory();
 
@@ -33,7 +35,7 @@ class CharacterBucket implements ICharacterBucket {
 
       UploadTask task = _reference.putFile(file);
 
-      task.snapshotEvents.listen((TaskSnapshot snapshot) {
+      await task.snapshotEvents.listen((TaskSnapshot snapshot) {
         print('Snapshot state: ${snapshot.state}'); // paused, running, complete
         print('Progress: ${(snapshot.bytesTransferred / snapshot.totalBytes) * 100} %');
       }, onError: (Object e) {
@@ -43,7 +45,9 @@ class CharacterBucket implements ICharacterBucket {
       await task.then((TaskSnapshot snapshot) {
         print('Upload complete!');
         // downloadURL = await _reference.getDownloadURL();
-      }).catchError(print);
+      }).catchError((Object e) {
+        print(e); // FirebaseException
+      });
 
       return right(unit);
     } on FirebaseException catch (e) {

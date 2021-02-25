@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
@@ -7,7 +6,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart' hide Alignment;
 // import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/character/character_failure.dart';
@@ -199,29 +197,24 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
       },
       imageButtonPressed: (e) async* {
         String downloadUrl;
-        final _picker = ImagePicker();
-        File _image;
-
-        Future getImage() async {
-          final pickedFile = await _picker.getImage(source: ImageSource.gallery);
-
-          if (pickedFile != null) {
-            _image = File(pickedFile.path);
-          } else {
-            print('No image selected');
-          }
-        }
 
         yield state.copyWith(
-          imageLoading: true,
+          isSaving: true,
           saveFailureOrSuccessOption: none(),
         );
 
-        await getImage();
+        await _characterBucket.upload(state.character.id.getOrCrash());
 
         yield state.copyWith(
-          imageLoading: false,
-          characterImage: Image.file(_image),
+          isSaving: false,
+          saveFailureOrSuccessOption: none(),
+        );
+        downloadUrl = await _characterBucket.getDownloadUrl(state.character.id.getOrCrash());
+
+        print(downloadUrl);
+        yield state.copyWith(
+          character: state.character.copyWith(imagePath: ImagePath(downloadUrl)),
+          characterImage: Image.network(downloadUrl),
           saveFailureOrSuccessOption: none(),
         );
       },

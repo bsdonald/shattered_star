@@ -74,6 +74,17 @@ class _ImageFieldState extends State<ImageField> {
   }
 }
 
+// BlocProvider<CharacterFormBloc>(
+//                         create: (context) => getIt<CharacterFormBloc>(),
+//                       );
+//                       showModalBottomSheet(
+//                         context: context,
+//                         backgroundColor: Colors.transparent,
+//                         builder: (context) => ImageBottomSheet(),
+//                       );
+
+// () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed())
+
 // TextFormField(
 //   textAlign: TextAlign.center,
 //   decoration: InputDecoration(
