@@ -1,10 +1,9 @@
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
 import 'package:shattered_star/domain/character/character.dart';
 
-class ImageField extends StatefulWidget {
+class ImageField extends StatelessWidget {
   final bool isEditing;
   final Character character;
   const ImageField({
@@ -13,27 +12,18 @@ class ImageField extends StatefulWidget {
     @required this.isEditing,
   }) : super(key: key);
 
-  @override
-  _ImageFieldState createState() => _ImageFieldState();
-}
-
-class _ImageFieldState extends State<ImageField> {
-  var backgroundImage = 'assets/images/forest.jpg';
-  Image image;
-  final _storage = FirebaseStorage.instance;
-  String imagePath;
-  String characterName;
-  String characterId;
+  
 
   @override
   Widget build(BuildContext context) {
-    return widget.isEditing
+   const backgroundImage = 'assets/images/forest.jpg';
+  Image image;
+  String imagePath;
+    return isEditing
         ? BlocConsumer<CharacterFormBloc, CharacterFormState>(
             listenWhen: (p, c) => p.isEditing || p.imageLoading != c.isEditing || c.imageLoading,
             listener: (context, state) {
               imagePath = state.character.imagePath.getOrCrash();
-              characterName = state.character.name.getOrCrash();
-              characterId = state.character.id.getOrCrash();
               image = Image.network(imagePath);
             },
             builder: (context, state) {
@@ -55,7 +45,12 @@ class _ImageFieldState extends State<ImageField> {
                   ),
                   RaisedButton(
                     child: Text('Select Image'),
-                    onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed()),
+                    onPressed: (state.isEditing)
+                        ? () {
+                            context.bloc<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed());
+                            context.bloc<CharacterFormBloc>().add(CharacterFormEvent.saved());
+                          }
+                        : () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed()),
                   ),
                 ],
               );
@@ -69,7 +64,7 @@ class _ImageFieldState extends State<ImageField> {
             ),
             // height: 180,
             // width: 150,
-            child: image,
+            child: Image.network(character.imagePath.getOrCrash()),
           );
   }
 }
