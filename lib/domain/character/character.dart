@@ -67,7 +67,7 @@ abstract class Character implements _$Character {
         rangedMod: RangedMod(''),
         combatManeuverBonus: CombatManeuverBonus(''),
         description: Description(''),
-        imagePath: ImagePath(''),
+        imagePath: ImagePath('https://firebasestorage.googleapis.com/v0/b/shattered-star.appspot.com/o/common%2Ftransparent.png?alt=media&token=f07200fe-5add-4a51-b41a-29eeb2fcee07'),
       );
   Option<ValueFailure<dynamic>> get failureOption {
     return name.failureOrUnit

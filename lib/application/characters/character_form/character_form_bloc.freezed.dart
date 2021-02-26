@@ -8699,8 +8699,6 @@ class _$CharacterFormStateTearOff {
       {@required
           Character character,
       @required
-          Image characterImage,
-      @required
           bool showErrorMessages,
       @required
           bool isEditing,
@@ -8712,7 +8710,6 @@ class _$CharacterFormStateTearOff {
           Option<Either<CharacterFailure, Unit>> saveFailureOrSuccessOption}) {
     return _CharacterFormState(
       character: character,
-      characterImage: characterImage,
       showErrorMessages: showErrorMessages,
       isEditing: isEditing,
       isSaving: isSaving,
@@ -8727,7 +8724,6 @@ const $CharacterFormState = _$CharacterFormStateTearOff();
 
 mixin _$CharacterFormState {
   Character get character;
-  Image get characterImage;
   bool get showErrorMessages;
   bool get isEditing;
   bool get isSaving;
@@ -8743,7 +8739,6 @@ abstract class $CharacterFormStateCopyWith<$Res> {
       _$CharacterFormStateCopyWithImpl<$Res>;
   $Res call(
       {Character character,
-      Image characterImage,
       bool showErrorMessages,
       bool isEditing,
       bool isSaving,
@@ -8764,7 +8759,6 @@ class _$CharacterFormStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object character = freezed,
-    Object characterImage = freezed,
     Object showErrorMessages = freezed,
     Object isEditing = freezed,
     Object isSaving = freezed,
@@ -8774,9 +8768,6 @@ class _$CharacterFormStateCopyWithImpl<$Res>
     return _then(_value.copyWith(
       character:
           character == freezed ? _value.character : character as Character,
-      characterImage: characterImage == freezed
-          ? _value.characterImage
-          : characterImage as Image,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
           : showErrorMessages as bool,
@@ -8810,7 +8801,6 @@ abstract class _$CharacterFormStateCopyWith<$Res>
   @override
   $Res call(
       {Character character,
-      Image characterImage,
       bool showErrorMessages,
       bool isEditing,
       bool isSaving,
@@ -8834,7 +8824,6 @@ class __$CharacterFormStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object character = freezed,
-    Object characterImage = freezed,
     Object showErrorMessages = freezed,
     Object isEditing = freezed,
     Object isSaving = freezed,
@@ -8844,9 +8833,6 @@ class __$CharacterFormStateCopyWithImpl<$Res>
     return _then(_CharacterFormState(
       character:
           character == freezed ? _value.character : character as Character,
-      characterImage: characterImage == freezed
-          ? _value.characterImage
-          : characterImage as Image,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
           : showErrorMessages as bool,
@@ -8867,14 +8853,12 @@ class _$_CharacterFormState
     implements _CharacterFormState {
   const _$_CharacterFormState(
       {@required this.character,
-      @required this.characterImage,
       @required this.showErrorMessages,
       @required this.isEditing,
       @required this.isSaving,
       @required this.imageLoading,
       @required this.saveFailureOrSuccessOption})
       : assert(character != null),
-        assert(characterImage != null),
         assert(showErrorMessages != null),
         assert(isEditing != null),
         assert(isSaving != null),
@@ -8883,8 +8867,6 @@ class _$_CharacterFormState
 
   @override
   final Character character;
-  @override
-  final Image characterImage;
   @override
   final bool showErrorMessages;
   @override
@@ -8898,7 +8880,7 @@ class _$_CharacterFormState
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CharacterFormState(character: $character, characterImage: $characterImage, showErrorMessages: $showErrorMessages, isEditing: $isEditing, isSaving: $isSaving, imageLoading: $imageLoading, saveFailureOrSuccessOption: $saveFailureOrSuccessOption)';
+    return 'CharacterFormState(character: $character, showErrorMessages: $showErrorMessages, isEditing: $isEditing, isSaving: $isSaving, imageLoading: $imageLoading, saveFailureOrSuccessOption: $saveFailureOrSuccessOption)';
   }
 
   @override
@@ -8907,7 +8889,6 @@ class _$_CharacterFormState
     properties
       ..add(DiagnosticsProperty('type', 'CharacterFormState'))
       ..add(DiagnosticsProperty('character', character))
-      ..add(DiagnosticsProperty('characterImage', characterImage))
       ..add(DiagnosticsProperty('showErrorMessages', showErrorMessages))
       ..add(DiagnosticsProperty('isEditing', isEditing))
       ..add(DiagnosticsProperty('isSaving', isSaving))
@@ -8923,9 +8904,6 @@ class _$_CharacterFormState
             (identical(other.character, character) ||
                 const DeepCollectionEquality()
                     .equals(other.character, character)) &&
-            (identical(other.characterImage, characterImage) ||
-                const DeepCollectionEquality()
-                    .equals(other.characterImage, characterImage)) &&
             (identical(other.showErrorMessages, showErrorMessages) ||
                 const DeepCollectionEquality()
                     .equals(other.showErrorMessages, showErrorMessages)) &&
@@ -8949,7 +8927,6 @@ class _$_CharacterFormState
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(character) ^
-      const DeepCollectionEquality().hash(characterImage) ^
       const DeepCollectionEquality().hash(showErrorMessages) ^
       const DeepCollectionEquality().hash(isEditing) ^
       const DeepCollectionEquality().hash(isSaving) ^
@@ -8966,8 +8943,6 @@ abstract class _CharacterFormState implements CharacterFormState {
       {@required
           Character character,
       @required
-          Image characterImage,
-      @required
           bool showErrorMessages,
       @required
           bool isEditing,
@@ -8981,8 +8956,6 @@ abstract class _CharacterFormState implements CharacterFormState {
 
   @override
   Character get character;
-  @override
-  Image get characterImage;
   @override
   bool get showErrorMessages;
   @override

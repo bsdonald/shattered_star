@@ -34,7 +34,6 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
           () => state.copyWith(),
           (initialCharacter) => state.copyWith(
             character: initialCharacter,
-            characterImage: Image.network(initialCharacter.imagePath.getOrCrash()),
             isEditing: true,
           ),
         );
@@ -199,22 +198,21 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
         String downloadUrl;
 
         yield state.copyWith(
-          isSaving: true,
+          imageLoading: true,
           saveFailureOrSuccessOption: none(),
         );
 
         await _characterBucket.upload(state.character.id.getOrCrash());
 
-        yield state.copyWith(
-          isSaving: false,
-          saveFailureOrSuccessOption: none(),
-        );
+        // yield state.copyWith(
+        //   saveFailureOrSuccessOption: none(),
+        // );
         downloadUrl = await _characterBucket.getDownloadUrl(state.character.id.getOrCrash());
 
         print(downloadUrl);
         yield state.copyWith(
+          imageLoading: false,
           character: state.character.copyWith(imagePath: ImagePath(downloadUrl)),
-          characterImage: Image.network(downloadUrl),
           saveFailureOrSuccessOption: none(),
         );
       },

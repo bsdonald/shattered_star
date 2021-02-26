@@ -31,10 +31,10 @@ class _ImageFieldState extends State<ImageField> {
         ? BlocConsumer<CharacterFormBloc, CharacterFormState>(
             listenWhen: (p, c) => p.isEditing || p.imageLoading != c.isEditing || c.imageLoading,
             listener: (context, state) {
-              image = state.characterImage;
-              imagePath = state.character.imagePath.toString();
+              imagePath = state.character.imagePath.getOrCrash();
               characterName = state.character.name.getOrCrash();
               characterId = state.character.id.getOrCrash();
+              image = Image.network(imagePath);
             },
             builder: (context, state) {
               print('image: $image');
