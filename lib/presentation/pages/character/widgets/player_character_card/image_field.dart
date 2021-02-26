@@ -21,7 +21,7 @@ class ImageField extends StatelessWidget {
   String imagePath;
     return isEditing
         ? BlocConsumer<CharacterFormBloc, CharacterFormState>(
-            listenWhen: (p, c) => p.isEditing || p.imageLoading != c.isEditing || c.imageLoading,
+            // listenWhen: (p, c) => p.isEditing || p.imageLoading != c.isEditing || c.imageLoading,
             listener: (context, state) {
               imagePath = state.character.imagePath.getOrCrash();
               image = Image.network(imagePath);
