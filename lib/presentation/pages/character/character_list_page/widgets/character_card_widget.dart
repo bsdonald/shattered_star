@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:shattered_star/application/characters/character_actor/character_actor_bloc.dart';
 import 'package:shattered_star/domain/character/character.dart';
+import 'package:shattered_star/presentation/pages/character/character_list_page/widgets/slide_action_button.dart';
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 class CharacterCard extends StatelessWidget {
@@ -18,83 +18,42 @@ class CharacterCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final slidableController = SlidableController();
-    var confirmDelete = false;
+    bool confirmDelete;
+    confirmDelete = false;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4),
       child: Slidable(
         controller: slidableController,
-        actionPane: SlidableDrawerActionPane(),
+        actionPane: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(8)),
+            ),
+            child: SlidableDrawerActionPane()),
         actionExtentRatio: 0.25,
         secondaryActions: <Widget>[
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 4.0),
-            child: Container(
-              decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(8),
-                    bottomLeft: Radius.circular(8),
-                  )),
-              child: IconSlideAction(
-                caption: 'Edit',
-                color: Theme.of(context).primaryColor.withOpacity(0),
-                icon: Icons.edit,
-                onTap: () {
-                  ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character);
-                },
-              ),
-            ),
+          SlideActionButton.left(
+            color: Theme.of(context).primaryColor,
+            caption: 'Edit',
+            icon: Icons.edit,
+            onTap: () {
+              ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character);
+            },
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 4.0),
-            child: Container(
-              decoration: BoxDecoration(
-                  color: Theme.of(context).errorColor,
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(8),
-                    bottomRight: Radius.circular(8),
-                  )),
-              child: IconSlideAction(
-                caption: 'Delete',
-                color: Theme.of(context).errorColor.withOpacity(0),
-                icon: Icons.delete,
-                onTap: () async {
-                  confirmDelete = await showDialog(
-                    context: context,
-                    builder: (context) => AlertDialog(
-                      title: Text('Are you sure?'),
-                      content: Text('Do you really want to delete ${character.name.getOrCrash()}?'),
-                      actions: <Widget>[
-                        FlatButton(
-                          onPressed: () {
-                            Navigator.of(context).pop(false);
-                            // print(confirmDelete);
-                          },
-                          child: Text('No'),
-                        ),
-                        FlatButton(
-                          onPressed: () {
-                            Navigator.of(context).pop(true);
-                            // print(confirmDelete);
-                          },
-                          child: Text('Yes'),
-                        ),
-                      ],
-                    ),
-                  );
-                  print(confirmDelete);
-
-                  if (confirmDelete != true) {
-                  } else {
-                    context.read<CharacterActorBloc>().add(CharacterActorEvent.deleted(character));
-                    // deleteImage();
-                    await FlushbarHelper.createInformation(message: '${character.name.getOrCrash()} has been deleted').show(context);
-                  }
-                },
-              ),
-            ),
-          )
+          SlideActionButton(
+            caption: 'Edit Colors',
+            color: Theme.of(context).accentColor,
+            icon: Icons.colorize,
+            onTap: () {},
+          ),
+          SlideActionButton.right(
+            color: Theme.of(context).errorColor,
+            caption: 'Delete',
+            icon: Icons.delete,
+            onTap: () {
+              deleteCharacter(context: context, confirmDelete: confirmDelete);
+            },
+          ),
         ],
         child: InkWell(
           onTap: () {
@@ -197,5 +156,39 @@ class CharacterCard extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  deleteCharacter({context, confirmDelete}) async {
+    confirmDelete = await showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Are you sure?'),
+        content: Text('Do you really want to delete ${character.name.getOrCrash()}?'),
+        actions: <Widget>[
+          FlatButton(
+            onPressed: () {
+              Navigator.of(context).pop(false);
+              // print(confirmDelete);
+            },
+            child: Text('No'),
+          ),
+          FlatButton(
+            onPressed: () {
+              Navigator.of(context).pop(true);
+              // print(confirmDelete);
+            },
+            child: Text('Yes'),
+          ),
+        ],
+      ),
+    );
+    print(confirmDelete);
+
+    if (confirmDelete != true) {
+    } else {
+      context.read<CharacterActorBloc>().add(CharacterActorEvent.deleted(character));
+      // deleteImage();
+      await FlushbarHelper.createInformation(message: '${character.name.getOrCrash()} has been deleted').show(context);
+    }
   }
 }
