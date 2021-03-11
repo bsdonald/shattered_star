@@ -25,11 +25,7 @@ class CharacterCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4),
       child: Slidable(
         controller: slidableController,
-        actionPane: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(8)),
-            ),
-            child: SlidableDrawerActionPane()),
+        actionPane: SlidableDrawerActionPane(),
         actionExtentRatio: 0.25,
         secondaryActions: <Widget>[
           SlideActionButton.left(
