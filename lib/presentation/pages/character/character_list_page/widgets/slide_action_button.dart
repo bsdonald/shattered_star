@@ -3,6 +3,12 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 
 //ignore: must_be_immutable
 class SlideActionButton extends StatelessWidget {
+  final Color color;
+  final String caption;
+  final IconData icon;
+  final void Function() onTap;
+  BorderRadiusGeometry borderRadius;
+
   SlideActionButton({
     Key key,
     @required this.color,
@@ -10,12 +16,6 @@ class SlideActionButton extends StatelessWidget {
     @required this.icon,
     @required this.onTap,
   }) : super(key: key);
-
-  final Color color;
-  final String caption;
-  final IconData icon;
-  final void Function() onTap;
-  BorderRadiusGeometry borderRadius;
 
   SlideActionButton.left({
     @required this.color,

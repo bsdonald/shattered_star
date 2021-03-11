@@ -10,7 +10,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../../domain/character/character.dart';
-import '../pages/character/character_details_page/character_details_page.dart';
 import '../pages/character/character_form_page/character_form_page.dart';
 import '../pages/character/character_home_page/character_home_page.dart';
 import '../pages/character/character_list_page/character_list_page.dart';
@@ -23,7 +22,6 @@ class Routes {
   static const String signInPage = '/sign-in-page';
   static const String homePage = '/home-page';
   static const String test = '/Test';
-  static const String characterDetailsPage = '/character-details-page';
   static const String characterListPage = '/character-list-page';
   static const String characterFormPage = '/character-form-page';
   static const all = <String>{
@@ -31,7 +29,6 @@ class Routes {
     signInPage,
     homePage,
     test,
-    characterDetailsPage,
     characterListPage,
     characterFormPage,
   };
@@ -45,7 +42,6 @@ class Router extends RouterBase {
     RouteDef(Routes.signInPage, page: SignInPage),
     RouteDef(Routes.homePage, page: HomePage),
     RouteDef(Routes.test, page: Test),
-    RouteDef(Routes.characterDetailsPage, page: CharacterDetailsPage),
     RouteDef(Routes.characterListPage, page: CharacterListPage),
     RouteDef(Routes.characterFormPage, page: CharacterFormPage),
   ];
@@ -77,12 +73,6 @@ class Router extends RouterBase {
     Test: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => Test(),
-        settings: data,
-      );
-    },
-    CharacterDetailsPage: (data) {
-      return MaterialPageRoute<dynamic>(
-        builder: (context) => CharacterDetailsPage(),
         settings: data,
       );
     },
@@ -127,9 +117,6 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
       );
 
   Future<dynamic> pushTest() => push<dynamic>(Routes.test);
-
-  Future<dynamic> pushCharacterDetailsPage() =>
-      push<dynamic>(Routes.characterDetailsPage);
 
   Future<dynamic> pushCharacterListPage() =>
       push<dynamic>(Routes.characterListPage);

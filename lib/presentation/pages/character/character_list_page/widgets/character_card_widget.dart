@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:shattered_star/application/characters/character_actor/character_actor_bloc.dart';
 import 'package:shattered_star/domain/character/character.dart';
@@ -46,8 +47,38 @@ class CharacterCard extends StatelessWidget {
             color: Theme.of(context).errorColor,
             caption: 'Delete',
             icon: Icons.delete,
-            onTap: () {
-              deleteCharacter(context: context, confirmDelete: confirmDelete);
+            onTap: () async {
+              confirmDelete = await showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: Text('Are you sure?'),
+                  content: Text('Do you really want to delete ${character.name.getOrCrash()}?'),
+                  actions: <Widget>[
+                    FlatButton(
+                      onPressed: () {
+                        Navigator.of(context).pop(false);
+                        // print(confirmDelete);
+                      },
+                      child: Text('No'),
+                    ),
+                    FlatButton(
+                      onPressed: () {
+                        Navigator.of(context).pop(true);
+                        // print(confirmDelete);
+                      },
+                      child: Text('Yes'),
+                    ),
+                  ],
+                ),
+              );
+              print(confirmDelete);
+
+              if (confirmDelete != true) {
+              } else {
+                context.read<CharacterActorBloc>().add(CharacterActorEvent.deleted(character));
+                // deleteImage();
+                await FlushbarHelper.createInformation(message: '${character.name.getOrCrash()} has been deleted').show(context);
+              }
             },
           ),
         ],
@@ -152,39 +183,5 @@ class CharacterCard extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  deleteCharacter({context, confirmDelete}) async {
-    confirmDelete = await showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text('Are you sure?'),
-        content: Text('Do you really want to delete ${character.name.getOrCrash()}?'),
-        actions: <Widget>[
-          FlatButton(
-            onPressed: () {
-              Navigator.of(context).pop(false);
-              // print(confirmDelete);
-            },
-            child: Text('No'),
-          ),
-          FlatButton(
-            onPressed: () {
-              Navigator.of(context).pop(true);
-              // print(confirmDelete);
-            },
-            child: Text('Yes'),
-          ),
-        ],
-      ),
-    );
-    print(confirmDelete);
-
-    if (confirmDelete != true) {
-    } else {
-      context.read<CharacterActorBloc>().add(CharacterActorEvent.deleted(character));
-      // deleteImage();
-      await FlushbarHelper.createInformation(message: '${character.name.getOrCrash()} has been deleted').show(context);
-    }
   }
 }
