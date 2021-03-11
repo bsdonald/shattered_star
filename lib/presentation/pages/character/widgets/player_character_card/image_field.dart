@@ -29,6 +29,7 @@ class ImageField extends StatelessWidget {
             builder: (context, state) {
               print('image: $image');
               return Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     height: 215,
