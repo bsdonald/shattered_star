@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/presentation/pages/character/widgets/player_character_card/character_bio.dart';
 import 'package:shattered_star/presentation/pages/character/widgets/player_character_card/character_details_field.dart';
@@ -29,7 +28,7 @@ class PlayerCharacterCard extends StatelessWidget {
     // isEditing ?? false;
     return SingleChildScrollView(
       child: Container(
-        height: !isEditing ? MediaQuery.of(context).size.height * .75 : 720,
+        height: !isEditing ? MediaQuery.of(context).size.height * .75 : MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),

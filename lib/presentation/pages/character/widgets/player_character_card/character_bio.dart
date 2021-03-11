@@ -21,7 +21,7 @@ class CharacterBio extends HookWidget {
 
     return Container(
       padding: EdgeInsets.all(8),
-      constraints: BoxConstraints.expand(height: 290),
+      constraints: BoxConstraints.expand(),
       decoration: BoxDecoration(
         color: Colors.amber,
         borderRadius: BorderRadius.only(
@@ -64,8 +64,8 @@ class CharacterBio extends HookWidget {
                         (r) => null,
                       ),
                   maxLength: char.Description.maxLength,
-                  minLines: 6,
-                  maxLines: 8,
+                  minLines: 9,
+                  maxLines: 9,
                 ),
               )
             : Column(

@@ -2,8 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart' hide Alignment;
+import 'package:flutter/material.dart' show Image;
 // import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
@@ -34,6 +33,7 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
           () => state.copyWith(),
           (initialCharacter) => state.copyWith(
             character: initialCharacter,
+            characterImage: Image.network('${initialCharacter.imagePath}'),
             isEditing: true,
           ),
         );
@@ -43,6 +43,7 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
           character: state.character.copyWith(name: Name(e.nameStr)),
           saveFailureOrSuccessOption: none(),
         );
+        print(state.character.name.getOrCrash());
       },
       raceChanged: (e) async* {
         yield state.copyWith(
@@ -202,17 +203,15 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
           saveFailureOrSuccessOption: none(),
         );
 
-        await _characterBucket.upload(state.character.id.getOrCrash());
+        var pickedImage = await _characterBucket.getImage();
 
-        // yield state.copyWith(
-        //   saveFailureOrSuccessOption: none(),
-        // );
-        downloadUrl = await _characterBucket.getDownloadUrl(state.character.id.getOrCrash());
+        // await _characterBucket.upload(state.character.id.getOrCrash());
 
-        print(downloadUrl);
+        // downloadUrl = await _characterBucket.getDownloadUrl(state.character.id.getOrCrash());
+        // print(downloadUrl);
         yield state.copyWith(
           imageLoading: false,
-          character: state.character.copyWith(imagePath: ImagePath(downloadUrl)),
+          characterImage: Image.file(pickedImage),
           saveFailureOrSuccessOption: none(),
         );
       },

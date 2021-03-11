@@ -1,17 +1,9 @@
-import 'dart:io';
-
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
-import 'package:shattered_star/domain/auth/i_auth_facade.dart';
 import 'package:shattered_star/domain/character/character.dart';
-import 'package:shattered_star/domain/character/value_objects.dart' as char;
-import 'package:shattered_star/domain/core/errors.dart';
-import 'package:shattered_star/injection.dart';
 
-class ImageField extends StatefulWidget {
+class ImageField extends StatelessWidget {
   final bool isEditing;
   final Character character;
   const ImageField({
@@ -20,55 +12,46 @@ class ImageField extends StatefulWidget {
     @required this.isEditing,
   }) : super(key: key);
 
-  @override
-  _ImageFieldState createState() => _ImageFieldState();
-}
-
-class _ImageFieldState extends State<ImageField> {
-  var backgroundImage = 'assets/images/forest.jpg';
-  File image;
-  final _storage = FirebaseStorage.instance;
-  String imagePath;
-  String characterName;
-  String characterId;
+  
 
   @override
   Widget build(BuildContext context) {
-    return widget.isEditing
+   const backgroundImage = 'assets/images/forest.jpg';
+  Image image;
+  String imagePath;
+    return isEditing
         ? BlocConsumer<CharacterFormBloc, CharacterFormState>(
-            listenWhen: (p, c) => p.isEditing != c.isEditing,
+            // listenWhen: (p, c) => p.isEditing || p.imageLoading != c.isEditing || c.imageLoading,
             listener: (context, state) {
               imagePath = state.character.imagePath.getOrCrash();
-              characterName = state.character.name.getOrCrash();
-              characterId = state.character.id.getOrCrash();
+              image = Image.network(imagePath);
             },
             builder: (context, state) {
+              print('image: $image');
               return Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  (imagePath != null)
-                      ? Container(
-                          height: 215,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(backgroundImage),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          // height: 180,
-                          // width: 150,
-                          child: Image.network(imagePath),
-                        )
-                      : Container(
-                          child: Image(
-                            image: AssetImage(backgroundImage),
-                            fit: BoxFit.cover,
-                            height: 215,
-                          ),
-                        ),
+                  Container(
+                    height: 215,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(backgroundImage),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    // height: 180,
+                    // width: 150,
+                    child: image ?? Text('Failed to load image'),
+                  ),
                   RaisedButton(
                     child: Text('Select Image'),
-                onPressed: () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.uploadButtonPressed()),
+                    onPressed: (state.isEditing)
+                        ? () {
+                            context.bloc<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed());
+                            context.bloc<CharacterFormBloc>().add(CharacterFormEvent.saved());
+                          }
+                        : () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed()),
                   ),
                 ],
               );
@@ -82,53 +65,21 @@ class _ImageFieldState extends State<ImageField> {
             ),
             // height: 180,
             // width: 150,
-            child: Image.network(widget.character.imagePath.getOrCrash()),
+            child: Image.network(character.imagePath.getOrCrash()),
           );
   }
-
-  pickImage() async {
-    final userOption = await getIt<IAuthFacade>().getSignedInUser();
-    final user = userOption.getOrElse(() => throw NotAuthenticatedError());
-    final _picker = ImagePicker();
-    PickedFile pickedImage;
-    String downloadURL;
-
-    pickedImage = await _picker.getImage(source: ImageSource.gallery);
-    var file = File(pickedImage.path);
-    var _reference = _storage.ref().child('users/${user.id.getOrCrash()}/player_characters/$characterId');
-
-    image = file;
-
-    if (image != null) {
-      //upload to firebase
-      UploadTask task = _reference.putFile(image);
-
-// Optional
-      task.snapshotEvents.listen((TaskSnapshot snapshot) {
-        print('Snapshot state: ${snapshot.state}'); // paused, running, complete
-        print('Progress: ${(snapshot.bytesTransferred / snapshot.totalBytes) * 100} %');
-      }, onError: (Object e) {
-        print(e); // FirebaseException
-      });
-
-// Optional
-      task.then((TaskSnapshot snapshot) async {
-        print('Upload complete!');
-        downloadURL = await _reference.getDownloadURL();
-        context.bloc<CharacterFormBloc>().add(
-              CharacterFormEvent.imageChanged(downloadURL),
-            );
-        setState(() {
-          imagePath = downloadURL;
-        });
-      }).catchError((Object e) {
-        print(e); // FirebaseException
-      });
-    } else {
-      print('No Path Recieved');
-    }
-  }
 }
+
+// BlocProvider<CharacterFormBloc>(
+//                         create: (context) => getIt<CharacterFormBloc>(),
+//                       );
+//                       showModalBottomSheet(
+//                         context: context,
+//                         backgroundColor: Colors.transparent,
+//                         builder: (context) => ImageBottomSheet(),
+//                       );
+
+// () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed())
 
 // TextFormField(
 //   textAlign: TextAlign.center,

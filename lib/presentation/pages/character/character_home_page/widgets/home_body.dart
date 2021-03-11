@@ -1,12 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:palette_generator/palette_generator.dart';
-import 'package:shattered_star/application/home/bloc/home_page_bloc.dart';
 import 'package:shattered_star/domain/character/character.dart';
-import 'package:shattered_star/dummy_data/Reily.dart';
-import 'package:shattered_star/injection.dart';
-import 'package:shattered_star/presentation/pages/character/character_details_page/widgets/pc_card.dart';
 import 'package:shattered_star/presentation/pages/character/character_home_page/widgets/character_card.dart';
 import 'package:shattered_star/presentation/pages/character/character_home_page/widgets/ss_home_card.dart';
 import 'package:shattered_star/presentation/routes/router.gr.dart';

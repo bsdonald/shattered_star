@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:shattered_star/domain/character/value_objects.dart';
 import 'package:shattered_star/domain/core/failures.dart';
 import 'package:shattered_star/domain/core/value_objects.dart';
-import 'package:shattered_star/domain/character/value_objects.dart';
 
 part 'character.freezed.dart';
 
@@ -67,7 +67,7 @@ abstract class Character implements _$Character {
         rangedMod: RangedMod(''),
         combatManeuverBonus: CombatManeuverBonus(''),
         description: Description(''),
-        imagePath: ImagePath(''),
+        imagePath: ImagePath('https://firebasestorage.googleapis.com/v0/b/shattered-star.appspot.com/o/common%2Ftransparent.png?alt=media&token=f07200fe-5add-4a51-b41a-29eeb2fcee07'),
       );
   Option<ValueFailure<dynamic>> get failureOption {
     return name.failureOrUnit

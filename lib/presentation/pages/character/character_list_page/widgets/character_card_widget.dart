@@ -1,17 +1,11 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'package:shattered_star/application/characters/character_actor/character_actor_bloc.dart';
-import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
-import 'package:shattered_star/domain/auth/i_auth_facade.dart';
-import 'package:shattered_star/domain/character/character.dart';
-import 'package:shattered_star/domain/core/errors.dart';
-import 'package:shattered_star/injection.dart';
-import 'package:shattered_star/presentation/routes/router.gr.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:shattered_star/application/characters/character_actor/character_actor_bloc.dart';
+import 'package:shattered_star/domain/character/character.dart';
+import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 class CharacterCard extends StatelessWidget {
   final Character character;
@@ -47,7 +41,7 @@ class CharacterCard extends StatelessWidget {
                 color: Theme.of(context).primaryColor.withOpacity(0),
                 icon: Icons.edit,
                 onTap: () {
-                  ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character, newCharacter: false);
+                  ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character);
                 },
               ),
             ),
@@ -107,7 +101,7 @@ class CharacterCard extends StatelessWidget {
             ExtendedNavigator.of(context).pushHomePage(character: character);
           },
           onLongPress: () {
-            ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character, newCharacter: false);
+            ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character);
           },
           child: Card(
             elevation: 10,
@@ -203,14 +197,5 @@ class CharacterCard extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  deleteImage() async {
-    final _storage = FirebaseStorage.instance;
-    final userOption = await getIt<IAuthFacade>().getSignedInUser();
-    final user = userOption.getOrElse(() => throw NotAuthenticatedError());
-    var _reference = _storage.ref().child('users/${user.id.getOrCrash()}/player_characters/${character.id.getOrCrash()}');
-
-    await _reference.delete();
   }
 }
