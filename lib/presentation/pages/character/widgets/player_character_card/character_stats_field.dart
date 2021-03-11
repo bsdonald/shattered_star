@@ -141,10 +141,10 @@ class StatBlocForm extends HookWidget {
                 children: <Widget>[
                   CharacterFormField(
                     controller: strengthEditingController,
-                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                    onChanged: (value) => context.read<CharacterFormBloc>().add(
                           CharacterFormEvent.strengthChanged(value),
                         ),
-                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.strength.value.fold(
+                    validator: (_) => context.read<CharacterFormBloc>().state.character.strength.value.fold(
                           (f) => f.maybeMap(
                             empty: (f) => 'cannot be empty',
                             invalidNumber: (f) => 'Please enter a number',
@@ -156,10 +156,10 @@ class StatBlocForm extends HookWidget {
                   ),
                   CharacterFormField(
                     controller: dexterityEditingController,
-                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                    onChanged: (value) => context.read<CharacterFormBloc>().add(
                           CharacterFormEvent.dexterityChanged(value),
                         ),
-                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.dexterity.value.fold(
+                    validator: (_) => context.read<CharacterFormBloc>().state.character.dexterity.value.fold(
                           (f) => f.maybeMap(
                             empty: (f) => 'cannot be empty',
                             invalidNumber: (f) => 'Please enter a number',
@@ -171,10 +171,10 @@ class StatBlocForm extends HookWidget {
                   ),
                   CharacterFormField(
                     controller: constitutionEditingController,
-                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                    onChanged: (value) => context.read<CharacterFormBloc>().add(
                           CharacterFormEvent.constitutionChanged(value),
                         ),
-                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.constitution.value.fold(
+                    validator: (_) => context.read<CharacterFormBloc>().state.character.constitution.value.fold(
                           (f) => f.maybeMap(
                             empty: (f) => 'cannot be empty',
                             invalidNumber: (f) => 'Please enter a number',
@@ -197,10 +197,10 @@ class StatBlocForm extends HookWidget {
                 children: <Widget>[
                   CharacterFormField(
                     controller: intelligenceEditingController,
-                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                    onChanged: (value) => context.read<CharacterFormBloc>().add(
                           CharacterFormEvent.intelligenceChanged(value),
                         ),
-                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.intelligence.value.fold(
+                    validator: (_) => context.read<CharacterFormBloc>().state.character.intelligence.value.fold(
                           (f) => f.maybeMap(
                             empty: (f) => 'cannot be empty',
                             invalidNumber: (f) => 'Please enter a number',
@@ -212,10 +212,10 @@ class StatBlocForm extends HookWidget {
                   ),
                   CharacterFormField(
                     controller: wisdomEditingController,
-                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                    onChanged: (value) => context.read<CharacterFormBloc>().add(
                           CharacterFormEvent.wisdomChanged(value),
                         ),
-                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.wisdom.value.fold(
+                    validator: (_) => context.read<CharacterFormBloc>().state.character.wisdom.value.fold(
                           (f) => f.maybeMap(
                             empty: (f) => 'cannot be empty',
                             invalidNumber: (f) => 'Please enter a number',
@@ -227,10 +227,10 @@ class StatBlocForm extends HookWidget {
                   ),
                   CharacterFormField(
                     controller: charismaEditingController,
-                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                    onChanged: (value) => context.read<CharacterFormBloc>().add(
                           CharacterFormEvent.charismaChanged(value),
                         ),
-                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.charisma.value.fold(
+                    validator: (_) => context.read<CharacterFormBloc>().state.character.charisma.value.fold(
                           (f) => f.maybeMap(
                             empty: (f) => 'cannot be empty',
                             invalidNumber: (f) => 'Please enter a number',
@@ -253,10 +253,10 @@ class StatBlocForm extends HookWidget {
                 children: <Widget>[
                   CharacterFormField(
                     controller: maxHPEditingController,
-                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                    onChanged: (value) => context.read<CharacterFormBloc>().add(
                           CharacterFormEvent.maxHPChanged(value),
                         ),
-                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.maxHP.value.fold(
+                    validator: (_) => context.read<CharacterFormBloc>().state.character.maxHP.value.fold(
                           (f) => f.maybeMap(
                             empty: (f) => 'cannot be empty',
                             invalidNumber: (f) => 'Please enter a number',
@@ -268,10 +268,10 @@ class StatBlocForm extends HookWidget {
                   ),
                   CharacterFormField(
                     controller: armorClassEditingController,
-                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                    onChanged: (value) => context.read<CharacterFormBloc>().add(
                           CharacterFormEvent.armorClassChanged(value),
                         ),
-                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.armorClass.value.fold(
+                    validator: (_) => context.read<CharacterFormBloc>().state.character.armorClass.value.fold(
                           (f) => f.maybeMap(
                             empty: (f) => 'cannot be empty',
                             invalidNumber: (f) => 'Please enter a number',
@@ -283,10 +283,10 @@ class StatBlocForm extends HookWidget {
                   ),
                   CharacterFormField(
                     controller: combatManeuverDefenseEditingController,
-                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                    onChanged: (value) => context.read<CharacterFormBloc>().add(
                           CharacterFormEvent.combatManeuverDefenseChanged(value),
                         ),
-                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.combatManeuverDefense.value.fold(
+                    validator: (_) => context.read<CharacterFormBloc>().state.character.combatManeuverDefense.value.fold(
                           (f) => f.maybeMap(
                             empty: (f) => 'cannot be empty',
                             invalidNumber: (f) => 'Please enter a number',
@@ -309,10 +309,10 @@ class StatBlocForm extends HookWidget {
                 children: <Widget>[
                   CharacterFormField(
                     controller: meleeModEditingController,
-                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                    onChanged: (value) => context.read<CharacterFormBloc>().add(
                           CharacterFormEvent.meleeModChanged(value),
                         ),
-                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.meleeMod.value.fold(
+                    validator: (_) => context.read<CharacterFormBloc>().state.character.meleeMod.value.fold(
                           (f) => f.maybeMap(
                             empty: (f) => 'cannot be empty',
                             invalidNumber: (f) => 'Please enter a number',
@@ -324,10 +324,10 @@ class StatBlocForm extends HookWidget {
                   ),
                   CharacterFormField(
                     controller: rangedModEditingController,
-                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                    onChanged: (value) => context.read<CharacterFormBloc>().add(
                           CharacterFormEvent.rangedModChanged(value),
                         ),
-                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.rangedMod.value.fold(
+                    validator: (_) => context.read<CharacterFormBloc>().state.character.rangedMod.value.fold(
                           (f) => f.maybeMap(
                             empty: (f) => 'cannot be empty',
                             invalidNumber: (f) => 'Please enter a number',
@@ -339,10 +339,10 @@ class StatBlocForm extends HookWidget {
                   ),
                   CharacterFormField(
                     controller: combatManeuverBonusEditingController,
-                    onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                    onChanged: (value) => context.read<CharacterFormBloc>().add(
                           CharacterFormEvent.combatManeuverBonusChanged(value),
                         ),
-                    validator: (_) => context.bloc<CharacterFormBloc>().state.character.combatManeuverBonus.value.fold(
+                    validator: (_) => context.read<CharacterFormBloc>().state.character.combatManeuverBonus.value.fold(
                           (f) => f.maybeMap(
                             empty: (f) => 'cannot be empty',
                             invalidNumber: (f) => 'Please enter a number',

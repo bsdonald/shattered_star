@@ -1,10 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:palette_generator/palette_generator.dart';
 import 'package:shattered_star/domain/character/character.dart';
-import 'package:shattered_star/presentation/pages/character/character_details_page/widgets/pc_card.dart';
 import 'package:shattered_star/presentation/pages/character/widgets/player_character_card/player_character_card.dart';
-import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 //TODO: CONSIDER RENAMING
 class CharacterCard extends StatelessWidget {

@@ -96,6 +96,6 @@ abstract class Character implements _$Character {
         .andThen(combatManeuverBonus.failureOrUnit)
         .andThen(description.failureOrUnit)
         .andThen(imagePath.failureOrUnit)
-        .fold((f) => some(f), (r) => none());
+        .fold(some, (r) => none());
   }
 }

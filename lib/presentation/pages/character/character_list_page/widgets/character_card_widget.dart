@@ -17,8 +17,8 @@ class CharacterCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final SlidableController slidableController = SlidableController();
-    bool confirmDelete = false;
+    final slidableController = SlidableController();
+    var confirmDelete = false;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4),
@@ -87,7 +87,7 @@ class CharacterCard extends StatelessWidget {
 
                   if (confirmDelete != true) {
                   } else {
-                    context.bloc<CharacterActorBloc>().add(CharacterActorEvent.deleted(character));
+                    context.read<CharacterActorBloc>().add(CharacterActorEvent.deleted(character));
                     // deleteImage();
                     await FlushbarHelper.createInformation(message: '${character.name.getOrCrash()} has been deleted').show(context);
                   }

@@ -25,7 +25,7 @@ class SignInForm extends StatelessWidget {
             },
             (_) {
               ExtendedNavigator.of(context).replace(Routes.characterListPage);
-              context.bloc<AuthBloc>().add(const AuthEvent.authCheckRequested());
+              context.read<AuthBloc>().add(const AuthEvent.authCheckRequested());
             },
           ),
         );
@@ -45,8 +45,8 @@ class SignInForm extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               TextFormField(
-                onChanged: (value) => context.bloc<SignInFormBloc>().add(SignInFormEvent.emailChanged(value)),
-                validator: (_) => context.bloc<SignInFormBloc>().state.emailAddress.value.fold(
+                onChanged: (value) => context.read<SignInFormBloc>().add(SignInFormEvent.emailChanged(value)),
+                validator: (_) => context.read<SignInFormBloc>().state.emailAddress.value.fold(
                       (f) => f.maybeMap(
                         invalidEmail: (_) => 'Invalid Email',
                         orElse: () => null,
@@ -62,8 +62,8 @@ class SignInForm extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               TextFormField(
-                onChanged: (value) => context.bloc<SignInFormBloc>().add(SignInFormEvent.passwordChanged(value)),
-                validator: (_) => context.bloc<SignInFormBloc>().state.password.value.fold(
+                onChanged: (value) => context.read<SignInFormBloc>().add(SignInFormEvent.passwordChanged(value)),
+                validator: (_) => context.read<SignInFormBloc>().state.password.value.fold(
                       (f) => f.maybeMap(
                         shortPassword: (_) => 'Password is Too Short',
                         orElse: () => null,
@@ -84,7 +84,7 @@ class SignInForm extends StatelessWidget {
                     child: FlatButton(
                       splashColor: Theme.of(context).accentColor,
                       onPressed: () {
-                        context.bloc<SignInFormBloc>().add(
+                        context.read<SignInFormBloc>().add(
                               const SignInFormEvent.signInWithEmailAndPasswordPressed(),
                             );
                       },
@@ -95,7 +95,7 @@ class SignInForm extends StatelessWidget {
                     child: FlatButton(
                       splashColor: Theme.of(context).accentColor,
                       onPressed: () {
-                        context.bloc<SignInFormBloc>().add(
+                        context.read<SignInFormBloc>().add(
                               const SignInFormEvent.registerWithEmailAndPasswordPressed(),
                             );
                       },
@@ -107,7 +107,7 @@ class SignInForm extends StatelessWidget {
               const SizedBox(height: 8),
               RaisedButton(
                 onPressed: () {
-                  context.bloc<SignInFormBloc>().add(
+                  context.read<SignInFormBloc>().add(
                         const SignInFormEvent.signInWithGooglePressed(),
                       );
                 },

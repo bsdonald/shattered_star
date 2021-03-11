@@ -39,10 +39,10 @@ class NamePlate extends HookWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: CharacterFormField(
                   controller: textEditingController,
-                  onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                  onChanged: (value) => context.read<CharacterFormBloc>().add(
                         CharacterFormEvent.nameChanged(value),
                       ),
-                  validator: (_) => context.bloc<CharacterFormBloc>().state.character.name.value.fold(
+                  validator: (_) => context.read<CharacterFormBloc>().state.character.name.value.fold(
                         (f) => f.maybeMap(
                           empty: (f) => 'cannot be empty',
                           exceedingLength: (f) => 'Exceeding length, max: ${f.max}',

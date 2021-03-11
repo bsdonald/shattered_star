@@ -1,6 +1,5 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/semantics.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:shattered_star/domain/core/errors.dart';
 import 'package:shattered_star/domain/core/failures.dart';
@@ -19,7 +18,7 @@ abstract class ValueObject<T> {
 
   Either<ValueFailure<dynamic>, Unit> get failureOrUnit {
     return value.fold(
-      (l) => left(l),
+      left,
       (r) => right(unit),
     );
   }

@@ -52,10 +52,10 @@ class CharacterBio extends HookWidget {
                       ),
                     ),
                   ),
-                  onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+                  onChanged: (value) => context.read<CharacterFormBloc>().add(
                         CharacterFormEvent.descriptionChanged(value),
                       ),
-                  validator: (_) => context.bloc<CharacterFormBloc>().state.character.description.value.fold(
+                  validator: (_) => context.read<CharacterFormBloc>().state.character.description.value.fold(
                         (f) => f.maybeMap(
                           empty: (f) => 'cannot be empty',
                           exceedingLength: (f) => 'Exceeding length, max: ${f.max}',

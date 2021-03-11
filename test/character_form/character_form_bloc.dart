@@ -196,7 +196,6 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
         );
       },
       imageButtonPressed: (e) async* {
-        String downloadUrl;
 
         yield state.copyWith(
           imageLoading: true,

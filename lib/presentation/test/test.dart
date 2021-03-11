@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -34,12 +33,12 @@ class _TestState extends State<Test> {
           RaisedButton(
             child: Text('Pick Image'),
             color: Colors.lightBlue,
-            onPressed: () => pickImage(),
+            onPressed: pickImage,
           ),
           RaisedButton(
             child: Text('Upload Image'),
             color: Colors.lightBlue,
-            onPressed: () => uploadImage(),
+            onPressed: uploadImage,
           ),
         ],
       ),
@@ -61,7 +60,7 @@ class _TestState extends State<Test> {
   uploadImage() async {
     if (image != null) {
       //upload to firebase
-      UploadTask task = _storage.ref().child('player_characters/test2').putFile(image);
+      var task = _storage.ref().child('player_characters/test2').putFile(image);
 
 // Optional
       task.snapshotEvents.listen((TaskSnapshot snapshot) {
@@ -72,11 +71,9 @@ class _TestState extends State<Test> {
       });
 
 // Optional
-      task.then((TaskSnapshot snapshot) async {
+      await task.then((TaskSnapshot snapshot) async {
         print('Upload complete!');
-      }).catchError((Object e) {
-        print(e); // FirebaseException
-      });
+      }).catchError(print);
     } else {
       print('No Path Recieved');
     }

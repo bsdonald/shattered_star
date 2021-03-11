@@ -1,14 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/services.dart';
-import 'package:injectable/injectable.dart';
 import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
 import 'package:kt_dart/kt.dart';
-import 'package:shattered_star/domain/character/i_character_repository.dart';
-import 'package:shattered_star/domain/character/character_failure.dart';
-import 'package:shattered_star/domain/character/character.dart';
-import 'package:shattered_star/infrastructure/core/firestore_helpers.dart';
-import 'package:shattered_star/infrastructure/character/character_dtos.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:shattered_star/domain/character/character.dart';
+import 'package:shattered_star/domain/character/character_failure.dart';
+import 'package:shattered_star/domain/character/i_character_repository.dart';
+import 'package:shattered_star/infrastructure/character/character_dtos.dart';
+import 'package:shattered_star/infrastructure/core/firestore_helpers.dart';
 
 @LazySingleton(as: ICharacterRepository)
 class CharacterRepository implements ICharacterRepository {

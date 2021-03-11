@@ -48,10 +48,10 @@ class ImageField extends StatelessWidget {
                     child: Text('Select Image'),
                     onPressed: (state.isEditing)
                         ? () {
-                            context.bloc<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed());
-                            context.bloc<CharacterFormBloc>().add(CharacterFormEvent.saved());
+                            context.read<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed());
+                            context.read<CharacterFormBloc>().add(CharacterFormEvent.saved());
                           }
-                        : () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed()),
+                        : () => context.read<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed()),
                   ),
                 ],
               );
@@ -79,7 +79,7 @@ class ImageField extends StatelessWidget {
 //                         builder: (context) => ImageBottomSheet(),
 //                       );
 
-// () => context.bloc<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed())
+// () => context.read<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed())
 
 // TextFormField(
 //   textAlign: TextAlign.center,
@@ -96,10 +96,10 @@ class ImageField extends StatelessWidget {
 //       ),
 //     ),
 //   ),
-//   onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+//   onChanged: (value) => context.read<CharacterFormBloc>().add(
 //         CharacterFormEvent.imageChanged(value),
 //       ),
-//   validator: (_) => context.bloc<CharacterFormBloc>().state.character.imagePath.value.fold(
+//   validator: (_) => context.read<CharacterFormBloc>().state.character.imagePath.value.fold(
 //         (f) => f.maybeMap(
 //           empty: (f) => 'cannot be empty',
 //           exceedingLength: (f) => 'Exceeding length, max: ${f.max}',

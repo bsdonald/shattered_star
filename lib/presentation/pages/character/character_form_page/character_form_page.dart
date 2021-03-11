@@ -79,7 +79,7 @@ class CharacterFormScaffold extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.check),
             onPressed: () {
-              context.bloc<CharacterFormBloc>().add(const CharacterFormEvent.saved());
+              context.read<CharacterFormBloc>().add(const CharacterFormEvent.saved());
             },
           ),
         ],

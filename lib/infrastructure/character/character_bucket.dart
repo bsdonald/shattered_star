@@ -27,15 +27,14 @@ class CharacterBucket implements ICharacterBucket {
     try {
       var pickedImage = await _picker.getImage(source: ImageSource.gallery);
       var file = File(pickedImage.path);
-      String downloadURL;
 
       final userBucket = await _storage.userDirectory();
 
       var _reference = userBucket.child('player_characters/$characterId');
 
-      UploadTask task = _reference.putFile(file);
+      var task = _reference.putFile(file);
 
-      await task.snapshotEvents.listen((TaskSnapshot snapshot) {
+      task.snapshotEvents.listen((TaskSnapshot snapshot) {
         print('Snapshot state: ${snapshot.state}'); // paused, running, complete
         print('Progress: ${(snapshot.bytesTransferred / snapshot.totalBytes) * 100} %');
       }, onError: (Object e) {
@@ -45,9 +44,7 @@ class CharacterBucket implements ICharacterBucket {
       await task.then((TaskSnapshot snapshot) {
         print('Upload complete!');
         // downloadURL = await _reference.getDownloadURL();
-      }).catchError((Object e) {
-        print(e); // FirebaseException
-      });
+      }).catchError(print);
 
       return right(unit);
     } on FirebaseException catch (e) {
@@ -65,7 +62,7 @@ class CharacterBucket implements ICharacterBucket {
 
     var _reference = userBucket.child('player_characters/$characterId');
 
-    String downloadUrl = await _reference.getDownloadURL();
+    var downloadUrl = await _reference.getDownloadURL();
 
     return downloadUrl;
   }

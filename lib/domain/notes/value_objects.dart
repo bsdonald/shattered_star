@@ -80,7 +80,7 @@ class List3<T> extends ValueObject<KtList<T>> {
   const List3._(this.value);
 
   int get length {
-    return value.getOrElse(() => emptyList()).size;
+    return value.getOrElse(emptyList).size;
   }
 
   bool get isFull {

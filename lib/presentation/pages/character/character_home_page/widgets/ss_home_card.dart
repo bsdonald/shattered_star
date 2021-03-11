@@ -30,15 +30,15 @@ class _SSHomeCardState extends State<SSHomeCard> {
         return GestureDetector(
           onTapDown: (details) {
             test = true;
-            context.bloc<HomePageBloc>().add(HomePageEvent.cardPressed());
+            context.read<HomePageBloc>().add(HomePageEvent.cardPressed());
           },
           onTapUp: (details) {
             test = false;
-            context.bloc<HomePageBloc>().add(HomePageEvent.cardReleased());
+            context.read<HomePageBloc>().add(HomePageEvent.cardReleased());
           },
           onTapCancel: () {
             test = false;
-            context.bloc<HomePageBloc>().add(HomePageEvent.cardReleased());
+            context.read<HomePageBloc>().add(HomePageEvent.cardReleased());
           },
           onTap: widget.onTap,
           child: Card(

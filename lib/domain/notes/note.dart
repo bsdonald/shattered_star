@@ -37,8 +37,8 @@ abstract class Note implements _$Note {
               .filter((o) => o.isSome())
               // if we don't get the 0th element, the list is empty. in such a case, it's valid.
               .getOrElse(0, (_) => none())
-              .fold(() => right(unit), (f) => left(f)),
+              .fold(() => right(unit), left),
         )
-        .fold((f) => some(f), (r) => none());
+        .fold(some, (r) => none());
   }
 }

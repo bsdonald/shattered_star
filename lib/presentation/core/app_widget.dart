@@ -10,7 +10,7 @@ import 'package:shattered_star/presentation/routes/router.gr.dart' as app_router
 class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final SSColors colors = getIt<SSColors>();
+    final colors = getIt<SSColors>();
 
     return MultiBlocProvider(
       providers: [

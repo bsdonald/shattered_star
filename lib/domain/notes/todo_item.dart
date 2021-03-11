@@ -23,6 +23,6 @@ const TodoItem._();
       );
 
   Option<ValueFailure<dynamic>> get failureOption {
-    return name.value.fold((f) => some(f), (_) => none());
+    return name.value.fold(some, (_) => none());
   }
 }

@@ -54,7 +54,7 @@ class CharacterListPage extends StatelessWidget {
             leading: IconButton(
               icon: Icon(Icons.exit_to_app),
               onPressed: () {
-                context.bloc<AuthBloc>().add(const AuthEvent.signedOut());
+                context.read<AuthBloc>().add(const AuthEvent.signedOut());
               },
             ),
             actions: <Widget>[

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
 import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/character/value_objects.dart' as char;
@@ -202,10 +201,10 @@ class DetailBlocForm extends HookWidget {
         children: [
           CharacterFormField(
             controller: raceEditingController,
-            onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+            onChanged: (value) => context.read<CharacterFormBloc>().add(
                   CharacterFormEvent.raceChanged(value),
                 ),
-            validator: (_) => context.bloc<CharacterFormBloc>().state.character.race.value.fold(
+            validator: (_) => context.read<CharacterFormBloc>().state.character.race.value.fold(
                   (f) => f.maybeMap(
                     empty: (f) => 'cannot be empty',
                     exceedingLength: (f) => 'Exceeding length, max: ${f.max}',
@@ -221,10 +220,10 @@ class DetailBlocForm extends HookWidget {
           ),
           CharacterFormField(
             controller: favoredClassEditingController,
-            onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+            onChanged: (value) => context.read<CharacterFormBloc>().add(
                   CharacterFormEvent.favoredClassChanged(value),
                 ),
-            validator: (_) => context.bloc<CharacterFormBloc>().state.character.favoredClass.value.fold(
+            validator: (_) => context.read<CharacterFormBloc>().state.character.favoredClass.value.fold(
                   (f) => f.maybeMap(
                     empty: (f) => 'cannot be empty',
                     exceedingLength: (f) => 'Exceeding length, max: ${f.max}',
@@ -240,10 +239,10 @@ class DetailBlocForm extends HookWidget {
           ),
           CharacterFormField(
             controller: levelEditingController,
-            onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+            onChanged: (value) => context.read<CharacterFormBloc>().add(
                   CharacterFormEvent.levelChanged(value),
                 ),
-            validator: (_) => context.bloc<CharacterFormBloc>().state.character.level.value.fold(
+            validator: (_) => context.read<CharacterFormBloc>().state.character.level.value.fold(
                   (f) => f.maybeMap(
                     empty: (f) => 'cannot be empty',
                     invalidNumber: (f) => 'Please enter a number',
@@ -258,10 +257,10 @@ class DetailBlocForm extends HookWidget {
           ),
           CharacterFormField(
             controller: genderEditingController,
-            onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+            onChanged: (value) => context.read<CharacterFormBloc>().add(
                   CharacterFormEvent.genderChanged(value),
                 ),
-            validator: (_) => context.bloc<CharacterFormBloc>().state.character.gender.value.fold(
+            validator: (_) => context.read<CharacterFormBloc>().state.character.gender.value.fold(
                   (f) => f.maybeMap(
                     empty: (f) => 'cannot be empty',
                     exceedingLength: (f) => 'Exceeding length, max: ${f.max}',
@@ -277,10 +276,10 @@ class DetailBlocForm extends HookWidget {
           ),
           CharacterFormField(
             controller: ageEditingController,
-            onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+            onChanged: (value) => context.read<CharacterFormBloc>().add(
                   CharacterFormEvent.ageChanged(value),
                 ),
-            validator: (_) => context.bloc<CharacterFormBloc>().state.character.age.value.fold(
+            validator: (_) => context.read<CharacterFormBloc>().state.character.age.value.fold(
                   (f) => f.maybeMap(
                     empty: (f) => 'cannot be empty',
                     invalidNumber: (f) => 'Please enter a number',
@@ -295,10 +294,10 @@ class DetailBlocForm extends HookWidget {
           ),
           CharacterFormField(
             controller: heightEditingController,
-            onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+            onChanged: (value) => context.read<CharacterFormBloc>().add(
                   CharacterFormEvent.heightChanged(value),
                 ),
-            validator: (_) => context.bloc<CharacterFormBloc>().state.character.height.value.fold(
+            validator: (_) => context.read<CharacterFormBloc>().state.character.height.value.fold(
                   (f) => f.maybeMap(
                     empty: (f) => 'cannot be empty',
                     exceedingLength: (f) => 'Exceeding length, max: ${f.max}',
@@ -314,10 +313,10 @@ class DetailBlocForm extends HookWidget {
           ),
           CharacterFormField(
             controller: weightEditingController,
-            onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+            onChanged: (value) => context.read<CharacterFormBloc>().add(
                   CharacterFormEvent.weightChanged(value),
                 ),
-            validator: (_) => context.bloc<CharacterFormBloc>().state.character.weight.value.fold(
+            validator: (_) => context.read<CharacterFormBloc>().state.character.weight.value.fold(
                   (f) => f.maybeMap(
                     empty: (f) => 'cannot be empty',
                     exceedingLength: (f) => 'Exceeding length, max: ${f.max}',
@@ -333,10 +332,10 @@ class DetailBlocForm extends HookWidget {
           ),
           CharacterFormField(
             controller: homeEditingController,
-            onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+            onChanged: (value) => context.read<CharacterFormBloc>().add(
                   CharacterFormEvent.homeChanged(value),
                 ),
-            validator: (_) => context.bloc<CharacterFormBloc>().state.character.home.value.fold(
+            validator: (_) => context.read<CharacterFormBloc>().state.character.home.value.fold(
                   (f) => f.maybeMap(
                     empty: (f) => 'cannot be empty',
                     exceedingLength: (f) => 'Exceeding length, max: ${f.max}',
@@ -352,10 +351,10 @@ class DetailBlocForm extends HookWidget {
           ),
           CharacterFormField(
             controller: alignmentEditingController,
-            onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+            onChanged: (value) => context.read<CharacterFormBloc>().add(
                   CharacterFormEvent.alignmentChanged(value),
                 ),
-            validator: (_) => context.bloc<CharacterFormBloc>().state.character.alignment.value.fold(
+            validator: (_) => context.read<CharacterFormBloc>().state.character.alignment.value.fold(
                   (f) => f.maybeMap(
                     empty: (f) => 'cannot be empty',
                     exceedingLength: (f) => 'Exceeding length, max: ${f.max}',
@@ -371,10 +370,10 @@ class DetailBlocForm extends HookWidget {
           ),
           CharacterFormField(
             controller: deityEditingController,
-            onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+            onChanged: (value) => context.read<CharacterFormBloc>().add(
                   CharacterFormEvent.deityChanged(value),
                 ),
-            validator: (_) => context.bloc<CharacterFormBloc>().state.character.deity.value.fold(
+            validator: (_) => context.read<CharacterFormBloc>().state.character.deity.value.fold(
                   (f) => f.maybeMap(
                     empty: (f) => 'cannot be empty',
                     exceedingLength: (f) => 'Exceeding length, max: ${f.max}',
@@ -390,10 +389,10 @@ class DetailBlocForm extends HookWidget {
           ),
           CharacterFormField(
             controller: languagesEditingController,
-            onChanged: (value) => context.bloc<CharacterFormBloc>().add(
+            onChanged: (value) => context.read<CharacterFormBloc>().add(
                   CharacterFormEvent.languagesChanged(value),
                 ),
-            validator: (_) => context.bloc<CharacterFormBloc>().state.character.languages.value.fold(
+            validator: (_) => context.read<CharacterFormBloc>().state.character.languages.value.fold(
                   (f) => f.maybeMap(
                     empty: (f) => 'cannot be empty',
                     exceedingLength: (f) => 'Exceeding length, max: ${f.max}',
