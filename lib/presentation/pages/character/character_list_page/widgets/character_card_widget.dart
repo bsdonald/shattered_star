@@ -6,6 +6,7 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:shattered_star/application/characters/character_actor/character_actor_bloc.dart';
 import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/presentation/pages/character/character_list_page/widgets/slide_action_button.dart';
+import 'package:shattered_star/presentation/pages/character/widgets/character_overview_card/character_overview_card.dart';
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 class CharacterCard extends StatelessWidget {
@@ -21,6 +22,17 @@ class CharacterCard extends StatelessWidget {
     final slidableController = SlidableController();
     bool confirmDelete;
     confirmDelete = false;
+    var statBlocTextColor = Colors.white;
+
+    var myGradient = LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [
+        Theme.of(context).scaffoldBackgroundColor,
+        Theme.of(context).primaryColor,
+        Theme.of(context).cardColor,
+      ],
+    );
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4),
@@ -41,7 +53,9 @@ class CharacterCard extends StatelessWidget {
             caption: 'Edit Colors',
             color: Theme.of(context).accentColor,
             icon: Icons.colorize,
-            onTap: () {},
+            onTap: () {
+              ExtendedNavigator.of(context).pushCharacterColorPage(character: character);
+            },
           ),
           SlideActionButton.right(
             color: Theme.of(context).errorColor,
@@ -89,96 +103,10 @@ class CharacterCard extends StatelessWidget {
           onLongPress: () {
             ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character);
           },
-          child: Card(
-            elevation: 10,
-            child: Ink(
-              decoration: BoxDecoration(
-                // gradient: backgroundGradient,
-                borderRadius: BorderRadius.all(Radius.circular(8.0)),
-              ),
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: character.imagePath.getOrCrash().isEmpty
-                            ? Container()
-                            : Image.network(
-                                character.imagePath.getOrCrash(),
-                                fit: BoxFit.scaleDown,
-                                height: 175,
-                              ),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    flex: 2,
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: DefaultTextStyle(
-                        style: TextStyle(
-                          // backgroundColor: charDetailBackgroundColor,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                        ),
-                        child: Column(
-                          children: <Widget>[
-                            FittedBox(
-                              fit: BoxFit.scaleDown,
-                              child: Text(character.name.getOrCrash()),
-                            ),
-                            SizedBox(height: 8),
-                            FittedBox(
-                              fit: BoxFit.scaleDown,
-                              child: Text(
-                                '${character.race.getOrCrash()} ${character.favoredClass.getOrCrash()}',
-                                maxLines: 1,
-                              ),
-                            ),
-                            SizedBox(height: 8),
-                            Text('level: ${character.level.getOrCrash()}'),
-                            SizedBox(height: 8),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Align(
-                      alignment: Alignment.centerRight,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: DefaultTextStyle(
-                          style: TextStyle(
-                            // color: statBlocTextColor,
-                            fontWeight: FontWeight.bold,
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: <Widget>[
-                              Text('${character.strength.getOrCrash()} STR'),
-                              SizedBox(height: 8),
-                              Text('${character.dexterity.getOrCrash()} DEX'),
-                              SizedBox(height: 8),
-                              Text('${character.constitution.getOrCrash()} CON'),
-                              SizedBox(height: 8),
-                              Text('${character.intelligence.getOrCrash()} INT'),
-                              SizedBox(height: 8),
-                              Text('${character.wisdom.getOrCrash()} WIS'),
-                              SizedBox(height: 8),
-                              Text('${character.charisma.getOrCrash()} CHA'),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+          child: CharacterOverviewCard(
+            backgroundGradient: myGradient,
+            statBlocTextColor: statBlocTextColor,
+            character: character,
           ),
         ),
       ),

@@ -10,6 +10,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../../domain/character/character.dart';
+import '../pages/character/character_color_page/character_color_page.dart';
 import '../pages/character/character_form_page/character_form_page.dart';
 import '../pages/character/character_home_page/character_home_page.dart';
 import '../pages/character/character_list_page/character_list_page.dart';
@@ -24,6 +25,7 @@ class Routes {
   static const String test = '/Test';
   static const String characterListPage = '/character-list-page';
   static const String characterFormPage = '/character-form-page';
+  static const String characterColorPage = '/character-color-page';
   static const all = <String>{
     splashPage,
     signInPage,
@@ -31,6 +33,7 @@ class Routes {
     test,
     characterListPage,
     characterFormPage,
+    characterColorPage,
   };
 }
 
@@ -44,6 +47,7 @@ class Router extends RouterBase {
     RouteDef(Routes.test, page: Test),
     RouteDef(Routes.characterListPage, page: CharacterListPage),
     RouteDef(Routes.characterFormPage, page: CharacterFormPage),
+    RouteDef(Routes.characterColorPage, page: CharacterColorPage),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -95,6 +99,16 @@ class Router extends RouterBase {
         fullscreenDialog: true,
       );
     },
+    CharacterColorPage: (data) {
+      final args = data.getArgs<CharacterColorPageArguments>(nullOk: false);
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => CharacterColorPage(
+          key: args.key,
+          character: args.character,
+        ),
+        settings: data,
+      );
+    },
   };
 }
 
@@ -130,6 +144,15 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
         arguments: CharacterFormPageArguments(
             key: key, editedCharacter: editedCharacter),
       );
+
+  Future<dynamic> pushCharacterColorPage({
+    Key key,
+    @required Character character,
+  }) =>
+      push<dynamic>(
+        Routes.characterColorPage,
+        arguments: CharacterColorPageArguments(key: key, character: character),
+      );
 }
 
 /// ************************************************************************
@@ -148,4 +171,11 @@ class CharacterFormPageArguments {
   final Key key;
   final Character editedCharacter;
   CharacterFormPageArguments({this.key, this.editedCharacter});
+}
+
+/// CharacterColorPage arguments holder class
+class CharacterColorPageArguments {
+  final Key key;
+  final Character character;
+  CharacterColorPageArguments({this.key, @required this.character});
 }
