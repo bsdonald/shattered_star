@@ -42,7 +42,12 @@ class _$CharacterDtoTearOff {
       @required String rangedMod,
       @required String combatManeuverBonus,
       @required String description,
-      @required String imagePath}) {
+      @required String imagePath,
+      @required String primaryGradientColor,
+      @required String secondaryGradientColor,
+      @required String tertiaryGradientColor,
+      @required String primaryTextColor,
+      @required String secondaryTextColor}) {
     return _Character(
       id: id,
       name: name,
@@ -71,6 +76,11 @@ class _$CharacterDtoTearOff {
       combatManeuverBonus: combatManeuverBonus,
       description: description,
       imagePath: imagePath,
+      primaryGradientColor: primaryGradientColor,
+      secondaryGradientColor: secondaryGradientColor,
+      tertiaryGradientColor: tertiaryGradientColor,
+      primaryTextColor: primaryTextColor,
+      secondaryTextColor: secondaryTextColor,
     );
   }
 }
@@ -107,6 +117,11 @@ mixin _$CharacterDto {
   String get combatManeuverBonus;
   String get description;
   String get imagePath;
+  String get primaryGradientColor;
+  String get secondaryGradientColor;
+  String get tertiaryGradientColor;
+  String get primaryTextColor;
+  String get secondaryTextColor;
 
   Map<String, dynamic> toJson();
   $CharacterDtoCopyWith<CharacterDto> get copyWith;
@@ -143,7 +158,12 @@ abstract class $CharacterDtoCopyWith<$Res> {
       String rangedMod,
       String combatManeuverBonus,
       String description,
-      String imagePath});
+      String imagePath,
+      String primaryGradientColor,
+      String secondaryGradientColor,
+      String tertiaryGradientColor,
+      String primaryTextColor,
+      String secondaryTextColor});
 }
 
 class _$CharacterDtoCopyWithImpl<$Res> implements $CharacterDtoCopyWith<$Res> {
@@ -182,6 +202,11 @@ class _$CharacterDtoCopyWithImpl<$Res> implements $CharacterDtoCopyWith<$Res> {
     Object combatManeuverBonus = freezed,
     Object description = freezed,
     Object imagePath = freezed,
+    Object primaryGradientColor = freezed,
+    Object secondaryGradientColor = freezed,
+    Object tertiaryGradientColor = freezed,
+    Object primaryTextColor = freezed,
+    Object secondaryTextColor = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -223,6 +248,21 @@ class _$CharacterDtoCopyWithImpl<$Res> implements $CharacterDtoCopyWith<$Res> {
       description:
           description == freezed ? _value.description : description as String,
       imagePath: imagePath == freezed ? _value.imagePath : imagePath as String,
+      primaryGradientColor: primaryGradientColor == freezed
+          ? _value.primaryGradientColor
+          : primaryGradientColor as String,
+      secondaryGradientColor: secondaryGradientColor == freezed
+          ? _value.secondaryGradientColor
+          : secondaryGradientColor as String,
+      tertiaryGradientColor: tertiaryGradientColor == freezed
+          ? _value.tertiaryGradientColor
+          : tertiaryGradientColor as String,
+      primaryTextColor: primaryTextColor == freezed
+          ? _value.primaryTextColor
+          : primaryTextColor as String,
+      secondaryTextColor: secondaryTextColor == freezed
+          ? _value.secondaryTextColor
+          : secondaryTextColor as String,
     ));
   }
 }
@@ -260,7 +300,12 @@ abstract class _$CharacterCopyWith<$Res>
       String rangedMod,
       String combatManeuverBonus,
       String description,
-      String imagePath});
+      String imagePath,
+      String primaryGradientColor,
+      String secondaryGradientColor,
+      String tertiaryGradientColor,
+      String primaryTextColor,
+      String secondaryTextColor});
 }
 
 class __$CharacterCopyWithImpl<$Res> extends _$CharacterDtoCopyWithImpl<$Res>
@@ -300,6 +345,11 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterDtoCopyWithImpl<$Res>
     Object combatManeuverBonus = freezed,
     Object description = freezed,
     Object imagePath = freezed,
+    Object primaryGradientColor = freezed,
+    Object secondaryGradientColor = freezed,
+    Object tertiaryGradientColor = freezed,
+    Object primaryTextColor = freezed,
+    Object secondaryTextColor = freezed,
   }) {
     return _then(_Character(
       id: id == freezed ? _value.id : id as String,
@@ -341,6 +391,21 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterDtoCopyWithImpl<$Res>
       description:
           description == freezed ? _value.description : description as String,
       imagePath: imagePath == freezed ? _value.imagePath : imagePath as String,
+      primaryGradientColor: primaryGradientColor == freezed
+          ? _value.primaryGradientColor
+          : primaryGradientColor as String,
+      secondaryGradientColor: secondaryGradientColor == freezed
+          ? _value.secondaryGradientColor
+          : secondaryGradientColor as String,
+      tertiaryGradientColor: tertiaryGradientColor == freezed
+          ? _value.tertiaryGradientColor
+          : tertiaryGradientColor as String,
+      primaryTextColor: primaryTextColor == freezed
+          ? _value.primaryTextColor
+          : primaryTextColor as String,
+      secondaryTextColor: secondaryTextColor == freezed
+          ? _value.secondaryTextColor
+          : secondaryTextColor as String,
     ));
   }
 }
@@ -374,7 +439,12 @@ class _$_Character extends _Character {
       @required this.rangedMod,
       @required this.combatManeuverBonus,
       @required this.description,
-      @required this.imagePath})
+      @required this.imagePath,
+      @required this.primaryGradientColor,
+      @required this.secondaryGradientColor,
+      @required this.tertiaryGradientColor,
+      @required this.primaryTextColor,
+      @required this.secondaryTextColor})
       : assert(name != null),
         assert(race != null),
         assert(favoredClass != null),
@@ -401,6 +471,11 @@ class _$_Character extends _Character {
         assert(combatManeuverBonus != null),
         assert(description != null),
         assert(imagePath != null),
+        assert(primaryGradientColor != null),
+        assert(secondaryGradientColor != null),
+        assert(tertiaryGradientColor != null),
+        assert(primaryTextColor != null),
+        assert(secondaryTextColor != null),
         super._();
 
   factory _$_Character.fromJson(Map<String, dynamic> json) =>
@@ -461,10 +536,20 @@ class _$_Character extends _Character {
   final String description;
   @override
   final String imagePath;
+  @override
+  final String primaryGradientColor;
+  @override
+  final String secondaryGradientColor;
+  @override
+  final String tertiaryGradientColor;
+  @override
+  final String primaryTextColor;
+  @override
+  final String secondaryTextColor;
 
   @override
   String toString() {
-    return 'CharacterDto(id: $id, name: $name, race: $race, favoredClass: $favoredClass, level: $level, gender: $gender, age: $age, height: $height, weight: $weight, home: $home, alignment: $alignment, deity: $deity, languages: $languages, strength: $strength, dexterity: $dexterity, constitution: $constitution, intelligence: $intelligence, wisdom: $wisdom, charisma: $charisma, maxHP: $maxHP, armorClass: $armorClass, combatManeuverDefense: $combatManeuverDefense, meleeMod: $meleeMod, rangedMod: $rangedMod, combatManeuverBonus: $combatManeuverBonus, description: $description, imagePath: $imagePath)';
+    return 'CharacterDto(id: $id, name: $name, race: $race, favoredClass: $favoredClass, level: $level, gender: $gender, age: $age, height: $height, weight: $weight, home: $home, alignment: $alignment, deity: $deity, languages: $languages, strength: $strength, dexterity: $dexterity, constitution: $constitution, intelligence: $intelligence, wisdom: $wisdom, charisma: $charisma, maxHP: $maxHP, armorClass: $armorClass, combatManeuverDefense: $combatManeuverDefense, meleeMod: $meleeMod, rangedMod: $rangedMod, combatManeuverBonus: $combatManeuverBonus, description: $description, imagePath: $imagePath, primaryGradientColor: $primaryGradientColor, secondaryGradientColor: $secondaryGradientColor, tertiaryGradientColor: $tertiaryGradientColor, primaryTextColor: $primaryTextColor, secondaryTextColor: $secondaryTextColor)';
   }
 
   @override
@@ -539,7 +624,12 @@ class _$_Character extends _Character {
                     .equals(other.description, description)) &&
             (identical(other.imagePath, imagePath) ||
                 const DeepCollectionEquality()
-                    .equals(other.imagePath, imagePath)));
+                    .equals(other.imagePath, imagePath)) &&
+            (identical(other.primaryGradientColor, primaryGradientColor) || const DeepCollectionEquality().equals(other.primaryGradientColor, primaryGradientColor)) &&
+            (identical(other.secondaryGradientColor, secondaryGradientColor) || const DeepCollectionEquality().equals(other.secondaryGradientColor, secondaryGradientColor)) &&
+            (identical(other.tertiaryGradientColor, tertiaryGradientColor) || const DeepCollectionEquality().equals(other.tertiaryGradientColor, tertiaryGradientColor)) &&
+            (identical(other.primaryTextColor, primaryTextColor) || const DeepCollectionEquality().equals(other.primaryTextColor, primaryTextColor)) &&
+            (identical(other.secondaryTextColor, secondaryTextColor) || const DeepCollectionEquality().equals(other.secondaryTextColor, secondaryTextColor)));
   }
 
   @override
@@ -571,7 +661,12 @@ class _$_Character extends _Character {
       const DeepCollectionEquality().hash(rangedMod) ^
       const DeepCollectionEquality().hash(combatManeuverBonus) ^
       const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(imagePath);
+      const DeepCollectionEquality().hash(imagePath) ^
+      const DeepCollectionEquality().hash(primaryGradientColor) ^
+      const DeepCollectionEquality().hash(secondaryGradientColor) ^
+      const DeepCollectionEquality().hash(tertiaryGradientColor) ^
+      const DeepCollectionEquality().hash(primaryTextColor) ^
+      const DeepCollectionEquality().hash(secondaryTextColor);
 
   @override
   _$CharacterCopyWith<_Character> get copyWith =>
@@ -612,7 +707,12 @@ abstract class _Character extends CharacterDto {
       @required String rangedMod,
       @required String combatManeuverBonus,
       @required String description,
-      @required String imagePath}) = _$_Character;
+      @required String imagePath,
+      @required String primaryGradientColor,
+      @required String secondaryGradientColor,
+      @required String tertiaryGradientColor,
+      @required String primaryTextColor,
+      @required String secondaryTextColor}) = _$_Character;
 
   factory _Character.fromJson(Map<String, dynamic> json) =
       _$_Character.fromJson;
@@ -672,6 +772,16 @@ abstract class _Character extends CharacterDto {
   String get description;
   @override
   String get imagePath;
+  @override
+  String get primaryGradientColor;
+  @override
+  String get secondaryGradientColor;
+  @override
+  String get tertiaryGradientColor;
+  @override
+  String get primaryTextColor;
+  @override
+  String get secondaryTextColor;
   @override
   _$CharacterCopyWith<_Character> get copyWith;
 }

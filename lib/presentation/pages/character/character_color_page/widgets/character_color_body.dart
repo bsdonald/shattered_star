@@ -3,7 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:palette_generator/palette_generator.dart';
 import 'package:shattered_star/domain/character/character.dart';
-import 'package:shattered_star/presentation/pages/character/character_home_page/widgets/character_card.dart';
+import 'package:shattered_star/presentation/pages/character/widgets/character_overview_card/character_overview_card.dart';
 
 const Color _kBackgroundColor = Color(0xffa0a0a0);
 const Color _kPlaceholderColor = Color(0x80404040);
@@ -37,7 +37,7 @@ class _CharacterColorBodyState extends State<CharacterColorBody> {
       children: [
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: CharacterCard(
+          child: CharacterOverviewCard(
             character: widget.character,
             backgroundGradient: myGradient,
             statBlocTextColor: statBlocTextColor,
