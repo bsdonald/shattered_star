@@ -4,9 +4,7 @@ import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/character/value_objects.dart';
 import 'package:shattered_star/domain/core/value_objects.dart';
 
-
 part 'character_dtos.freezed.dart';
-
 part 'character_dtos.g.dart';
 
 @freezed
@@ -41,6 +39,11 @@ abstract class CharacterDto implements _$CharacterDto {
     @required String combatManeuverBonus,
     @required String description,
     @required String imagePath,
+    @required String primaryGradientColor,
+    @required String secondaryGradientColor,
+    @required String tertiaryGradientColor,
+    @required String primaryTextColor,
+    @required String secondaryTextColor,
   }) = _Character;
 
   factory CharacterDto.fromDomain(Character character) {
@@ -72,12 +75,17 @@ abstract class CharacterDto implements _$CharacterDto {
       combatManeuverBonus: character.combatManeuverBonus.getOrCrash(),
       description: character.description.getOrCrash(),
       imagePath: character.imagePath.getOrCrash(),
+      primaryGradientColor: character.primaryGradientColor.getOrCrash(),
+      secondaryGradientColor: character.secondaryGradientColor.getOrCrash(),
+      tertiaryGradientColor: character.tertiaryGradientColor.getOrCrash(),
+      primaryTextColor: character.primaryTextColor.getOrCrash(),
+      secondaryTextColor: character.secondaryTextColor.getOrCrash(),
     );
   }
 
- Character toDomain() {
-   return Character(
-     id: UniqueId.fromUniqueString(id),
+  Character toDomain() {
+    return Character(
+      id: UniqueId.fromUniqueString(id),
       name: Name(name),
       race: Race(race),
       favoredClass: FavoredClass(favoredClass),
@@ -102,10 +110,15 @@ abstract class CharacterDto implements _$CharacterDto {
       meleeMod: MeleeMod(meleeMod),
       rangedMod: RangedMod(rangedMod),
       combatManeuverBonus: CombatManeuverBonus(combatManeuverBonus),
-      description:Description(description),
+      description: Description(description),
       imagePath: ImagePath(imagePath),
-   );
- }
+      primaryGradientColor: PrimaryGradientColor(primaryGradientColor),
+      secondaryGradientColor: SecondaryGradientColor(secondaryGradientColor),
+      tertiaryGradientColor: TertiaryGradientColor(tertiaryGradientColor),
+      primaryTextColor: PrimaryTextColor(primaryTextColor),
+      secondaryTextColor: SecondaryTextColor(secondaryTextColor),
+    );
+  }
 
   factory CharacterDto.fromJson(Map<String, dynamic> json) => _$CharacterDtoFromJson(json);
 
@@ -113,4 +126,3 @@ abstract class CharacterDto implements _$CharacterDto {
     return CharacterDto.fromJson(doc.data()).copyWith(id: doc.id);
   }
 }
-
