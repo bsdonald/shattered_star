@@ -34,11 +34,6 @@ _$_Character _$_$_CharacterFromJson(Map<String, dynamic> json) {
     combatManeuverBonus: json['combatManeuverBonus'] as String,
     description: json['description'] as String,
     imagePath: json['imagePath'] as String,
-    primaryGradientColor: json['primaryGradientColor'] as String,
-    secondaryGradientColor: json['secondaryGradientColor'] as String,
-    tertiaryGradientColor: json['tertiaryGradientColor'] as String,
-    primaryTextColor: json['primaryTextColor'] as String,
-    secondaryTextColor: json['secondaryTextColor'] as String,
   );
 }
 
@@ -70,9 +65,4 @@ Map<String, dynamic> _$_$_CharacterToJson(_$_Character instance) =>
       'combatManeuverBonus': instance.combatManeuverBonus,
       'description': instance.description,
       'imagePath': instance.imagePath,
-      'primaryGradientColor': instance.primaryGradientColor,
-      'secondaryGradientColor': instance.secondaryGradientColor,
-      'tertiaryGradientColor': instance.tertiaryGradientColor,
-      'primaryTextColor': instance.primaryTextColor,
-      'secondaryTextColor': instance.secondaryTextColor,
     };

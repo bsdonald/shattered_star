@@ -39,12 +39,7 @@ class _$CharacterTearOff {
       @required RangedMod rangedMod,
       @required CombatManeuverBonus combatManeuverBonus,
       @required Description description,
-      @required ImagePath imagePath,
-      @required PrimaryGradientColor primaryGradientColor,
-      @required SecondaryGradientColor secondaryGradientColor,
-      @required TertiaryGradientColor tertiaryGradientColor,
-      @required PrimaryTextColor primaryTextColor,
-      @required SecondaryTextColor secondaryTextColor}) {
+      @required ImagePath imagePath}) {
     return _Character(
       id: id,
       name: name,
@@ -73,11 +68,6 @@ class _$CharacterTearOff {
       combatManeuverBonus: combatManeuverBonus,
       description: description,
       imagePath: imagePath,
-      primaryGradientColor: primaryGradientColor,
-      secondaryGradientColor: secondaryGradientColor,
-      tertiaryGradientColor: tertiaryGradientColor,
-      primaryTextColor: primaryTextColor,
-      secondaryTextColor: secondaryTextColor,
     );
   }
 }
@@ -113,11 +103,6 @@ mixin _$Character {
   CombatManeuverBonus get combatManeuverBonus;
   Description get description;
   ImagePath get imagePath;
-  PrimaryGradientColor get primaryGradientColor;
-  SecondaryGradientColor get secondaryGradientColor;
-  TertiaryGradientColor get tertiaryGradientColor;
-  PrimaryTextColor get primaryTextColor;
-  SecondaryTextColor get secondaryTextColor;
 
   $CharacterCopyWith<Character> get copyWith;
 }
@@ -152,12 +137,7 @@ abstract class $CharacterCopyWith<$Res> {
       RangedMod rangedMod,
       CombatManeuverBonus combatManeuverBonus,
       Description description,
-      ImagePath imagePath,
-      PrimaryGradientColor primaryGradientColor,
-      SecondaryGradientColor secondaryGradientColor,
-      TertiaryGradientColor tertiaryGradientColor,
-      PrimaryTextColor primaryTextColor,
-      SecondaryTextColor secondaryTextColor});
+      ImagePath imagePath});
 }
 
 class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
@@ -196,11 +176,6 @@ class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
     Object combatManeuverBonus = freezed,
     Object description = freezed,
     Object imagePath = freezed,
-    Object primaryGradientColor = freezed,
-    Object secondaryGradientColor = freezed,
-    Object tertiaryGradientColor = freezed,
-    Object primaryTextColor = freezed,
-    Object secondaryTextColor = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as UniqueId,
@@ -248,21 +223,6 @@ class _$CharacterCopyWithImpl<$Res> implements $CharacterCopyWith<$Res> {
           : description as Description,
       imagePath:
           imagePath == freezed ? _value.imagePath : imagePath as ImagePath,
-      primaryGradientColor: primaryGradientColor == freezed
-          ? _value.primaryGradientColor
-          : primaryGradientColor as PrimaryGradientColor,
-      secondaryGradientColor: secondaryGradientColor == freezed
-          ? _value.secondaryGradientColor
-          : secondaryGradientColor as SecondaryGradientColor,
-      tertiaryGradientColor: tertiaryGradientColor == freezed
-          ? _value.tertiaryGradientColor
-          : tertiaryGradientColor as TertiaryGradientColor,
-      primaryTextColor: primaryTextColor == freezed
-          ? _value.primaryTextColor
-          : primaryTextColor as PrimaryTextColor,
-      secondaryTextColor: secondaryTextColor == freezed
-          ? _value.secondaryTextColor
-          : secondaryTextColor as SecondaryTextColor,
     ));
   }
 }
@@ -299,12 +259,7 @@ abstract class _$CharacterCopyWith<$Res> implements $CharacterCopyWith<$Res> {
       RangedMod rangedMod,
       CombatManeuverBonus combatManeuverBonus,
       Description description,
-      ImagePath imagePath,
-      PrimaryGradientColor primaryGradientColor,
-      SecondaryGradientColor secondaryGradientColor,
-      TertiaryGradientColor tertiaryGradientColor,
-      PrimaryTextColor primaryTextColor,
-      SecondaryTextColor secondaryTextColor});
+      ImagePath imagePath});
 }
 
 class __$CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
@@ -344,11 +299,6 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
     Object combatManeuverBonus = freezed,
     Object description = freezed,
     Object imagePath = freezed,
-    Object primaryGradientColor = freezed,
-    Object secondaryGradientColor = freezed,
-    Object tertiaryGradientColor = freezed,
-    Object primaryTextColor = freezed,
-    Object secondaryTextColor = freezed,
   }) {
     return _then(_Character(
       id: id == freezed ? _value.id : id as UniqueId,
@@ -396,21 +346,6 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
           : description as Description,
       imagePath:
           imagePath == freezed ? _value.imagePath : imagePath as ImagePath,
-      primaryGradientColor: primaryGradientColor == freezed
-          ? _value.primaryGradientColor
-          : primaryGradientColor as PrimaryGradientColor,
-      secondaryGradientColor: secondaryGradientColor == freezed
-          ? _value.secondaryGradientColor
-          : secondaryGradientColor as SecondaryGradientColor,
-      tertiaryGradientColor: tertiaryGradientColor == freezed
-          ? _value.tertiaryGradientColor
-          : tertiaryGradientColor as TertiaryGradientColor,
-      primaryTextColor: primaryTextColor == freezed
-          ? _value.primaryTextColor
-          : primaryTextColor as PrimaryTextColor,
-      secondaryTextColor: secondaryTextColor == freezed
-          ? _value.secondaryTextColor
-          : secondaryTextColor as SecondaryTextColor,
     ));
   }
 }
@@ -443,12 +378,7 @@ class _$_Character extends _Character {
       @required this.rangedMod,
       @required this.combatManeuverBonus,
       @required this.description,
-      @required this.imagePath,
-      @required this.primaryGradientColor,
-      @required this.secondaryGradientColor,
-      @required this.tertiaryGradientColor,
-      @required this.primaryTextColor,
-      @required this.secondaryTextColor})
+      @required this.imagePath})
       : assert(id != null),
         assert(name != null),
         assert(race != null),
@@ -476,11 +406,6 @@ class _$_Character extends _Character {
         assert(combatManeuverBonus != null),
         assert(description != null),
         assert(imagePath != null),
-        assert(primaryGradientColor != null),
-        assert(secondaryGradientColor != null),
-        assert(tertiaryGradientColor != null),
-        assert(primaryTextColor != null),
-        assert(secondaryTextColor != null),
         super._();
 
   @override
@@ -537,20 +462,10 @@ class _$_Character extends _Character {
   final Description description;
   @override
   final ImagePath imagePath;
-  @override
-  final PrimaryGradientColor primaryGradientColor;
-  @override
-  final SecondaryGradientColor secondaryGradientColor;
-  @override
-  final TertiaryGradientColor tertiaryGradientColor;
-  @override
-  final PrimaryTextColor primaryTextColor;
-  @override
-  final SecondaryTextColor secondaryTextColor;
 
   @override
   String toString() {
-    return 'Character(id: $id, name: $name, race: $race, favoredClass: $favoredClass, level: $level, gender: $gender, age: $age, height: $height, weight: $weight, home: $home, alignment: $alignment, deity: $deity, languages: $languages, strength: $strength, dexterity: $dexterity, constitution: $constitution, intelligence: $intelligence, wisdom: $wisdom, charisma: $charisma, maxHP: $maxHP, armorClass: $armorClass, combatManeuverDefense: $combatManeuverDefense, meleeMod: $meleeMod, rangedMod: $rangedMod, combatManeuverBonus: $combatManeuverBonus, description: $description, imagePath: $imagePath, primaryGradientColor: $primaryGradientColor, secondaryGradientColor: $secondaryGradientColor, tertiaryGradientColor: $tertiaryGradientColor, primaryTextColor: $primaryTextColor, secondaryTextColor: $secondaryTextColor)';
+    return 'Character(id: $id, name: $name, race: $race, favoredClass: $favoredClass, level: $level, gender: $gender, age: $age, height: $height, weight: $weight, home: $home, alignment: $alignment, deity: $deity, languages: $languages, strength: $strength, dexterity: $dexterity, constitution: $constitution, intelligence: $intelligence, wisdom: $wisdom, charisma: $charisma, maxHP: $maxHP, armorClass: $armorClass, combatManeuverDefense: $combatManeuverDefense, meleeMod: $meleeMod, rangedMod: $rangedMod, combatManeuverBonus: $combatManeuverBonus, description: $description, imagePath: $imagePath)';
   }
 
   @override
@@ -625,12 +540,7 @@ class _$_Character extends _Character {
                     .equals(other.description, description)) &&
             (identical(other.imagePath, imagePath) ||
                 const DeepCollectionEquality()
-                    .equals(other.imagePath, imagePath)) &&
-            (identical(other.primaryGradientColor, primaryGradientColor) || const DeepCollectionEquality().equals(other.primaryGradientColor, primaryGradientColor)) &&
-            (identical(other.secondaryGradientColor, secondaryGradientColor) || const DeepCollectionEquality().equals(other.secondaryGradientColor, secondaryGradientColor)) &&
-            (identical(other.tertiaryGradientColor, tertiaryGradientColor) || const DeepCollectionEquality().equals(other.tertiaryGradientColor, tertiaryGradientColor)) &&
-            (identical(other.primaryTextColor, primaryTextColor) || const DeepCollectionEquality().equals(other.primaryTextColor, primaryTextColor)) &&
-            (identical(other.secondaryTextColor, secondaryTextColor) || const DeepCollectionEquality().equals(other.secondaryTextColor, secondaryTextColor)));
+                    .equals(other.imagePath, imagePath)));
   }
 
   @override
@@ -662,12 +572,7 @@ class _$_Character extends _Character {
       const DeepCollectionEquality().hash(rangedMod) ^
       const DeepCollectionEquality().hash(combatManeuverBonus) ^
       const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(imagePath) ^
-      const DeepCollectionEquality().hash(primaryGradientColor) ^
-      const DeepCollectionEquality().hash(secondaryGradientColor) ^
-      const DeepCollectionEquality().hash(tertiaryGradientColor) ^
-      const DeepCollectionEquality().hash(primaryTextColor) ^
-      const DeepCollectionEquality().hash(secondaryTextColor);
+      const DeepCollectionEquality().hash(imagePath);
 
   @override
   _$CharacterCopyWith<_Character> get copyWith =>
@@ -703,12 +608,7 @@ abstract class _Character extends Character {
       @required RangedMod rangedMod,
       @required CombatManeuverBonus combatManeuverBonus,
       @required Description description,
-      @required ImagePath imagePath,
-      @required PrimaryGradientColor primaryGradientColor,
-      @required SecondaryGradientColor secondaryGradientColor,
-      @required TertiaryGradientColor tertiaryGradientColor,
-      @required PrimaryTextColor primaryTextColor,
-      @required SecondaryTextColor secondaryTextColor}) = _$_Character;
+      @required ImagePath imagePath}) = _$_Character;
 
   @override
   UniqueId get id;
@@ -764,16 +664,6 @@ abstract class _Character extends Character {
   Description get description;
   @override
   ImagePath get imagePath;
-  @override
-  PrimaryGradientColor get primaryGradientColor;
-  @override
-  SecondaryGradientColor get secondaryGradientColor;
-  @override
-  TertiaryGradientColor get tertiaryGradientColor;
-  @override
-  PrimaryTextColor get primaryTextColor;
-  @override
-  SecondaryTextColor get secondaryTextColor;
   @override
   _$CharacterCopyWith<_Character> get copyWith;
 }
