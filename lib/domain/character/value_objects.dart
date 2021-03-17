@@ -99,8 +99,7 @@ class Height extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
 
-    static const maxLength = 8;
-
+  static const maxLength = 8;
 
   factory Height(String input) {
     assert(input != null);
@@ -112,13 +111,11 @@ class Height extends ValueObject<String> {
   const Height._(this.value);
 }
 
-
 class Weight extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
 
-      static const maxLength = 10;
-
+  static const maxLength = 10;
 
   factory Weight(String input) {
     assert(input != null);
@@ -156,7 +153,7 @@ class Alignment extends ValueObject<String> {
     assert(input != null);
     return Alignment._(
       validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty).flatMap(validateSingleLine),
-        );
+    );
   }
 
   const Alignment._(this.value);
@@ -172,7 +169,7 @@ class Deity extends ValueObject<String> {
     assert(input != null);
     return Deity._(
       validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty).flatMap(validateSingleLine),
-        );
+    );
   }
 
   const Deity._(this.value);
@@ -182,14 +179,14 @@ class Languages extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
 
-    static const maxLength = 100;
+  static const maxLength = 100;
 
   factory Languages(String input) {
     assert(input != null);
 
     return Languages._(
       validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty).flatMap(validateSingleLine),
-        );
+    );
   }
 
   const Languages._(this.value);
@@ -203,7 +200,7 @@ class Strength extends ValueObject<String> {
     assert(input != null);
     return Strength._(
       validateStatNumber(input),
-        );
+    );
   }
 
   const Strength._(this.value);
@@ -217,7 +214,7 @@ class Dexterity extends ValueObject<String> {
     assert(input != null);
     return Dexterity._(
       validateStatNumber(input),
-        );
+    );
   }
 
   const Dexterity._(this.value);
@@ -231,7 +228,7 @@ class Constitution extends ValueObject<String> {
     assert(input != null);
     return Constitution._(
       validateStatNumber(input),
-        );
+    );
   }
 
   const Constitution._(this.value);
@@ -245,7 +242,7 @@ class Intelligence extends ValueObject<String> {
     assert(input != null);
     return Intelligence._(
       validateStatNumber(input),
-        );
+    );
   }
 
   const Intelligence._(this.value);
@@ -259,7 +256,7 @@ class Wisdom extends ValueObject<String> {
     assert(input != null);
     return Wisdom._(
       validateStatNumber(input),
-        );
+    );
   }
 
   const Wisdom._(this.value);
@@ -273,7 +270,7 @@ class Charisma extends ValueObject<String> {
     assert(input != null);
     return Charisma._(
       validateStatNumber(input),
-        );
+    );
   }
 
   const Charisma._(this.value);
@@ -287,7 +284,7 @@ class MaxHP extends ValueObject<String> {
     assert(input != null);
     return MaxHP._(
       validateIsNumber(input),
-        );
+    );
   }
 
   const MaxHP._(this.value);
@@ -301,7 +298,7 @@ class ArmorClass extends ValueObject<String> {
     assert(input != null);
     return ArmorClass._(
       validateIsNumber(input),
-        );
+    );
   }
 
   const ArmorClass._(this.value);
@@ -315,7 +312,7 @@ class CombatManeuverDefense extends ValueObject<String> {
     assert(input != null);
     return CombatManeuverDefense._(
       validateIsNumber(input),
-        );
+    );
   }
 
   const CombatManeuverDefense._(this.value);
@@ -329,7 +326,7 @@ class MeleeMod extends ValueObject<String> {
     assert(input != null);
     return MeleeMod._(
       validateIsNumber(input),
-        );
+    );
   }
 
   const MeleeMod._(this.value);
@@ -343,7 +340,7 @@ class RangedMod extends ValueObject<String> {
     assert(input != null);
     return RangedMod._(
       validateIsNumber(input),
-        );
+    );
   }
 
   const RangedMod._(this.value);
@@ -357,7 +354,7 @@ class CombatManeuverBonus extends ValueObject<String> {
     assert(input != null);
     return CombatManeuverBonus._(
       validateIsNumber(input),
-        );
+    );
   }
 
   const CombatManeuverBonus._(this.value);
@@ -383,12 +380,10 @@ class ImagePath extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
 
-  static const maxLength = 1000;
-
   factory ImagePath(String input) {
     assert(input != null);
     return ImagePath._(
-      validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty),
+      validateStringNotEmpty(input),
     );
   }
 
