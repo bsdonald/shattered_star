@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shattered_star/application/home/bloc/home_page_bloc.dart';
 import 'package:shattered_star/domain/character/character.dart';
 
-class SSHomeCard extends StatefulWidget {
+class SSHomeCard extends StatelessWidget {
   final String title;
   final String image;
   final Function onTap;
@@ -19,15 +19,9 @@ class SSHomeCard extends StatefulWidget {
   });
 
   @override
-  _SSHomeCardState createState() => _SSHomeCardState();
-}
-
-class _SSHomeCardState extends State<SSHomeCard> {
-  bool test = false;
-  bool longPress = false;
-
-  @override
   Widget build(BuildContext context) {
+    bool test;
+    test = false;
     return BlocBuilder<HomePageBloc, HomePageState>(
       builder: (context, state) {
         return GestureDetector(
@@ -43,7 +37,7 @@ class _SSHomeCardState extends State<SSHomeCard> {
             test = false;
             context.read<HomePageBloc>().add(HomePageEvent.cardReleased());
           },
-          onTap: widget.onTap,
+          onTap: onTap,
           child: Card(
             child: GridTile(
               footer: !test
@@ -51,7 +45,7 @@ class _SSHomeCardState extends State<SSHomeCard> {
                   : GridTileBar(
                       backgroundColor: Theme.of(context).accentColor.withOpacity(0.85),
                       title: Text(
-                        widget.title,
+                        title,
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -59,18 +53,18 @@ class _SSHomeCardState extends State<SSHomeCard> {
                 decoration: BoxDecoration(
                   gradient: RadialGradient(
                     colors: [
-                      widget.character.primaryGradientColor.getOrCrash(),
-                      widget.character.secondaryGradientColor.getOrCrash(),
-                      widget.character.tertiaryGradientColor.getOrCrash(),
+                      character.primaryGradientColor.getOrCrash(),
+                      character.secondaryGradientColor.getOrCrash(),
+                      character.tertiaryGradientColor.getOrCrash(),
                     ],
-                    center: widget.gradientAlignment,
+                    center: gradientAlignment,
                     radius: 1.75,
                     tileMode: TileMode.clamp,
                   ),
                   borderRadius: BorderRadius.all(Radius.circular(8.0)),
                 ),
                 child: Image.asset(
-                  widget.image,
+                  image,
                   fit: BoxFit.contain,
                   height: 10,
                 ),

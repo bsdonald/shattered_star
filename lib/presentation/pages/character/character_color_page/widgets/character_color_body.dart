@@ -21,18 +21,6 @@ class _CharacterColorBodyState extends State<CharacterColorBody> {
 
   @override
   Widget build(BuildContext context) {
-    var statBlocTextColor = Colors.white;
-
-    var myGradient = LinearGradient(
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
-      colors: [
-        Theme.of(context).scaffoldBackgroundColor,
-        Theme.of(context).primaryColor,
-        Theme.of(context).cardColor,
-      ],
-    );
-
     return Column(
       children: [
         Padding(
