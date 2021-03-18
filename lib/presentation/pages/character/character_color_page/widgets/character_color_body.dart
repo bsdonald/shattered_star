@@ -57,11 +57,10 @@ class _CharacterColorBodyState extends State<CharacterColorBody> {
   }
 
   generatePalette() async {
-    paletteGenerator = await PaletteGenerator.fromImageProvider(
+    await PaletteGenerator.fromImageProvider(
       Image.network(widget.character.imagePath.getOrCrash()).image,
       maximumColorCount: 50,
     );
-    print(paletteGenerator.colors);
     setState(() {});
   }
 }

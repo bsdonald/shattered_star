@@ -7,6 +7,7 @@ import 'package:flutter/material.dart' hide Alignment;
 // import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
+import 'package:palette_generator/palette_generator.dart';
 import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/character/character_failure.dart';
 import 'package:shattered_star/domain/character/i_character_bucket.dart';
@@ -196,6 +197,7 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
       },
       imageButtonPressed: (e) async* {
         String downloadUrl;
+        PaletteGenerator paletteGenerator;
 
         yield state.copyWith(
           imageLoading: true,
@@ -209,10 +211,20 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
         // );
         downloadUrl = await _characterBucket.getDownloadUrl(state.character.id.getOrCrash());
 
-        print(downloadUrl);
+        paletteGenerator = await PaletteGenerator.fromImageProvider(
+          Image.network(downloadUrl).image,
+          maximumColorCount: 20,
+        );
+
         yield state.copyWith(
           imageLoading: false,
-          character: state.character.copyWith(imagePath: ImagePath(downloadUrl)),
+          character: state.character.copyWith(
+            imagePath: ImagePath(downloadUrl),
+            primaryGradientColor: PrimaryGradientColor(paletteGenerator.lightMutedColor?.color),
+            secondaryGradientColor: SecondaryGradientColor(paletteGenerator.dominantColor?.color),
+            tertiaryGradientColor: TertiaryGradientColor(paletteGenerator.darkMutedColor?.color),
+            secondaryTextColor: SecondaryTextColor(paletteGenerator.lightMutedColor?.color),
+          ),
           saveFailureOrSuccessOption: none(),
         );
       },
