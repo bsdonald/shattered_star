@@ -37,11 +37,7 @@ class _CharacterColorBodyState extends State<CharacterColorBody> {
       children: [
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: CharacterOverviewCard(
-            character: widget.character,
-            backgroundGradient: myGradient,
-            statBlocTextColor: statBlocTextColor,
-          ),
+          child: CharacterOverviewCard(widget.character),
         ),
         RaisedButton(
           child: Text('Generate Palette'),
@@ -57,7 +53,7 @@ class _CharacterColorBodyState extends State<CharacterColorBody> {
   }
 
   generatePalette() async {
-    await PaletteGenerator.fromImageProvider(
+    paletteGenerator = await PaletteGenerator.fromImageProvider(
       Image.network(widget.character.imagePath.getOrCrash()).image,
       maximumColorCount: 50,
     );

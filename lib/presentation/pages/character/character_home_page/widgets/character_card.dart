@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/presentation/pages/character/widgets/character_overview_card/character_overview_card.dart';
@@ -7,18 +6,8 @@ import 'package:shattered_star/presentation/pages/character/widgets/player_chara
 //TODO: CONSIDER RENAMING
 class CharacterCard extends StatelessWidget {
   final Character character;
-  final LinearGradient backgroundGradient;
-  final Color statBlocTextColor;
-  // final Color charDetailTextColor;
-  // final Color charDetailBackgroundColor;
 
-  const CharacterCard({
-    @required this.backgroundGradient,
-    @required this.statBlocTextColor,
-    @required this.character,
-    // @required this.charDetailTextColor,
-    // @required this.charDetailBackgroundColor,
-  });
+  const CharacterCard(this.character);
 
   @override
   Widget build(BuildContext context) {
@@ -37,11 +26,7 @@ class CharacterCard extends StatelessWidget {
           ),
         );
       },
-      child: CharacterOverviewCard(
-        backgroundGradient: backgroundGradient,
-        statBlocTextColor: statBlocTextColor,
-        character: character,
-      ),
+      child: CharacterOverviewCard(character),
     );
   }
 }

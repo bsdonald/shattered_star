@@ -1,22 +1,11 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:shattered_star/domain/character/character.dart';
 
 //TODO: CONSIDER RENAMING
 class CharacterOverviewCard extends StatelessWidget {
   final Character character;
-  final LinearGradient backgroundGradient;
-  final Color statBlocTextColor;
-  // final Color charDetailTextColor;
-  // final Color charDetailBackgroundColor;
 
-  const CharacterOverviewCard({
-    @required this.backgroundGradient,
-    @required this.statBlocTextColor,
-    @required this.character,
-    // @required this.charDetailTextColor,
-    // @required this.charDetailBackgroundColor,
-  });
+  const CharacterOverviewCard(this.character);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +13,15 @@ class CharacterOverviewCard extends StatelessWidget {
       elevation: 10,
       child: Ink(
         decoration: BoxDecoration(
-          gradient: backgroundGradient,
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              character.primaryGradientColor.getOrCrash(),
+              character.secondaryGradientColor.getOrCrash(),
+              character.tertiaryGradientColor.getOrCrash(),
+            ],
+          ),
           borderRadius: BorderRadius.all(Radius.circular(8.0)),
         ),
         child: Row(
@@ -78,7 +75,7 @@ class CharacterOverviewCard extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: DefaultTextStyle(
                     style: TextStyle(
-                      color: statBlocTextColor,
+                      color: character.secondaryTextColor.getOrCrash(),
                       fontWeight: FontWeight.bold,
                     ),
                     child: Column(

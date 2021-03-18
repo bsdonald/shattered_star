@@ -22,17 +22,6 @@ class CharacterCard extends StatelessWidget {
     final slidableController = SlidableController();
     bool confirmDelete;
     confirmDelete = false;
-    var statBlocTextColor = Colors.white;
-
-    var myGradient = LinearGradient(
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
-      colors: [
-        Theme.of(context).scaffoldBackgroundColor,
-        Theme.of(context).primaryColor,
-        Theme.of(context).cardColor,
-      ],
-    );
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4),
@@ -103,11 +92,7 @@ class CharacterCard extends StatelessWidget {
           onLongPress: () {
             ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character);
           },
-          child: CharacterOverviewCard(
-            backgroundGradient: myGradient,
-            statBlocTextColor: statBlocTextColor,
-            character: character,
-          ),
+          child: CharacterOverviewCard(character),
         ),
       ),
     );
