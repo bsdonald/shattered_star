@@ -8,11 +8,13 @@ import 'package:shattered_star/domain/character/value_objects.dart' as char;
 class CharacterBio extends HookWidget {
   final bool isEditing;
   final Character character;
+  final Color color;
 
   const CharacterBio({
     Key key,
     @required this.isEditing,
     @required this.character,
+    @required this.color,
   }) : super(key: key);
 
   @override
@@ -23,7 +25,7 @@ class CharacterBio extends HookWidget {
       padding: EdgeInsets.all(8),
       constraints: BoxConstraints.expand(),
       decoration: BoxDecoration(
-        color: Colors.amber,
+        color: color,
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(20),
           bottomRight: Radius.circular(20),

@@ -8,18 +8,20 @@ import 'package:shattered_star/presentation/pages/character/character_form_page/
 class CharacterStatsField extends StatelessWidget {
   final bool isEditing;
   final Character character;
+  final Color color;
 
   const CharacterStatsField({
     Key key,
     @required this.isEditing,
     @required this.character,
+    @required this.color,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       // width: 900,
-      color: Colors.amber,
+      color: color,
       child: isEditing ? StatBlocForm() : StatBlocGrid(character: character),
     );
   }
@@ -110,23 +112,22 @@ class StatBlocForm extends HookWidget {
     final rangedModEditingController = useTextEditingController();
     final combatManeuverBonusEditingController = useTextEditingController();
 
-
     return BlocListener<CharacterFormBloc, CharacterFormState>(
-        listenWhen: (p, c) => p.isEditing != c.isEditing,
-        listener: (context, state) {
-          strengthEditingController.text = state.character.strength.getOrCrash();
-          dexterityEditingController.text = state.character.dexterity.getOrCrash();
-          constitutionEditingController.text = state.character.constitution.getOrCrash();
-          intelligenceEditingController.text = state.character.intelligence.getOrCrash();
-          wisdomEditingController.text = state.character.wisdom.getOrCrash();
-          charismaEditingController.text = state.character.charisma.getOrCrash();
-          maxHPEditingController.text = state.character.maxHP.getOrCrash();
-          armorClassEditingController.text = state.character.armorClass.getOrCrash();
-          combatManeuverDefenseEditingController.text = state.character.combatManeuverDefense.getOrCrash();
-          meleeModEditingController.text = state.character.meleeMod.getOrCrash();
-          rangedModEditingController.text = state.character.rangedMod.getOrCrash();
-          combatManeuverBonusEditingController.text = state.character.combatManeuverBonus.getOrCrash();
-        },
+      listenWhen: (p, c) => p.isEditing != c.isEditing,
+      listener: (context, state) {
+        strengthEditingController.text = state.character.strength.getOrCrash();
+        dexterityEditingController.text = state.character.dexterity.getOrCrash();
+        constitutionEditingController.text = state.character.constitution.getOrCrash();
+        intelligenceEditingController.text = state.character.intelligence.getOrCrash();
+        wisdomEditingController.text = state.character.wisdom.getOrCrash();
+        charismaEditingController.text = state.character.charisma.getOrCrash();
+        maxHPEditingController.text = state.character.maxHP.getOrCrash();
+        armorClassEditingController.text = state.character.armorClass.getOrCrash();
+        combatManeuverDefenseEditingController.text = state.character.combatManeuverDefense.getOrCrash();
+        meleeModEditingController.text = state.character.meleeMod.getOrCrash();
+        rangedModEditingController.text = state.character.rangedMod.getOrCrash();
+        combatManeuverBonusEditingController.text = state.character.combatManeuverBonus.getOrCrash();
+      },
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
