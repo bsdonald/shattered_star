@@ -43,11 +43,11 @@ class _$CharacterDtoTearOff {
       @required String combatManeuverBonus,
       @required String description,
       @required String imagePath,
-      @required String primaryGradientColor,
-      @required String secondaryGradientColor,
-      @required String tertiaryGradientColor,
-      @required String primaryTextColor,
-      @required String secondaryTextColor}) {
+      @required int primaryGradientColor,
+      @required int secondaryGradientColor,
+      @required int tertiaryGradientColor,
+      @required int primaryTextColor,
+      @required int secondaryTextColor}) {
     return _Character(
       id: id,
       name: name,
@@ -117,11 +117,11 @@ mixin _$CharacterDto {
   String get combatManeuverBonus;
   String get description;
   String get imagePath;
-  String get primaryGradientColor;
-  String get secondaryGradientColor;
-  String get tertiaryGradientColor;
-  String get primaryTextColor;
-  String get secondaryTextColor;
+  int get primaryGradientColor;
+  int get secondaryGradientColor;
+  int get tertiaryGradientColor;
+  int get primaryTextColor;
+  int get secondaryTextColor;
 
   Map<String, dynamic> toJson();
   $CharacterDtoCopyWith<CharacterDto> get copyWith;
@@ -159,11 +159,11 @@ abstract class $CharacterDtoCopyWith<$Res> {
       String combatManeuverBonus,
       String description,
       String imagePath,
-      String primaryGradientColor,
-      String secondaryGradientColor,
-      String tertiaryGradientColor,
-      String primaryTextColor,
-      String secondaryTextColor});
+      int primaryGradientColor,
+      int secondaryGradientColor,
+      int tertiaryGradientColor,
+      int primaryTextColor,
+      int secondaryTextColor});
 }
 
 class _$CharacterDtoCopyWithImpl<$Res> implements $CharacterDtoCopyWith<$Res> {
@@ -250,19 +250,19 @@ class _$CharacterDtoCopyWithImpl<$Res> implements $CharacterDtoCopyWith<$Res> {
       imagePath: imagePath == freezed ? _value.imagePath : imagePath as String,
       primaryGradientColor: primaryGradientColor == freezed
           ? _value.primaryGradientColor
-          : primaryGradientColor as String,
+          : primaryGradientColor as int,
       secondaryGradientColor: secondaryGradientColor == freezed
           ? _value.secondaryGradientColor
-          : secondaryGradientColor as String,
+          : secondaryGradientColor as int,
       tertiaryGradientColor: tertiaryGradientColor == freezed
           ? _value.tertiaryGradientColor
-          : tertiaryGradientColor as String,
+          : tertiaryGradientColor as int,
       primaryTextColor: primaryTextColor == freezed
           ? _value.primaryTextColor
-          : primaryTextColor as String,
+          : primaryTextColor as int,
       secondaryTextColor: secondaryTextColor == freezed
           ? _value.secondaryTextColor
-          : secondaryTextColor as String,
+          : secondaryTextColor as int,
     ));
   }
 }
@@ -301,11 +301,11 @@ abstract class _$CharacterCopyWith<$Res>
       String combatManeuverBonus,
       String description,
       String imagePath,
-      String primaryGradientColor,
-      String secondaryGradientColor,
-      String tertiaryGradientColor,
-      String primaryTextColor,
-      String secondaryTextColor});
+      int primaryGradientColor,
+      int secondaryGradientColor,
+      int tertiaryGradientColor,
+      int primaryTextColor,
+      int secondaryTextColor});
 }
 
 class __$CharacterCopyWithImpl<$Res> extends _$CharacterDtoCopyWithImpl<$Res>
@@ -393,19 +393,19 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterDtoCopyWithImpl<$Res>
       imagePath: imagePath == freezed ? _value.imagePath : imagePath as String,
       primaryGradientColor: primaryGradientColor == freezed
           ? _value.primaryGradientColor
-          : primaryGradientColor as String,
+          : primaryGradientColor as int,
       secondaryGradientColor: secondaryGradientColor == freezed
           ? _value.secondaryGradientColor
-          : secondaryGradientColor as String,
+          : secondaryGradientColor as int,
       tertiaryGradientColor: tertiaryGradientColor == freezed
           ? _value.tertiaryGradientColor
-          : tertiaryGradientColor as String,
+          : tertiaryGradientColor as int,
       primaryTextColor: primaryTextColor == freezed
           ? _value.primaryTextColor
-          : primaryTextColor as String,
+          : primaryTextColor as int,
       secondaryTextColor: secondaryTextColor == freezed
           ? _value.secondaryTextColor
-          : secondaryTextColor as String,
+          : secondaryTextColor as int,
     ));
   }
 }
@@ -537,15 +537,15 @@ class _$_Character extends _Character {
   @override
   final String imagePath;
   @override
-  final String primaryGradientColor;
+  final int primaryGradientColor;
   @override
-  final String secondaryGradientColor;
+  final int secondaryGradientColor;
   @override
-  final String tertiaryGradientColor;
+  final int tertiaryGradientColor;
   @override
-  final String primaryTextColor;
+  final int primaryTextColor;
   @override
-  final String secondaryTextColor;
+  final int secondaryTextColor;
 
   @override
   String toString() {
@@ -708,11 +708,11 @@ abstract class _Character extends CharacterDto {
       @required String combatManeuverBonus,
       @required String description,
       @required String imagePath,
-      @required String primaryGradientColor,
-      @required String secondaryGradientColor,
-      @required String tertiaryGradientColor,
-      @required String primaryTextColor,
-      @required String secondaryTextColor}) = _$_Character;
+      @required int primaryGradientColor,
+      @required int secondaryGradientColor,
+      @required int tertiaryGradientColor,
+      @required int primaryTextColor,
+      @required int secondaryTextColor}) = _$_Character;
 
   factory _Character.fromJson(Map<String, dynamic> json) =
       _$_Character.fromJson;
@@ -773,15 +773,15 @@ abstract class _Character extends CharacterDto {
   @override
   String get imagePath;
   @override
-  String get primaryGradientColor;
+  int get primaryGradientColor;
   @override
-  String get secondaryGradientColor;
+  int get secondaryGradientColor;
   @override
-  String get tertiaryGradientColor;
+  int get tertiaryGradientColor;
   @override
-  String get primaryTextColor;
+  int get primaryTextColor;
   @override
-  String get secondaryTextColor;
+  int get secondaryTextColor;
   @override
   _$CharacterCopyWith<_Character> get copyWith;
 }

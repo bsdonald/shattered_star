@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:shattered_star/domain/character/character.dart';
@@ -39,11 +41,11 @@ abstract class CharacterDto implements _$CharacterDto {
     @required String combatManeuverBonus,
     @required String description,
     @required String imagePath,
-    @required String primaryGradientColor,
-    @required String secondaryGradientColor,
-    @required String tertiaryGradientColor,
-    @required String primaryTextColor,
-    @required String secondaryTextColor,
+    @required int primaryGradientColor,
+    @required int secondaryGradientColor,
+    @required int tertiaryGradientColor,
+    @required int primaryTextColor,
+    @required int secondaryTextColor,
   }) = _Character;
 
   factory CharacterDto.fromDomain(Character character) {
@@ -75,11 +77,11 @@ abstract class CharacterDto implements _$CharacterDto {
       combatManeuverBonus: character.combatManeuverBonus.getOrCrash(),
       description: character.description.getOrCrash(),
       imagePath: character.imagePath.getOrCrash(),
-      primaryGradientColor: character.primaryGradientColor.getOrCrash(),
-      secondaryGradientColor: character.secondaryGradientColor.getOrCrash(),
-      tertiaryGradientColor: character.tertiaryGradientColor.getOrCrash(),
-      primaryTextColor: character.primaryTextColor.getOrCrash(),
-      secondaryTextColor: character.secondaryTextColor.getOrCrash(),
+      primaryGradientColor: character.primaryGradientColor.getOrCrash().value,
+      secondaryGradientColor: character.secondaryGradientColor.getOrCrash().value,
+      tertiaryGradientColor: character.tertiaryGradientColor.getOrCrash().value,
+      primaryTextColor: character.primaryTextColor.getOrCrash().value,
+      secondaryTextColor: character.secondaryTextColor.getOrCrash().value,
     );
   }
 
@@ -112,11 +114,11 @@ abstract class CharacterDto implements _$CharacterDto {
       combatManeuverBonus: CombatManeuverBonus(combatManeuverBonus),
       description: Description(description),
       imagePath: ImagePath(imagePath),
-      primaryGradientColor: PrimaryGradientColor(primaryGradientColor),
-      secondaryGradientColor: SecondaryGradientColor(secondaryGradientColor),
-      tertiaryGradientColor: TertiaryGradientColor(tertiaryGradientColor),
-      primaryTextColor: PrimaryTextColor(primaryTextColor),
-      secondaryTextColor: SecondaryTextColor(secondaryTextColor),
+      primaryGradientColor: PrimaryGradientColor(Color(primaryGradientColor)),
+      secondaryGradientColor: SecondaryGradientColor(Color(secondaryGradientColor)),
+      tertiaryGradientColor: TertiaryGradientColor(Color(tertiaryGradientColor)),
+      primaryTextColor: PrimaryTextColor(Color(primaryTextColor)),
+      secondaryTextColor: SecondaryTextColor(Color(secondaryTextColor)),
     );
   }
 

@@ -1,6 +1,8 @@
 import 'package:dartz/dartz.dart';
+import 'package:flutter/material.dart';
 import 'package:shattered_star/domain/core/failures.dart';
 import 'package:shattered_star/domain/core/value_objects.dart';
+import 'package:shattered_star/domain/core/value_transformers.dart';
 import 'package:shattered_star/domain/core/value_validators.dart';
 
 class Name extends ValueObject<String> {
@@ -392,70 +394,70 @@ class ImagePath extends ValueObject<String> {
   const ImagePath._(this.value);
 }
 
-class PrimaryGradientColor extends ValueObject<String> {
+class PrimaryGradientColor extends ValueObject<Color> {
   @override
-  final Either<ValueFailure<String>, String> value;
+  final Either<ValueFailure<Color>, Color> value;
 
-  factory PrimaryGradientColor(String input) {
+  factory PrimaryGradientColor(Color input) {
     assert(input != null);
     return PrimaryGradientColor._(
-      validateStringNotEmpty(input),
+      right(makeColorOpaque(input)),
     );
   }
 
   const PrimaryGradientColor._(this.value);
 }
 
-class SecondaryGradientColor extends ValueObject<String> {
+class SecondaryGradientColor extends ValueObject<Color> {
   @override
-  final Either<ValueFailure<String>, String> value;
+  final Either<ValueFailure<Color>, Color> value;
 
-  factory SecondaryGradientColor(String input) {
+  factory SecondaryGradientColor(Color input) {
     assert(input != null);
     return SecondaryGradientColor._(
-      validateStringNotEmpty(input),
+      right(makeColorOpaque(input)),
     );
   }
 
   const SecondaryGradientColor._(this.value);
 }
 
-class TertiaryGradientColor extends ValueObject<String> {
+class TertiaryGradientColor extends ValueObject<Color> {
   @override
-  final Either<ValueFailure<String>, String> value;
+  final Either<ValueFailure<Color>, Color> value;
 
-  factory TertiaryGradientColor(String input) {
+  factory TertiaryGradientColor(Color input) {
     assert(input != null);
     return TertiaryGradientColor._(
-      validateStringNotEmpty(input),
+      right(makeColorOpaque(input)),
     );
   }
 
   const TertiaryGradientColor._(this.value);
 }
 
-class PrimaryTextColor extends ValueObject<String> {
+class PrimaryTextColor extends ValueObject<Color> {
   @override
-  final Either<ValueFailure<String>, String> value;
+  final Either<ValueFailure<Color>, Color> value;
 
-  factory PrimaryTextColor(String input) {
+  factory PrimaryTextColor(Color input) {
     assert(input != null);
     return PrimaryTextColor._(
-      validateStringNotEmpty(input),
+      right(makeColorOpaque(input)),
     );
   }
 
   const PrimaryTextColor._(this.value);
 }
 
-class SecondaryTextColor extends ValueObject<String> {
+class SecondaryTextColor extends ValueObject<Color> {
   @override
-  final Either<ValueFailure<String>, String> value;
+  final Either<ValueFailure<Color>, Color> value;
 
-  factory SecondaryTextColor(String input) {
+  factory SecondaryTextColor(Color input) {
     assert(input != null);
     return SecondaryTextColor._(
-      validateStringNotEmpty(input),
+      right(makeColorOpaque(input)),
     );
   }
 

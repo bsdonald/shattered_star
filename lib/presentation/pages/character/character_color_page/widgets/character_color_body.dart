@@ -50,6 +50,7 @@ class _CharacterColorBodyState extends State<CharacterColorBody> {
         ),
         PaletteSwatches(
           generator: paletteGenerator,
+          character: widget.character,
         ),
       ],
     );
@@ -70,11 +71,12 @@ class PaletteSwatches extends StatelessWidget {
   ///
   /// The [generator] is optional. If it is null, then the display will
   /// just be an empty container.
-  const PaletteSwatches({Key key, this.generator}) : super(key: key);
+  const PaletteSwatches({Key key, this.generator, this.character}) : super(key: key);
 
   /// The [PaletteGenerator] that contains all of the swatches that we're going
   /// to display.
   final PaletteGenerator generator;
+  final Character character;
 
   @override
   Widget build(BuildContext context) {
@@ -94,13 +96,11 @@ class PaletteSwatches extends StatelessWidget {
           children: swatches,
         ),
         Container(height: 30.0),
-        PaletteSwatch(label: 'Dominant', color: generator.dominantColor?.color),
-        PaletteSwatch(label: 'Light Vibrant', color: generator.lightVibrantColor?.color),
-        PaletteSwatch(label: 'Vibrant', color: generator.vibrantColor?.color),
-        PaletteSwatch(label: 'Dark Vibrant', color: generator.darkVibrantColor?.color),
-        PaletteSwatch(label: 'Light Muted', color: generator.lightMutedColor?.color),
-        PaletteSwatch(label: 'Muted', color: generator.mutedColor?.color),
-        PaletteSwatch(label: 'Dark Muted', color: generator.darkMutedColor?.color),
+        PaletteSwatch(label: 'Color 1', color: character.primaryGradientColor.getOrCrash()),
+        PaletteSwatch(label: 'Color 2', color: character.secondaryGradientColor.getOrCrash()),
+        PaletteSwatch(label: 'Color 3', color: character.tertiaryGradientColor.getOrCrash()),
+        PaletteSwatch(label: 'Text Color 1', color: character.primaryTextColor.getOrCrash()),
+        PaletteSwatch(label: 'Text Color 2', color: character.secondaryTextColor.getOrCrash()),
       ],
     );
   }

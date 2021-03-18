@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:shattered_star/domain/character/value_objects.dart';
@@ -73,11 +75,11 @@ abstract class Character implements _$Character {
         combatManeuverBonus: CombatManeuverBonus(''),
         description: Description(''),
         imagePath: ImagePath('https://firebasestorage.googleapis.com/v0/b/shattered-star.appspot.com/o/common%2Ftransparent.png?alt=media&token=f07200fe-5add-4a51-b41a-29eeb2fcee07'),
-        primaryGradientColor: PrimaryGradientColor('0xFFD0E6E4'),
-        secondaryGradientColor: SecondaryGradientColor('0xFF99E5EE'),
-        tertiaryGradientColor: TertiaryGradientColor('0xFF689B8E'),
-        primaryTextColor: PrimaryTextColor('0xFFFFFFFF'),
-        secondaryTextColor: SecondaryTextColor('0xFFFFFFFF'),
+        primaryGradientColor: PrimaryGradientColor(Color(0xFFD0E6E4)),
+        secondaryGradientColor: SecondaryGradientColor(Color(0xFF99E5EE)),
+        tertiaryGradientColor: TertiaryGradientColor(Color(0xFF689B8E)),
+        primaryTextColor: PrimaryTextColor(Color(0xFFFFFFFF)),
+        secondaryTextColor: SecondaryTextColor(Color(0xFFFFFFFF)),
       );
   Option<ValueFailure<dynamic>> get failureOption {
     return name.failureOrUnit
