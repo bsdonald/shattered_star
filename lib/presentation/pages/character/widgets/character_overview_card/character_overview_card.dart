@@ -29,15 +29,18 @@ class CharacterOverviewCard extends StatelessWidget {
             Expanded(
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: character.imagePath.getOrCrash().isEmpty
-                      ? Container()
-                      : Image.network(
-                          character.imagePath.getOrCrash(),
-                          fit: BoxFit.scaleDown,
-                          height: 175,
-                        ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: character.imagePath.getOrCrash().isEmpty
+                        ? Container()
+                        : Image.network(
+                            character.imagePath.getOrCrash(),
+                            fit: BoxFit.scaleDown,
+                            height: 175,
+                          ),
+                  ),
                 ),
               ),
             ),
