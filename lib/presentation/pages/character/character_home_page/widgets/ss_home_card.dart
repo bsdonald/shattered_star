@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shattered_star/application/home/bloc/home_page_bloc.dart';
+import 'package:shattered_star/domain/character/character.dart';
 
 class SSHomeCard extends StatefulWidget {
   final String title;
   final String image;
   final Function onTap;
   final Alignment gradientAlignment;
+  final Character character;
 
   SSHomeCard({
     @required this.title,
     @required this.image,
     @required this.onTap,
     @required this.gradientAlignment,
+    @required this.character,
   });
 
   @override
@@ -54,11 +57,16 @@ class _SSHomeCardState extends State<SSHomeCard> {
                     ),
               child: Ink(
                 decoration: BoxDecoration(
-                  gradient: RadialGradient(colors: [
-                    Theme.of(context).scaffoldBackgroundColor,
-                    Theme.of(context).primaryColor,
-                    Theme.of(context).cardColor,
-                  ], center: widget.gradientAlignment, radius: 1.75, tileMode: TileMode.clamp),
+                  gradient: RadialGradient(
+                    colors: [
+                      widget.character.primaryGradientColor.getOrCrash(),
+                      widget.character.secondaryGradientColor.getOrCrash(),
+                      widget.character.tertiaryGradientColor.getOrCrash(),
+                    ],
+                    center: widget.gradientAlignment,
+                    radius: 1.75,
+                    tileMode: TileMode.clamp,
+                  ),
                   borderRadius: BorderRadius.all(Radius.circular(8.0)),
                 ),
                 child: Image.asset(

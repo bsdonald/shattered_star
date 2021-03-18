@@ -27,6 +27,7 @@ class HomeBody extends StatelessWidget {
             // ignore: prefer_const_literals_to_create_immutables
             children: <Widget>[
               SSHomeCard(
+                character: character,
                 image: 'assets/images/inventory.png',
                 title: 'Inventory',
                 onTap: () {
@@ -35,6 +36,7 @@ class HomeBody extends StatelessWidget {
                 gradientAlignment: Alignment.bottomRight,
               ),
               SSHomeCard(
+                character: character,
                 image: 'assets/images/quest_items.png',
                 title: 'Quest Items',
                 onTap: () {
@@ -43,6 +45,7 @@ class HomeBody extends StatelessWidget {
                 gradientAlignment: Alignment.bottomLeft,
               ),
               SSHomeCard(
+                character: character,
                 image: 'assets/images/characters_npcs.png',
                 title: 'Characters/NPCs',
                 onTap: () {
@@ -51,6 +54,7 @@ class HomeBody extends StatelessWidget {
                 gradientAlignment: Alignment.topRight,
               ),
               SSHomeCard(
+                character: character,
                 image: 'assets/images/journal1.png',
                 title: 'Journal',
                 onTap: () {

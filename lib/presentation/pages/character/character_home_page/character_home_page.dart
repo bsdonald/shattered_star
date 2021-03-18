@@ -33,6 +33,7 @@ class HomePage extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             title: const Text('Home'),
+            backgroundColor: character.tertiaryGradientColor.getOrCrash(),
             leading: IconButton(
               icon: Icon(Icons.exit_to_app),
               onPressed: () {
@@ -47,6 +48,7 @@ class HomePage extends StatelessWidget {
             ],
           ),
           body: HomeBody(character: character),
+          backgroundColor: character.primaryGradientColor.getOrCrash(),
         ),
       ),
     );
