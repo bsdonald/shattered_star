@@ -85,3 +85,14 @@ Either<ValueFailure<String>, String> validatePassword(String input) {
     return left(ValueFailure.shortPassword(failedValue: input));
   }
 }
+
+Either<ValueFailure<int>, int> validateNumber(int input) {
+  if (input.bitLength == 32) {
+    print('success!');
+    return right(input);
+  } else {
+    print('failure!');
+    return left(ValueFailure.invalidNumber(failedValue: input));
+
+  }
+}

@@ -1,106 +1,50 @@
-import 'dart:io';
 import 'dart:math' as math;
 
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:palette_generator/palette_generator.dart';
+import 'package:shattered_star/domain/character/character.dart';
+import 'package:shattered_star/presentation/pages/character/widgets/character_overview_card/character_overview_card.dart';
 
 const Color _kBackgroundColor = Color(0xffa0a0a0);
 const Color _kPlaceholderColor = Color(0x80404040);
 
-class Test extends StatefulWidget {
+class CharacterColorBody extends StatefulWidget {
+  final Character character;
+  const CharacterColorBody({Key key, @required this.character}) : super(key: key);
+
   @override
-  _TestState createState() => _TestState();
+  _CharacterColorBodyState createState() => _CharacterColorBodyState();
 }
 
-class _TestState extends State<Test> {
-  final _storage = FirebaseStorage.instance;
-  String imageUrl;
-  File image;
+class _CharacterColorBodyState extends State<CharacterColorBody> {
   PaletteGenerator paletteGenerator;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Test'),
-        automaticallyImplyLeading: true,
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            (image != null)
-                ? Image.file(image)
-                : Placeholder(
-                    fallbackHeight: 200,
-                    fallbackWidth: double.infinity,
-                  ),
-            SizedBox(height: 20),
-            RaisedButton(
-              child: Text('Pick Image'),
-              color: Colors.lightBlue,
-              onPressed: pickImage,
-            ),
-            RaisedButton(
-              child: Text('Upload Image'),
-              color: Colors.lightBlue,
-              onPressed: uploadImage,
-            ),
-            RaisedButton(
-              child: Text('Generate Palette'),
-              color: Colors.lightBlue,
-              onPressed: generatePalette,
-            ),
-            PaletteSwatches(
-              generator: paletteGenerator,
-            ),
-          ],
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: CharacterOverviewCard(widget.character),
         ),
-      ),
+        RaisedButton(
+          child: Text('Generate Palette'),
+          color: Colors.lightBlue,
+          onPressed: generatePalette,
+        ),
+        PaletteSwatches(
+          generator: paletteGenerator,
+          character: widget.character,
+        ),
+      ],
     );
-  }
-
-  pickImage() async {
-    final _picker = ImagePicker();
-    PickedFile pickedImage;
-
-    pickedImage = await _picker.getImage(source: ImageSource.gallery);
-    var file = File(pickedImage.path);
-
-    setState(() {
-      image = file;
-    });
-  }
-
-  uploadImage() async {
-    if (image != null) {
-      //upload to firebase
-      var task = _storage.ref().child('player_characters/test2').putFile(image);
-
-// Optional
-      task.snapshotEvents.listen((TaskSnapshot snapshot) {
-        print('Snapshot state: ${snapshot.state}'); // paused, running, complete
-        print('Progress: ${(snapshot.bytesTransferred / snapshot.totalBytes) * 100} %');
-      }, onError: (Object e) {
-        print(e); // FirebaseException
-      });
-
-// Optional
-      await task.then((TaskSnapshot snapshot) async {
-        print('Upload complete!');
-      }).catchError(print);
-    } else {
-      print('No Path Recieved');
-    }
   }
 
   generatePalette() async {
     paletteGenerator = await PaletteGenerator.fromImageProvider(
-      Image.file(image).image,
+      Image.network(widget.character.imagePath.getOrCrash()).image,
       maximumColorCount: 50,
     );
-    print(paletteGenerator.colors);
     setState(() {});
   }
 }
@@ -110,11 +54,12 @@ class PaletteSwatches extends StatelessWidget {
   ///
   /// The [generator] is optional. If it is null, then the display will
   /// just be an empty container.
-  const PaletteSwatches({Key key, this.generator}) : super(key: key);
+  const PaletteSwatches({Key key, this.generator, this.character}) : super(key: key);
 
   /// The [PaletteGenerator] that contains all of the swatches that we're going
   /// to display.
   final PaletteGenerator generator;
+  final Character character;
 
   @override
   Widget build(BuildContext context) {
@@ -134,13 +79,11 @@ class PaletteSwatches extends StatelessWidget {
           children: swatches,
         ),
         Container(height: 30.0),
-        PaletteSwatch(label: 'Dominant', color: generator.dominantColor?.color),
-        PaletteSwatch(label: 'Light Vibrant', color: generator.lightVibrantColor?.color),
-        PaletteSwatch(label: 'Vibrant', color: generator.vibrantColor?.color),
-        PaletteSwatch(label: 'Dark Vibrant', color: generator.darkVibrantColor?.color),
-        PaletteSwatch(label: 'Light Muted', color: generator.lightMutedColor?.color),
-        PaletteSwatch(label: 'Muted', color: generator.mutedColor?.color),
-        PaletteSwatch(label: 'Dark Muted', color: generator.darkMutedColor?.color),
+        PaletteSwatch(label: 'Color 1', color: character.primaryGradientColor.getOrCrash()),
+        PaletteSwatch(label: 'Color 2', color: character.secondaryGradientColor.getOrCrash()),
+        PaletteSwatch(label: 'Color 3', color: character.tertiaryGradientColor.getOrCrash()),
+        PaletteSwatch(label: 'Text Color 1', color: character.primaryTextColor.getOrCrash()),
+        PaletteSwatch(label: 'Text Color 2', color: character.secondaryTextColor.getOrCrash()),
       ],
     );
   }

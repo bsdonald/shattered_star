@@ -1,12 +1,12 @@
+import 'dart:ui';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:shattered_star/domain/character/character.dart';
 import 'package:shattered_star/domain/character/value_objects.dart';
 import 'package:shattered_star/domain/core/value_objects.dart';
 
-
 part 'character_dtos.freezed.dart';
-
 part 'character_dtos.g.dart';
 
 @freezed
@@ -41,6 +41,11 @@ abstract class CharacterDto implements _$CharacterDto {
     @required String combatManeuverBonus,
     @required String description,
     @required String imagePath,
+    @required int primaryGradientColor,
+    @required int secondaryGradientColor,
+    @required int tertiaryGradientColor,
+    @required int primaryTextColor,
+    @required int secondaryTextColor,
   }) = _Character;
 
   factory CharacterDto.fromDomain(Character character) {
@@ -72,12 +77,17 @@ abstract class CharacterDto implements _$CharacterDto {
       combatManeuverBonus: character.combatManeuverBonus.getOrCrash(),
       description: character.description.getOrCrash(),
       imagePath: character.imagePath.getOrCrash(),
+      primaryGradientColor: character.primaryGradientColor.getOrCrash().value,
+      secondaryGradientColor: character.secondaryGradientColor.getOrCrash().value,
+      tertiaryGradientColor: character.tertiaryGradientColor.getOrCrash().value,
+      primaryTextColor: character.primaryTextColor.getOrCrash().value,
+      secondaryTextColor: character.secondaryTextColor.getOrCrash().value,
     );
   }
 
- Character toDomain() {
-   return Character(
-     id: UniqueId.fromUniqueString(id),
+  Character toDomain() {
+    return Character(
+      id: UniqueId.fromUniqueString(id),
       name: Name(name),
       race: Race(race),
       favoredClass: FavoredClass(favoredClass),
@@ -102,10 +112,15 @@ abstract class CharacterDto implements _$CharacterDto {
       meleeMod: MeleeMod(meleeMod),
       rangedMod: RangedMod(rangedMod),
       combatManeuverBonus: CombatManeuverBonus(combatManeuverBonus),
-      description:Description(description),
+      description: Description(description),
       imagePath: ImagePath(imagePath),
-   );
- }
+      primaryGradientColor: PrimaryGradientColor(Color(primaryGradientColor)),
+      secondaryGradientColor: SecondaryGradientColor(Color(secondaryGradientColor)),
+      tertiaryGradientColor: TertiaryGradientColor(Color(tertiaryGradientColor)),
+      primaryTextColor: PrimaryTextColor(Color(primaryTextColor)),
+      secondaryTextColor: SecondaryTextColor(Color(secondaryTextColor)),
+    );
+  }
 
   factory CharacterDto.fromJson(Map<String, dynamic> json) => _$CharacterDtoFromJson(json);
 
@@ -113,4 +128,3 @@ abstract class CharacterDto implements _$CharacterDto {
     return CharacterDto.fromJson(doc.data()).copyWith(id: doc.id);
   }
 }
-

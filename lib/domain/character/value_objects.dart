@@ -1,6 +1,8 @@
 import 'package:dartz/dartz.dart';
+import 'package:flutter/material.dart';
 import 'package:shattered_star/domain/core/failures.dart';
 import 'package:shattered_star/domain/core/value_objects.dart';
+import 'package:shattered_star/domain/core/value_transformers.dart';
 import 'package:shattered_star/domain/core/value_validators.dart';
 
 class Name extends ValueObject<String> {
@@ -388,4 +390,74 @@ class ImagePath extends ValueObject<String> {
   }
 
   const ImagePath._(this.value);
+}
+
+class PrimaryGradientColor extends ValueObject<Color> {
+  @override
+  final Either<ValueFailure<Color>, Color> value;
+
+  factory PrimaryGradientColor(Color input) {
+    assert(input != null);
+    return PrimaryGradientColor._(
+      right(makeColorOpaque(input)),
+    );
+  }
+
+  const PrimaryGradientColor._(this.value);
+}
+
+class SecondaryGradientColor extends ValueObject<Color> {
+  @override
+  final Either<ValueFailure<Color>, Color> value;
+
+  factory SecondaryGradientColor(Color input) {
+    assert(input != null);
+    return SecondaryGradientColor._(
+      right(makeColorOpaque(input)),
+    );
+  }
+
+  const SecondaryGradientColor._(this.value);
+}
+
+class TertiaryGradientColor extends ValueObject<Color> {
+  @override
+  final Either<ValueFailure<Color>, Color> value;
+
+  factory TertiaryGradientColor(Color input) {
+    assert(input != null);
+    return TertiaryGradientColor._(
+      right(makeColorOpaque(input)),
+    );
+  }
+
+  const TertiaryGradientColor._(this.value);
+}
+
+class PrimaryTextColor extends ValueObject<Color> {
+  @override
+  final Either<ValueFailure<Color>, Color> value;
+
+  factory PrimaryTextColor(Color input) {
+    assert(input != null);
+    return PrimaryTextColor._(
+      right(makeColorOpaque(input)),
+    );
+  }
+
+  const PrimaryTextColor._(this.value);
+}
+
+class SecondaryTextColor extends ValueObject<Color> {
+  @override
+  final Either<ValueFailure<Color>, Color> value;
+
+  factory SecondaryTextColor(Color input) {
+    assert(input != null);
+    return SecondaryTextColor._(
+      right(makeColorOpaque(input)),
+    );
+  }
+
+  const SecondaryTextColor._(this.value);
 }

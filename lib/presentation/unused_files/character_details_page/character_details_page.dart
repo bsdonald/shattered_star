@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shattered_star/presentation/pages//character/character_details_page/widgets/pc_card.dart';
+import 'package:shattered_star/presentation/unused_files/character_details_page/widgets/pc_card.dart';
 
 //TODO: RENAME TO CHARACTERSHEET OR CHARACTERCARD
 class CharacterDetailsPage extends StatelessWidget {

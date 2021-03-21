@@ -9,11 +9,13 @@ import 'package:shattered_star/presentation/pages/character/character_form_page/
 class NamePlate extends HookWidget {
   final bool isEditing;
   final Character character;
+  final Color color;
 
   const NamePlate({
     Key key,
     @required this.isEditing,
     @required this.character,
+    @required this.color,
   }) : super(key: key);
 
   @override
@@ -23,7 +25,7 @@ class NamePlate extends HookWidget {
       // height: 24,
       constraints: !isEditing ? BoxConstraints.expand(height: 42) : null,
       decoration: BoxDecoration(
-        color: Colors.amber,
+        color: color,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),

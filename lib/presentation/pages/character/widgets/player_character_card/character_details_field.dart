@@ -9,11 +9,13 @@ import 'package:shattered_star/presentation/pages/character/character_form_page/
 class CharacterDetailsField extends HookWidget {
   final bool isEditing;
   final Character character;
+  final Color color;
 
   const CharacterDetailsField({
     Key key,
     @required this.isEditing,
     @required this.character,
+    @required this.color,
   }) : super(key: key);
 
   @override
@@ -22,7 +24,7 @@ class CharacterDetailsField extends HookWidget {
       padding: EdgeInsets.all(4),
       // height: 300,
       // width: 180,
-      color: Colors.amber,
+      color: color,
       child: SingleChildScrollView(
         child: isEditing ? DetailBlocForm() : DetailBlocList(character: character),
       ),
@@ -183,18 +185,18 @@ class DetailBlocForm extends HookWidget {
     return BlocListener<CharacterFormBloc, CharacterFormState>(
       listenWhen: (p, c) => p.isEditing != c.isEditing,
       listener: (context, state) {
-          raceEditingController.text = state.character.race.getOrCrash();
-          favoredClassEditingController.text = state.character.favoredClass.getOrCrash();
-          levelEditingController.text = state.character.level.getOrCrash();
-          genderEditingController.text = state.character.gender.getOrCrash();
-          ageEditingController.text = state.character.age.getOrCrash();
-          heightEditingController.text = state.character.height.getOrCrash();
-          weightEditingController.text = state.character.weight.getOrCrash();
-          homeEditingController.text = state.character.home.getOrCrash();
-          alignmentEditingController.text = state.character.alignment.getOrCrash();
-          deityEditingController.text = state.character.deity.getOrCrash();
-          languagesEditingController.text = state.character.languages.getOrCrash();
-        },
+        raceEditingController.text = state.character.race.getOrCrash();
+        favoredClassEditingController.text = state.character.favoredClass.getOrCrash();
+        levelEditingController.text = state.character.level.getOrCrash();
+        genderEditingController.text = state.character.gender.getOrCrash();
+        ageEditingController.text = state.character.age.getOrCrash();
+        heightEditingController.text = state.character.height.getOrCrash();
+        weightEditingController.text = state.character.weight.getOrCrash();
+        homeEditingController.text = state.character.home.getOrCrash();
+        alignmentEditingController.text = state.character.alignment.getOrCrash();
+        deityEditingController.text = state.character.deity.getOrCrash();
+        languagesEditingController.text = state.character.languages.getOrCrash();
+      },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -409,5 +411,3 @@ class DetailBlocForm extends HookWidget {
     );
   }
 }
-
-

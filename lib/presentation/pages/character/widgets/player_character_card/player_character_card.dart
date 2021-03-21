@@ -25,20 +25,25 @@ class PlayerCharacterCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textBlocColor = Theme.of(context).scaffoldBackgroundColor;
     // isEditing ?? false;
     return SingleChildScrollView(
       child: Container(
         height: !isEditing ? MediaQuery.of(context).size.height * .75 : MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
-          color: Colors.white,
           borderRadius: BorderRadius.circular(20),
+          color: Theme.of(context).cardColor,
         ),
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              NamePlate(isEditing: isEditing, character:character),
+              NamePlate(
+                isEditing: isEditing,
+                character: character,
+                color: textBlocColor,
+              ),
               SizedBox(
                 height: 12,
               ),
@@ -49,13 +54,17 @@ class PlayerCharacterCard extends StatelessWidget {
                   children: [
                     Expanded(
                       flex: 4,
-                      child: ImageField(isEditing: isEditing, character:character),
+                      child: ImageField(isEditing: isEditing, character: character),
                     ),
                     Expanded(
                       flex: 5,
                       child: Padding(
                         padding: const EdgeInsets.only(left: 12),
-                        child: CharacterDetailsField(isEditing: isEditing, character:character),
+                        child: CharacterDetailsField(
+                          isEditing: isEditing,
+                          character: character,
+                          color: textBlocColor,
+                        ),
                       ),
                     ),
                   ],
@@ -66,14 +75,22 @@ class PlayerCharacterCard extends StatelessWidget {
               ),
               Expanded(
                 flex: !isEditing ? 1 : 0,
-                child: CharacterStatsField(isEditing: isEditing, character:character),
+                child: CharacterStatsField(
+                  isEditing: isEditing,
+                  character: character,
+                  color: textBlocColor,
+                ),
               ),
               SizedBox(
                 height: 12,
               ),
               Expanded(
                 flex: !isEditing ? 4 : 1,
-                child: CharacterBio(isEditing: isEditing, character:character),
+                child: CharacterBio(
+                  isEditing: isEditing,
+                  character: character,
+                  color: textBlocColor,
+                ),
               ),
             ],
           ),

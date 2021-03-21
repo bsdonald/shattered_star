@@ -13,7 +13,6 @@ class CharacterListBody extends StatelessWidget {
           initial: (_) => Container(),
           loadInProgress: (_) => const Center(child: CircularProgressIndicator()),
           loadSuccess: (state) {
-            print('size ${state.characters.size}');
             return ListView.builder(
               itemBuilder: (context, index) {
                 final character = state.characters[index];
