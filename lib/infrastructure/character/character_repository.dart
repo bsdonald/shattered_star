@@ -20,7 +20,7 @@ class CharacterRepository implements ICharacterRepository {
     yield* userDoc.characterCollection
         .orderBy(
           'name',
-          descending: true,
+          descending: false,
         )
         .snapshots()
         .map(
