@@ -382,12 +382,10 @@ class ImagePath extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
 
-  static const maxLength = 1000;
-
   factory ImagePath(String input) {
     assert(input != null);
     return ImagePath._(
-      validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty),
+      validateStringNotEmpty(input),
     );
   }
 
