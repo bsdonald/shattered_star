@@ -37,6 +37,13 @@
 	<string>We Need to take a picture!</string>
 	<key>NSCameraUsageDescription</key>
 	<string>We Need to take a picture!</string>
+	<key>UIBackgroundModes</key>
+    <array>
+		<string>fetch</string>
+   		<string>remote-notification</string>
+	</array>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+		<bool>true</bool>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
