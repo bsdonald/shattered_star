@@ -19,23 +19,34 @@ class CharacterBucket implements ICharacterBucket {
 
   @override
   Future<File> getImage() async {
-    var pickedImage = await _picker.getImage(source: ImageSource.gallery);
-    return File(pickedImage.path);
+    File file;
+    var pickedImage = await FilePicker.platform.pickFiles(
+      type: FileType.image,
+    );
+
+    if (pickedImage != null) {
+      file = File(pickedImage.files.first.path);
+    }
+    return file;
   }
 
   @override
-  Future<Either<CharacterFailure, Unit>> upload(String characterId) async {
+  Future<File> getFile() async {
+    File file;
+    var pickedImage = await FilePicker.platform.pickFiles(
+      type: FileType.custom,
+      allowedExtensions: ['png'],
+    );
+
+    if (pickedImage != null) {
+      file = File(pickedImage.files.first.path);
+    }
+    return file;
+  }
+
+  @override
+  Future<Either<CharacterFailure, Unit>> upload(String characterId, File file) async {
     try {
-      File file;
-      var pickedImage = await FilePicker.platform.pickFiles(
-        type: FileType.custom,
-        allowedExtensions: ['png'],
-      );
-
-      if (pickedImage != null) {
-        file = File(pickedImage.files.first.path);
-      }
-
       final userBucket = await _storage.userDirectory();
 
       var _reference = userBucket.child('player_characters/$characterId');

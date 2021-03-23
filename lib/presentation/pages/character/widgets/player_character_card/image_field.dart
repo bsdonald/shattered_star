@@ -44,8 +44,19 @@ class ImageField extends StatelessWidget {
                     // width: 150,
                     child: image ?? Text('Failed to load image'),
                   ),
+                  SizedBox(),
                   RaisedButton(
                     child: Text('Select Image'),
+                    onPressed: (state.isEditing)
+                        ? () {
+                            context.read<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed());
+                            context.read<CharacterFormBloc>().add(CharacterFormEvent.saved());
+                          }
+                        : () => context.read<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed()),
+                  ),
+                  Text('OR'),
+                  RaisedButton(
+                    child: Text('Select File'),
                     onPressed: (state.isEditing)
                         ? () {
                             context.read<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed());

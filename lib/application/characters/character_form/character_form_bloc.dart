@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
@@ -198,35 +199,40 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
       imageButtonPressed: (e) async* {
         String downloadUrl;
         PaletteGenerator paletteGenerator;
+        File file;
 
         yield state.copyWith(
           imageLoading: true,
           saveFailureOrSuccessOption: none(),
         );
 
-        await _characterBucket.upload(state.character.id.getOrCrash());
+        file = await _characterBucket.getFile();
 
-        // yield state.copyWith(
-        //   saveFailureOrSuccessOption: none(),
-        // );
-        downloadUrl = await _characterBucket.getDownloadUrl(state.character.id.getOrCrash());
+        if (file != null) {
+          await _characterBucket.upload(state.character.id.getOrCrash(), file);
 
-        paletteGenerator = await PaletteGenerator.fromImageProvider(
-          Image.network(downloadUrl).image,
-          maximumColorCount: 20,
-        );
+          // yield state.copyWith(
+          //   saveFailureOrSuccessOption: none(),
+          // );
+          downloadUrl = await _characterBucket.getDownloadUrl(state.character.id.getOrCrash());
 
-        yield state.copyWith(
-          imageLoading: false,
-          character: state.character.copyWith(
-            imagePath: ImagePath(downloadUrl),
-            primaryGradientColor: PrimaryGradientColor(paletteGenerator.lightMutedColor?.color),
-            secondaryGradientColor: SecondaryGradientColor(paletteGenerator.dominantColor?.color),
-            tertiaryGradientColor: TertiaryGradientColor(paletteGenerator.darkMutedColor?.color),
-            secondaryTextColor: SecondaryTextColor(paletteGenerator.lightMutedColor?.color),
-          ),
-          saveFailureOrSuccessOption: none(),
-        );
+          paletteGenerator = await PaletteGenerator.fromImageProvider(
+            Image.network(downloadUrl).image,
+            maximumColorCount: 20,
+          );
+
+          yield state.copyWith(
+            imageLoading: false,
+            character: state.character.copyWith(
+              imagePath: ImagePath(downloadUrl),
+              primaryGradientColor: PrimaryGradientColor(paletteGenerator.lightMutedColor?.color),
+              secondaryGradientColor: SecondaryGradientColor(paletteGenerator.dominantColor?.color),
+              tertiaryGradientColor: TertiaryGradientColor(paletteGenerator.darkMutedColor?.color),
+              secondaryTextColor: SecondaryTextColor(paletteGenerator.lightMutedColor?.color),
+            ),
+            saveFailureOrSuccessOption: none(),
+          );
+        }
       },
       saved: (e) async* {
         Either<CharacterFailure, Unit> failureOrSuccess;
