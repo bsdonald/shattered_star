@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:dartz/dartz.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
@@ -25,8 +26,15 @@ class CharacterBucket implements ICharacterBucket {
   @override
   Future<Either<CharacterFailure, Unit>> upload(String characterId) async {
     try {
-      var pickedImage = await _picker.getImage(source: ImageSource.gallery);
-      var file = File(pickedImage.path);
+      File file;
+      var pickedImage = await FilePicker.platform.pickFiles(
+        type: FileType.custom,
+        allowedExtensions: ['png'],
+      );
+
+      if (pickedImage != null) {
+        file = File(pickedImage.files.first.path);
+      }
 
       final userBucket = await _storage.userDirectory();
 

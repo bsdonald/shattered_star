@@ -43,7 +43,7 @@
    		<string>remote-notification</string>
 	</array>
 	<key>LSSupportsOpeningDocumentsInPlace</key>
-		<bool>true</bool>
+	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

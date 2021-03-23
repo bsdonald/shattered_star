@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'dart:math' as math;
 
+import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -40,7 +41,7 @@ class _TestState extends State<Test> {
             RaisedButton(
               child: Text('Pick Image'),
               color: Colors.lightBlue,
-              onPressed: pickImage,
+              onPressed: pickFile,
             ),
             RaisedButton(
               child: Text('Upload Image'),
@@ -67,6 +68,22 @@ class _TestState extends State<Test> {
 
     pickedImage = await _picker.getImage(source: ImageSource.gallery);
     var file = File(pickedImage.path);
+
+    setState(() {
+      image = file;
+    });
+  }
+
+  pickFile() async {
+    File file;
+    final FilePickerResult result = await FilePicker.platform.pickFiles(
+      type: FileType.custom,
+      allowedExtensions: ['png'],
+    );
+
+    if (result != null) {
+      file = File(result.files.first.path);
+    }
 
     setState(() {
       image = file;
