@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:dartz/dartz.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shattered_star/domain/character/character_failure.dart';
 import 'package:shattered_star/domain/character/i_character_bucket.dart';
@@ -11,28 +11,45 @@ import 'package:shattered_star/infrastructure/core/storage_helpers.dart';
 @LazySingleton(as: ICharacterBucket)
 class CharacterBucket implements ICharacterBucket {
   final FirebaseStorage _storage;
-  final _picker = ImagePicker();
   // String imagePath;
 
   CharacterBucket(this._storage);
 
   @override
   Future<File> getImage() async {
-    var pickedImage = await _picker.getImage(source: ImageSource.gallery);
-    return File(pickedImage.path);
+    File file;
+    final pickedImage = await FilePicker.platform.pickFiles(
+      type: FileType.image,
+    );
+
+    if (pickedImage != null) {
+      file = File(pickedImage.files.first.path);
+    }
+    return file;
   }
 
   @override
-  Future<Either<CharacterFailure, Unit>> upload(String characterId) async {
-    try {
-      var pickedImage = await _picker.getImage(source: ImageSource.gallery);
-      var file = File(pickedImage.path);
+  Future<File> getFile() async {
+    File file;
+    final pickedImage = await FilePicker.platform.pickFiles(
+      type: FileType.custom,
+      allowedExtensions: ['png', 'jpeg', 'jpg'],
+    );
 
+    if (pickedImage != null) {
+      file = File(pickedImage.files.first.path);
+    }
+    return file;
+  }
+
+  @override
+  Future<Either<CharacterFailure, Unit>> upload(String characterId, File file) async {
+    try {
       final userBucket = await _storage.userDirectory();
 
-      var _reference = userBucket.child('player_characters/$characterId');
+      final _reference = userBucket.child('player_characters/$characterId');
 
-      var task = _reference.putFile(file);
+      final task = _reference.putFile(file);
 
       task.snapshotEvents.listen((TaskSnapshot snapshot) {
         print('Snapshot state: ${snapshot.state}'); // paused, running, complete
@@ -60,9 +77,9 @@ class CharacterBucket implements ICharacterBucket {
   Future<String> getDownloadUrl(String characterId) async {
     final userBucket = await _storage.userDirectory();
 
-    var _reference = userBucket.child('player_characters/$characterId');
+    final _reference = userBucket.child('player_characters/$characterId');
 
-    var downloadUrl = await _reference.getDownloadURL();
+    final downloadUrl = await _reference.getDownloadURL();
 
     return downloadUrl;
   }
@@ -74,6 +91,7 @@ class CharacterBucket implements ICharacterBucket {
 
       await userBucket.child('player_characters/$characterId').delete();
 
+      print('image wad deleted');
       return right(unit);
     } on FirebaseException catch (e) {
       if (e.message.contains('PERMISSION_DENIED')) {

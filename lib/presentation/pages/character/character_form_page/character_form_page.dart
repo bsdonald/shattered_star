@@ -69,6 +69,13 @@ class CharacterFormScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.clear),
+          onPressed: () {
+            context.read<CharacterFormBloc>().add(const CharacterFormEvent.cancelButtonPressed());
+            ExtendedNavigator.of(context).pop();
+          },
+        ),
         title: BlocBuilder<CharacterFormBloc, CharacterFormState>(
           buildWhen: (p, c) => p.isEditing != c.isEditing,
           builder: (context, state) {

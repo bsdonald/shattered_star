@@ -28,7 +28,9 @@ abstract class CharacterFormEvent with _$CharacterFormEvent {
   const factory CharacterFormEvent.rangedModChanged(String rangedModStr) = _rangedModChanged;
   const factory CharacterFormEvent.combatManeuverBonusChanged(String combatManeuverBonusStr) = _CombatManeuverBonusChanged;
   const factory CharacterFormEvent.descriptionChanged(String descriptionStr) = _DescriptionChanged;
-  const factory CharacterFormEvent.imageChanged(String imageStr) = _ImageChanged;
   const factory CharacterFormEvent.saved() = _Saved;
-  const factory CharacterFormEvent.imageButtonPressed() = _UploadButtonPressed;
+  const factory CharacterFormEvent.imageButtonPressed() = _ImageButtonPressed;
+  const factory CharacterFormEvent.fileButtonPressed() = _FileButtonPressed;
+  const factory CharacterFormEvent.cancelButtonPressed() = _CancelButtonPressed;
+
 }

@@ -170,18 +170,20 @@ class _$CharacterFormEventTearOff {
     );
   }
 
-  _ImageChanged imageChanged(String imageStr) {
-    return _ImageChanged(
-      imageStr,
-    );
-  }
-
   _Saved saved() {
     return const _Saved();
   }
 
-  _UploadButtonPressed imageButtonPressed() {
-    return const _UploadButtonPressed();
+  _ImageButtonPressed imageButtonPressed() {
+    return const _ImageButtonPressed();
+  }
+
+  _FileButtonPressed fileButtonPressed() {
+    return const _FileButtonPressed();
+  }
+
+  _CancelButtonPressed cancelButtonPressed() {
+    return const _CancelButtonPressed();
   }
 }
 
@@ -218,9 +220,10 @@ mixin _$CharacterFormEvent {
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -250,9 +253,10 @@ mixin _$CharacterFormEvent {
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -286,9 +290,10 @@ mixin _$CharacterFormEvent {
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
@@ -318,9 +323,10 @@ mixin _$CharacterFormEvent {
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   });
 }
@@ -438,9 +444,10 @@ class _$_Initialized with DiagnosticableTreeMixin implements _Initialized {
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -468,9 +475,10 @@ class _$_Initialized with DiagnosticableTreeMixin implements _Initialized {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return initialized(initialCharacterOption);
   }
 
@@ -503,9 +511,10 @@ class _$_Initialized with DiagnosticableTreeMixin implements _Initialized {
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -547,9 +556,10 @@ class _$_Initialized with DiagnosticableTreeMixin implements _Initialized {
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -577,9 +587,10 @@ class _$_Initialized with DiagnosticableTreeMixin implements _Initialized {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return initialized(this);
   }
 
@@ -612,9 +623,10 @@ class _$_Initialized with DiagnosticableTreeMixin implements _Initialized {
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -725,9 +737,10 @@ class _$_NameChanged with DiagnosticableTreeMixin implements _NameChanged {
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -755,9 +768,10 @@ class _$_NameChanged with DiagnosticableTreeMixin implements _NameChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return nameChanged(nameStr);
   }
 
@@ -790,9 +804,10 @@ class _$_NameChanged with DiagnosticableTreeMixin implements _NameChanged {
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -834,9 +849,10 @@ class _$_NameChanged with DiagnosticableTreeMixin implements _NameChanged {
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -864,9 +880,10 @@ class _$_NameChanged with DiagnosticableTreeMixin implements _NameChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return nameChanged(this);
   }
 
@@ -899,9 +916,10 @@ class _$_NameChanged with DiagnosticableTreeMixin implements _NameChanged {
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1011,9 +1029,10 @@ class _$_RaceChanged with DiagnosticableTreeMixin implements _RaceChanged {
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1041,9 +1060,10 @@ class _$_RaceChanged with DiagnosticableTreeMixin implements _RaceChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return raceChanged(raceStr);
   }
 
@@ -1076,9 +1096,10 @@ class _$_RaceChanged with DiagnosticableTreeMixin implements _RaceChanged {
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1120,9 +1141,10 @@ class _$_RaceChanged with DiagnosticableTreeMixin implements _RaceChanged {
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1150,9 +1172,10 @@ class _$_RaceChanged with DiagnosticableTreeMixin implements _RaceChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return raceChanged(this);
   }
 
@@ -1185,9 +1208,10 @@ class _$_RaceChanged with DiagnosticableTreeMixin implements _RaceChanged {
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1306,9 +1330,10 @@ class _$_FavoredClassChanged
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1336,9 +1361,10 @@ class _$_FavoredClassChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return favoredClassChanged(favoredClassStr);
   }
 
@@ -1371,9 +1397,10 @@ class _$_FavoredClassChanged
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1415,9 +1442,10 @@ class _$_FavoredClassChanged
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1445,9 +1473,10 @@ class _$_FavoredClassChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return favoredClassChanged(this);
   }
 
@@ -1480,9 +1509,10 @@ class _$_FavoredClassChanged
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1594,9 +1624,10 @@ class _$_LevelChanged with DiagnosticableTreeMixin implements _LevelChanged {
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1624,9 +1655,10 @@ class _$_LevelChanged with DiagnosticableTreeMixin implements _LevelChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return levelChanged(levelStr);
   }
 
@@ -1659,9 +1691,10 @@ class _$_LevelChanged with DiagnosticableTreeMixin implements _LevelChanged {
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1703,9 +1736,10 @@ class _$_LevelChanged with DiagnosticableTreeMixin implements _LevelChanged {
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1733,9 +1767,10 @@ class _$_LevelChanged with DiagnosticableTreeMixin implements _LevelChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return levelChanged(this);
   }
 
@@ -1768,9 +1803,10 @@ class _$_LevelChanged with DiagnosticableTreeMixin implements _LevelChanged {
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1881,9 +1917,10 @@ class _$_GenderChanged with DiagnosticableTreeMixin implements _GenderChanged {
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1911,9 +1948,10 @@ class _$_GenderChanged with DiagnosticableTreeMixin implements _GenderChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return genderChanged(genderStr);
   }
 
@@ -1946,9 +1984,10 @@ class _$_GenderChanged with DiagnosticableTreeMixin implements _GenderChanged {
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1990,9 +2029,10 @@ class _$_GenderChanged with DiagnosticableTreeMixin implements _GenderChanged {
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2020,9 +2060,10 @@ class _$_GenderChanged with DiagnosticableTreeMixin implements _GenderChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return genderChanged(this);
   }
 
@@ -2055,9 +2096,10 @@ class _$_GenderChanged with DiagnosticableTreeMixin implements _GenderChanged {
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2167,9 +2209,10 @@ class _$_AgeChanged with DiagnosticableTreeMixin implements _AgeChanged {
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2197,9 +2240,10 @@ class _$_AgeChanged with DiagnosticableTreeMixin implements _AgeChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return ageChanged(ageStr);
   }
 
@@ -2232,9 +2276,10 @@ class _$_AgeChanged with DiagnosticableTreeMixin implements _AgeChanged {
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2276,9 +2321,10 @@ class _$_AgeChanged with DiagnosticableTreeMixin implements _AgeChanged {
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2306,9 +2352,10 @@ class _$_AgeChanged with DiagnosticableTreeMixin implements _AgeChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return ageChanged(this);
   }
 
@@ -2341,9 +2388,10 @@ class _$_AgeChanged with DiagnosticableTreeMixin implements _AgeChanged {
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2454,9 +2502,10 @@ class _$_HeightChanged with DiagnosticableTreeMixin implements _HeightChanged {
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2484,9 +2533,10 @@ class _$_HeightChanged with DiagnosticableTreeMixin implements _HeightChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return heightChanged(heightStr);
   }
 
@@ -2519,9 +2569,10 @@ class _$_HeightChanged with DiagnosticableTreeMixin implements _HeightChanged {
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2563,9 +2614,10 @@ class _$_HeightChanged with DiagnosticableTreeMixin implements _HeightChanged {
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2593,9 +2645,10 @@ class _$_HeightChanged with DiagnosticableTreeMixin implements _HeightChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return heightChanged(this);
   }
 
@@ -2628,9 +2681,10 @@ class _$_HeightChanged with DiagnosticableTreeMixin implements _HeightChanged {
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2741,9 +2795,10 @@ class _$_WeightChanged with DiagnosticableTreeMixin implements _WeightChanged {
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2771,9 +2826,10 @@ class _$_WeightChanged with DiagnosticableTreeMixin implements _WeightChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return weightChanged(weightStr);
   }
 
@@ -2806,9 +2862,10 @@ class _$_WeightChanged with DiagnosticableTreeMixin implements _WeightChanged {
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2850,9 +2907,10 @@ class _$_WeightChanged with DiagnosticableTreeMixin implements _WeightChanged {
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2880,9 +2938,10 @@ class _$_WeightChanged with DiagnosticableTreeMixin implements _WeightChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return weightChanged(this);
   }
 
@@ -2915,9 +2974,10 @@ class _$_WeightChanged with DiagnosticableTreeMixin implements _WeightChanged {
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3027,9 +3087,10 @@ class _$_HomeChanged with DiagnosticableTreeMixin implements _HomeChanged {
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3057,9 +3118,10 @@ class _$_HomeChanged with DiagnosticableTreeMixin implements _HomeChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return homeChanged(homeStr);
   }
 
@@ -3092,9 +3154,10 @@ class _$_HomeChanged with DiagnosticableTreeMixin implements _HomeChanged {
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3136,9 +3199,10 @@ class _$_HomeChanged with DiagnosticableTreeMixin implements _HomeChanged {
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3166,9 +3230,10 @@ class _$_HomeChanged with DiagnosticableTreeMixin implements _HomeChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return homeChanged(this);
   }
 
@@ -3201,9 +3266,10 @@ class _$_HomeChanged with DiagnosticableTreeMixin implements _HomeChanged {
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3316,9 +3382,10 @@ class _$_AlignmentChanged
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3346,9 +3413,10 @@ class _$_AlignmentChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return alignmentChanged(alignmentStr);
   }
 
@@ -3381,9 +3449,10 @@ class _$_AlignmentChanged
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3425,9 +3494,10 @@ class _$_AlignmentChanged
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3455,9 +3525,10 @@ class _$_AlignmentChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return alignmentChanged(this);
   }
 
@@ -3490,9 +3561,10 @@ class _$_AlignmentChanged
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3603,9 +3675,10 @@ class _$_DeityChanged with DiagnosticableTreeMixin implements _DeityChanged {
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3633,9 +3706,10 @@ class _$_DeityChanged with DiagnosticableTreeMixin implements _DeityChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return deityChanged(deityStr);
   }
 
@@ -3668,9 +3742,10 @@ class _$_DeityChanged with DiagnosticableTreeMixin implements _DeityChanged {
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3712,9 +3787,10 @@ class _$_DeityChanged with DiagnosticableTreeMixin implements _DeityChanged {
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3742,9 +3818,10 @@ class _$_DeityChanged with DiagnosticableTreeMixin implements _DeityChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return deityChanged(this);
   }
 
@@ -3777,9 +3854,10 @@ class _$_DeityChanged with DiagnosticableTreeMixin implements _DeityChanged {
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3892,9 +3970,10 @@ class _$_LanguagesChanged
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3922,9 +4001,10 @@ class _$_LanguagesChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return languagesChanged(languagesStr);
   }
 
@@ -3957,9 +4037,10 @@ class _$_LanguagesChanged
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4001,9 +4082,10 @@ class _$_LanguagesChanged
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4031,9 +4113,10 @@ class _$_LanguagesChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return languagesChanged(this);
   }
 
@@ -4066,9 +4149,10 @@ class _$_LanguagesChanged
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4181,9 +4265,10 @@ class _$_StrengthChanged
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4211,9 +4296,10 @@ class _$_StrengthChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return strengthChanged(strengthStr);
   }
 
@@ -4246,9 +4332,10 @@ class _$_StrengthChanged
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4290,9 +4377,10 @@ class _$_StrengthChanged
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4320,9 +4408,10 @@ class _$_StrengthChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return strengthChanged(this);
   }
 
@@ -4355,9 +4444,10 @@ class _$_StrengthChanged
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4470,9 +4560,10 @@ class _$_DexterityChanged
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4500,9 +4591,10 @@ class _$_DexterityChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return dexterityChanged(dexterityStr);
   }
 
@@ -4535,9 +4627,10 @@ class _$_DexterityChanged
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4579,9 +4672,10 @@ class _$_DexterityChanged
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4609,9 +4703,10 @@ class _$_DexterityChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return dexterityChanged(this);
   }
 
@@ -4644,9 +4739,10 @@ class _$_DexterityChanged
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4765,9 +4861,10 @@ class _$_ConstitutionChanged
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4795,9 +4892,10 @@ class _$_ConstitutionChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return constitutionChanged(constitutionStr);
   }
 
@@ -4830,9 +4928,10 @@ class _$_ConstitutionChanged
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4874,9 +4973,10 @@ class _$_ConstitutionChanged
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4904,9 +5004,10 @@ class _$_ConstitutionChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return constitutionChanged(this);
   }
 
@@ -4939,9 +5040,10 @@ class _$_ConstitutionChanged
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5061,9 +5163,10 @@ class _$_IntelligenceChanged
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5091,9 +5194,10 @@ class _$_IntelligenceChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return intelligenceChanged(intelligenceStr);
   }
 
@@ -5126,9 +5230,10 @@ class _$_IntelligenceChanged
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5170,9 +5275,10 @@ class _$_IntelligenceChanged
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5200,9 +5306,10 @@ class _$_IntelligenceChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return intelligenceChanged(this);
   }
 
@@ -5235,9 +5342,10 @@ class _$_IntelligenceChanged
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5349,9 +5457,10 @@ class _$_WisdomChanged with DiagnosticableTreeMixin implements _WisdomChanged {
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5379,9 +5488,10 @@ class _$_WisdomChanged with DiagnosticableTreeMixin implements _WisdomChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return wisdomChanged(wisdomStr);
   }
 
@@ -5414,9 +5524,10 @@ class _$_WisdomChanged with DiagnosticableTreeMixin implements _WisdomChanged {
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5458,9 +5569,10 @@ class _$_WisdomChanged with DiagnosticableTreeMixin implements _WisdomChanged {
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5488,9 +5600,10 @@ class _$_WisdomChanged with DiagnosticableTreeMixin implements _WisdomChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return wisdomChanged(this);
   }
 
@@ -5523,9 +5636,10 @@ class _$_WisdomChanged with DiagnosticableTreeMixin implements _WisdomChanged {
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5638,9 +5752,10 @@ class _$_CharismaChanged
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5668,9 +5783,10 @@ class _$_CharismaChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return charismaChanged(charismaStr);
   }
 
@@ -5703,9 +5819,10 @@ class _$_CharismaChanged
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5747,9 +5864,10 @@ class _$_CharismaChanged
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5777,9 +5895,10 @@ class _$_CharismaChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return charismaChanged(this);
   }
 
@@ -5812,9 +5931,10 @@ class _$_CharismaChanged
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5925,9 +6045,10 @@ class _$_MaxHPChanged with DiagnosticableTreeMixin implements _MaxHPChanged {
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5955,9 +6076,10 @@ class _$_MaxHPChanged with DiagnosticableTreeMixin implements _MaxHPChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return maxHPChanged(maxHPStr);
   }
 
@@ -5990,9 +6112,10 @@ class _$_MaxHPChanged with DiagnosticableTreeMixin implements _MaxHPChanged {
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6034,9 +6157,10 @@ class _$_MaxHPChanged with DiagnosticableTreeMixin implements _MaxHPChanged {
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6064,9 +6188,10 @@ class _$_MaxHPChanged with DiagnosticableTreeMixin implements _MaxHPChanged {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return maxHPChanged(this);
   }
 
@@ -6099,9 +6224,10 @@ class _$_MaxHPChanged with DiagnosticableTreeMixin implements _MaxHPChanged {
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6215,9 +6341,10 @@ class _$_ArmorClassChanged
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6245,9 +6372,10 @@ class _$_ArmorClassChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return armorClassChanged(armorClassStr);
   }
 
@@ -6280,9 +6408,10 @@ class _$_ArmorClassChanged
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6324,9 +6453,10 @@ class _$_ArmorClassChanged
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6354,9 +6484,10 @@ class _$_ArmorClassChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return armorClassChanged(this);
   }
 
@@ -6389,9 +6520,10 @@ class _$_ArmorClassChanged
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6515,9 +6647,10 @@ class _$_CombatManeuverDefenseChanged
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6545,9 +6678,10 @@ class _$_CombatManeuverDefenseChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return combatManeuverDefenseChanged(combatManeuverDefenseStr);
   }
 
@@ -6580,9 +6714,10 @@ class _$_CombatManeuverDefenseChanged
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6624,9 +6759,10 @@ class _$_CombatManeuverDefenseChanged
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6654,9 +6790,10 @@ class _$_CombatManeuverDefenseChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return combatManeuverDefenseChanged(this);
   }
 
@@ -6689,9 +6826,10 @@ class _$_CombatManeuverDefenseChanged
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6806,9 +6944,10 @@ class _$_MeleeModChanged
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6836,9 +6975,10 @@ class _$_MeleeModChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return meleeModChanged(meleeModStr);
   }
 
@@ -6871,9 +7011,10 @@ class _$_MeleeModChanged
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6915,9 +7056,10 @@ class _$_MeleeModChanged
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6945,9 +7087,10 @@ class _$_MeleeModChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return meleeModChanged(this);
   }
 
@@ -6980,9 +7123,10 @@ class _$_MeleeModChanged
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7095,9 +7239,10 @@ class _$_rangedModChanged
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7125,9 +7270,10 @@ class _$_rangedModChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return rangedModChanged(rangedModStr);
   }
 
@@ -7160,9 +7306,10 @@ class _$_rangedModChanged
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7204,9 +7351,10 @@ class _$_rangedModChanged
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7234,9 +7382,10 @@ class _$_rangedModChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return rangedModChanged(this);
   }
 
@@ -7269,9 +7418,10 @@ class _$_rangedModChanged
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7393,9 +7543,10 @@ class _$_CombatManeuverBonusChanged
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7423,9 +7574,10 @@ class _$_CombatManeuverBonusChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return combatManeuverBonusChanged(combatManeuverBonusStr);
   }
 
@@ -7458,9 +7610,10 @@ class _$_CombatManeuverBonusChanged
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7502,9 +7655,10 @@ class _$_CombatManeuverBonusChanged
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7532,9 +7686,10 @@ class _$_CombatManeuverBonusChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return combatManeuverBonusChanged(this);
   }
 
@@ -7567,9 +7722,10 @@ class _$_CombatManeuverBonusChanged
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7689,9 +7845,10 @@ class _$_DescriptionChanged
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7719,9 +7876,10 @@ class _$_DescriptionChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return descriptionChanged(descriptionStr);
   }
 
@@ -7754,9 +7912,10 @@ class _$_DescriptionChanged
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7798,9 +7957,10 @@ class _$_DescriptionChanged
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7828,9 +7988,10 @@ class _$_DescriptionChanged
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return descriptionChanged(this);
   }
 
@@ -7863,9 +8024,10 @@ class _$_DescriptionChanged
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7882,293 +8044,6 @@ abstract class _DescriptionChanged implements CharacterFormEvent {
 
   String get descriptionStr;
   _$DescriptionChangedCopyWith<_DescriptionChanged> get copyWith;
-}
-
-abstract class _$ImageChangedCopyWith<$Res> {
-  factory _$ImageChangedCopyWith(
-          _ImageChanged value, $Res Function(_ImageChanged) then) =
-      __$ImageChangedCopyWithImpl<$Res>;
-  $Res call({String imageStr});
-}
-
-class __$ImageChangedCopyWithImpl<$Res>
-    extends _$CharacterFormEventCopyWithImpl<$Res>
-    implements _$ImageChangedCopyWith<$Res> {
-  __$ImageChangedCopyWithImpl(
-      _ImageChanged _value, $Res Function(_ImageChanged) _then)
-      : super(_value, (v) => _then(v as _ImageChanged));
-
-  @override
-  _ImageChanged get _value => super._value as _ImageChanged;
-
-  @override
-  $Res call({
-    Object imageStr = freezed,
-  }) {
-    return _then(_ImageChanged(
-      imageStr == freezed ? _value.imageStr : imageStr as String,
-    ));
-  }
-}
-
-class _$_ImageChanged with DiagnosticableTreeMixin implements _ImageChanged {
-  const _$_ImageChanged(this.imageStr) : assert(imageStr != null);
-
-  @override
-  final String imageStr;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CharacterFormEvent.imageChanged(imageStr: $imageStr)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'CharacterFormEvent.imageChanged'))
-      ..add(DiagnosticsProperty('imageStr', imageStr));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _ImageChanged &&
-            (identical(other.imageStr, imageStr) ||
-                const DeepCollectionEquality()
-                    .equals(other.imageStr, imageStr)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(imageStr);
-
-  @override
-  _$ImageChangedCopyWith<_ImageChanged> get copyWith =>
-      __$ImageChangedCopyWithImpl<_ImageChanged>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
-    @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-  }) {
-    assert(initialized != null);
-    assert(nameChanged != null);
-    assert(raceChanged != null);
-    assert(favoredClassChanged != null);
-    assert(levelChanged != null);
-    assert(genderChanged != null);
-    assert(ageChanged != null);
-    assert(heightChanged != null);
-    assert(weightChanged != null);
-    assert(homeChanged != null);
-    assert(alignmentChanged != null);
-    assert(deityChanged != null);
-    assert(languagesChanged != null);
-    assert(strengthChanged != null);
-    assert(dexterityChanged != null);
-    assert(constitutionChanged != null);
-    assert(intelligenceChanged != null);
-    assert(wisdomChanged != null);
-    assert(charismaChanged != null);
-    assert(maxHPChanged != null);
-    assert(armorClassChanged != null);
-    assert(combatManeuverDefenseChanged != null);
-    assert(meleeModChanged != null);
-    assert(rangedModChanged != null);
-    assert(combatManeuverBonusChanged != null);
-    assert(descriptionChanged != null);
-    assert(imageChanged != null);
-    assert(saved != null);
-    assert(imageButtonPressed != null);
-    return imageChanged(imageStr);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (imageChanged != null) {
-      return imageChanged(imageStr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
-    @required
-        Result combatManeuverDefenseChanged(
-            _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
-    @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
-  }) {
-    assert(initialized != null);
-    assert(nameChanged != null);
-    assert(raceChanged != null);
-    assert(favoredClassChanged != null);
-    assert(levelChanged != null);
-    assert(genderChanged != null);
-    assert(ageChanged != null);
-    assert(heightChanged != null);
-    assert(weightChanged != null);
-    assert(homeChanged != null);
-    assert(alignmentChanged != null);
-    assert(deityChanged != null);
-    assert(languagesChanged != null);
-    assert(strengthChanged != null);
-    assert(dexterityChanged != null);
-    assert(constitutionChanged != null);
-    assert(intelligenceChanged != null);
-    assert(wisdomChanged != null);
-    assert(charismaChanged != null);
-    assert(maxHPChanged != null);
-    assert(armorClassChanged != null);
-    assert(combatManeuverDefenseChanged != null);
-    assert(meleeModChanged != null);
-    assert(rangedModChanged != null);
-    assert(combatManeuverBonusChanged != null);
-    assert(descriptionChanged != null);
-    assert(imageChanged != null);
-    assert(saved != null);
-    assert(imageButtonPressed != null);
-    return imageChanged(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (imageChanged != null) {
-      return imageChanged(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _ImageChanged implements CharacterFormEvent {
-  const factory _ImageChanged(String imageStr) = _$_ImageChanged;
-
-  String get imageStr;
-  _$ImageChangedCopyWith<_ImageChanged> get copyWith;
 }
 
 abstract class _$SavedCopyWith<$Res> {
@@ -8237,9 +8112,10 @@ class _$_Saved with DiagnosticableTreeMixin implements _Saved {
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8267,9 +8143,10 @@ class _$_Saved with DiagnosticableTreeMixin implements _Saved {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return saved();
   }
 
@@ -8302,9 +8179,10 @@ class _$_Saved with DiagnosticableTreeMixin implements _Saved {
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8346,9 +8224,10 @@ class _$_Saved with DiagnosticableTreeMixin implements _Saved {
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8376,9 +8255,10 @@ class _$_Saved with DiagnosticableTreeMixin implements _Saved {
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return saved(this);
   }
 
@@ -8411,9 +8291,10 @@ class _$_Saved with DiagnosticableTreeMixin implements _Saved {
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8428,27 +8309,27 @@ abstract class _Saved implements CharacterFormEvent {
   const factory _Saved() = _$_Saved;
 }
 
-abstract class _$UploadButtonPressedCopyWith<$Res> {
-  factory _$UploadButtonPressedCopyWith(_UploadButtonPressed value,
-          $Res Function(_UploadButtonPressed) then) =
-      __$UploadButtonPressedCopyWithImpl<$Res>;
+abstract class _$ImageButtonPressedCopyWith<$Res> {
+  factory _$ImageButtonPressedCopyWith(
+          _ImageButtonPressed value, $Res Function(_ImageButtonPressed) then) =
+      __$ImageButtonPressedCopyWithImpl<$Res>;
 }
 
-class __$UploadButtonPressedCopyWithImpl<$Res>
+class __$ImageButtonPressedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
-    implements _$UploadButtonPressedCopyWith<$Res> {
-  __$UploadButtonPressedCopyWithImpl(
-      _UploadButtonPressed _value, $Res Function(_UploadButtonPressed) _then)
-      : super(_value, (v) => _then(v as _UploadButtonPressed));
+    implements _$ImageButtonPressedCopyWith<$Res> {
+  __$ImageButtonPressedCopyWithImpl(
+      _ImageButtonPressed _value, $Res Function(_ImageButtonPressed) _then)
+      : super(_value, (v) => _then(v as _ImageButtonPressed));
 
   @override
-  _UploadButtonPressed get _value => super._value as _UploadButtonPressed;
+  _ImageButtonPressed get _value => super._value as _ImageButtonPressed;
 }
 
-class _$_UploadButtonPressed
+class _$_ImageButtonPressed
     with DiagnosticableTreeMixin
-    implements _UploadButtonPressed {
-  const _$_UploadButtonPressed();
+    implements _ImageButtonPressed {
+  const _$_ImageButtonPressed();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -8465,7 +8346,7 @@ class _$_UploadButtonPressed
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _UploadButtonPressed);
+    return identical(this, other) || (other is _ImageButtonPressed);
   }
 
   @override
@@ -8501,9 +8382,10 @@ class _$_UploadButtonPressed
     @required Result rangedModChanged(String rangedModStr),
     @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     @required Result descriptionChanged(String descriptionStr),
-    @required Result imageChanged(String imageStr),
     @required Result saved(),
     @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8531,9 +8413,10 @@ class _$_UploadButtonPressed
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return imageButtonPressed();
   }
 
@@ -8566,9 +8449,10 @@ class _$_UploadButtonPressed
     Result rangedModChanged(String rangedModStr),
     Result combatManeuverBonusChanged(String combatManeuverBonusStr),
     Result descriptionChanged(String descriptionStr),
-    Result imageChanged(String imageStr),
     Result saved(),
     Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8610,9 +8494,10 @@ class _$_UploadButtonPressed
     @required
         Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result imageChanged(_ImageChanged value),
     @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_UploadButtonPressed value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8640,9 +8525,10 @@ class _$_UploadButtonPressed
     assert(rangedModChanged != null);
     assert(combatManeuverBonusChanged != null);
     assert(descriptionChanged != null);
-    assert(imageChanged != null);
     assert(saved != null);
     assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return imageButtonPressed(this);
   }
 
@@ -8675,9 +8561,10 @@ class _$_UploadButtonPressed
     Result rangedModChanged(_rangedModChanged value),
     Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
     Result descriptionChanged(_DescriptionChanged value),
-    Result imageChanged(_ImageChanged value),
     Result saved(_Saved value),
-    Result imageButtonPressed(_UploadButtonPressed value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8688,8 +8575,548 @@ class _$_UploadButtonPressed
   }
 }
 
-abstract class _UploadButtonPressed implements CharacterFormEvent {
-  const factory _UploadButtonPressed() = _$_UploadButtonPressed;
+abstract class _ImageButtonPressed implements CharacterFormEvent {
+  const factory _ImageButtonPressed() = _$_ImageButtonPressed;
+}
+
+abstract class _$FileButtonPressedCopyWith<$Res> {
+  factory _$FileButtonPressedCopyWith(
+          _FileButtonPressed value, $Res Function(_FileButtonPressed) then) =
+      __$FileButtonPressedCopyWithImpl<$Res>;
+}
+
+class __$FileButtonPressedCopyWithImpl<$Res>
+    extends _$CharacterFormEventCopyWithImpl<$Res>
+    implements _$FileButtonPressedCopyWith<$Res> {
+  __$FileButtonPressedCopyWithImpl(
+      _FileButtonPressed _value, $Res Function(_FileButtonPressed) _then)
+      : super(_value, (v) => _then(v as _FileButtonPressed));
+
+  @override
+  _FileButtonPressed get _value => super._value as _FileButtonPressed;
+}
+
+class _$_FileButtonPressed
+    with DiagnosticableTreeMixin
+    implements _FileButtonPressed {
+  const _$_FileButtonPressed();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CharacterFormEvent.fileButtonPressed()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(
+          DiagnosticsProperty('type', 'CharacterFormEvent.fileButtonPressed'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _FileButtonPressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result initialized(Option<Character> initialCharacterOption),
+    @required Result nameChanged(String nameStr),
+    @required Result raceChanged(String raceStr),
+    @required Result favoredClassChanged(String favoredClassStr),
+    @required Result levelChanged(String levelStr),
+    @required Result genderChanged(String genderStr),
+    @required Result ageChanged(String ageStr),
+    @required Result heightChanged(String heightStr),
+    @required Result weightChanged(String weightStr),
+    @required Result homeChanged(String homeStr),
+    @required Result alignmentChanged(String alignmentStr),
+    @required Result deityChanged(String deityStr),
+    @required Result languagesChanged(String languagesStr),
+    @required Result strengthChanged(String strengthStr),
+    @required Result dexterityChanged(String dexterityStr),
+    @required Result constitutionChanged(String constitutionStr),
+    @required Result intelligenceChanged(String intelligenceStr),
+    @required Result wisdomChanged(String wisdomStr),
+    @required Result charismaChanged(String charismaStr),
+    @required Result maxHPChanged(String maxHPStr),
+    @required Result armorClassChanged(String armorClassStr),
+    @required
+        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required Result meleeModChanged(String meleeModStr),
+    @required Result rangedModChanged(String rangedModStr),
+    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required Result descriptionChanged(String descriptionStr),
+    @required Result saved(),
+    @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
+  }) {
+    assert(initialized != null);
+    assert(nameChanged != null);
+    assert(raceChanged != null);
+    assert(favoredClassChanged != null);
+    assert(levelChanged != null);
+    assert(genderChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
+    assert(homeChanged != null);
+    assert(alignmentChanged != null);
+    assert(deityChanged != null);
+    assert(languagesChanged != null);
+    assert(strengthChanged != null);
+    assert(dexterityChanged != null);
+    assert(constitutionChanged != null);
+    assert(intelligenceChanged != null);
+    assert(wisdomChanged != null);
+    assert(charismaChanged != null);
+    assert(maxHPChanged != null);
+    assert(armorClassChanged != null);
+    assert(combatManeuverDefenseChanged != null);
+    assert(meleeModChanged != null);
+    assert(rangedModChanged != null);
+    assert(combatManeuverBonusChanged != null);
+    assert(descriptionChanged != null);
+    assert(saved != null);
+    assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
+    return fileButtonPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result initialized(Option<Character> initialCharacterOption),
+    Result nameChanged(String nameStr),
+    Result raceChanged(String raceStr),
+    Result favoredClassChanged(String favoredClassStr),
+    Result levelChanged(String levelStr),
+    Result genderChanged(String genderStr),
+    Result ageChanged(String ageStr),
+    Result heightChanged(String heightStr),
+    Result weightChanged(String weightStr),
+    Result homeChanged(String homeStr),
+    Result alignmentChanged(String alignmentStr),
+    Result deityChanged(String deityStr),
+    Result languagesChanged(String languagesStr),
+    Result strengthChanged(String strengthStr),
+    Result dexterityChanged(String dexterityStr),
+    Result constitutionChanged(String constitutionStr),
+    Result intelligenceChanged(String intelligenceStr),
+    Result wisdomChanged(String wisdomStr),
+    Result charismaChanged(String charismaStr),
+    Result maxHPChanged(String maxHPStr),
+    Result armorClassChanged(String armorClassStr),
+    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    Result meleeModChanged(String meleeModStr),
+    Result rangedModChanged(String rangedModStr),
+    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
+    Result descriptionChanged(String descriptionStr),
+    Result saved(),
+    Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (fileButtonPressed != null) {
+      return fileButtonPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result initialized(_Initialized value),
+    @required Result nameChanged(_NameChanged value),
+    @required Result raceChanged(_RaceChanged value),
+    @required Result favoredClassChanged(_FavoredClassChanged value),
+    @required Result levelChanged(_LevelChanged value),
+    @required Result genderChanged(_GenderChanged value),
+    @required Result ageChanged(_AgeChanged value),
+    @required Result heightChanged(_HeightChanged value),
+    @required Result weightChanged(_WeightChanged value),
+    @required Result homeChanged(_HomeChanged value),
+    @required Result alignmentChanged(_AlignmentChanged value),
+    @required Result deityChanged(_DeityChanged value),
+    @required Result languagesChanged(_LanguagesChanged value),
+    @required Result strengthChanged(_StrengthChanged value),
+    @required Result dexterityChanged(_DexterityChanged value),
+    @required Result constitutionChanged(_ConstitutionChanged value),
+    @required Result intelligenceChanged(_IntelligenceChanged value),
+    @required Result wisdomChanged(_WisdomChanged value),
+    @required Result charismaChanged(_CharismaChanged value),
+    @required Result maxHPChanged(_MaxHPChanged value),
+    @required Result armorClassChanged(_ArmorClassChanged value),
+    @required
+        Result combatManeuverDefenseChanged(
+            _CombatManeuverDefenseChanged value),
+    @required Result meleeModChanged(_MeleeModChanged value),
+    @required Result rangedModChanged(_rangedModChanged value),
+    @required
+        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required Result descriptionChanged(_DescriptionChanged value),
+    @required Result saved(_Saved value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
+  }) {
+    assert(initialized != null);
+    assert(nameChanged != null);
+    assert(raceChanged != null);
+    assert(favoredClassChanged != null);
+    assert(levelChanged != null);
+    assert(genderChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
+    assert(homeChanged != null);
+    assert(alignmentChanged != null);
+    assert(deityChanged != null);
+    assert(languagesChanged != null);
+    assert(strengthChanged != null);
+    assert(dexterityChanged != null);
+    assert(constitutionChanged != null);
+    assert(intelligenceChanged != null);
+    assert(wisdomChanged != null);
+    assert(charismaChanged != null);
+    assert(maxHPChanged != null);
+    assert(armorClassChanged != null);
+    assert(combatManeuverDefenseChanged != null);
+    assert(meleeModChanged != null);
+    assert(rangedModChanged != null);
+    assert(combatManeuverBonusChanged != null);
+    assert(descriptionChanged != null);
+    assert(saved != null);
+    assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
+    return fileButtonPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result initialized(_Initialized value),
+    Result nameChanged(_NameChanged value),
+    Result raceChanged(_RaceChanged value),
+    Result favoredClassChanged(_FavoredClassChanged value),
+    Result levelChanged(_LevelChanged value),
+    Result genderChanged(_GenderChanged value),
+    Result ageChanged(_AgeChanged value),
+    Result heightChanged(_HeightChanged value),
+    Result weightChanged(_WeightChanged value),
+    Result homeChanged(_HomeChanged value),
+    Result alignmentChanged(_AlignmentChanged value),
+    Result deityChanged(_DeityChanged value),
+    Result languagesChanged(_LanguagesChanged value),
+    Result strengthChanged(_StrengthChanged value),
+    Result dexterityChanged(_DexterityChanged value),
+    Result constitutionChanged(_ConstitutionChanged value),
+    Result intelligenceChanged(_IntelligenceChanged value),
+    Result wisdomChanged(_WisdomChanged value),
+    Result charismaChanged(_CharismaChanged value),
+    Result maxHPChanged(_MaxHPChanged value),
+    Result armorClassChanged(_ArmorClassChanged value),
+    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    Result meleeModChanged(_MeleeModChanged value),
+    Result rangedModChanged(_rangedModChanged value),
+    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    Result descriptionChanged(_DescriptionChanged value),
+    Result saved(_Saved value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (fileButtonPressed != null) {
+      return fileButtonPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FileButtonPressed implements CharacterFormEvent {
+  const factory _FileButtonPressed() = _$_FileButtonPressed;
+}
+
+abstract class _$CancelButtonPressedCopyWith<$Res> {
+  factory _$CancelButtonPressedCopyWith(_CancelButtonPressed value,
+          $Res Function(_CancelButtonPressed) then) =
+      __$CancelButtonPressedCopyWithImpl<$Res>;
+}
+
+class __$CancelButtonPressedCopyWithImpl<$Res>
+    extends _$CharacterFormEventCopyWithImpl<$Res>
+    implements _$CancelButtonPressedCopyWith<$Res> {
+  __$CancelButtonPressedCopyWithImpl(
+      _CancelButtonPressed _value, $Res Function(_CancelButtonPressed) _then)
+      : super(_value, (v) => _then(v as _CancelButtonPressed));
+
+  @override
+  _CancelButtonPressed get _value => super._value as _CancelButtonPressed;
+}
+
+class _$_CancelButtonPressed
+    with DiagnosticableTreeMixin
+    implements _CancelButtonPressed {
+  const _$_CancelButtonPressed();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CharacterFormEvent.cancelButtonPressed()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'CharacterFormEvent.cancelButtonPressed'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _CancelButtonPressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result initialized(Option<Character> initialCharacterOption),
+    @required Result nameChanged(String nameStr),
+    @required Result raceChanged(String raceStr),
+    @required Result favoredClassChanged(String favoredClassStr),
+    @required Result levelChanged(String levelStr),
+    @required Result genderChanged(String genderStr),
+    @required Result ageChanged(String ageStr),
+    @required Result heightChanged(String heightStr),
+    @required Result weightChanged(String weightStr),
+    @required Result homeChanged(String homeStr),
+    @required Result alignmentChanged(String alignmentStr),
+    @required Result deityChanged(String deityStr),
+    @required Result languagesChanged(String languagesStr),
+    @required Result strengthChanged(String strengthStr),
+    @required Result dexterityChanged(String dexterityStr),
+    @required Result constitutionChanged(String constitutionStr),
+    @required Result intelligenceChanged(String intelligenceStr),
+    @required Result wisdomChanged(String wisdomStr),
+    @required Result charismaChanged(String charismaStr),
+    @required Result maxHPChanged(String maxHPStr),
+    @required Result armorClassChanged(String armorClassStr),
+    @required
+        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required Result meleeModChanged(String meleeModStr),
+    @required Result rangedModChanged(String rangedModStr),
+    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required Result descriptionChanged(String descriptionStr),
+    @required Result saved(),
+    @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
+  }) {
+    assert(initialized != null);
+    assert(nameChanged != null);
+    assert(raceChanged != null);
+    assert(favoredClassChanged != null);
+    assert(levelChanged != null);
+    assert(genderChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
+    assert(homeChanged != null);
+    assert(alignmentChanged != null);
+    assert(deityChanged != null);
+    assert(languagesChanged != null);
+    assert(strengthChanged != null);
+    assert(dexterityChanged != null);
+    assert(constitutionChanged != null);
+    assert(intelligenceChanged != null);
+    assert(wisdomChanged != null);
+    assert(charismaChanged != null);
+    assert(maxHPChanged != null);
+    assert(armorClassChanged != null);
+    assert(combatManeuverDefenseChanged != null);
+    assert(meleeModChanged != null);
+    assert(rangedModChanged != null);
+    assert(combatManeuverBonusChanged != null);
+    assert(descriptionChanged != null);
+    assert(saved != null);
+    assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
+    return cancelButtonPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result initialized(Option<Character> initialCharacterOption),
+    Result nameChanged(String nameStr),
+    Result raceChanged(String raceStr),
+    Result favoredClassChanged(String favoredClassStr),
+    Result levelChanged(String levelStr),
+    Result genderChanged(String genderStr),
+    Result ageChanged(String ageStr),
+    Result heightChanged(String heightStr),
+    Result weightChanged(String weightStr),
+    Result homeChanged(String homeStr),
+    Result alignmentChanged(String alignmentStr),
+    Result deityChanged(String deityStr),
+    Result languagesChanged(String languagesStr),
+    Result strengthChanged(String strengthStr),
+    Result dexterityChanged(String dexterityStr),
+    Result constitutionChanged(String constitutionStr),
+    Result intelligenceChanged(String intelligenceStr),
+    Result wisdomChanged(String wisdomStr),
+    Result charismaChanged(String charismaStr),
+    Result maxHPChanged(String maxHPStr),
+    Result armorClassChanged(String armorClassStr),
+    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    Result meleeModChanged(String meleeModStr),
+    Result rangedModChanged(String rangedModStr),
+    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
+    Result descriptionChanged(String descriptionStr),
+    Result saved(),
+    Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (cancelButtonPressed != null) {
+      return cancelButtonPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result initialized(_Initialized value),
+    @required Result nameChanged(_NameChanged value),
+    @required Result raceChanged(_RaceChanged value),
+    @required Result favoredClassChanged(_FavoredClassChanged value),
+    @required Result levelChanged(_LevelChanged value),
+    @required Result genderChanged(_GenderChanged value),
+    @required Result ageChanged(_AgeChanged value),
+    @required Result heightChanged(_HeightChanged value),
+    @required Result weightChanged(_WeightChanged value),
+    @required Result homeChanged(_HomeChanged value),
+    @required Result alignmentChanged(_AlignmentChanged value),
+    @required Result deityChanged(_DeityChanged value),
+    @required Result languagesChanged(_LanguagesChanged value),
+    @required Result strengthChanged(_StrengthChanged value),
+    @required Result dexterityChanged(_DexterityChanged value),
+    @required Result constitutionChanged(_ConstitutionChanged value),
+    @required Result intelligenceChanged(_IntelligenceChanged value),
+    @required Result wisdomChanged(_WisdomChanged value),
+    @required Result charismaChanged(_CharismaChanged value),
+    @required Result maxHPChanged(_MaxHPChanged value),
+    @required Result armorClassChanged(_ArmorClassChanged value),
+    @required
+        Result combatManeuverDefenseChanged(
+            _CombatManeuverDefenseChanged value),
+    @required Result meleeModChanged(_MeleeModChanged value),
+    @required Result rangedModChanged(_rangedModChanged value),
+    @required
+        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required Result descriptionChanged(_DescriptionChanged value),
+    @required Result saved(_Saved value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
+  }) {
+    assert(initialized != null);
+    assert(nameChanged != null);
+    assert(raceChanged != null);
+    assert(favoredClassChanged != null);
+    assert(levelChanged != null);
+    assert(genderChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
+    assert(homeChanged != null);
+    assert(alignmentChanged != null);
+    assert(deityChanged != null);
+    assert(languagesChanged != null);
+    assert(strengthChanged != null);
+    assert(dexterityChanged != null);
+    assert(constitutionChanged != null);
+    assert(intelligenceChanged != null);
+    assert(wisdomChanged != null);
+    assert(charismaChanged != null);
+    assert(maxHPChanged != null);
+    assert(armorClassChanged != null);
+    assert(combatManeuverDefenseChanged != null);
+    assert(meleeModChanged != null);
+    assert(rangedModChanged != null);
+    assert(combatManeuverBonusChanged != null);
+    assert(descriptionChanged != null);
+    assert(saved != null);
+    assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
+    return cancelButtonPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result initialized(_Initialized value),
+    Result nameChanged(_NameChanged value),
+    Result raceChanged(_RaceChanged value),
+    Result favoredClassChanged(_FavoredClassChanged value),
+    Result levelChanged(_LevelChanged value),
+    Result genderChanged(_GenderChanged value),
+    Result ageChanged(_AgeChanged value),
+    Result heightChanged(_HeightChanged value),
+    Result weightChanged(_WeightChanged value),
+    Result homeChanged(_HomeChanged value),
+    Result alignmentChanged(_AlignmentChanged value),
+    Result deityChanged(_DeityChanged value),
+    Result languagesChanged(_LanguagesChanged value),
+    Result strengthChanged(_StrengthChanged value),
+    Result dexterityChanged(_DexterityChanged value),
+    Result constitutionChanged(_ConstitutionChanged value),
+    Result intelligenceChanged(_IntelligenceChanged value),
+    Result wisdomChanged(_WisdomChanged value),
+    Result charismaChanged(_CharismaChanged value),
+    Result maxHPChanged(_MaxHPChanged value),
+    Result armorClassChanged(_ArmorClassChanged value),
+    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    Result meleeModChanged(_MeleeModChanged value),
+    Result rangedModChanged(_rangedModChanged value),
+    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    Result descriptionChanged(_DescriptionChanged value),
+    Result saved(_Saved value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (cancelButtonPressed != null) {
+      return cancelButtonPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CancelButtonPressed implements CharacterFormEvent {
+  const factory _CancelButtonPressed() = _$_CancelButtonPressed;
 }
 
 class _$CharacterFormStateTearOff {
