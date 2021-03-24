@@ -181,6 +181,10 @@ class _$CharacterFormEventTearOff {
   _FileButtonPressed fileButtonPressed() {
     return const _FileButtonPressed();
   }
+
+  _CancelButtonPressed cancelButtonPressed() {
+    return const _CancelButtonPressed();
+  }
 }
 
 // ignore: unused_element
@@ -219,6 +223,7 @@ mixin _$CharacterFormEvent {
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -251,6 +256,7 @@ mixin _$CharacterFormEvent {
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -287,6 +293,7 @@ mixin _$CharacterFormEvent {
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
@@ -319,6 +326,7 @@ mixin _$CharacterFormEvent {
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   });
 }
@@ -439,6 +447,7 @@ class _$_Initialized with DiagnosticableTreeMixin implements _Initialized {
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -469,6 +478,7 @@ class _$_Initialized with DiagnosticableTreeMixin implements _Initialized {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return initialized(initialCharacterOption);
   }
 
@@ -504,6 +514,7 @@ class _$_Initialized with DiagnosticableTreeMixin implements _Initialized {
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -548,6 +559,7 @@ class _$_Initialized with DiagnosticableTreeMixin implements _Initialized {
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -578,6 +590,7 @@ class _$_Initialized with DiagnosticableTreeMixin implements _Initialized {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return initialized(this);
   }
 
@@ -613,6 +626,7 @@ class _$_Initialized with DiagnosticableTreeMixin implements _Initialized {
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -726,6 +740,7 @@ class _$_NameChanged with DiagnosticableTreeMixin implements _NameChanged {
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -756,6 +771,7 @@ class _$_NameChanged with DiagnosticableTreeMixin implements _NameChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return nameChanged(nameStr);
   }
 
@@ -791,6 +807,7 @@ class _$_NameChanged with DiagnosticableTreeMixin implements _NameChanged {
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -835,6 +852,7 @@ class _$_NameChanged with DiagnosticableTreeMixin implements _NameChanged {
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -865,6 +883,7 @@ class _$_NameChanged with DiagnosticableTreeMixin implements _NameChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return nameChanged(this);
   }
 
@@ -900,6 +919,7 @@ class _$_NameChanged with DiagnosticableTreeMixin implements _NameChanged {
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1012,6 +1032,7 @@ class _$_RaceChanged with DiagnosticableTreeMixin implements _RaceChanged {
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1042,6 +1063,7 @@ class _$_RaceChanged with DiagnosticableTreeMixin implements _RaceChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return raceChanged(raceStr);
   }
 
@@ -1077,6 +1099,7 @@ class _$_RaceChanged with DiagnosticableTreeMixin implements _RaceChanged {
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1121,6 +1144,7 @@ class _$_RaceChanged with DiagnosticableTreeMixin implements _RaceChanged {
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1151,6 +1175,7 @@ class _$_RaceChanged with DiagnosticableTreeMixin implements _RaceChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return raceChanged(this);
   }
 
@@ -1186,6 +1211,7 @@ class _$_RaceChanged with DiagnosticableTreeMixin implements _RaceChanged {
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1307,6 +1333,7 @@ class _$_FavoredClassChanged
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1337,6 +1364,7 @@ class _$_FavoredClassChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return favoredClassChanged(favoredClassStr);
   }
 
@@ -1372,6 +1400,7 @@ class _$_FavoredClassChanged
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1416,6 +1445,7 @@ class _$_FavoredClassChanged
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1446,6 +1476,7 @@ class _$_FavoredClassChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return favoredClassChanged(this);
   }
 
@@ -1481,6 +1512,7 @@ class _$_FavoredClassChanged
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1595,6 +1627,7 @@ class _$_LevelChanged with DiagnosticableTreeMixin implements _LevelChanged {
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1625,6 +1658,7 @@ class _$_LevelChanged with DiagnosticableTreeMixin implements _LevelChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return levelChanged(levelStr);
   }
 
@@ -1660,6 +1694,7 @@ class _$_LevelChanged with DiagnosticableTreeMixin implements _LevelChanged {
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1704,6 +1739,7 @@ class _$_LevelChanged with DiagnosticableTreeMixin implements _LevelChanged {
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1734,6 +1770,7 @@ class _$_LevelChanged with DiagnosticableTreeMixin implements _LevelChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return levelChanged(this);
   }
 
@@ -1769,6 +1806,7 @@ class _$_LevelChanged with DiagnosticableTreeMixin implements _LevelChanged {
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1882,6 +1920,7 @@ class _$_GenderChanged with DiagnosticableTreeMixin implements _GenderChanged {
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1912,6 +1951,7 @@ class _$_GenderChanged with DiagnosticableTreeMixin implements _GenderChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return genderChanged(genderStr);
   }
 
@@ -1947,6 +1987,7 @@ class _$_GenderChanged with DiagnosticableTreeMixin implements _GenderChanged {
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1991,6 +2032,7 @@ class _$_GenderChanged with DiagnosticableTreeMixin implements _GenderChanged {
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2021,6 +2063,7 @@ class _$_GenderChanged with DiagnosticableTreeMixin implements _GenderChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return genderChanged(this);
   }
 
@@ -2056,6 +2099,7 @@ class _$_GenderChanged with DiagnosticableTreeMixin implements _GenderChanged {
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2168,6 +2212,7 @@ class _$_AgeChanged with DiagnosticableTreeMixin implements _AgeChanged {
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2198,6 +2243,7 @@ class _$_AgeChanged with DiagnosticableTreeMixin implements _AgeChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return ageChanged(ageStr);
   }
 
@@ -2233,6 +2279,7 @@ class _$_AgeChanged with DiagnosticableTreeMixin implements _AgeChanged {
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2277,6 +2324,7 @@ class _$_AgeChanged with DiagnosticableTreeMixin implements _AgeChanged {
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2307,6 +2355,7 @@ class _$_AgeChanged with DiagnosticableTreeMixin implements _AgeChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return ageChanged(this);
   }
 
@@ -2342,6 +2391,7 @@ class _$_AgeChanged with DiagnosticableTreeMixin implements _AgeChanged {
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2455,6 +2505,7 @@ class _$_HeightChanged with DiagnosticableTreeMixin implements _HeightChanged {
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2485,6 +2536,7 @@ class _$_HeightChanged with DiagnosticableTreeMixin implements _HeightChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return heightChanged(heightStr);
   }
 
@@ -2520,6 +2572,7 @@ class _$_HeightChanged with DiagnosticableTreeMixin implements _HeightChanged {
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2564,6 +2617,7 @@ class _$_HeightChanged with DiagnosticableTreeMixin implements _HeightChanged {
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2594,6 +2648,7 @@ class _$_HeightChanged with DiagnosticableTreeMixin implements _HeightChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return heightChanged(this);
   }
 
@@ -2629,6 +2684,7 @@ class _$_HeightChanged with DiagnosticableTreeMixin implements _HeightChanged {
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2742,6 +2798,7 @@ class _$_WeightChanged with DiagnosticableTreeMixin implements _WeightChanged {
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2772,6 +2829,7 @@ class _$_WeightChanged with DiagnosticableTreeMixin implements _WeightChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return weightChanged(weightStr);
   }
 
@@ -2807,6 +2865,7 @@ class _$_WeightChanged with DiagnosticableTreeMixin implements _WeightChanged {
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2851,6 +2910,7 @@ class _$_WeightChanged with DiagnosticableTreeMixin implements _WeightChanged {
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2881,6 +2941,7 @@ class _$_WeightChanged with DiagnosticableTreeMixin implements _WeightChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return weightChanged(this);
   }
 
@@ -2916,6 +2977,7 @@ class _$_WeightChanged with DiagnosticableTreeMixin implements _WeightChanged {
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3028,6 +3090,7 @@ class _$_HomeChanged with DiagnosticableTreeMixin implements _HomeChanged {
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3058,6 +3121,7 @@ class _$_HomeChanged with DiagnosticableTreeMixin implements _HomeChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return homeChanged(homeStr);
   }
 
@@ -3093,6 +3157,7 @@ class _$_HomeChanged with DiagnosticableTreeMixin implements _HomeChanged {
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3137,6 +3202,7 @@ class _$_HomeChanged with DiagnosticableTreeMixin implements _HomeChanged {
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3167,6 +3233,7 @@ class _$_HomeChanged with DiagnosticableTreeMixin implements _HomeChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return homeChanged(this);
   }
 
@@ -3202,6 +3269,7 @@ class _$_HomeChanged with DiagnosticableTreeMixin implements _HomeChanged {
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3317,6 +3385,7 @@ class _$_AlignmentChanged
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3347,6 +3416,7 @@ class _$_AlignmentChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return alignmentChanged(alignmentStr);
   }
 
@@ -3382,6 +3452,7 @@ class _$_AlignmentChanged
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3426,6 +3497,7 @@ class _$_AlignmentChanged
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3456,6 +3528,7 @@ class _$_AlignmentChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return alignmentChanged(this);
   }
 
@@ -3491,6 +3564,7 @@ class _$_AlignmentChanged
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3604,6 +3678,7 @@ class _$_DeityChanged with DiagnosticableTreeMixin implements _DeityChanged {
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3634,6 +3709,7 @@ class _$_DeityChanged with DiagnosticableTreeMixin implements _DeityChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return deityChanged(deityStr);
   }
 
@@ -3669,6 +3745,7 @@ class _$_DeityChanged with DiagnosticableTreeMixin implements _DeityChanged {
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3713,6 +3790,7 @@ class _$_DeityChanged with DiagnosticableTreeMixin implements _DeityChanged {
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3743,6 +3821,7 @@ class _$_DeityChanged with DiagnosticableTreeMixin implements _DeityChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return deityChanged(this);
   }
 
@@ -3778,6 +3857,7 @@ class _$_DeityChanged with DiagnosticableTreeMixin implements _DeityChanged {
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3893,6 +3973,7 @@ class _$_LanguagesChanged
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3923,6 +4004,7 @@ class _$_LanguagesChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return languagesChanged(languagesStr);
   }
 
@@ -3958,6 +4040,7 @@ class _$_LanguagesChanged
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4002,6 +4085,7 @@ class _$_LanguagesChanged
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4032,6 +4116,7 @@ class _$_LanguagesChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return languagesChanged(this);
   }
 
@@ -4067,6 +4152,7 @@ class _$_LanguagesChanged
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4182,6 +4268,7 @@ class _$_StrengthChanged
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4212,6 +4299,7 @@ class _$_StrengthChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return strengthChanged(strengthStr);
   }
 
@@ -4247,6 +4335,7 @@ class _$_StrengthChanged
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4291,6 +4380,7 @@ class _$_StrengthChanged
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4321,6 +4411,7 @@ class _$_StrengthChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return strengthChanged(this);
   }
 
@@ -4356,6 +4447,7 @@ class _$_StrengthChanged
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4471,6 +4563,7 @@ class _$_DexterityChanged
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4501,6 +4594,7 @@ class _$_DexterityChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return dexterityChanged(dexterityStr);
   }
 
@@ -4536,6 +4630,7 @@ class _$_DexterityChanged
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4580,6 +4675,7 @@ class _$_DexterityChanged
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4610,6 +4706,7 @@ class _$_DexterityChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return dexterityChanged(this);
   }
 
@@ -4645,6 +4742,7 @@ class _$_DexterityChanged
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4766,6 +4864,7 @@ class _$_ConstitutionChanged
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4796,6 +4895,7 @@ class _$_ConstitutionChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return constitutionChanged(constitutionStr);
   }
 
@@ -4831,6 +4931,7 @@ class _$_ConstitutionChanged
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4875,6 +4976,7 @@ class _$_ConstitutionChanged
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4905,6 +5007,7 @@ class _$_ConstitutionChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return constitutionChanged(this);
   }
 
@@ -4940,6 +5043,7 @@ class _$_ConstitutionChanged
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5062,6 +5166,7 @@ class _$_IntelligenceChanged
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5092,6 +5197,7 @@ class _$_IntelligenceChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return intelligenceChanged(intelligenceStr);
   }
 
@@ -5127,6 +5233,7 @@ class _$_IntelligenceChanged
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5171,6 +5278,7 @@ class _$_IntelligenceChanged
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5201,6 +5309,7 @@ class _$_IntelligenceChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return intelligenceChanged(this);
   }
 
@@ -5236,6 +5345,7 @@ class _$_IntelligenceChanged
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5350,6 +5460,7 @@ class _$_WisdomChanged with DiagnosticableTreeMixin implements _WisdomChanged {
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5380,6 +5491,7 @@ class _$_WisdomChanged with DiagnosticableTreeMixin implements _WisdomChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return wisdomChanged(wisdomStr);
   }
 
@@ -5415,6 +5527,7 @@ class _$_WisdomChanged with DiagnosticableTreeMixin implements _WisdomChanged {
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5459,6 +5572,7 @@ class _$_WisdomChanged with DiagnosticableTreeMixin implements _WisdomChanged {
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5489,6 +5603,7 @@ class _$_WisdomChanged with DiagnosticableTreeMixin implements _WisdomChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return wisdomChanged(this);
   }
 
@@ -5524,6 +5639,7 @@ class _$_WisdomChanged with DiagnosticableTreeMixin implements _WisdomChanged {
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5639,6 +5755,7 @@ class _$_CharismaChanged
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5669,6 +5786,7 @@ class _$_CharismaChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return charismaChanged(charismaStr);
   }
 
@@ -5704,6 +5822,7 @@ class _$_CharismaChanged
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5748,6 +5867,7 @@ class _$_CharismaChanged
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5778,6 +5898,7 @@ class _$_CharismaChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return charismaChanged(this);
   }
 
@@ -5813,6 +5934,7 @@ class _$_CharismaChanged
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5926,6 +6048,7 @@ class _$_MaxHPChanged with DiagnosticableTreeMixin implements _MaxHPChanged {
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5956,6 +6079,7 @@ class _$_MaxHPChanged with DiagnosticableTreeMixin implements _MaxHPChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return maxHPChanged(maxHPStr);
   }
 
@@ -5991,6 +6115,7 @@ class _$_MaxHPChanged with DiagnosticableTreeMixin implements _MaxHPChanged {
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6035,6 +6160,7 @@ class _$_MaxHPChanged with DiagnosticableTreeMixin implements _MaxHPChanged {
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6065,6 +6191,7 @@ class _$_MaxHPChanged with DiagnosticableTreeMixin implements _MaxHPChanged {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return maxHPChanged(this);
   }
 
@@ -6100,6 +6227,7 @@ class _$_MaxHPChanged with DiagnosticableTreeMixin implements _MaxHPChanged {
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6216,6 +6344,7 @@ class _$_ArmorClassChanged
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6246,6 +6375,7 @@ class _$_ArmorClassChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return armorClassChanged(armorClassStr);
   }
 
@@ -6281,6 +6411,7 @@ class _$_ArmorClassChanged
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6325,6 +6456,7 @@ class _$_ArmorClassChanged
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6355,6 +6487,7 @@ class _$_ArmorClassChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return armorClassChanged(this);
   }
 
@@ -6390,6 +6523,7 @@ class _$_ArmorClassChanged
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6516,6 +6650,7 @@ class _$_CombatManeuverDefenseChanged
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6546,6 +6681,7 @@ class _$_CombatManeuverDefenseChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return combatManeuverDefenseChanged(combatManeuverDefenseStr);
   }
 
@@ -6581,6 +6717,7 @@ class _$_CombatManeuverDefenseChanged
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6625,6 +6762,7 @@ class _$_CombatManeuverDefenseChanged
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6655,6 +6793,7 @@ class _$_CombatManeuverDefenseChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return combatManeuverDefenseChanged(this);
   }
 
@@ -6690,6 +6829,7 @@ class _$_CombatManeuverDefenseChanged
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6807,6 +6947,7 @@ class _$_MeleeModChanged
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6837,6 +6978,7 @@ class _$_MeleeModChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return meleeModChanged(meleeModStr);
   }
 
@@ -6872,6 +7014,7 @@ class _$_MeleeModChanged
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6916,6 +7059,7 @@ class _$_MeleeModChanged
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6946,6 +7090,7 @@ class _$_MeleeModChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return meleeModChanged(this);
   }
 
@@ -6981,6 +7126,7 @@ class _$_MeleeModChanged
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7096,6 +7242,7 @@ class _$_rangedModChanged
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7126,6 +7273,7 @@ class _$_rangedModChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return rangedModChanged(rangedModStr);
   }
 
@@ -7161,6 +7309,7 @@ class _$_rangedModChanged
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7205,6 +7354,7 @@ class _$_rangedModChanged
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7235,6 +7385,7 @@ class _$_rangedModChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return rangedModChanged(this);
   }
 
@@ -7270,6 +7421,7 @@ class _$_rangedModChanged
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7394,6 +7546,7 @@ class _$_CombatManeuverBonusChanged
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7424,6 +7577,7 @@ class _$_CombatManeuverBonusChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return combatManeuverBonusChanged(combatManeuverBonusStr);
   }
 
@@ -7459,6 +7613,7 @@ class _$_CombatManeuverBonusChanged
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7503,6 +7658,7 @@ class _$_CombatManeuverBonusChanged
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7533,6 +7689,7 @@ class _$_CombatManeuverBonusChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return combatManeuverBonusChanged(this);
   }
 
@@ -7568,6 +7725,7 @@ class _$_CombatManeuverBonusChanged
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7690,6 +7848,7 @@ class _$_DescriptionChanged
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7720,6 +7879,7 @@ class _$_DescriptionChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return descriptionChanged(descriptionStr);
   }
 
@@ -7755,6 +7915,7 @@ class _$_DescriptionChanged
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7799,6 +7960,7 @@ class _$_DescriptionChanged
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7829,6 +7991,7 @@ class _$_DescriptionChanged
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return descriptionChanged(this);
   }
 
@@ -7864,6 +8027,7 @@ class _$_DescriptionChanged
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7951,6 +8115,7 @@ class _$_Saved with DiagnosticableTreeMixin implements _Saved {
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7981,6 +8146,7 @@ class _$_Saved with DiagnosticableTreeMixin implements _Saved {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return saved();
   }
 
@@ -8016,6 +8182,7 @@ class _$_Saved with DiagnosticableTreeMixin implements _Saved {
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8060,6 +8227,7 @@ class _$_Saved with DiagnosticableTreeMixin implements _Saved {
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8090,6 +8258,7 @@ class _$_Saved with DiagnosticableTreeMixin implements _Saved {
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return saved(this);
   }
 
@@ -8125,6 +8294,7 @@ class _$_Saved with DiagnosticableTreeMixin implements _Saved {
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8215,6 +8385,7 @@ class _$_ImageButtonPressed
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8245,6 +8416,7 @@ class _$_ImageButtonPressed
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return imageButtonPressed();
   }
 
@@ -8280,6 +8452,7 @@ class _$_ImageButtonPressed
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8324,6 +8497,7 @@ class _$_ImageButtonPressed
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8354,6 +8528,7 @@ class _$_ImageButtonPressed
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return imageButtonPressed(this);
   }
 
@@ -8389,6 +8564,7 @@ class _$_ImageButtonPressed
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8479,6 +8655,7 @@ class _$_FileButtonPressed
     @required Result saved(),
     @required Result imageButtonPressed(),
     @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8509,6 +8686,7 @@ class _$_FileButtonPressed
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return fileButtonPressed();
   }
 
@@ -8544,6 +8722,7 @@ class _$_FileButtonPressed
     Result saved(),
     Result imageButtonPressed(),
     Result fileButtonPressed(),
+    Result cancelButtonPressed(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8588,6 +8767,7 @@ class _$_FileButtonPressed
     @required Result saved(_Saved value),
     @required Result imageButtonPressed(_ImageButtonPressed value),
     @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8618,6 +8798,7 @@ class _$_FileButtonPressed
     assert(saved != null);
     assert(imageButtonPressed != null);
     assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
     return fileButtonPressed(this);
   }
 
@@ -8653,6 +8834,7 @@ class _$_FileButtonPressed
     Result saved(_Saved value),
     Result imageButtonPressed(_ImageButtonPressed value),
     Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8665,6 +8847,276 @@ class _$_FileButtonPressed
 
 abstract class _FileButtonPressed implements CharacterFormEvent {
   const factory _FileButtonPressed() = _$_FileButtonPressed;
+}
+
+abstract class _$CancelButtonPressedCopyWith<$Res> {
+  factory _$CancelButtonPressedCopyWith(_CancelButtonPressed value,
+          $Res Function(_CancelButtonPressed) then) =
+      __$CancelButtonPressedCopyWithImpl<$Res>;
+}
+
+class __$CancelButtonPressedCopyWithImpl<$Res>
+    extends _$CharacterFormEventCopyWithImpl<$Res>
+    implements _$CancelButtonPressedCopyWith<$Res> {
+  __$CancelButtonPressedCopyWithImpl(
+      _CancelButtonPressed _value, $Res Function(_CancelButtonPressed) _then)
+      : super(_value, (v) => _then(v as _CancelButtonPressed));
+
+  @override
+  _CancelButtonPressed get _value => super._value as _CancelButtonPressed;
+}
+
+class _$_CancelButtonPressed
+    with DiagnosticableTreeMixin
+    implements _CancelButtonPressed {
+  const _$_CancelButtonPressed();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CharacterFormEvent.cancelButtonPressed()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'CharacterFormEvent.cancelButtonPressed'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _CancelButtonPressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result initialized(Option<Character> initialCharacterOption),
+    @required Result nameChanged(String nameStr),
+    @required Result raceChanged(String raceStr),
+    @required Result favoredClassChanged(String favoredClassStr),
+    @required Result levelChanged(String levelStr),
+    @required Result genderChanged(String genderStr),
+    @required Result ageChanged(String ageStr),
+    @required Result heightChanged(String heightStr),
+    @required Result weightChanged(String weightStr),
+    @required Result homeChanged(String homeStr),
+    @required Result alignmentChanged(String alignmentStr),
+    @required Result deityChanged(String deityStr),
+    @required Result languagesChanged(String languagesStr),
+    @required Result strengthChanged(String strengthStr),
+    @required Result dexterityChanged(String dexterityStr),
+    @required Result constitutionChanged(String constitutionStr),
+    @required Result intelligenceChanged(String intelligenceStr),
+    @required Result wisdomChanged(String wisdomStr),
+    @required Result charismaChanged(String charismaStr),
+    @required Result maxHPChanged(String maxHPStr),
+    @required Result armorClassChanged(String armorClassStr),
+    @required
+        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required Result meleeModChanged(String meleeModStr),
+    @required Result rangedModChanged(String rangedModStr),
+    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required Result descriptionChanged(String descriptionStr),
+    @required Result saved(),
+    @required Result imageButtonPressed(),
+    @required Result fileButtonPressed(),
+    @required Result cancelButtonPressed(),
+  }) {
+    assert(initialized != null);
+    assert(nameChanged != null);
+    assert(raceChanged != null);
+    assert(favoredClassChanged != null);
+    assert(levelChanged != null);
+    assert(genderChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
+    assert(homeChanged != null);
+    assert(alignmentChanged != null);
+    assert(deityChanged != null);
+    assert(languagesChanged != null);
+    assert(strengthChanged != null);
+    assert(dexterityChanged != null);
+    assert(constitutionChanged != null);
+    assert(intelligenceChanged != null);
+    assert(wisdomChanged != null);
+    assert(charismaChanged != null);
+    assert(maxHPChanged != null);
+    assert(armorClassChanged != null);
+    assert(combatManeuverDefenseChanged != null);
+    assert(meleeModChanged != null);
+    assert(rangedModChanged != null);
+    assert(combatManeuverBonusChanged != null);
+    assert(descriptionChanged != null);
+    assert(saved != null);
+    assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
+    return cancelButtonPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result initialized(Option<Character> initialCharacterOption),
+    Result nameChanged(String nameStr),
+    Result raceChanged(String raceStr),
+    Result favoredClassChanged(String favoredClassStr),
+    Result levelChanged(String levelStr),
+    Result genderChanged(String genderStr),
+    Result ageChanged(String ageStr),
+    Result heightChanged(String heightStr),
+    Result weightChanged(String weightStr),
+    Result homeChanged(String homeStr),
+    Result alignmentChanged(String alignmentStr),
+    Result deityChanged(String deityStr),
+    Result languagesChanged(String languagesStr),
+    Result strengthChanged(String strengthStr),
+    Result dexterityChanged(String dexterityStr),
+    Result constitutionChanged(String constitutionStr),
+    Result intelligenceChanged(String intelligenceStr),
+    Result wisdomChanged(String wisdomStr),
+    Result charismaChanged(String charismaStr),
+    Result maxHPChanged(String maxHPStr),
+    Result armorClassChanged(String armorClassStr),
+    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    Result meleeModChanged(String meleeModStr),
+    Result rangedModChanged(String rangedModStr),
+    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
+    Result descriptionChanged(String descriptionStr),
+    Result saved(),
+    Result imageButtonPressed(),
+    Result fileButtonPressed(),
+    Result cancelButtonPressed(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (cancelButtonPressed != null) {
+      return cancelButtonPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result initialized(_Initialized value),
+    @required Result nameChanged(_NameChanged value),
+    @required Result raceChanged(_RaceChanged value),
+    @required Result favoredClassChanged(_FavoredClassChanged value),
+    @required Result levelChanged(_LevelChanged value),
+    @required Result genderChanged(_GenderChanged value),
+    @required Result ageChanged(_AgeChanged value),
+    @required Result heightChanged(_HeightChanged value),
+    @required Result weightChanged(_WeightChanged value),
+    @required Result homeChanged(_HomeChanged value),
+    @required Result alignmentChanged(_AlignmentChanged value),
+    @required Result deityChanged(_DeityChanged value),
+    @required Result languagesChanged(_LanguagesChanged value),
+    @required Result strengthChanged(_StrengthChanged value),
+    @required Result dexterityChanged(_DexterityChanged value),
+    @required Result constitutionChanged(_ConstitutionChanged value),
+    @required Result intelligenceChanged(_IntelligenceChanged value),
+    @required Result wisdomChanged(_WisdomChanged value),
+    @required Result charismaChanged(_CharismaChanged value),
+    @required Result maxHPChanged(_MaxHPChanged value),
+    @required Result armorClassChanged(_ArmorClassChanged value),
+    @required
+        Result combatManeuverDefenseChanged(
+            _CombatManeuverDefenseChanged value),
+    @required Result meleeModChanged(_MeleeModChanged value),
+    @required Result rangedModChanged(_rangedModChanged value),
+    @required
+        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required Result descriptionChanged(_DescriptionChanged value),
+    @required Result saved(_Saved value),
+    @required Result imageButtonPressed(_ImageButtonPressed value),
+    @required Result fileButtonPressed(_FileButtonPressed value),
+    @required Result cancelButtonPressed(_CancelButtonPressed value),
+  }) {
+    assert(initialized != null);
+    assert(nameChanged != null);
+    assert(raceChanged != null);
+    assert(favoredClassChanged != null);
+    assert(levelChanged != null);
+    assert(genderChanged != null);
+    assert(ageChanged != null);
+    assert(heightChanged != null);
+    assert(weightChanged != null);
+    assert(homeChanged != null);
+    assert(alignmentChanged != null);
+    assert(deityChanged != null);
+    assert(languagesChanged != null);
+    assert(strengthChanged != null);
+    assert(dexterityChanged != null);
+    assert(constitutionChanged != null);
+    assert(intelligenceChanged != null);
+    assert(wisdomChanged != null);
+    assert(charismaChanged != null);
+    assert(maxHPChanged != null);
+    assert(armorClassChanged != null);
+    assert(combatManeuverDefenseChanged != null);
+    assert(meleeModChanged != null);
+    assert(rangedModChanged != null);
+    assert(combatManeuverBonusChanged != null);
+    assert(descriptionChanged != null);
+    assert(saved != null);
+    assert(imageButtonPressed != null);
+    assert(fileButtonPressed != null);
+    assert(cancelButtonPressed != null);
+    return cancelButtonPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result initialized(_Initialized value),
+    Result nameChanged(_NameChanged value),
+    Result raceChanged(_RaceChanged value),
+    Result favoredClassChanged(_FavoredClassChanged value),
+    Result levelChanged(_LevelChanged value),
+    Result genderChanged(_GenderChanged value),
+    Result ageChanged(_AgeChanged value),
+    Result heightChanged(_HeightChanged value),
+    Result weightChanged(_WeightChanged value),
+    Result homeChanged(_HomeChanged value),
+    Result alignmentChanged(_AlignmentChanged value),
+    Result deityChanged(_DeityChanged value),
+    Result languagesChanged(_LanguagesChanged value),
+    Result strengthChanged(_StrengthChanged value),
+    Result dexterityChanged(_DexterityChanged value),
+    Result constitutionChanged(_ConstitutionChanged value),
+    Result intelligenceChanged(_IntelligenceChanged value),
+    Result wisdomChanged(_WisdomChanged value),
+    Result charismaChanged(_CharismaChanged value),
+    Result maxHPChanged(_MaxHPChanged value),
+    Result armorClassChanged(_ArmorClassChanged value),
+    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    Result meleeModChanged(_MeleeModChanged value),
+    Result rangedModChanged(_rangedModChanged value),
+    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    Result descriptionChanged(_DescriptionChanged value),
+    Result saved(_Saved value),
+    Result imageButtonPressed(_ImageButtonPressed value),
+    Result fileButtonPressed(_FileButtonPressed value),
+    Result cancelButtonPressed(_CancelButtonPressed value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (cancelButtonPressed != null) {
+      return cancelButtonPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CancelButtonPressed implements CharacterFormEvent {
+  const factory _CancelButtonPressed() = _$_CancelButtonPressed;
 }
 
 class _$CharacterFormStateTearOff {

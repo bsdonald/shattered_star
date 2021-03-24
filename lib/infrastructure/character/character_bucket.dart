@@ -91,6 +91,7 @@ class CharacterBucket implements ICharacterBucket {
 
       await userBucket.child('player_characters/$characterId').delete();
 
+      print('image wad deleted');
       return right(unit);
     } on FirebaseException catch (e) {
       if (e.message.contains('PERMISSION_DENIED')) {
