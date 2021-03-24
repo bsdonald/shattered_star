@@ -190,13 +190,46 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
           saveFailureOrSuccessOption: none(),
         );
       },
-      imageChanged: (e) async* {
+      //TODO: add an event for file button pressed, map the event to state, and hook up buttons on imageField appropriately
+      imageButtonPressed: (e) async* {
+        String downloadUrl;
+        PaletteGenerator paletteGenerator;
+        File file;
+
         yield state.copyWith(
-          character: state.character.copyWith(imagePath: ImagePath(e.imageStr)),
+          imageLoading: true,
           saveFailureOrSuccessOption: none(),
         );
+
+        file = await _characterBucket.getImage();
+
+        if (file != null) {
+          await _characterBucket.upload(state.character.id.getOrCrash(), file);
+
+          // yield state.copyWith(
+          //   saveFailureOrSuccessOption: none(),
+          // );
+          downloadUrl = await _characterBucket.getDownloadUrl(state.character.id.getOrCrash());
+
+          paletteGenerator = await PaletteGenerator.fromImageProvider(
+            Image.network(downloadUrl).image,
+            maximumColorCount: 20,
+          );
+
+          yield state.copyWith(
+            imageLoading: false,
+            character: state.character.copyWith(
+              imagePath: ImagePath(downloadUrl),
+              primaryGradientColor: PrimaryGradientColor(paletteGenerator.lightMutedColor?.color),
+              secondaryGradientColor: SecondaryGradientColor(paletteGenerator.dominantColor?.color),
+              tertiaryGradientColor: TertiaryGradientColor(paletteGenerator.darkMutedColor?.color),
+              secondaryTextColor: SecondaryTextColor(paletteGenerator.lightMutedColor?.color),
+            ),
+            saveFailureOrSuccessOption: none(),
+          );
+        }
       },
-      imageButtonPressed: (e) async* {
+      fileButtonPressed: (e) async* {
         String downloadUrl;
         PaletteGenerator paletteGenerator;
         File file;

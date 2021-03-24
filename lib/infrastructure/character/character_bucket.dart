@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:dartz/dartz.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shattered_star/domain/character/character_failure.dart';
 import 'package:shattered_star/domain/character/i_character_bucket.dart';
@@ -12,7 +11,6 @@ import 'package:shattered_star/infrastructure/core/storage_helpers.dart';
 @LazySingleton(as: ICharacterBucket)
 class CharacterBucket implements ICharacterBucket {
   final FirebaseStorage _storage;
-  final _picker = ImagePicker();
   // String imagePath;
 
   CharacterBucket(this._storage);
@@ -20,7 +18,7 @@ class CharacterBucket implements ICharacterBucket {
   @override
   Future<File> getImage() async {
     File file;
-    var pickedImage = await FilePicker.platform.pickFiles(
+    final pickedImage = await FilePicker.platform.pickFiles(
       type: FileType.image,
     );
 
@@ -33,9 +31,9 @@ class CharacterBucket implements ICharacterBucket {
   @override
   Future<File> getFile() async {
     File file;
-    var pickedImage = await FilePicker.platform.pickFiles(
+    final pickedImage = await FilePicker.platform.pickFiles(
       type: FileType.custom,
-      allowedExtensions: ['png'],
+      allowedExtensions: ['png', 'jpeg', 'jpg'],
     );
 
     if (pickedImage != null) {
@@ -49,9 +47,9 @@ class CharacterBucket implements ICharacterBucket {
     try {
       final userBucket = await _storage.userDirectory();
 
-      var _reference = userBucket.child('player_characters/$characterId');
+      final _reference = userBucket.child('player_characters/$characterId');
 
-      var task = _reference.putFile(file);
+      final task = _reference.putFile(file);
 
       task.snapshotEvents.listen((TaskSnapshot snapshot) {
         print('Snapshot state: ${snapshot.state}'); // paused, running, complete
@@ -79,9 +77,9 @@ class CharacterBucket implements ICharacterBucket {
   Future<String> getDownloadUrl(String characterId) async {
     final userBucket = await _storage.userDirectory();
 
-    var _reference = userBucket.child('player_characters/$characterId');
+    final _reference = userBucket.child('player_characters/$characterId');
 
-    var downloadUrl = await _reference.getDownloadURL();
+    final downloadUrl = await _reference.getDownloadURL();
 
     return downloadUrl;
   }

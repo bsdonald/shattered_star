@@ -77,8 +77,8 @@ class _TestState extends State<Test> {
   pickFile() async {
     File file;
     final FilePickerResult result = await FilePicker.platform.pickFiles(
-      type: FileType.custom,
-      allowedExtensions: ['png'],
+      type: FileType.image,
+      // allowedExtensions: ['png'],
     );
 
     if (result != null) {
