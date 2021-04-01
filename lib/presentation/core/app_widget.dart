@@ -11,6 +11,7 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = getIt<SSColors>();
+    final key = GlobalKey();
 
     return MultiBlocProvider(
       providers: [
@@ -20,9 +21,10 @@ class AppWidget extends StatelessWidget {
         BlocProvider<CharacterFormBloc>(create: (context) => getIt<CharacterFormBloc>()),
       ],
       child: MaterialApp(
+        key: key,
         debugShowCheckedModeBanner: false,
         title: "Shattered Star Player's Guide",
-        builder: ExtendedNavigator.builder(router: app_router.Router()),
+        builder: ExtendedNavigator(router: app_router.Router()),
         theme: ThemeData.light().copyWith(
           primaryColor: colors.lightBlue,
           accentColor: colors.darkOrange,
