@@ -1,5 +1,5 @@
+import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shattered_star/application/auth/auth_bloc.dart';
@@ -35,12 +35,9 @@ class CharacterListPage extends StatelessWidget {
                 FlushbarHelper.createError(
                   duration: const Duration(seconds: 5),
                   message: state.characterFailure.map(
-                    unexpected: (_) =>
-                    'Unexpected error occured while deleting, please contact support',
-                    insufficientPermission: (_) =>
-                    'Insufficient permissions. Please check you are signed in',
-                    unableToUpdate: (_) =>
-                    'If you are seeing this message, something went completely wrong.',
+                    unexpected: (_) => 'Unexpected error occured while deleting, please contact support',
+                    insufficientPermission: (_) => 'Insufficient permissions. Please check you are signed in',
+                    unableToUpdate: (_) => 'If you are seeing this message, something went completely wrong.',
                   ),
                 );
               },

@@ -1,4 +1,4 @@
-import 'package:auto_route/auto_route_annotations.dart';
+import 'package:auto_route/annotations.dart';
 import 'package:shattered_star/presentation/pages/character/character_color_page/character_color_page.dart';
 import 'package:shattered_star/presentation/pages/character/character_form_page/character_form_page.dart';
 import 'package:shattered_star/presentation/pages/character/character_home_page/character_home_page.dart';
