@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'character_form_bloc.dart';
 
@@ -9,135 +9,158 @@ part of 'character_form_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$CharacterFormEventTearOff {
   const _$CharacterFormEventTearOff();
 
+// ignore: unused_element
   _Initialized initialized(Option<Character> initialCharacterOption) {
     return _Initialized(
       initialCharacterOption,
     );
   }
 
+// ignore: unused_element
   _NameChanged nameChanged(String nameStr) {
     return _NameChanged(
       nameStr,
     );
   }
 
+// ignore: unused_element
   _RaceChanged raceChanged(String raceStr) {
     return _RaceChanged(
       raceStr,
     );
   }
 
+// ignore: unused_element
   _FavoredClassChanged favoredClassChanged(String favoredClassStr) {
     return _FavoredClassChanged(
       favoredClassStr,
     );
   }
 
+// ignore: unused_element
   _LevelChanged levelChanged(String levelStr) {
     return _LevelChanged(
       levelStr,
     );
   }
 
+// ignore: unused_element
   _GenderChanged genderChanged(String genderStr) {
     return _GenderChanged(
       genderStr,
     );
   }
 
+// ignore: unused_element
   _AgeChanged ageChanged(String ageStr) {
     return _AgeChanged(
       ageStr,
     );
   }
 
+// ignore: unused_element
   _HeightChanged heightChanged(String heightStr) {
     return _HeightChanged(
       heightStr,
     );
   }
 
+// ignore: unused_element
   _WeightChanged weightChanged(String weightStr) {
     return _WeightChanged(
       weightStr,
     );
   }
 
+// ignore: unused_element
   _HomeChanged homeChanged(String homeStr) {
     return _HomeChanged(
       homeStr,
     );
   }
 
+// ignore: unused_element
   _AlignmentChanged alignmentChanged(String alignmentStr) {
     return _AlignmentChanged(
       alignmentStr,
     );
   }
 
+// ignore: unused_element
   _DeityChanged deityChanged(String deityStr) {
     return _DeityChanged(
       deityStr,
     );
   }
 
+// ignore: unused_element
   _LanguagesChanged languagesChanged(String languagesStr) {
     return _LanguagesChanged(
       languagesStr,
     );
   }
 
+// ignore: unused_element
   _StrengthChanged strengthChanged(String strengthStr) {
     return _StrengthChanged(
       strengthStr,
     );
   }
 
+// ignore: unused_element
   _DexterityChanged dexterityChanged(String dexterityStr) {
     return _DexterityChanged(
       dexterityStr,
     );
   }
 
+// ignore: unused_element
   _ConstitutionChanged constitutionChanged(String constitutionStr) {
     return _ConstitutionChanged(
       constitutionStr,
     );
   }
 
+// ignore: unused_element
   _IntelligenceChanged intelligenceChanged(String intelligenceStr) {
     return _IntelligenceChanged(
       intelligenceStr,
     );
   }
 
+// ignore: unused_element
   _WisdomChanged wisdomChanged(String wisdomStr) {
     return _WisdomChanged(
       wisdomStr,
     );
   }
 
+// ignore: unused_element
   _CharismaChanged charismaChanged(String charismaStr) {
     return _CharismaChanged(
       charismaStr,
     );
   }
 
+// ignore: unused_element
   _MaxHPChanged maxHPChanged(String maxHPStr) {
     return _MaxHPChanged(
       maxHPStr,
     );
   }
 
+// ignore: unused_element
   _ArmorClassChanged armorClassChanged(String armorClassStr) {
     return _ArmorClassChanged(
       armorClassStr,
     );
   }
 
+// ignore: unused_element
   _CombatManeuverDefenseChanged combatManeuverDefenseChanged(
       String combatManeuverDefenseStr) {
     return _CombatManeuverDefenseChanged(
@@ -145,18 +168,21 @@ class _$CharacterFormEventTearOff {
     );
   }
 
+// ignore: unused_element
   _MeleeModChanged meleeModChanged(String meleeModStr) {
     return _MeleeModChanged(
       meleeModStr,
     );
   }
 
+// ignore: unused_element
   _rangedModChanged rangedModChanged(String rangedModStr) {
     return _rangedModChanged(
       rangedModStr,
     );
   }
 
+// ignore: unused_element
   _CombatManeuverBonusChanged combatManeuverBonusChanged(
       String combatManeuverBonusStr) {
     return _CombatManeuverBonusChanged(
@@ -164,179 +190,188 @@ class _$CharacterFormEventTearOff {
     );
   }
 
+// ignore: unused_element
   _DescriptionChanged descriptionChanged(String descriptionStr) {
     return _DescriptionChanged(
       descriptionStr,
     );
   }
 
+// ignore: unused_element
   _Saved saved() {
     return const _Saved();
   }
 
+// ignore: unused_element
   _ImageButtonPressed imageButtonPressed() {
     return const _ImageButtonPressed();
   }
 
+// ignore: unused_element
   _FileButtonPressed fileButtonPressed() {
     return const _FileButtonPressed();
   }
 
+// ignore: unused_element
   _CancelButtonPressed cancelButtonPressed() {
     return const _CancelButtonPressed();
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $CharacterFormEvent = _$CharacterFormEventTearOff();
 
+/// @nodoc
 mixin _$CharacterFormEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   });
 }
 
+/// @nodoc
 abstract class $CharacterFormEventCopyWith<$Res> {
   factory $CharacterFormEventCopyWith(
           CharacterFormEvent value, $Res Function(CharacterFormEvent) then) =
       _$CharacterFormEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$CharacterFormEventCopyWithImpl<$Res>
     implements $CharacterFormEventCopyWith<$Res> {
   _$CharacterFormEventCopyWithImpl(this._value, this._then);
@@ -346,6 +381,7 @@ class _$CharacterFormEventCopyWithImpl<$Res>
   final $Res Function(CharacterFormEvent) _then;
 }
 
+/// @nodoc
 abstract class _$InitializedCopyWith<$Res> {
   factory _$InitializedCopyWith(
           _Initialized value, $Res Function(_Initialized) then) =
@@ -353,6 +389,7 @@ abstract class _$InitializedCopyWith<$Res> {
   $Res call({Option<Character> initialCharacterOption});
 }
 
+/// @nodoc
 class __$InitializedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$InitializedCopyWith<$Res> {
@@ -375,6 +412,7 @@ class __$InitializedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Initialized with DiagnosticableTreeMixin implements _Initialized {
   const _$_Initialized(this.initialCharacterOption)
       : assert(initialCharacterOption != null);
@@ -410,44 +448,45 @@ class _$_Initialized with DiagnosticableTreeMixin implements _Initialized {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(initialCharacterOption);
 
+  @JsonKey(ignore: true)
   @override
   _$InitializedCopyWith<_Initialized> get copyWith =>
       __$InitializedCopyWithImpl<_Initialized>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -484,38 +523,38 @@ class _$_Initialized with DiagnosticableTreeMixin implements _Initialized {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initialized != null) {
@@ -526,40 +565,40 @@ class _$_Initialized with DiagnosticableTreeMixin implements _Initialized {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -596,38 +635,38 @@ class _$_Initialized with DiagnosticableTreeMixin implements _Initialized {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initialized != null) {
@@ -642,9 +681,11 @@ abstract class _Initialized implements CharacterFormEvent {
       _$_Initialized;
 
   Option<Character> get initialCharacterOption;
+  @JsonKey(ignore: true)
   _$InitializedCopyWith<_Initialized> get copyWith;
 }
 
+/// @nodoc
 abstract class _$NameChangedCopyWith<$Res> {
   factory _$NameChangedCopyWith(
           _NameChanged value, $Res Function(_NameChanged) then) =
@@ -652,6 +693,7 @@ abstract class _$NameChangedCopyWith<$Res> {
   $Res call({String nameStr});
 }
 
+/// @nodoc
 class __$NameChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$NameChangedCopyWith<$Res> {
@@ -672,6 +714,7 @@ class __$NameChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_NameChanged with DiagnosticableTreeMixin implements _NameChanged {
   const _$_NameChanged(this.nameStr) : assert(nameStr != null);
 
@@ -703,44 +746,45 @@ class _$_NameChanged with DiagnosticableTreeMixin implements _NameChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(nameStr);
 
+  @JsonKey(ignore: true)
   @override
   _$NameChangedCopyWith<_NameChanged> get copyWith =>
       __$NameChangedCopyWithImpl<_NameChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -777,38 +821,38 @@ class _$_NameChanged with DiagnosticableTreeMixin implements _NameChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (nameChanged != null) {
@@ -819,40 +863,40 @@ class _$_NameChanged with DiagnosticableTreeMixin implements _NameChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -889,38 +933,38 @@ class _$_NameChanged with DiagnosticableTreeMixin implements _NameChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (nameChanged != null) {
@@ -934,9 +978,11 @@ abstract class _NameChanged implements CharacterFormEvent {
   const factory _NameChanged(String nameStr) = _$_NameChanged;
 
   String get nameStr;
+  @JsonKey(ignore: true)
   _$NameChangedCopyWith<_NameChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$RaceChangedCopyWith<$Res> {
   factory _$RaceChangedCopyWith(
           _RaceChanged value, $Res Function(_RaceChanged) then) =
@@ -944,6 +990,7 @@ abstract class _$RaceChangedCopyWith<$Res> {
   $Res call({String raceStr});
 }
 
+/// @nodoc
 class __$RaceChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$RaceChangedCopyWith<$Res> {
@@ -964,6 +1011,7 @@ class __$RaceChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_RaceChanged with DiagnosticableTreeMixin implements _RaceChanged {
   const _$_RaceChanged(this.raceStr) : assert(raceStr != null);
 
@@ -995,44 +1043,45 @@ class _$_RaceChanged with DiagnosticableTreeMixin implements _RaceChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(raceStr);
 
+  @JsonKey(ignore: true)
   @override
   _$RaceChangedCopyWith<_RaceChanged> get copyWith =>
       __$RaceChangedCopyWithImpl<_RaceChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1069,38 +1118,38 @@ class _$_RaceChanged with DiagnosticableTreeMixin implements _RaceChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (raceChanged != null) {
@@ -1111,40 +1160,40 @@ class _$_RaceChanged with DiagnosticableTreeMixin implements _RaceChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1181,38 +1230,38 @@ class _$_RaceChanged with DiagnosticableTreeMixin implements _RaceChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (raceChanged != null) {
@@ -1226,9 +1275,11 @@ abstract class _RaceChanged implements CharacterFormEvent {
   const factory _RaceChanged(String raceStr) = _$_RaceChanged;
 
   String get raceStr;
+  @JsonKey(ignore: true)
   _$RaceChangedCopyWith<_RaceChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$FavoredClassChangedCopyWith<$Res> {
   factory _$FavoredClassChangedCopyWith(_FavoredClassChanged value,
           $Res Function(_FavoredClassChanged) then) =
@@ -1236,6 +1287,7 @@ abstract class _$FavoredClassChangedCopyWith<$Res> {
   $Res call({String favoredClassStr});
 }
 
+/// @nodoc
 class __$FavoredClassChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$FavoredClassChangedCopyWith<$Res> {
@@ -1258,6 +1310,7 @@ class __$FavoredClassChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_FavoredClassChanged
     with DiagnosticableTreeMixin
     implements _FavoredClassChanged {
@@ -1295,6 +1348,7 @@ class _$_FavoredClassChanged
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(favoredClassStr);
 
+  @JsonKey(ignore: true)
   @override
   _$FavoredClassChangedCopyWith<_FavoredClassChanged> get copyWith =>
       __$FavoredClassChangedCopyWithImpl<_FavoredClassChanged>(
@@ -1302,38 +1356,38 @@ class _$_FavoredClassChanged
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1370,38 +1424,38 @@ class _$_FavoredClassChanged
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (favoredClassChanged != null) {
@@ -1412,40 +1466,40 @@ class _$_FavoredClassChanged
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1482,38 +1536,38 @@ class _$_FavoredClassChanged
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (favoredClassChanged != null) {
@@ -1528,9 +1582,11 @@ abstract class _FavoredClassChanged implements CharacterFormEvent {
       _$_FavoredClassChanged;
 
   String get favoredClassStr;
+  @JsonKey(ignore: true)
   _$FavoredClassChangedCopyWith<_FavoredClassChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$LevelChangedCopyWith<$Res> {
   factory _$LevelChangedCopyWith(
           _LevelChanged value, $Res Function(_LevelChanged) then) =
@@ -1538,6 +1594,7 @@ abstract class _$LevelChangedCopyWith<$Res> {
   $Res call({String levelStr});
 }
 
+/// @nodoc
 class __$LevelChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$LevelChangedCopyWith<$Res> {
@@ -1558,6 +1615,7 @@ class __$LevelChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_LevelChanged with DiagnosticableTreeMixin implements _LevelChanged {
   const _$_LevelChanged(this.levelStr) : assert(levelStr != null);
 
@@ -1590,44 +1648,45 @@ class _$_LevelChanged with DiagnosticableTreeMixin implements _LevelChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(levelStr);
 
+  @JsonKey(ignore: true)
   @override
   _$LevelChangedCopyWith<_LevelChanged> get copyWith =>
       __$LevelChangedCopyWithImpl<_LevelChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1664,38 +1723,38 @@ class _$_LevelChanged with DiagnosticableTreeMixin implements _LevelChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (levelChanged != null) {
@@ -1706,40 +1765,40 @@ class _$_LevelChanged with DiagnosticableTreeMixin implements _LevelChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1776,38 +1835,38 @@ class _$_LevelChanged with DiagnosticableTreeMixin implements _LevelChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (levelChanged != null) {
@@ -1821,9 +1880,11 @@ abstract class _LevelChanged implements CharacterFormEvent {
   const factory _LevelChanged(String levelStr) = _$_LevelChanged;
 
   String get levelStr;
+  @JsonKey(ignore: true)
   _$LevelChangedCopyWith<_LevelChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$GenderChangedCopyWith<$Res> {
   factory _$GenderChangedCopyWith(
           _GenderChanged value, $Res Function(_GenderChanged) then) =
@@ -1831,6 +1892,7 @@ abstract class _$GenderChangedCopyWith<$Res> {
   $Res call({String genderStr});
 }
 
+/// @nodoc
 class __$GenderChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$GenderChangedCopyWith<$Res> {
@@ -1851,6 +1913,7 @@ class __$GenderChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_GenderChanged with DiagnosticableTreeMixin implements _GenderChanged {
   const _$_GenderChanged(this.genderStr) : assert(genderStr != null);
 
@@ -1883,44 +1946,45 @@ class _$_GenderChanged with DiagnosticableTreeMixin implements _GenderChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(genderStr);
 
+  @JsonKey(ignore: true)
   @override
   _$GenderChangedCopyWith<_GenderChanged> get copyWith =>
       __$GenderChangedCopyWithImpl<_GenderChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1957,38 +2021,38 @@ class _$_GenderChanged with DiagnosticableTreeMixin implements _GenderChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (genderChanged != null) {
@@ -1999,40 +2063,40 @@ class _$_GenderChanged with DiagnosticableTreeMixin implements _GenderChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2069,38 +2133,38 @@ class _$_GenderChanged with DiagnosticableTreeMixin implements _GenderChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (genderChanged != null) {
@@ -2114,9 +2178,11 @@ abstract class _GenderChanged implements CharacterFormEvent {
   const factory _GenderChanged(String genderStr) = _$_GenderChanged;
 
   String get genderStr;
+  @JsonKey(ignore: true)
   _$GenderChangedCopyWith<_GenderChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$AgeChangedCopyWith<$Res> {
   factory _$AgeChangedCopyWith(
           _AgeChanged value, $Res Function(_AgeChanged) then) =
@@ -2124,6 +2190,7 @@ abstract class _$AgeChangedCopyWith<$Res> {
   $Res call({String ageStr});
 }
 
+/// @nodoc
 class __$AgeChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$AgeChangedCopyWith<$Res> {
@@ -2144,6 +2211,7 @@ class __$AgeChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_AgeChanged with DiagnosticableTreeMixin implements _AgeChanged {
   const _$_AgeChanged(this.ageStr) : assert(ageStr != null);
 
@@ -2175,44 +2243,45 @@ class _$_AgeChanged with DiagnosticableTreeMixin implements _AgeChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(ageStr);
 
+  @JsonKey(ignore: true)
   @override
   _$AgeChangedCopyWith<_AgeChanged> get copyWith =>
       __$AgeChangedCopyWithImpl<_AgeChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2249,38 +2318,38 @@ class _$_AgeChanged with DiagnosticableTreeMixin implements _AgeChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (ageChanged != null) {
@@ -2291,40 +2360,40 @@ class _$_AgeChanged with DiagnosticableTreeMixin implements _AgeChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2361,38 +2430,38 @@ class _$_AgeChanged with DiagnosticableTreeMixin implements _AgeChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (ageChanged != null) {
@@ -2406,9 +2475,11 @@ abstract class _AgeChanged implements CharacterFormEvent {
   const factory _AgeChanged(String ageStr) = _$_AgeChanged;
 
   String get ageStr;
+  @JsonKey(ignore: true)
   _$AgeChangedCopyWith<_AgeChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$HeightChangedCopyWith<$Res> {
   factory _$HeightChangedCopyWith(
           _HeightChanged value, $Res Function(_HeightChanged) then) =
@@ -2416,6 +2487,7 @@ abstract class _$HeightChangedCopyWith<$Res> {
   $Res call({String heightStr});
 }
 
+/// @nodoc
 class __$HeightChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$HeightChangedCopyWith<$Res> {
@@ -2436,6 +2508,7 @@ class __$HeightChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_HeightChanged with DiagnosticableTreeMixin implements _HeightChanged {
   const _$_HeightChanged(this.heightStr) : assert(heightStr != null);
 
@@ -2468,44 +2541,45 @@ class _$_HeightChanged with DiagnosticableTreeMixin implements _HeightChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(heightStr);
 
+  @JsonKey(ignore: true)
   @override
   _$HeightChangedCopyWith<_HeightChanged> get copyWith =>
       __$HeightChangedCopyWithImpl<_HeightChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2542,38 +2616,38 @@ class _$_HeightChanged with DiagnosticableTreeMixin implements _HeightChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (heightChanged != null) {
@@ -2584,40 +2658,40 @@ class _$_HeightChanged with DiagnosticableTreeMixin implements _HeightChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2654,38 +2728,38 @@ class _$_HeightChanged with DiagnosticableTreeMixin implements _HeightChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (heightChanged != null) {
@@ -2699,9 +2773,11 @@ abstract class _HeightChanged implements CharacterFormEvent {
   const factory _HeightChanged(String heightStr) = _$_HeightChanged;
 
   String get heightStr;
+  @JsonKey(ignore: true)
   _$HeightChangedCopyWith<_HeightChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$WeightChangedCopyWith<$Res> {
   factory _$WeightChangedCopyWith(
           _WeightChanged value, $Res Function(_WeightChanged) then) =
@@ -2709,6 +2785,7 @@ abstract class _$WeightChangedCopyWith<$Res> {
   $Res call({String weightStr});
 }
 
+/// @nodoc
 class __$WeightChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$WeightChangedCopyWith<$Res> {
@@ -2729,6 +2806,7 @@ class __$WeightChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_WeightChanged with DiagnosticableTreeMixin implements _WeightChanged {
   const _$_WeightChanged(this.weightStr) : assert(weightStr != null);
 
@@ -2761,44 +2839,45 @@ class _$_WeightChanged with DiagnosticableTreeMixin implements _WeightChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(weightStr);
 
+  @JsonKey(ignore: true)
   @override
   _$WeightChangedCopyWith<_WeightChanged> get copyWith =>
       __$WeightChangedCopyWithImpl<_WeightChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2835,38 +2914,38 @@ class _$_WeightChanged with DiagnosticableTreeMixin implements _WeightChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (weightChanged != null) {
@@ -2877,40 +2956,40 @@ class _$_WeightChanged with DiagnosticableTreeMixin implements _WeightChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2947,38 +3026,38 @@ class _$_WeightChanged with DiagnosticableTreeMixin implements _WeightChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (weightChanged != null) {
@@ -2992,9 +3071,11 @@ abstract class _WeightChanged implements CharacterFormEvent {
   const factory _WeightChanged(String weightStr) = _$_WeightChanged;
 
   String get weightStr;
+  @JsonKey(ignore: true)
   _$WeightChangedCopyWith<_WeightChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$HomeChangedCopyWith<$Res> {
   factory _$HomeChangedCopyWith(
           _HomeChanged value, $Res Function(_HomeChanged) then) =
@@ -3002,6 +3083,7 @@ abstract class _$HomeChangedCopyWith<$Res> {
   $Res call({String homeStr});
 }
 
+/// @nodoc
 class __$HomeChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$HomeChangedCopyWith<$Res> {
@@ -3022,6 +3104,7 @@ class __$HomeChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_HomeChanged with DiagnosticableTreeMixin implements _HomeChanged {
   const _$_HomeChanged(this.homeStr) : assert(homeStr != null);
 
@@ -3053,44 +3136,45 @@ class _$_HomeChanged with DiagnosticableTreeMixin implements _HomeChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(homeStr);
 
+  @JsonKey(ignore: true)
   @override
   _$HomeChangedCopyWith<_HomeChanged> get copyWith =>
       __$HomeChangedCopyWithImpl<_HomeChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3127,38 +3211,38 @@ class _$_HomeChanged with DiagnosticableTreeMixin implements _HomeChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (homeChanged != null) {
@@ -3169,40 +3253,40 @@ class _$_HomeChanged with DiagnosticableTreeMixin implements _HomeChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3239,38 +3323,38 @@ class _$_HomeChanged with DiagnosticableTreeMixin implements _HomeChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (homeChanged != null) {
@@ -3284,9 +3368,11 @@ abstract class _HomeChanged implements CharacterFormEvent {
   const factory _HomeChanged(String homeStr) = _$_HomeChanged;
 
   String get homeStr;
+  @JsonKey(ignore: true)
   _$HomeChangedCopyWith<_HomeChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$AlignmentChangedCopyWith<$Res> {
   factory _$AlignmentChangedCopyWith(
           _AlignmentChanged value, $Res Function(_AlignmentChanged) then) =
@@ -3294,6 +3380,7 @@ abstract class _$AlignmentChangedCopyWith<$Res> {
   $Res call({String alignmentStr});
 }
 
+/// @nodoc
 class __$AlignmentChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$AlignmentChangedCopyWith<$Res> {
@@ -3314,6 +3401,7 @@ class __$AlignmentChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_AlignmentChanged
     with DiagnosticableTreeMixin
     implements _AlignmentChanged {
@@ -3348,44 +3436,45 @@ class _$_AlignmentChanged
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(alignmentStr);
 
+  @JsonKey(ignore: true)
   @override
   _$AlignmentChangedCopyWith<_AlignmentChanged> get copyWith =>
       __$AlignmentChangedCopyWithImpl<_AlignmentChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3422,38 +3511,38 @@ class _$_AlignmentChanged
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (alignmentChanged != null) {
@@ -3464,40 +3553,40 @@ class _$_AlignmentChanged
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3534,38 +3623,38 @@ class _$_AlignmentChanged
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (alignmentChanged != null) {
@@ -3579,9 +3668,11 @@ abstract class _AlignmentChanged implements CharacterFormEvent {
   const factory _AlignmentChanged(String alignmentStr) = _$_AlignmentChanged;
 
   String get alignmentStr;
+  @JsonKey(ignore: true)
   _$AlignmentChangedCopyWith<_AlignmentChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$DeityChangedCopyWith<$Res> {
   factory _$DeityChangedCopyWith(
           _DeityChanged value, $Res Function(_DeityChanged) then) =
@@ -3589,6 +3680,7 @@ abstract class _$DeityChangedCopyWith<$Res> {
   $Res call({String deityStr});
 }
 
+/// @nodoc
 class __$DeityChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$DeityChangedCopyWith<$Res> {
@@ -3609,6 +3701,7 @@ class __$DeityChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_DeityChanged with DiagnosticableTreeMixin implements _DeityChanged {
   const _$_DeityChanged(this.deityStr) : assert(deityStr != null);
 
@@ -3641,44 +3734,45 @@ class _$_DeityChanged with DiagnosticableTreeMixin implements _DeityChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(deityStr);
 
+  @JsonKey(ignore: true)
   @override
   _$DeityChangedCopyWith<_DeityChanged> get copyWith =>
       __$DeityChangedCopyWithImpl<_DeityChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3715,38 +3809,38 @@ class _$_DeityChanged with DiagnosticableTreeMixin implements _DeityChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (deityChanged != null) {
@@ -3757,40 +3851,40 @@ class _$_DeityChanged with DiagnosticableTreeMixin implements _DeityChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -3827,38 +3921,38 @@ class _$_DeityChanged with DiagnosticableTreeMixin implements _DeityChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (deityChanged != null) {
@@ -3872,9 +3966,11 @@ abstract class _DeityChanged implements CharacterFormEvent {
   const factory _DeityChanged(String deityStr) = _$_DeityChanged;
 
   String get deityStr;
+  @JsonKey(ignore: true)
   _$DeityChangedCopyWith<_DeityChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$LanguagesChangedCopyWith<$Res> {
   factory _$LanguagesChangedCopyWith(
           _LanguagesChanged value, $Res Function(_LanguagesChanged) then) =
@@ -3882,6 +3978,7 @@ abstract class _$LanguagesChangedCopyWith<$Res> {
   $Res call({String languagesStr});
 }
 
+/// @nodoc
 class __$LanguagesChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$LanguagesChangedCopyWith<$Res> {
@@ -3902,6 +3999,7 @@ class __$LanguagesChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_LanguagesChanged
     with DiagnosticableTreeMixin
     implements _LanguagesChanged {
@@ -3936,44 +4034,45 @@ class _$_LanguagesChanged
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(languagesStr);
 
+  @JsonKey(ignore: true)
   @override
   _$LanguagesChangedCopyWith<_LanguagesChanged> get copyWith =>
       __$LanguagesChangedCopyWithImpl<_LanguagesChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4010,38 +4109,38 @@ class _$_LanguagesChanged
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (languagesChanged != null) {
@@ -4052,40 +4151,40 @@ class _$_LanguagesChanged
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4122,38 +4221,38 @@ class _$_LanguagesChanged
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (languagesChanged != null) {
@@ -4167,9 +4266,11 @@ abstract class _LanguagesChanged implements CharacterFormEvent {
   const factory _LanguagesChanged(String languagesStr) = _$_LanguagesChanged;
 
   String get languagesStr;
+  @JsonKey(ignore: true)
   _$LanguagesChangedCopyWith<_LanguagesChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$StrengthChangedCopyWith<$Res> {
   factory _$StrengthChangedCopyWith(
           _StrengthChanged value, $Res Function(_StrengthChanged) then) =
@@ -4177,6 +4278,7 @@ abstract class _$StrengthChangedCopyWith<$Res> {
   $Res call({String strengthStr});
 }
 
+/// @nodoc
 class __$StrengthChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$StrengthChangedCopyWith<$Res> {
@@ -4197,6 +4299,7 @@ class __$StrengthChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_StrengthChanged
     with DiagnosticableTreeMixin
     implements _StrengthChanged {
@@ -4231,44 +4334,45 @@ class _$_StrengthChanged
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(strengthStr);
 
+  @JsonKey(ignore: true)
   @override
   _$StrengthChangedCopyWith<_StrengthChanged> get copyWith =>
       __$StrengthChangedCopyWithImpl<_StrengthChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4305,38 +4409,38 @@ class _$_StrengthChanged
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (strengthChanged != null) {
@@ -4347,40 +4451,40 @@ class _$_StrengthChanged
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4417,38 +4521,38 @@ class _$_StrengthChanged
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (strengthChanged != null) {
@@ -4462,9 +4566,11 @@ abstract class _StrengthChanged implements CharacterFormEvent {
   const factory _StrengthChanged(String strengthStr) = _$_StrengthChanged;
 
   String get strengthStr;
+  @JsonKey(ignore: true)
   _$StrengthChangedCopyWith<_StrengthChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$DexterityChangedCopyWith<$Res> {
   factory _$DexterityChangedCopyWith(
           _DexterityChanged value, $Res Function(_DexterityChanged) then) =
@@ -4472,6 +4578,7 @@ abstract class _$DexterityChangedCopyWith<$Res> {
   $Res call({String dexterityStr});
 }
 
+/// @nodoc
 class __$DexterityChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$DexterityChangedCopyWith<$Res> {
@@ -4492,6 +4599,7 @@ class __$DexterityChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_DexterityChanged
     with DiagnosticableTreeMixin
     implements _DexterityChanged {
@@ -4526,44 +4634,45 @@ class _$_DexterityChanged
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(dexterityStr);
 
+  @JsonKey(ignore: true)
   @override
   _$DexterityChangedCopyWith<_DexterityChanged> get copyWith =>
       __$DexterityChangedCopyWithImpl<_DexterityChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4600,38 +4709,38 @@ class _$_DexterityChanged
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (dexterityChanged != null) {
@@ -4642,40 +4751,40 @@ class _$_DexterityChanged
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4712,38 +4821,38 @@ class _$_DexterityChanged
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (dexterityChanged != null) {
@@ -4757,9 +4866,11 @@ abstract class _DexterityChanged implements CharacterFormEvent {
   const factory _DexterityChanged(String dexterityStr) = _$_DexterityChanged;
 
   String get dexterityStr;
+  @JsonKey(ignore: true)
   _$DexterityChangedCopyWith<_DexterityChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$ConstitutionChangedCopyWith<$Res> {
   factory _$ConstitutionChangedCopyWith(_ConstitutionChanged value,
           $Res Function(_ConstitutionChanged) then) =
@@ -4767,6 +4878,7 @@ abstract class _$ConstitutionChangedCopyWith<$Res> {
   $Res call({String constitutionStr});
 }
 
+/// @nodoc
 class __$ConstitutionChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$ConstitutionChangedCopyWith<$Res> {
@@ -4789,6 +4901,7 @@ class __$ConstitutionChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_ConstitutionChanged
     with DiagnosticableTreeMixin
     implements _ConstitutionChanged {
@@ -4826,6 +4939,7 @@ class _$_ConstitutionChanged
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(constitutionStr);
 
+  @JsonKey(ignore: true)
   @override
   _$ConstitutionChangedCopyWith<_ConstitutionChanged> get copyWith =>
       __$ConstitutionChangedCopyWithImpl<_ConstitutionChanged>(
@@ -4833,38 +4947,38 @@ class _$_ConstitutionChanged
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -4901,38 +5015,38 @@ class _$_ConstitutionChanged
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (constitutionChanged != null) {
@@ -4943,40 +5057,40 @@ class _$_ConstitutionChanged
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5013,38 +5127,38 @@ class _$_ConstitutionChanged
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (constitutionChanged != null) {
@@ -5059,9 +5173,11 @@ abstract class _ConstitutionChanged implements CharacterFormEvent {
       _$_ConstitutionChanged;
 
   String get constitutionStr;
+  @JsonKey(ignore: true)
   _$ConstitutionChangedCopyWith<_ConstitutionChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$IntelligenceChangedCopyWith<$Res> {
   factory _$IntelligenceChangedCopyWith(_IntelligenceChanged value,
           $Res Function(_IntelligenceChanged) then) =
@@ -5069,6 +5185,7 @@ abstract class _$IntelligenceChangedCopyWith<$Res> {
   $Res call({String intelligenceStr});
 }
 
+/// @nodoc
 class __$IntelligenceChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$IntelligenceChangedCopyWith<$Res> {
@@ -5091,6 +5208,7 @@ class __$IntelligenceChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_IntelligenceChanged
     with DiagnosticableTreeMixin
     implements _IntelligenceChanged {
@@ -5128,6 +5246,7 @@ class _$_IntelligenceChanged
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(intelligenceStr);
 
+  @JsonKey(ignore: true)
   @override
   _$IntelligenceChangedCopyWith<_IntelligenceChanged> get copyWith =>
       __$IntelligenceChangedCopyWithImpl<_IntelligenceChanged>(
@@ -5135,38 +5254,38 @@ class _$_IntelligenceChanged
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5203,38 +5322,38 @@ class _$_IntelligenceChanged
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (intelligenceChanged != null) {
@@ -5245,40 +5364,40 @@ class _$_IntelligenceChanged
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5315,38 +5434,38 @@ class _$_IntelligenceChanged
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (intelligenceChanged != null) {
@@ -5361,9 +5480,11 @@ abstract class _IntelligenceChanged implements CharacterFormEvent {
       _$_IntelligenceChanged;
 
   String get intelligenceStr;
+  @JsonKey(ignore: true)
   _$IntelligenceChangedCopyWith<_IntelligenceChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$WisdomChangedCopyWith<$Res> {
   factory _$WisdomChangedCopyWith(
           _WisdomChanged value, $Res Function(_WisdomChanged) then) =
@@ -5371,6 +5492,7 @@ abstract class _$WisdomChangedCopyWith<$Res> {
   $Res call({String wisdomStr});
 }
 
+/// @nodoc
 class __$WisdomChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$WisdomChangedCopyWith<$Res> {
@@ -5391,6 +5513,7 @@ class __$WisdomChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_WisdomChanged with DiagnosticableTreeMixin implements _WisdomChanged {
   const _$_WisdomChanged(this.wisdomStr) : assert(wisdomStr != null);
 
@@ -5423,44 +5546,45 @@ class _$_WisdomChanged with DiagnosticableTreeMixin implements _WisdomChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(wisdomStr);
 
+  @JsonKey(ignore: true)
   @override
   _$WisdomChangedCopyWith<_WisdomChanged> get copyWith =>
       __$WisdomChangedCopyWithImpl<_WisdomChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5497,38 +5621,38 @@ class _$_WisdomChanged with DiagnosticableTreeMixin implements _WisdomChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (wisdomChanged != null) {
@@ -5539,40 +5663,40 @@ class _$_WisdomChanged with DiagnosticableTreeMixin implements _WisdomChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5609,38 +5733,38 @@ class _$_WisdomChanged with DiagnosticableTreeMixin implements _WisdomChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (wisdomChanged != null) {
@@ -5654,9 +5778,11 @@ abstract class _WisdomChanged implements CharacterFormEvent {
   const factory _WisdomChanged(String wisdomStr) = _$_WisdomChanged;
 
   String get wisdomStr;
+  @JsonKey(ignore: true)
   _$WisdomChangedCopyWith<_WisdomChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$CharismaChangedCopyWith<$Res> {
   factory _$CharismaChangedCopyWith(
           _CharismaChanged value, $Res Function(_CharismaChanged) then) =
@@ -5664,6 +5790,7 @@ abstract class _$CharismaChangedCopyWith<$Res> {
   $Res call({String charismaStr});
 }
 
+/// @nodoc
 class __$CharismaChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$CharismaChangedCopyWith<$Res> {
@@ -5684,6 +5811,7 @@ class __$CharismaChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_CharismaChanged
     with DiagnosticableTreeMixin
     implements _CharismaChanged {
@@ -5718,44 +5846,45 @@ class _$_CharismaChanged
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(charismaStr);
 
+  @JsonKey(ignore: true)
   @override
   _$CharismaChangedCopyWith<_CharismaChanged> get copyWith =>
       __$CharismaChangedCopyWithImpl<_CharismaChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5792,38 +5921,38 @@ class _$_CharismaChanged
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (charismaChanged != null) {
@@ -5834,40 +5963,40 @@ class _$_CharismaChanged
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -5904,38 +6033,38 @@ class _$_CharismaChanged
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (charismaChanged != null) {
@@ -5949,9 +6078,11 @@ abstract class _CharismaChanged implements CharacterFormEvent {
   const factory _CharismaChanged(String charismaStr) = _$_CharismaChanged;
 
   String get charismaStr;
+  @JsonKey(ignore: true)
   _$CharismaChangedCopyWith<_CharismaChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$MaxHPChangedCopyWith<$Res> {
   factory _$MaxHPChangedCopyWith(
           _MaxHPChanged value, $Res Function(_MaxHPChanged) then) =
@@ -5959,6 +6090,7 @@ abstract class _$MaxHPChangedCopyWith<$Res> {
   $Res call({String maxHPStr});
 }
 
+/// @nodoc
 class __$MaxHPChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$MaxHPChangedCopyWith<$Res> {
@@ -5979,6 +6111,7 @@ class __$MaxHPChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_MaxHPChanged with DiagnosticableTreeMixin implements _MaxHPChanged {
   const _$_MaxHPChanged(this.maxHPStr) : assert(maxHPStr != null);
 
@@ -6011,44 +6144,45 @@ class _$_MaxHPChanged with DiagnosticableTreeMixin implements _MaxHPChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(maxHPStr);
 
+  @JsonKey(ignore: true)
   @override
   _$MaxHPChangedCopyWith<_MaxHPChanged> get copyWith =>
       __$MaxHPChangedCopyWithImpl<_MaxHPChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6085,38 +6219,38 @@ class _$_MaxHPChanged with DiagnosticableTreeMixin implements _MaxHPChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (maxHPChanged != null) {
@@ -6127,40 +6261,40 @@ class _$_MaxHPChanged with DiagnosticableTreeMixin implements _MaxHPChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6197,38 +6331,38 @@ class _$_MaxHPChanged with DiagnosticableTreeMixin implements _MaxHPChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (maxHPChanged != null) {
@@ -6242,9 +6376,11 @@ abstract class _MaxHPChanged implements CharacterFormEvent {
   const factory _MaxHPChanged(String maxHPStr) = _$_MaxHPChanged;
 
   String get maxHPStr;
+  @JsonKey(ignore: true)
   _$MaxHPChangedCopyWith<_MaxHPChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$ArmorClassChangedCopyWith<$Res> {
   factory _$ArmorClassChangedCopyWith(
           _ArmorClassChanged value, $Res Function(_ArmorClassChanged) then) =
@@ -6252,6 +6388,7 @@ abstract class _$ArmorClassChangedCopyWith<$Res> {
   $Res call({String armorClassStr});
 }
 
+/// @nodoc
 class __$ArmorClassChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$ArmorClassChangedCopyWith<$Res> {
@@ -6272,6 +6409,7 @@ class __$ArmorClassChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_ArmorClassChanged
     with DiagnosticableTreeMixin
     implements _ArmorClassChanged {
@@ -6307,44 +6445,45 @@ class _$_ArmorClassChanged
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(armorClassStr);
 
+  @JsonKey(ignore: true)
   @override
   _$ArmorClassChangedCopyWith<_ArmorClassChanged> get copyWith =>
       __$ArmorClassChangedCopyWithImpl<_ArmorClassChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6381,38 +6520,38 @@ class _$_ArmorClassChanged
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (armorClassChanged != null) {
@@ -6423,40 +6562,40 @@ class _$_ArmorClassChanged
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6493,38 +6632,38 @@ class _$_ArmorClassChanged
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (armorClassChanged != null) {
@@ -6538,9 +6677,11 @@ abstract class _ArmorClassChanged implements CharacterFormEvent {
   const factory _ArmorClassChanged(String armorClassStr) = _$_ArmorClassChanged;
 
   String get armorClassStr;
+  @JsonKey(ignore: true)
   _$ArmorClassChangedCopyWith<_ArmorClassChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$CombatManeuverDefenseChangedCopyWith<$Res> {
   factory _$CombatManeuverDefenseChangedCopyWith(
           _CombatManeuverDefenseChanged value,
@@ -6549,6 +6690,7 @@ abstract class _$CombatManeuverDefenseChangedCopyWith<$Res> {
   $Res call({String combatManeuverDefenseStr});
 }
 
+/// @nodoc
 class __$CombatManeuverDefenseChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$CombatManeuverDefenseChangedCopyWith<$Res> {
@@ -6573,6 +6715,7 @@ class __$CombatManeuverDefenseChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_CombatManeuverDefenseChanged
     with DiagnosticableTreeMixin
     implements _CombatManeuverDefenseChanged {
@@ -6612,6 +6755,7 @@ class _$_CombatManeuverDefenseChanged
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(combatManeuverDefenseStr);
 
+  @JsonKey(ignore: true)
   @override
   _$CombatManeuverDefenseChangedCopyWith<_CombatManeuverDefenseChanged>
       get copyWith => __$CombatManeuverDefenseChangedCopyWithImpl<
@@ -6619,38 +6763,38 @@ class _$_CombatManeuverDefenseChanged
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6687,38 +6831,38 @@ class _$_CombatManeuverDefenseChanged
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (combatManeuverDefenseChanged != null) {
@@ -6729,40 +6873,40 @@ class _$_CombatManeuverDefenseChanged
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6799,38 +6943,38 @@ class _$_CombatManeuverDefenseChanged
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (combatManeuverDefenseChanged != null) {
@@ -6845,10 +6989,12 @@ abstract class _CombatManeuverDefenseChanged implements CharacterFormEvent {
       _$_CombatManeuverDefenseChanged;
 
   String get combatManeuverDefenseStr;
+  @JsonKey(ignore: true)
   _$CombatManeuverDefenseChangedCopyWith<_CombatManeuverDefenseChanged>
       get copyWith;
 }
 
+/// @nodoc
 abstract class _$MeleeModChangedCopyWith<$Res> {
   factory _$MeleeModChangedCopyWith(
           _MeleeModChanged value, $Res Function(_MeleeModChanged) then) =
@@ -6856,6 +7002,7 @@ abstract class _$MeleeModChangedCopyWith<$Res> {
   $Res call({String meleeModStr});
 }
 
+/// @nodoc
 class __$MeleeModChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$MeleeModChangedCopyWith<$Res> {
@@ -6876,6 +7023,7 @@ class __$MeleeModChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_MeleeModChanged
     with DiagnosticableTreeMixin
     implements _MeleeModChanged {
@@ -6910,44 +7058,45 @@ class _$_MeleeModChanged
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(meleeModStr);
 
+  @JsonKey(ignore: true)
   @override
   _$MeleeModChangedCopyWith<_MeleeModChanged> get copyWith =>
       __$MeleeModChangedCopyWithImpl<_MeleeModChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -6984,38 +7133,38 @@ class _$_MeleeModChanged
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (meleeModChanged != null) {
@@ -7026,40 +7175,40 @@ class _$_MeleeModChanged
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7096,38 +7245,38 @@ class _$_MeleeModChanged
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (meleeModChanged != null) {
@@ -7141,9 +7290,11 @@ abstract class _MeleeModChanged implements CharacterFormEvent {
   const factory _MeleeModChanged(String meleeModStr) = _$_MeleeModChanged;
 
   String get meleeModStr;
+  @JsonKey(ignore: true)
   _$MeleeModChangedCopyWith<_MeleeModChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$rangedModChangedCopyWith<$Res> {
   factory _$rangedModChangedCopyWith(
           _rangedModChanged value, $Res Function(_rangedModChanged) then) =
@@ -7151,6 +7302,7 @@ abstract class _$rangedModChangedCopyWith<$Res> {
   $Res call({String rangedModStr});
 }
 
+/// @nodoc
 class __$rangedModChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$rangedModChangedCopyWith<$Res> {
@@ -7171,6 +7323,7 @@ class __$rangedModChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_rangedModChanged
     with DiagnosticableTreeMixin
     implements _rangedModChanged {
@@ -7205,44 +7358,45 @@ class _$_rangedModChanged
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(rangedModStr);
 
+  @JsonKey(ignore: true)
   @override
   _$rangedModChangedCopyWith<_rangedModChanged> get copyWith =>
       __$rangedModChangedCopyWithImpl<_rangedModChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7279,38 +7433,38 @@ class _$_rangedModChanged
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (rangedModChanged != null) {
@@ -7321,40 +7475,40 @@ class _$_rangedModChanged
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7391,38 +7545,38 @@ class _$_rangedModChanged
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (rangedModChanged != null) {
@@ -7436,9 +7590,11 @@ abstract class _rangedModChanged implements CharacterFormEvent {
   const factory _rangedModChanged(String rangedModStr) = _$_rangedModChanged;
 
   String get rangedModStr;
+  @JsonKey(ignore: true)
   _$rangedModChangedCopyWith<_rangedModChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$CombatManeuverBonusChangedCopyWith<$Res> {
   factory _$CombatManeuverBonusChangedCopyWith(
           _CombatManeuverBonusChanged value,
@@ -7447,6 +7603,7 @@ abstract class _$CombatManeuverBonusChangedCopyWith<$Res> {
   $Res call({String combatManeuverBonusStr});
 }
 
+/// @nodoc
 class __$CombatManeuverBonusChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$CombatManeuverBonusChangedCopyWith<$Res> {
@@ -7470,6 +7627,7 @@ class __$CombatManeuverBonusChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_CombatManeuverBonusChanged
     with DiagnosticableTreeMixin
     implements _CombatManeuverBonusChanged {
@@ -7508,6 +7666,7 @@ class _$_CombatManeuverBonusChanged
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(combatManeuverBonusStr);
 
+  @JsonKey(ignore: true)
   @override
   _$CombatManeuverBonusChangedCopyWith<_CombatManeuverBonusChanged>
       get copyWith => __$CombatManeuverBonusChangedCopyWithImpl<
@@ -7515,38 +7674,38 @@ class _$_CombatManeuverBonusChanged
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7583,38 +7742,38 @@ class _$_CombatManeuverBonusChanged
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (combatManeuverBonusChanged != null) {
@@ -7625,40 +7784,40 @@ class _$_CombatManeuverBonusChanged
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7695,38 +7854,38 @@ class _$_CombatManeuverBonusChanged
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (combatManeuverBonusChanged != null) {
@@ -7741,10 +7900,12 @@ abstract class _CombatManeuverBonusChanged implements CharacterFormEvent {
       _$_CombatManeuverBonusChanged;
 
   String get combatManeuverBonusStr;
+  @JsonKey(ignore: true)
   _$CombatManeuverBonusChangedCopyWith<_CombatManeuverBonusChanged>
       get copyWith;
 }
 
+/// @nodoc
 abstract class _$DescriptionChangedCopyWith<$Res> {
   factory _$DescriptionChangedCopyWith(
           _DescriptionChanged value, $Res Function(_DescriptionChanged) then) =
@@ -7752,6 +7913,7 @@ abstract class _$DescriptionChangedCopyWith<$Res> {
   $Res call({String descriptionStr});
 }
 
+/// @nodoc
 class __$DescriptionChangedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$DescriptionChangedCopyWith<$Res> {
@@ -7774,6 +7936,7 @@ class __$DescriptionChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_DescriptionChanged
     with DiagnosticableTreeMixin
     implements _DescriptionChanged {
@@ -7811,44 +7974,45 @@ class _$_DescriptionChanged
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(descriptionStr);
 
+  @JsonKey(ignore: true)
   @override
   _$DescriptionChangedCopyWith<_DescriptionChanged> get copyWith =>
       __$DescriptionChangedCopyWithImpl<_DescriptionChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7885,38 +8049,38 @@ class _$_DescriptionChanged
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (descriptionChanged != null) {
@@ -7927,40 +8091,40 @@ class _$_DescriptionChanged
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -7997,38 +8161,38 @@ class _$_DescriptionChanged
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (descriptionChanged != null) {
@@ -8043,14 +8207,17 @@ abstract class _DescriptionChanged implements CharacterFormEvent {
       _$_DescriptionChanged;
 
   String get descriptionStr;
+  @JsonKey(ignore: true)
   _$DescriptionChangedCopyWith<_DescriptionChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$SavedCopyWith<$Res> {
   factory _$SavedCopyWith(_Saved value, $Res Function(_Saved) then) =
       __$SavedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$SavedCopyWithImpl<$Res> extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$SavedCopyWith<$Res> {
   __$SavedCopyWithImpl(_Saved _value, $Res Function(_Saved) _then)
@@ -8060,6 +8227,7 @@ class __$SavedCopyWithImpl<$Res> extends _$CharacterFormEventCopyWithImpl<$Res>
   _Saved get _value => super._value as _Saved;
 }
 
+/// @nodoc
 class _$_Saved with DiagnosticableTreeMixin implements _Saved {
   const _$_Saved();
 
@@ -8084,38 +8252,38 @@ class _$_Saved with DiagnosticableTreeMixin implements _Saved {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8152,38 +8320,38 @@ class _$_Saved with DiagnosticableTreeMixin implements _Saved {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (saved != null) {
@@ -8194,40 +8362,40 @@ class _$_Saved with DiagnosticableTreeMixin implements _Saved {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8264,38 +8432,38 @@ class _$_Saved with DiagnosticableTreeMixin implements _Saved {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (saved != null) {
@@ -8309,12 +8477,14 @@ abstract class _Saved implements CharacterFormEvent {
   const factory _Saved() = _$_Saved;
 }
 
+/// @nodoc
 abstract class _$ImageButtonPressedCopyWith<$Res> {
   factory _$ImageButtonPressedCopyWith(
           _ImageButtonPressed value, $Res Function(_ImageButtonPressed) then) =
       __$ImageButtonPressedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$ImageButtonPressedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$ImageButtonPressedCopyWith<$Res> {
@@ -8326,6 +8496,7 @@ class __$ImageButtonPressedCopyWithImpl<$Res>
   _ImageButtonPressed get _value => super._value as _ImageButtonPressed;
 }
 
+/// @nodoc
 class _$_ImageButtonPressed
     with DiagnosticableTreeMixin
     implements _ImageButtonPressed {
@@ -8354,38 +8525,38 @@ class _$_ImageButtonPressed
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8422,38 +8593,38 @@ class _$_ImageButtonPressed
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (imageButtonPressed != null) {
@@ -8464,40 +8635,40 @@ class _$_ImageButtonPressed
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8534,38 +8705,38 @@ class _$_ImageButtonPressed
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (imageButtonPressed != null) {
@@ -8579,12 +8750,14 @@ abstract class _ImageButtonPressed implements CharacterFormEvent {
   const factory _ImageButtonPressed() = _$_ImageButtonPressed;
 }
 
+/// @nodoc
 abstract class _$FileButtonPressedCopyWith<$Res> {
   factory _$FileButtonPressedCopyWith(
           _FileButtonPressed value, $Res Function(_FileButtonPressed) then) =
       __$FileButtonPressedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$FileButtonPressedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$FileButtonPressedCopyWith<$Res> {
@@ -8596,6 +8769,7 @@ class __$FileButtonPressedCopyWithImpl<$Res>
   _FileButtonPressed get _value => super._value as _FileButtonPressed;
 }
 
+/// @nodoc
 class _$_FileButtonPressed
     with DiagnosticableTreeMixin
     implements _FileButtonPressed {
@@ -8624,38 +8798,38 @@ class _$_FileButtonPressed
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8692,38 +8866,38 @@ class _$_FileButtonPressed
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (fileButtonPressed != null) {
@@ -8734,40 +8908,40 @@ class _$_FileButtonPressed
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8804,38 +8978,38 @@ class _$_FileButtonPressed
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (fileButtonPressed != null) {
@@ -8849,12 +9023,14 @@ abstract class _FileButtonPressed implements CharacterFormEvent {
   const factory _FileButtonPressed() = _$_FileButtonPressed;
 }
 
+/// @nodoc
 abstract class _$CancelButtonPressedCopyWith<$Res> {
   factory _$CancelButtonPressedCopyWith(_CancelButtonPressed value,
           $Res Function(_CancelButtonPressed) then) =
       __$CancelButtonPressedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$CancelButtonPressedCopyWithImpl<$Res>
     extends _$CharacterFormEventCopyWithImpl<$Res>
     implements _$CancelButtonPressedCopyWith<$Res> {
@@ -8866,6 +9042,7 @@ class __$CancelButtonPressedCopyWithImpl<$Res>
   _CancelButtonPressed get _value => super._value as _CancelButtonPressed;
 }
 
+/// @nodoc
 class _$_CancelButtonPressed
     with DiagnosticableTreeMixin
     implements _CancelButtonPressed {
@@ -8894,38 +9071,38 @@ class _$_CancelButtonPressed
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Character> initialCharacterOption),
-    @required Result nameChanged(String nameStr),
-    @required Result raceChanged(String raceStr),
-    @required Result favoredClassChanged(String favoredClassStr),
-    @required Result levelChanged(String levelStr),
-    @required Result genderChanged(String genderStr),
-    @required Result ageChanged(String ageStr),
-    @required Result heightChanged(String heightStr),
-    @required Result weightChanged(String weightStr),
-    @required Result homeChanged(String homeStr),
-    @required Result alignmentChanged(String alignmentStr),
-    @required Result deityChanged(String deityStr),
-    @required Result languagesChanged(String languagesStr),
-    @required Result strengthChanged(String strengthStr),
-    @required Result dexterityChanged(String dexterityStr),
-    @required Result constitutionChanged(String constitutionStr),
-    @required Result intelligenceChanged(String intelligenceStr),
-    @required Result wisdomChanged(String wisdomStr),
-    @required Result charismaChanged(String charismaStr),
-    @required Result maxHPChanged(String maxHPStr),
-    @required Result armorClassChanged(String armorClassStr),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Character> initialCharacterOption),
+    @required TResult nameChanged(String nameStr),
+    @required TResult raceChanged(String raceStr),
+    @required TResult favoredClassChanged(String favoredClassStr),
+    @required TResult levelChanged(String levelStr),
+    @required TResult genderChanged(String genderStr),
+    @required TResult ageChanged(String ageStr),
+    @required TResult heightChanged(String heightStr),
+    @required TResult weightChanged(String weightStr),
+    @required TResult homeChanged(String homeStr),
+    @required TResult alignmentChanged(String alignmentStr),
+    @required TResult deityChanged(String deityStr),
+    @required TResult languagesChanged(String languagesStr),
+    @required TResult strengthChanged(String strengthStr),
+    @required TResult dexterityChanged(String dexterityStr),
+    @required TResult constitutionChanged(String constitutionStr),
+    @required TResult intelligenceChanged(String intelligenceStr),
+    @required TResult wisdomChanged(String wisdomStr),
+    @required TResult charismaChanged(String charismaStr),
+    @required TResult maxHPChanged(String maxHPStr),
+    @required TResult armorClassChanged(String armorClassStr),
     @required
-        Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    @required Result meleeModChanged(String meleeModStr),
-    @required Result rangedModChanged(String rangedModStr),
-    @required Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    @required Result descriptionChanged(String descriptionStr),
-    @required Result saved(),
-    @required Result imageButtonPressed(),
-    @required Result fileButtonPressed(),
-    @required Result cancelButtonPressed(),
+        TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    @required TResult meleeModChanged(String meleeModStr),
+    @required TResult rangedModChanged(String rangedModStr),
+    @required TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    @required TResult descriptionChanged(String descriptionStr),
+    @required TResult saved(),
+    @required TResult imageButtonPressed(),
+    @required TResult fileButtonPressed(),
+    @required TResult cancelButtonPressed(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -8962,38 +9139,38 @@ class _$_CancelButtonPressed
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Character> initialCharacterOption),
-    Result nameChanged(String nameStr),
-    Result raceChanged(String raceStr),
-    Result favoredClassChanged(String favoredClassStr),
-    Result levelChanged(String levelStr),
-    Result genderChanged(String genderStr),
-    Result ageChanged(String ageStr),
-    Result heightChanged(String heightStr),
-    Result weightChanged(String weightStr),
-    Result homeChanged(String homeStr),
-    Result alignmentChanged(String alignmentStr),
-    Result deityChanged(String deityStr),
-    Result languagesChanged(String languagesStr),
-    Result strengthChanged(String strengthStr),
-    Result dexterityChanged(String dexterityStr),
-    Result constitutionChanged(String constitutionStr),
-    Result intelligenceChanged(String intelligenceStr),
-    Result wisdomChanged(String wisdomStr),
-    Result charismaChanged(String charismaStr),
-    Result maxHPChanged(String maxHPStr),
-    Result armorClassChanged(String armorClassStr),
-    Result combatManeuverDefenseChanged(String combatManeuverDefenseStr),
-    Result meleeModChanged(String meleeModStr),
-    Result rangedModChanged(String rangedModStr),
-    Result combatManeuverBonusChanged(String combatManeuverBonusStr),
-    Result descriptionChanged(String descriptionStr),
-    Result saved(),
-    Result imageButtonPressed(),
-    Result fileButtonPressed(),
-    Result cancelButtonPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Character> initialCharacterOption),
+    TResult nameChanged(String nameStr),
+    TResult raceChanged(String raceStr),
+    TResult favoredClassChanged(String favoredClassStr),
+    TResult levelChanged(String levelStr),
+    TResult genderChanged(String genderStr),
+    TResult ageChanged(String ageStr),
+    TResult heightChanged(String heightStr),
+    TResult weightChanged(String weightStr),
+    TResult homeChanged(String homeStr),
+    TResult alignmentChanged(String alignmentStr),
+    TResult deityChanged(String deityStr),
+    TResult languagesChanged(String languagesStr),
+    TResult strengthChanged(String strengthStr),
+    TResult dexterityChanged(String dexterityStr),
+    TResult constitutionChanged(String constitutionStr),
+    TResult intelligenceChanged(String intelligenceStr),
+    TResult wisdomChanged(String wisdomStr),
+    TResult charismaChanged(String charismaStr),
+    TResult maxHPChanged(String maxHPStr),
+    TResult armorClassChanged(String armorClassStr),
+    TResult combatManeuverDefenseChanged(String combatManeuverDefenseStr),
+    TResult meleeModChanged(String meleeModStr),
+    TResult rangedModChanged(String rangedModStr),
+    TResult combatManeuverBonusChanged(String combatManeuverBonusStr),
+    TResult descriptionChanged(String descriptionStr),
+    TResult saved(),
+    TResult imageButtonPressed(),
+    TResult fileButtonPressed(),
+    TResult cancelButtonPressed(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (cancelButtonPressed != null) {
@@ -9004,40 +9181,40 @@ class _$_CancelButtonPressed
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result nameChanged(_NameChanged value),
-    @required Result raceChanged(_RaceChanged value),
-    @required Result favoredClassChanged(_FavoredClassChanged value),
-    @required Result levelChanged(_LevelChanged value),
-    @required Result genderChanged(_GenderChanged value),
-    @required Result ageChanged(_AgeChanged value),
-    @required Result heightChanged(_HeightChanged value),
-    @required Result weightChanged(_WeightChanged value),
-    @required Result homeChanged(_HomeChanged value),
-    @required Result alignmentChanged(_AlignmentChanged value),
-    @required Result deityChanged(_DeityChanged value),
-    @required Result languagesChanged(_LanguagesChanged value),
-    @required Result strengthChanged(_StrengthChanged value),
-    @required Result dexterityChanged(_DexterityChanged value),
-    @required Result constitutionChanged(_ConstitutionChanged value),
-    @required Result intelligenceChanged(_IntelligenceChanged value),
-    @required Result wisdomChanged(_WisdomChanged value),
-    @required Result charismaChanged(_CharismaChanged value),
-    @required Result maxHPChanged(_MaxHPChanged value),
-    @required Result armorClassChanged(_ArmorClassChanged value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult nameChanged(_NameChanged value),
+    @required TResult raceChanged(_RaceChanged value),
+    @required TResult favoredClassChanged(_FavoredClassChanged value),
+    @required TResult levelChanged(_LevelChanged value),
+    @required TResult genderChanged(_GenderChanged value),
+    @required TResult ageChanged(_AgeChanged value),
+    @required TResult heightChanged(_HeightChanged value),
+    @required TResult weightChanged(_WeightChanged value),
+    @required TResult homeChanged(_HomeChanged value),
+    @required TResult alignmentChanged(_AlignmentChanged value),
+    @required TResult deityChanged(_DeityChanged value),
+    @required TResult languagesChanged(_LanguagesChanged value),
+    @required TResult strengthChanged(_StrengthChanged value),
+    @required TResult dexterityChanged(_DexterityChanged value),
+    @required TResult constitutionChanged(_ConstitutionChanged value),
+    @required TResult intelligenceChanged(_IntelligenceChanged value),
+    @required TResult wisdomChanged(_WisdomChanged value),
+    @required TResult charismaChanged(_CharismaChanged value),
+    @required TResult maxHPChanged(_MaxHPChanged value),
+    @required TResult armorClassChanged(_ArmorClassChanged value),
     @required
-        Result combatManeuverDefenseChanged(
+        TResult combatManeuverDefenseChanged(
             _CombatManeuverDefenseChanged value),
-    @required Result meleeModChanged(_MeleeModChanged value),
-    @required Result rangedModChanged(_rangedModChanged value),
+    @required TResult meleeModChanged(_MeleeModChanged value),
+    @required TResult rangedModChanged(_rangedModChanged value),
     @required
-        Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    @required Result descriptionChanged(_DescriptionChanged value),
-    @required Result saved(_Saved value),
-    @required Result imageButtonPressed(_ImageButtonPressed value),
-    @required Result fileButtonPressed(_FileButtonPressed value),
-    @required Result cancelButtonPressed(_CancelButtonPressed value),
+        TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    @required TResult descriptionChanged(_DescriptionChanged value),
+    @required TResult saved(_Saved value),
+    @required TResult imageButtonPressed(_ImageButtonPressed value),
+    @required TResult fileButtonPressed(_FileButtonPressed value),
+    @required TResult cancelButtonPressed(_CancelButtonPressed value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -9074,38 +9251,38 @@ class _$_CancelButtonPressed
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result nameChanged(_NameChanged value),
-    Result raceChanged(_RaceChanged value),
-    Result favoredClassChanged(_FavoredClassChanged value),
-    Result levelChanged(_LevelChanged value),
-    Result genderChanged(_GenderChanged value),
-    Result ageChanged(_AgeChanged value),
-    Result heightChanged(_HeightChanged value),
-    Result weightChanged(_WeightChanged value),
-    Result homeChanged(_HomeChanged value),
-    Result alignmentChanged(_AlignmentChanged value),
-    Result deityChanged(_DeityChanged value),
-    Result languagesChanged(_LanguagesChanged value),
-    Result strengthChanged(_StrengthChanged value),
-    Result dexterityChanged(_DexterityChanged value),
-    Result constitutionChanged(_ConstitutionChanged value),
-    Result intelligenceChanged(_IntelligenceChanged value),
-    Result wisdomChanged(_WisdomChanged value),
-    Result charismaChanged(_CharismaChanged value),
-    Result maxHPChanged(_MaxHPChanged value),
-    Result armorClassChanged(_ArmorClassChanged value),
-    Result combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
-    Result meleeModChanged(_MeleeModChanged value),
-    Result rangedModChanged(_rangedModChanged value),
-    Result combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
-    Result descriptionChanged(_DescriptionChanged value),
-    Result saved(_Saved value),
-    Result imageButtonPressed(_ImageButtonPressed value),
-    Result fileButtonPressed(_FileButtonPressed value),
-    Result cancelButtonPressed(_CancelButtonPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult nameChanged(_NameChanged value),
+    TResult raceChanged(_RaceChanged value),
+    TResult favoredClassChanged(_FavoredClassChanged value),
+    TResult levelChanged(_LevelChanged value),
+    TResult genderChanged(_GenderChanged value),
+    TResult ageChanged(_AgeChanged value),
+    TResult heightChanged(_HeightChanged value),
+    TResult weightChanged(_WeightChanged value),
+    TResult homeChanged(_HomeChanged value),
+    TResult alignmentChanged(_AlignmentChanged value),
+    TResult deityChanged(_DeityChanged value),
+    TResult languagesChanged(_LanguagesChanged value),
+    TResult strengthChanged(_StrengthChanged value),
+    TResult dexterityChanged(_DexterityChanged value),
+    TResult constitutionChanged(_ConstitutionChanged value),
+    TResult intelligenceChanged(_IntelligenceChanged value),
+    TResult wisdomChanged(_WisdomChanged value),
+    TResult charismaChanged(_CharismaChanged value),
+    TResult maxHPChanged(_MaxHPChanged value),
+    TResult armorClassChanged(_ArmorClassChanged value),
+    TResult combatManeuverDefenseChanged(_CombatManeuverDefenseChanged value),
+    TResult meleeModChanged(_MeleeModChanged value),
+    TResult rangedModChanged(_rangedModChanged value),
+    TResult combatManeuverBonusChanged(_CombatManeuverBonusChanged value),
+    TResult descriptionChanged(_DescriptionChanged value),
+    TResult saved(_Saved value),
+    TResult imageButtonPressed(_ImageButtonPressed value),
+    TResult fileButtonPressed(_FileButtonPressed value),
+    TResult cancelButtonPressed(_CancelButtonPressed value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (cancelButtonPressed != null) {
@@ -9119,9 +9296,11 @@ abstract class _CancelButtonPressed implements CharacterFormEvent {
   const factory _CancelButtonPressed() = _$_CancelButtonPressed;
 }
 
+/// @nodoc
 class _$CharacterFormStateTearOff {
   const _$CharacterFormStateTearOff();
 
+// ignore: unused_element
   _CharacterFormState call(
       {@required
           Character character,
@@ -9146,9 +9325,11 @@ class _$CharacterFormStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $CharacterFormState = _$CharacterFormStateTearOff();
 
+/// @nodoc
 mixin _$CharacterFormState {
   Character get character;
   bool get showErrorMessages;
@@ -9157,9 +9338,11 @@ mixin _$CharacterFormState {
   bool get imageLoading;
   Option<Either<CharacterFailure, Unit>> get saveFailureOrSuccessOption;
 
+  @JsonKey(ignore: true)
   $CharacterFormStateCopyWith<CharacterFormState> get copyWith;
 }
 
+/// @nodoc
 abstract class $CharacterFormStateCopyWith<$Res> {
   factory $CharacterFormStateCopyWith(
           CharacterFormState value, $Res Function(CharacterFormState) then) =
@@ -9175,6 +9358,7 @@ abstract class $CharacterFormStateCopyWith<$Res> {
   $CharacterCopyWith<$Res> get character;
 }
 
+/// @nodoc
 class _$CharacterFormStateCopyWithImpl<$Res>
     implements $CharacterFormStateCopyWith<$Res> {
   _$CharacterFormStateCopyWithImpl(this._value, this._then);
@@ -9220,6 +9404,7 @@ class _$CharacterFormStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$CharacterFormStateCopyWith<$Res>
     implements $CharacterFormStateCopyWith<$Res> {
   factory _$CharacterFormStateCopyWith(
@@ -9238,6 +9423,7 @@ abstract class _$CharacterFormStateCopyWith<$Res>
   $CharacterCopyWith<$Res> get character;
 }
 
+/// @nodoc
 class __$CharacterFormStateCopyWithImpl<$Res>
     extends _$CharacterFormStateCopyWithImpl<$Res>
     implements _$CharacterFormStateCopyWith<$Res> {
@@ -9275,6 +9461,7 @@ class __$CharacterFormStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_CharacterFormState
     with DiagnosticableTreeMixin
     implements _CharacterFormState {
@@ -9360,6 +9547,7 @@ class _$_CharacterFormState
       const DeepCollectionEquality().hash(imageLoading) ^
       const DeepCollectionEquality().hash(saveFailureOrSuccessOption);
 
+  @JsonKey(ignore: true)
   @override
   _$CharacterFormStateCopyWith<_CharacterFormState> get copyWith =>
       __$CharacterFormStateCopyWithImpl<_CharacterFormState>(this, _$identity);
@@ -9394,5 +9582,6 @@ abstract class _CharacterFormState implements CharacterFormState {
   @override
   Option<Either<CharacterFailure, Unit>> get saveFailureOrSuccessOption;
   @override
+  @JsonKey(ignore: true)
   _$CharacterFormStateCopyWith<_CharacterFormState> get copyWith;
 }

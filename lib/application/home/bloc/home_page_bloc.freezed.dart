@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'home_page_bloc.dart';
 
@@ -9,52 +9,59 @@ part of 'home_page_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$HomePageEventTearOff {
   const _$HomePageEventTearOff();
 
+// ignore: unused_element
   CardPressed cardPressed() {
     return const CardPressed();
   }
 
+// ignore: unused_element
   CardReleased cardReleased() {
     return const CardReleased();
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $HomePageEvent = _$HomePageEventTearOff();
 
+/// @nodoc
 mixin _$HomePageEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result cardPressed(),
-    @required Result cardReleased(),
+  TResult when<TResult extends Object>({
+    @required TResult cardPressed(),
+    @required TResult cardReleased(),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result cardPressed(),
-    Result cardReleased(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult cardPressed(),
+    TResult cardReleased(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result cardPressed(CardPressed value),
-    @required Result cardReleased(CardReleased value),
+  TResult map<TResult extends Object>({
+    @required TResult cardPressed(CardPressed value),
+    @required TResult cardReleased(CardReleased value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result cardPressed(CardPressed value),
-    Result cardReleased(CardReleased value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult cardPressed(CardPressed value),
+    TResult cardReleased(CardReleased value),
+    @required TResult orElse(),
   });
 }
 
+/// @nodoc
 abstract class $HomePageEventCopyWith<$Res> {
   factory $HomePageEventCopyWith(
           HomePageEvent value, $Res Function(HomePageEvent) then) =
       _$HomePageEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$HomePageEventCopyWithImpl<$Res>
     implements $HomePageEventCopyWith<$Res> {
   _$HomePageEventCopyWithImpl(this._value, this._then);
@@ -64,12 +71,14 @@ class _$HomePageEventCopyWithImpl<$Res>
   final $Res Function(HomePageEvent) _then;
 }
 
+/// @nodoc
 abstract class $CardPressedCopyWith<$Res> {
   factory $CardPressedCopyWith(
           CardPressed value, $Res Function(CardPressed) then) =
       _$CardPressedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$CardPressedCopyWithImpl<$Res> extends _$HomePageEventCopyWithImpl<$Res>
     implements $CardPressedCopyWith<$Res> {
   _$CardPressedCopyWithImpl(
@@ -80,6 +89,7 @@ class _$CardPressedCopyWithImpl<$Res> extends _$HomePageEventCopyWithImpl<$Res>
   CardPressed get _value => super._value as CardPressed;
 }
 
+/// @nodoc
 class _$CardPressed implements CardPressed {
   const _$CardPressed();
 
@@ -98,9 +108,9 @@ class _$CardPressed implements CardPressed {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result cardPressed(),
-    @required Result cardReleased(),
+  TResult when<TResult extends Object>({
+    @required TResult cardPressed(),
+    @required TResult cardReleased(),
   }) {
     assert(cardPressed != null);
     assert(cardReleased != null);
@@ -109,10 +119,10 @@ class _$CardPressed implements CardPressed {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result cardPressed(),
-    Result cardReleased(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult cardPressed(),
+    TResult cardReleased(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (cardPressed != null) {
@@ -123,9 +133,9 @@ class _$CardPressed implements CardPressed {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result cardPressed(CardPressed value),
-    @required Result cardReleased(CardReleased value),
+  TResult map<TResult extends Object>({
+    @required TResult cardPressed(CardPressed value),
+    @required TResult cardReleased(CardReleased value),
   }) {
     assert(cardPressed != null);
     assert(cardReleased != null);
@@ -134,10 +144,10 @@ class _$CardPressed implements CardPressed {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result cardPressed(CardPressed value),
-    Result cardReleased(CardReleased value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult cardPressed(CardPressed value),
+    TResult cardReleased(CardReleased value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (cardPressed != null) {
@@ -151,12 +161,14 @@ abstract class CardPressed implements HomePageEvent {
   const factory CardPressed() = _$CardPressed;
 }
 
+/// @nodoc
 abstract class $CardReleasedCopyWith<$Res> {
   factory $CardReleasedCopyWith(
           CardReleased value, $Res Function(CardReleased) then) =
       _$CardReleasedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$CardReleasedCopyWithImpl<$Res> extends _$HomePageEventCopyWithImpl<$Res>
     implements $CardReleasedCopyWith<$Res> {
   _$CardReleasedCopyWithImpl(
@@ -167,6 +179,7 @@ class _$CardReleasedCopyWithImpl<$Res> extends _$HomePageEventCopyWithImpl<$Res>
   CardReleased get _value => super._value as CardReleased;
 }
 
+/// @nodoc
 class _$CardReleased implements CardReleased {
   const _$CardReleased();
 
@@ -185,9 +198,9 @@ class _$CardReleased implements CardReleased {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result cardPressed(),
-    @required Result cardReleased(),
+  TResult when<TResult extends Object>({
+    @required TResult cardPressed(),
+    @required TResult cardReleased(),
   }) {
     assert(cardPressed != null);
     assert(cardReleased != null);
@@ -196,10 +209,10 @@ class _$CardReleased implements CardReleased {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result cardPressed(),
-    Result cardReleased(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult cardPressed(),
+    TResult cardReleased(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (cardReleased != null) {
@@ -210,9 +223,9 @@ class _$CardReleased implements CardReleased {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result cardPressed(CardPressed value),
-    @required Result cardReleased(CardReleased value),
+  TResult map<TResult extends Object>({
+    @required TResult cardPressed(CardPressed value),
+    @required TResult cardReleased(CardReleased value),
   }) {
     assert(cardPressed != null);
     assert(cardReleased != null);
@@ -221,10 +234,10 @@ class _$CardReleased implements CardReleased {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result cardPressed(CardPressed value),
-    Result cardReleased(CardReleased value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult cardPressed(CardPressed value),
+    TResult cardReleased(CardReleased value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (cardReleased != null) {
@@ -238,60 +251,68 @@ abstract class CardReleased implements HomePageEvent {
   const factory CardReleased() = _$CardReleased;
 }
 
+/// @nodoc
 class _$HomePageStateTearOff {
   const _$HomePageStateTearOff();
 
+// ignore: unused_element
   HomePageInitial initial() {
     return const HomePageInitial();
   }
 
+// ignore: unused_element
   HomePageCardPressed cardPressed() {
     return const HomePageCardPressed();
   }
 
+// ignore: unused_element
   HomePageCardReleased cardReleased() {
     return const HomePageCardReleased();
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $HomePageState = _$HomePageStateTearOff();
 
+/// @nodoc
 mixin _$HomePageState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result cardPressed(),
-    @required Result cardReleased(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult cardPressed(),
+    @required TResult cardReleased(),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result cardPressed(),
-    Result cardReleased(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult cardPressed(),
+    TResult cardReleased(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(HomePageInitial value),
-    @required Result cardPressed(HomePageCardPressed value),
-    @required Result cardReleased(HomePageCardReleased value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(HomePageInitial value),
+    @required TResult cardPressed(HomePageCardPressed value),
+    @required TResult cardReleased(HomePageCardReleased value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(HomePageInitial value),
-    Result cardPressed(HomePageCardPressed value),
-    Result cardReleased(HomePageCardReleased value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(HomePageInitial value),
+    TResult cardPressed(HomePageCardPressed value),
+    TResult cardReleased(HomePageCardReleased value),
+    @required TResult orElse(),
   });
 }
 
+/// @nodoc
 abstract class $HomePageStateCopyWith<$Res> {
   factory $HomePageStateCopyWith(
           HomePageState value, $Res Function(HomePageState) then) =
       _$HomePageStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$HomePageStateCopyWithImpl<$Res>
     implements $HomePageStateCopyWith<$Res> {
   _$HomePageStateCopyWithImpl(this._value, this._then);
@@ -301,12 +322,14 @@ class _$HomePageStateCopyWithImpl<$Res>
   final $Res Function(HomePageState) _then;
 }
 
+/// @nodoc
 abstract class $HomePageInitialCopyWith<$Res> {
   factory $HomePageInitialCopyWith(
           HomePageInitial value, $Res Function(HomePageInitial) then) =
       _$HomePageInitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$HomePageInitialCopyWithImpl<$Res>
     extends _$HomePageStateCopyWithImpl<$Res>
     implements $HomePageInitialCopyWith<$Res> {
@@ -318,6 +341,7 @@ class _$HomePageInitialCopyWithImpl<$Res>
   HomePageInitial get _value => super._value as HomePageInitial;
 }
 
+/// @nodoc
 class _$HomePageInitial implements HomePageInitial {
   const _$HomePageInitial();
 
@@ -336,10 +360,10 @@ class _$HomePageInitial implements HomePageInitial {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result cardPressed(),
-    @required Result cardReleased(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult cardPressed(),
+    @required TResult cardReleased(),
   }) {
     assert(initial != null);
     assert(cardPressed != null);
@@ -349,11 +373,11 @@ class _$HomePageInitial implements HomePageInitial {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result cardPressed(),
-    Result cardReleased(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult cardPressed(),
+    TResult cardReleased(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
@@ -364,10 +388,10 @@ class _$HomePageInitial implements HomePageInitial {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(HomePageInitial value),
-    @required Result cardPressed(HomePageCardPressed value),
-    @required Result cardReleased(HomePageCardReleased value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(HomePageInitial value),
+    @required TResult cardPressed(HomePageCardPressed value),
+    @required TResult cardReleased(HomePageCardReleased value),
   }) {
     assert(initial != null);
     assert(cardPressed != null);
@@ -377,11 +401,11 @@ class _$HomePageInitial implements HomePageInitial {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(HomePageInitial value),
-    Result cardPressed(HomePageCardPressed value),
-    Result cardReleased(HomePageCardReleased value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(HomePageInitial value),
+    TResult cardPressed(HomePageCardPressed value),
+    TResult cardReleased(HomePageCardReleased value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
@@ -395,12 +419,14 @@ abstract class HomePageInitial implements HomePageState {
   const factory HomePageInitial() = _$HomePageInitial;
 }
 
+/// @nodoc
 abstract class $HomePageCardPressedCopyWith<$Res> {
   factory $HomePageCardPressedCopyWith(
           HomePageCardPressed value, $Res Function(HomePageCardPressed) then) =
       _$HomePageCardPressedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$HomePageCardPressedCopyWithImpl<$Res>
     extends _$HomePageStateCopyWithImpl<$Res>
     implements $HomePageCardPressedCopyWith<$Res> {
@@ -412,6 +438,7 @@ class _$HomePageCardPressedCopyWithImpl<$Res>
   HomePageCardPressed get _value => super._value as HomePageCardPressed;
 }
 
+/// @nodoc
 class _$HomePageCardPressed implements HomePageCardPressed {
   const _$HomePageCardPressed();
 
@@ -430,10 +457,10 @@ class _$HomePageCardPressed implements HomePageCardPressed {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result cardPressed(),
-    @required Result cardReleased(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult cardPressed(),
+    @required TResult cardReleased(),
   }) {
     assert(initial != null);
     assert(cardPressed != null);
@@ -443,11 +470,11 @@ class _$HomePageCardPressed implements HomePageCardPressed {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result cardPressed(),
-    Result cardReleased(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult cardPressed(),
+    TResult cardReleased(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (cardPressed != null) {
@@ -458,10 +485,10 @@ class _$HomePageCardPressed implements HomePageCardPressed {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(HomePageInitial value),
-    @required Result cardPressed(HomePageCardPressed value),
-    @required Result cardReleased(HomePageCardReleased value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(HomePageInitial value),
+    @required TResult cardPressed(HomePageCardPressed value),
+    @required TResult cardReleased(HomePageCardReleased value),
   }) {
     assert(initial != null);
     assert(cardPressed != null);
@@ -471,11 +498,11 @@ class _$HomePageCardPressed implements HomePageCardPressed {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(HomePageInitial value),
-    Result cardPressed(HomePageCardPressed value),
-    Result cardReleased(HomePageCardReleased value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(HomePageInitial value),
+    TResult cardPressed(HomePageCardPressed value),
+    TResult cardReleased(HomePageCardReleased value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (cardPressed != null) {
@@ -489,12 +516,14 @@ abstract class HomePageCardPressed implements HomePageState {
   const factory HomePageCardPressed() = _$HomePageCardPressed;
 }
 
+/// @nodoc
 abstract class $HomePageCardReleasedCopyWith<$Res> {
   factory $HomePageCardReleasedCopyWith(HomePageCardReleased value,
           $Res Function(HomePageCardReleased) then) =
       _$HomePageCardReleasedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$HomePageCardReleasedCopyWithImpl<$Res>
     extends _$HomePageStateCopyWithImpl<$Res>
     implements $HomePageCardReleasedCopyWith<$Res> {
@@ -506,6 +535,7 @@ class _$HomePageCardReleasedCopyWithImpl<$Res>
   HomePageCardReleased get _value => super._value as HomePageCardReleased;
 }
 
+/// @nodoc
 class _$HomePageCardReleased implements HomePageCardReleased {
   const _$HomePageCardReleased();
 
@@ -524,10 +554,10 @@ class _$HomePageCardReleased implements HomePageCardReleased {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result cardPressed(),
-    @required Result cardReleased(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult cardPressed(),
+    @required TResult cardReleased(),
   }) {
     assert(initial != null);
     assert(cardPressed != null);
@@ -537,11 +567,11 @@ class _$HomePageCardReleased implements HomePageCardReleased {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result cardPressed(),
-    Result cardReleased(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult cardPressed(),
+    TResult cardReleased(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (cardReleased != null) {
@@ -552,10 +582,10 @@ class _$HomePageCardReleased implements HomePageCardReleased {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(HomePageInitial value),
-    @required Result cardPressed(HomePageCardPressed value),
-    @required Result cardReleased(HomePageCardReleased value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(HomePageInitial value),
+    @required TResult cardPressed(HomePageCardPressed value),
+    @required TResult cardReleased(HomePageCardReleased value),
   }) {
     assert(initial != null);
     assert(cardPressed != null);
@@ -565,11 +595,11 @@ class _$HomePageCardReleased implements HomePageCardReleased {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(HomePageInitial value),
-    Result cardPressed(HomePageCardPressed value),
-    Result cardReleased(HomePageCardReleased value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(HomePageInitial value),
+    TResult cardPressed(HomePageCardPressed value),
+    TResult cardReleased(HomePageCardReleased value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (cardReleased != null) {

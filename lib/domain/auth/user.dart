@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:shattered_star/domain/auth/value_objects.dart';
 import 'package:shattered_star/domain/core/value_objects.dart';
 
 part 'user.freezed.dart';
@@ -7,6 +8,8 @@ part 'user.freezed.dart';
 abstract class User with _$User{
   const factory User({
    @required UniqueId id,
+  //  Username username,
+   EmailAddress emailAddress,
 
   }) = _User;
 }

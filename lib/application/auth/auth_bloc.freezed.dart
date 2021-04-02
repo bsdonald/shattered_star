@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'auth_bloc.dart';
 
@@ -9,51 +9,58 @@ part of 'auth_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$AuthEventTearOff {
   const _$AuthEventTearOff();
 
+// ignore: unused_element
   AuthCheckRequested authCheckRequested() {
     return const AuthCheckRequested();
   }
 
+// ignore: unused_element
   SignedOut signedOut() {
     return const SignedOut();
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AuthEvent = _$AuthEventTearOff();
 
+/// @nodoc
 mixin _$AuthEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result authCheckRequested(),
-    @required Result signedOut(),
+  TResult when<TResult extends Object>({
+    @required TResult authCheckRequested(),
+    @required TResult signedOut(),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result authCheckRequested(),
-    Result signedOut(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult authCheckRequested(),
+    TResult signedOut(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result authCheckRequested(AuthCheckRequested value),
-    @required Result signedOut(SignedOut value),
+  TResult map<TResult extends Object>({
+    @required TResult authCheckRequested(AuthCheckRequested value),
+    @required TResult signedOut(SignedOut value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result authCheckRequested(AuthCheckRequested value),
-    Result signedOut(SignedOut value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult authCheckRequested(AuthCheckRequested value),
+    TResult signedOut(SignedOut value),
+    @required TResult orElse(),
   });
 }
 
+/// @nodoc
 abstract class $AuthEventCopyWith<$Res> {
   factory $AuthEventCopyWith(AuthEvent value, $Res Function(AuthEvent) then) =
       _$AuthEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$AuthEventCopyWithImpl<$Res> implements $AuthEventCopyWith<$Res> {
   _$AuthEventCopyWithImpl(this._value, this._then);
 
@@ -62,12 +69,14 @@ class _$AuthEventCopyWithImpl<$Res> implements $AuthEventCopyWith<$Res> {
   final $Res Function(AuthEvent) _then;
 }
 
+/// @nodoc
 abstract class $AuthCheckRequestedCopyWith<$Res> {
   factory $AuthCheckRequestedCopyWith(
           AuthCheckRequested value, $Res Function(AuthCheckRequested) then) =
       _$AuthCheckRequestedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$AuthCheckRequestedCopyWithImpl<$Res>
     extends _$AuthEventCopyWithImpl<$Res>
     implements $AuthCheckRequestedCopyWith<$Res> {
@@ -79,6 +88,7 @@ class _$AuthCheckRequestedCopyWithImpl<$Res>
   AuthCheckRequested get _value => super._value as AuthCheckRequested;
 }
 
+/// @nodoc
 class _$AuthCheckRequested implements AuthCheckRequested {
   const _$AuthCheckRequested();
 
@@ -97,9 +107,9 @@ class _$AuthCheckRequested implements AuthCheckRequested {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result authCheckRequested(),
-    @required Result signedOut(),
+  TResult when<TResult extends Object>({
+    @required TResult authCheckRequested(),
+    @required TResult signedOut(),
   }) {
     assert(authCheckRequested != null);
     assert(signedOut != null);
@@ -108,10 +118,10 @@ class _$AuthCheckRequested implements AuthCheckRequested {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result authCheckRequested(),
-    Result signedOut(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult authCheckRequested(),
+    TResult signedOut(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (authCheckRequested != null) {
@@ -122,9 +132,9 @@ class _$AuthCheckRequested implements AuthCheckRequested {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result authCheckRequested(AuthCheckRequested value),
-    @required Result signedOut(SignedOut value),
+  TResult map<TResult extends Object>({
+    @required TResult authCheckRequested(AuthCheckRequested value),
+    @required TResult signedOut(SignedOut value),
   }) {
     assert(authCheckRequested != null);
     assert(signedOut != null);
@@ -133,10 +143,10 @@ class _$AuthCheckRequested implements AuthCheckRequested {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result authCheckRequested(AuthCheckRequested value),
-    Result signedOut(SignedOut value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult authCheckRequested(AuthCheckRequested value),
+    TResult signedOut(SignedOut value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (authCheckRequested != null) {
@@ -150,11 +160,13 @@ abstract class AuthCheckRequested implements AuthEvent {
   const factory AuthCheckRequested() = _$AuthCheckRequested;
 }
 
+/// @nodoc
 abstract class $SignedOutCopyWith<$Res> {
   factory $SignedOutCopyWith(SignedOut value, $Res Function(SignedOut) then) =
       _$SignedOutCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$SignedOutCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
     implements $SignedOutCopyWith<$Res> {
   _$SignedOutCopyWithImpl(SignedOut _value, $Res Function(SignedOut) _then)
@@ -164,6 +176,7 @@ class _$SignedOutCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
   SignedOut get _value => super._value as SignedOut;
 }
 
+/// @nodoc
 class _$SignedOut implements SignedOut {
   const _$SignedOut();
 
@@ -182,9 +195,9 @@ class _$SignedOut implements SignedOut {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result authCheckRequested(),
-    @required Result signedOut(),
+  TResult when<TResult extends Object>({
+    @required TResult authCheckRequested(),
+    @required TResult signedOut(),
   }) {
     assert(authCheckRequested != null);
     assert(signedOut != null);
@@ -193,10 +206,10 @@ class _$SignedOut implements SignedOut {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result authCheckRequested(),
-    Result signedOut(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult authCheckRequested(),
+    TResult signedOut(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (signedOut != null) {
@@ -207,9 +220,9 @@ class _$SignedOut implements SignedOut {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result authCheckRequested(AuthCheckRequested value),
-    @required Result signedOut(SignedOut value),
+  TResult map<TResult extends Object>({
+    @required TResult authCheckRequested(AuthCheckRequested value),
+    @required TResult signedOut(SignedOut value),
   }) {
     assert(authCheckRequested != null);
     assert(signedOut != null);
@@ -218,10 +231,10 @@ class _$SignedOut implements SignedOut {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result authCheckRequested(AuthCheckRequested value),
-    Result signedOut(SignedOut value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult authCheckRequested(AuthCheckRequested value),
+    TResult signedOut(SignedOut value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (signedOut != null) {
@@ -235,59 +248,67 @@ abstract class SignedOut implements AuthEvent {
   const factory SignedOut() = _$SignedOut;
 }
 
+/// @nodoc
 class _$AuthStateTearOff {
   const _$AuthStateTearOff();
 
+// ignore: unused_element
   Initial initial() {
     return const Initial();
   }
 
+// ignore: unused_element
   Authenticated authenticated() {
     return const Authenticated();
   }
 
+// ignore: unused_element
   Unauthenticated unauthenticated() {
     return const Unauthenticated();
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AuthState = _$AuthStateTearOff();
 
+/// @nodoc
 mixin _$AuthState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result authenticated(),
-    @required Result unauthenticated(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult authenticated(),
+    @required TResult unauthenticated(),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result authenticated(),
-    Result unauthenticated(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult authenticated(),
+    TResult unauthenticated(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(Initial value),
-    @required Result authenticated(Authenticated value),
-    @required Result unauthenticated(Unauthenticated value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(Initial value),
+    @required TResult authenticated(Authenticated value),
+    @required TResult unauthenticated(Unauthenticated value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(Initial value),
-    Result authenticated(Authenticated value),
-    Result unauthenticated(Unauthenticated value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(Initial value),
+    TResult authenticated(Authenticated value),
+    TResult unauthenticated(Unauthenticated value),
+    @required TResult orElse(),
   });
 }
 
+/// @nodoc
 abstract class $AuthStateCopyWith<$Res> {
   factory $AuthStateCopyWith(AuthState value, $Res Function(AuthState) then) =
       _$AuthStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$AuthStateCopyWithImpl<$Res> implements $AuthStateCopyWith<$Res> {
   _$AuthStateCopyWithImpl(this._value, this._then);
 
@@ -296,11 +317,13 @@ class _$AuthStateCopyWithImpl<$Res> implements $AuthStateCopyWith<$Res> {
   final $Res Function(AuthState) _then;
 }
 
+/// @nodoc
 abstract class $InitialCopyWith<$Res> {
   factory $InitialCopyWith(Initial value, $Res Function(Initial) then) =
       _$InitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$InitialCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
     implements $InitialCopyWith<$Res> {
   _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
@@ -310,6 +333,7 @@ class _$InitialCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
   Initial get _value => super._value as Initial;
 }
 
+/// @nodoc
 class _$Initial implements Initial {
   const _$Initial();
 
@@ -328,10 +352,10 @@ class _$Initial implements Initial {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result authenticated(),
-    @required Result unauthenticated(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult authenticated(),
+    @required TResult unauthenticated(),
   }) {
     assert(initial != null);
     assert(authenticated != null);
@@ -341,11 +365,11 @@ class _$Initial implements Initial {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result authenticated(),
-    Result unauthenticated(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult authenticated(),
+    TResult unauthenticated(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
@@ -356,10 +380,10 @@ class _$Initial implements Initial {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(Initial value),
-    @required Result authenticated(Authenticated value),
-    @required Result unauthenticated(Unauthenticated value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(Initial value),
+    @required TResult authenticated(Authenticated value),
+    @required TResult unauthenticated(Unauthenticated value),
   }) {
     assert(initial != null);
     assert(authenticated != null);
@@ -369,11 +393,11 @@ class _$Initial implements Initial {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(Initial value),
-    Result authenticated(Authenticated value),
-    Result unauthenticated(Unauthenticated value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(Initial value),
+    TResult authenticated(Authenticated value),
+    TResult unauthenticated(Unauthenticated value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
@@ -387,12 +411,14 @@ abstract class Initial implements AuthState {
   const factory Initial() = _$Initial;
 }
 
+/// @nodoc
 abstract class $AuthenticatedCopyWith<$Res> {
   factory $AuthenticatedCopyWith(
           Authenticated value, $Res Function(Authenticated) then) =
       _$AuthenticatedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$AuthenticatedCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
     implements $AuthenticatedCopyWith<$Res> {
   _$AuthenticatedCopyWithImpl(
@@ -403,6 +429,7 @@ class _$AuthenticatedCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
   Authenticated get _value => super._value as Authenticated;
 }
 
+/// @nodoc
 class _$Authenticated implements Authenticated {
   const _$Authenticated();
 
@@ -421,10 +448,10 @@ class _$Authenticated implements Authenticated {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result authenticated(),
-    @required Result unauthenticated(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult authenticated(),
+    @required TResult unauthenticated(),
   }) {
     assert(initial != null);
     assert(authenticated != null);
@@ -434,11 +461,11 @@ class _$Authenticated implements Authenticated {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result authenticated(),
-    Result unauthenticated(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult authenticated(),
+    TResult unauthenticated(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (authenticated != null) {
@@ -449,10 +476,10 @@ class _$Authenticated implements Authenticated {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(Initial value),
-    @required Result authenticated(Authenticated value),
-    @required Result unauthenticated(Unauthenticated value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(Initial value),
+    @required TResult authenticated(Authenticated value),
+    @required TResult unauthenticated(Unauthenticated value),
   }) {
     assert(initial != null);
     assert(authenticated != null);
@@ -462,11 +489,11 @@ class _$Authenticated implements Authenticated {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(Initial value),
-    Result authenticated(Authenticated value),
-    Result unauthenticated(Unauthenticated value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(Initial value),
+    TResult authenticated(Authenticated value),
+    TResult unauthenticated(Unauthenticated value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (authenticated != null) {
@@ -480,12 +507,14 @@ abstract class Authenticated implements AuthState {
   const factory Authenticated() = _$Authenticated;
 }
 
+/// @nodoc
 abstract class $UnauthenticatedCopyWith<$Res> {
   factory $UnauthenticatedCopyWith(
           Unauthenticated value, $Res Function(Unauthenticated) then) =
       _$UnauthenticatedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$UnauthenticatedCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
     implements $UnauthenticatedCopyWith<$Res> {
   _$UnauthenticatedCopyWithImpl(
@@ -496,6 +525,7 @@ class _$UnauthenticatedCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
   Unauthenticated get _value => super._value as Unauthenticated;
 }
 
+/// @nodoc
 class _$Unauthenticated implements Unauthenticated {
   const _$Unauthenticated();
 
@@ -514,10 +544,10 @@ class _$Unauthenticated implements Unauthenticated {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result authenticated(),
-    @required Result unauthenticated(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult authenticated(),
+    @required TResult unauthenticated(),
   }) {
     assert(initial != null);
     assert(authenticated != null);
@@ -527,11 +557,11 @@ class _$Unauthenticated implements Unauthenticated {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result authenticated(),
-    Result unauthenticated(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult authenticated(),
+    TResult unauthenticated(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (unauthenticated != null) {
@@ -542,10 +572,10 @@ class _$Unauthenticated implements Unauthenticated {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(Initial value),
-    @required Result authenticated(Authenticated value),
-    @required Result unauthenticated(Unauthenticated value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(Initial value),
+    @required TResult authenticated(Authenticated value),
+    @required TResult unauthenticated(Unauthenticated value),
   }) {
     assert(initial != null);
     assert(authenticated != null);
@@ -555,11 +585,11 @@ class _$Unauthenticated implements Unauthenticated {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(Initial value),
-    Result authenticated(Authenticated value),
-    Result unauthenticated(Unauthenticated value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(Initial value),
+    TResult authenticated(Authenticated value),
+    TResult unauthenticated(Unauthenticated value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (unauthenticated != null) {

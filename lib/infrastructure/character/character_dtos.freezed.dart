@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'character_dtos.dart';
 
@@ -12,9 +12,11 @@ CharacterDto _$CharacterDtoFromJson(Map<String, dynamic> json) {
   return _Character.fromJson(json);
 }
 
+/// @nodoc
 class _$CharacterDtoTearOff {
   const _$CharacterDtoTearOff();
 
+// ignore: unused_element
   _Character call(
       {@JsonKey(ignore: true) String id,
       @required String name,
@@ -83,11 +85,18 @@ class _$CharacterDtoTearOff {
       secondaryTextColor: secondaryTextColor,
     );
   }
+
+// ignore: unused_element
+  CharacterDto fromJson(Map<String, Object> json) {
+    return CharacterDto.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $CharacterDto = _$CharacterDtoTearOff();
 
+/// @nodoc
 mixin _$CharacterDto {
   @JsonKey(ignore: true)
   String get id;
@@ -124,9 +133,11 @@ mixin _$CharacterDto {
   int get secondaryTextColor;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CharacterDtoCopyWith<CharacterDto> get copyWith;
 }
 
+/// @nodoc
 abstract class $CharacterDtoCopyWith<$Res> {
   factory $CharacterDtoCopyWith(
           CharacterDto value, $Res Function(CharacterDto) then) =
@@ -166,6 +177,7 @@ abstract class $CharacterDtoCopyWith<$Res> {
       int secondaryTextColor});
 }
 
+/// @nodoc
 class _$CharacterDtoCopyWithImpl<$Res> implements $CharacterDtoCopyWith<$Res> {
   _$CharacterDtoCopyWithImpl(this._value, this._then);
 
@@ -267,6 +279,7 @@ class _$CharacterDtoCopyWithImpl<$Res> implements $CharacterDtoCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$CharacterCopyWith<$Res>
     implements $CharacterDtoCopyWith<$Res> {
   factory _$CharacterCopyWith(
@@ -308,6 +321,7 @@ abstract class _$CharacterCopyWith<$Res>
       int secondaryTextColor});
 }
 
+/// @nodoc
 class __$CharacterCopyWithImpl<$Res> extends _$CharacterDtoCopyWithImpl<$Res>
     implements _$CharacterCopyWith<$Res> {
   __$CharacterCopyWithImpl(_Character _value, $Res Function(_Character) _then)
@@ -411,6 +425,8 @@ class __$CharacterCopyWithImpl<$Res> extends _$CharacterDtoCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_Character extends _Character {
   const _$_Character(
       {@JsonKey(ignore: true) this.id,
@@ -668,6 +684,7 @@ class _$_Character extends _Character {
       const DeepCollectionEquality().hash(primaryTextColor) ^
       const DeepCollectionEquality().hash(secondaryTextColor);
 
+  @JsonKey(ignore: true)
   @override
   _$CharacterCopyWith<_Character> get copyWith =>
       __$CharacterCopyWithImpl<_Character>(this, _$identity);
@@ -783,5 +800,6 @@ abstract class _Character extends CharacterDto {
   @override
   int get secondaryTextColor;
   @override
+  @JsonKey(ignore: true)
   _$CharacterCopyWith<_Character> get copyWith;
 }

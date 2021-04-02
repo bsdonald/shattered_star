@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shattered_star/application/auth/auth_bloc.dart';
 import 'package:shattered_star/application/home/bloc/home_page_bloc.dart';
 import 'package:shattered_star/domain/character/character.dart';
-import 'package:shattered_star/presentation/pages//character/character_home_page/widgets/home_body.dart';
+import 'package:shattered_star/presentation/pages/character/character_home_page/widgets/home_body.dart';
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 class HomePage extends StatelessWidget {

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'todo_item.dart';
 
@@ -9,9 +9,11 @@ part of 'todo_item.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$TodoItemTearOff {
   const _$TodoItemTearOff();
 
+// ignore: unused_element
   _TodoItem call(
       {@required UniqueId id, @required TodoName name, @required bool done}) {
     return _TodoItem(
@@ -22,23 +24,28 @@ class _$TodoItemTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TodoItem = _$TodoItemTearOff();
 
+/// @nodoc
 mixin _$TodoItem {
   UniqueId get id;
   TodoName get name;
   bool get done;
 
+  @JsonKey(ignore: true)
   $TodoItemCopyWith<TodoItem> get copyWith;
 }
 
+/// @nodoc
 abstract class $TodoItemCopyWith<$Res> {
   factory $TodoItemCopyWith(TodoItem value, $Res Function(TodoItem) then) =
       _$TodoItemCopyWithImpl<$Res>;
   $Res call({UniqueId id, TodoName name, bool done});
 }
 
+/// @nodoc
 class _$TodoItemCopyWithImpl<$Res> implements $TodoItemCopyWith<$Res> {
   _$TodoItemCopyWithImpl(this._value, this._then);
 
@@ -60,6 +67,7 @@ class _$TodoItemCopyWithImpl<$Res> implements $TodoItemCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$TodoItemCopyWith<$Res> implements $TodoItemCopyWith<$Res> {
   factory _$TodoItemCopyWith(_TodoItem value, $Res Function(_TodoItem) then) =
       __$TodoItemCopyWithImpl<$Res>;
@@ -67,6 +75,7 @@ abstract class _$TodoItemCopyWith<$Res> implements $TodoItemCopyWith<$Res> {
   $Res call({UniqueId id, TodoName name, bool done});
 }
 
+/// @nodoc
 class __$TodoItemCopyWithImpl<$Res> extends _$TodoItemCopyWithImpl<$Res>
     implements _$TodoItemCopyWith<$Res> {
   __$TodoItemCopyWithImpl(_TodoItem _value, $Res Function(_TodoItem) _then)
@@ -89,6 +98,7 @@ class __$TodoItemCopyWithImpl<$Res> extends _$TodoItemCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_TodoItem extends _TodoItem {
   const _$_TodoItem(
       {@required this.id, @required this.name, @required this.done})
@@ -128,6 +138,7 @@ class _$_TodoItem extends _TodoItem {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(done);
 
+  @JsonKey(ignore: true)
   @override
   _$TodoItemCopyWith<_TodoItem> get copyWith =>
       __$TodoItemCopyWithImpl<_TodoItem>(this, _$identity);
@@ -147,5 +158,6 @@ abstract class _TodoItem extends TodoItem {
   @override
   bool get done;
   @override
+  @JsonKey(ignore: true)
   _$TodoItemCopyWith<_TodoItem> get copyWith;
 }
