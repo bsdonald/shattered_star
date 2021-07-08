@@ -26,7 +26,7 @@ class Router extends _i1.RootStackRouter {
     SplashPageRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
         routeData: routeData,
         builder: (_) {
-          return _i3.SplashPage();
+          return const _i3.SplashPage();
         }),
     SignInPageRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
         routeData: routeData,
@@ -47,7 +47,7 @@ class Router extends _i1.RootStackRouter {
     CharacterListPageRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
         routeData: routeData,
         builder: (_) {
-          return _i7.CharacterListPage();
+          return const _i7.CharacterListPage();
         }),
     CharacterFormPageRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
         routeData: routeData,
@@ -61,8 +61,7 @@ class Router extends _i1.RootStackRouter {
     CharacterColorPageRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
         routeData: routeData,
         builder: (data) {
-          final args = data.argsAs<CharacterColorPageRouteArgs>(
-              orElse: () => const CharacterColorPageRouteArgs());
+          final args = data.argsAs<CharacterColorPageRouteArgs>();
           return _i9.CharacterColorPage(
               key: args.key, character: args.character);
         })
@@ -145,7 +144,7 @@ class CharacterFormPageRouteArgs {
 
 class CharacterColorPageRoute
     extends _i1.PageRouteInfo<CharacterColorPageRouteArgs> {
-  CharacterColorPageRoute({_i2.Key? key, _i10.Character character})
+  CharacterColorPageRoute({_i2.Key? key, required _i10.Character character})
       : super(name,
             path: '/character-color-page',
             args: CharacterColorPageRouteArgs(key: key, character: character));
@@ -154,7 +153,7 @@ class CharacterColorPageRoute
 }
 
 class CharacterColorPageRouteArgs {
-  const CharacterColorPageRouteArgs({this.key, this.character});
+  const CharacterColorPageRouteArgs({this.key, required this.character});
 
   final _i2.Key? key;
 
