@@ -7,7 +7,7 @@ class SlideActionButton extends StatelessWidget {
   final String caption;
   final IconData icon;
   final void Function() onTap;
-  BorderRadiusGeometry borderRadius;
+  BorderRadiusGeometry? borderRadius;
 
   SlideActionButton({
     Key? key,
@@ -18,24 +18,28 @@ class SlideActionButton extends StatelessWidget {
   }) : super(key: key);
 
   SlideActionButton.left({
+    Key? key,
     required this.color,
     required this.caption,
     required this.icon,
     required this.onTap,
-  }) : borderRadius = BorderRadius.only(
+  })   : borderRadius = BorderRadius.only(
           topLeft: Radius.circular(8),
           bottomLeft: Radius.circular(8),
-        );
+        ),
+        super(key: key);
 
   SlideActionButton.right({
+    Key? key,
     required this.color,
     required this.caption,
     required this.icon,
     required this.onTap,
-  }) : borderRadius = BorderRadius.only(
+  })   : borderRadius = BorderRadius.only(
           topRight: Radius.circular(8),
           bottomRight: Radius.circular(8),
-        );
+        ),
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {

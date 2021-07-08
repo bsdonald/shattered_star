@@ -28,7 +28,7 @@ class CriticalFailureDisplay extends StatelessWidget {
             style: const TextStyle(fontSize: 24),
             textAlign: TextAlign.center,
           ),
-          FlatButton(
+          TextButton(
             onPressed: () {
               print('Sending email!');
             },

@@ -1,4 +1,3 @@
-import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,6 +9,8 @@ import 'package:shattered_star/presentation/pages/character/character_list_page/
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 class CharacterListPage extends StatelessWidget {
+  const CharacterListPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -24,7 +25,7 @@ class CharacterListPage extends StatelessWidget {
           BlocListener<AuthBloc, AuthState>(
             listener: (context, state) {
               state.maybeMap(
-                unauthenticated: (_) => ExtendedNavigator.of(context).replace(Routes.signInPage),
+                unauthenticated: (_) => AutoRouter.of(context).replace(const SignInPageRoute()),
                 orElse: () {},
               );
             },
@@ -32,14 +33,21 @@ class CharacterListPage extends StatelessWidget {
           BlocListener<CharacterActorBloc, CharacterActorState>(listener: (context, state) {
             state.maybeMap(
               deleteFailure: (state) {
-                FlushbarHelper.createError(
-                  duration: const Duration(seconds: 5),
-                  message: state.characterFailure.map(
-                    unexpected: (_) => 'Unexpected error occured while deleting, please contact support',
-                    insufficientPermission: (_) => 'Insufficient permissions. Please check you are signed in',
-                    unableToUpdate: (_) => 'If you are seeing this message, something went completely wrong.',
+                final snackBar = SnackBar(
+                  behavior: SnackBarBehavior.floating,
+                  content: Text(
+                    state.characterFailure.map(
+                      unexpected: (_) => 'Unexpected error occured while deleting, please contact support',
+                      insufficientPermission: (_) => 'Insufficient permissions. Please check you are signed in',
+                      unableToUpdate: (_) => 'If you are seeing this message, something went completely wrong.',
+                    ),
+                  ),
+                  action: SnackBarAction(
+                    label: 'Action',
+                    onPressed: () {},
                   ),
                 );
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
               },
               orElse: () {},
             );
@@ -58,7 +66,7 @@ class CharacterListPage extends StatelessWidget {
               IconButton(
                 icon: Icon(Icons.person_add_rounded),
                 onPressed: () {
-                  ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: null);
+                  AutoRouter.of(context).push(CharacterFormPageRoute());
                 },
               ),
             ],
