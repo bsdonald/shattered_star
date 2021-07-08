@@ -177,31 +177,29 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
 
       file = await _characterBucket.getImage();
 
-      if (file != null) {
-        await _characterBucket.upload(state.character.id.getOrCrash(), file);
+      await _characterBucket.upload(state.character.id.getOrCrash(), file);
 
-        // yield state.copyWith(
-        //   saveFailureOrSuccessOption: none(),
-        // );
-        downloadUrl = await _characterBucket.getDownloadUrl(state.character.id.getOrCrash());
+      // yield state.copyWith(
+      //   saveFailureOrSuccessOption: none(),
+      // );
+      downloadUrl = await _characterBucket.getDownloadUrl(state.character.id.getOrCrash());
 
-        paletteGenerator = await PaletteGenerator.fromImageProvider(
-          Image.network(downloadUrl).image,
-          maximumColorCount: 20,
-        );
+      paletteGenerator = await PaletteGenerator.fromImageProvider(
+        Image.network(downloadUrl).image,
+        maximumColorCount: 20,
+      );
 
-        yield state.copyWith(
-          imageLoading: false,
-          character: state.character.copyWith(
-            imagePath: ImagePath(downloadUrl),
-            primaryGradientColor: PrimaryGradientColor(paletteGenerator.lightMutedColor?.color),
-            secondaryGradientColor: SecondaryGradientColor(paletteGenerator.dominantColor?.color),
-            tertiaryGradientColor: TertiaryGradientColor(paletteGenerator.darkMutedColor?.color),
-            secondaryTextColor: SecondaryTextColor(paletteGenerator.lightMutedColor?.color),
-          ),
-          saveFailureOrSuccessOption: none(),
-        );
-      }
+      yield state.copyWith(
+        imageLoading: false,
+        character: state.character.copyWith(
+          imagePath: ImagePath(downloadUrl),
+          primaryGradientColor: PrimaryGradientColor(paletteGenerator.lightMutedColor!.color),
+          secondaryGradientColor: SecondaryGradientColor(paletteGenerator.dominantColor!.color),
+          tertiaryGradientColor: TertiaryGradientColor(paletteGenerator.darkMutedColor!.color),
+          secondaryTextColor: SecondaryTextColor(paletteGenerator.lightMutedColor!.color),
+        ),
+        saveFailureOrSuccessOption: none(),
+      );
     }, fileButtonPressed: (e) async* {
       String downloadUrl;
       PaletteGenerator paletteGenerator;
@@ -231,16 +229,16 @@ class CharacterFormBloc extends Bloc<CharacterFormEvent, CharacterFormState> {
           imageLoading: false,
           character: state.character.copyWith(
             imagePath: ImagePath(downloadUrl),
-            primaryGradientColor: PrimaryGradientColor(paletteGenerator.lightMutedColor?.color),
-            secondaryGradientColor: SecondaryGradientColor(paletteGenerator.dominantColor?.color),
-            tertiaryGradientColor: TertiaryGradientColor(paletteGenerator.darkMutedColor?.color),
-            secondaryTextColor: SecondaryTextColor(paletteGenerator.lightMutedColor?.color),
+            primaryGradientColor: PrimaryGradientColor(paletteGenerator.lightMutedColor!.color),
+            secondaryGradientColor: SecondaryGradientColor(paletteGenerator.dominantColor!.color),
+            tertiaryGradientColor: TertiaryGradientColor(paletteGenerator.darkMutedColor!.color),
+            secondaryTextColor: SecondaryTextColor(paletteGenerator.lightMutedColor!.color),
           ),
           saveFailureOrSuccessOption: none(),
         );
       }
     }, saved: (e) async* {
-      Either<CharacterFailure, Unit> failureOrSuccess;
+      Either<CharacterFailure, Unit>? failureOrSuccess;
 
       yield state.copyWith(
         isSaving: true,

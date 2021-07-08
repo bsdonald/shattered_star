@@ -11,9 +11,9 @@ class CharacterFormField extends StatelessWidget {
 
   const CharacterFormField({
     Key key,
-    @required this.onChanged,
-    @required this.validator,
-    @required this.label,
+    required this.onChanged,
+    required this.validator,
+    required this.label,
     this.maxLength,
     this.maxLines = 1,
     this.controller,

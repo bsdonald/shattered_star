@@ -108,7 +108,7 @@ class SavingInProgressOverlay extends StatelessWidget {
   final bool isSaving;
   const SavingInProgressOverlay({
     Key key,
-    @required this.isSaving,
+    required this.isSaving,
   }) : super(key: key);
 
   @override

@@ -12,8 +12,8 @@ class PlayerCharacterCard extends StatelessWidget {
 
   const PlayerCharacterCard({
     Key key,
-    @required this.isEditing,
-    @required this.character,
+    required this.isEditing,
+    required this.character,
   }) : super(key: key);
 
   void show(BuildContext context) {

@@ -19,7 +19,8 @@ class CharacterWatcherBloc extends Bloc<CharacterWatcherEvent, CharacterWatcherS
 
   CharacterWatcherBloc(this._characterRepository) : super(const CharacterWatcherState.initial());
 
-  StreamSubscription<Either<CharacterFailure, KtList<Character>>> _characterStreamSubscription;
+  StreamSubscription<Either<CharacterFailure, KtList<Character>>>?
+      _characterStreamSubscription;
 
   @override
   Stream<CharacterWatcherState> mapEventToState(

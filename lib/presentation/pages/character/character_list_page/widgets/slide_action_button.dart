@@ -11,27 +11,27 @@ class SlideActionButton extends StatelessWidget {
 
   SlideActionButton({
     Key key,
-    @required this.color,
-    @required this.caption,
-    @required this.icon,
-    @required this.onTap,
+    required this.color,
+    required this.caption,
+    required this.icon,
+    required this.onTap,
   }) : super(key: key);
 
   SlideActionButton.left({
-    @required this.color,
-    @required this.caption,
-    @required this.icon,
-    @required this.onTap,
+    required this.color,
+    required this.caption,
+    required this.icon,
+    required this.onTap,
   }) : borderRadius = BorderRadius.only(
           topLeft: Radius.circular(8),
           bottomLeft: Radius.circular(8),
         );
 
   SlideActionButton.right({
-    @required this.color,
-    @required this.caption,
-    @required this.icon,
-    @required this.onTap,
+    required this.color,
+    required this.caption,
+    required this.icon,
+    required this.onTap,
   }) : borderRadius = BorderRadius.only(
           topRight: Radius.circular(8),
           bottomRight: Radius.circular(8),

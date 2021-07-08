@@ -11,11 +11,11 @@ class SSHomeCard extends StatelessWidget {
   final Character character;
 
   SSHomeCard({
-    @required this.title,
-    @required this.image,
-    @required this.onTap,
-    @required this.gradientAlignment,
-    @required this.character,
+    required this.title,
+    required this.image,
+    required this.onTap,
+    required this.gradientAlignment,
+    required this.character,
   });
 
   @override

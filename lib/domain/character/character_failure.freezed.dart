@@ -31,29 +31,29 @@ const $CharacterFailure = _$CharacterFailureTearOff();
 mixin _$CharacterFailure {
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result unexpected(),
-    @required Result insufficientPermission(),
-    @required Result unableToUpdate(),
+    required Result unexpected(),
+    required Result insufficientPermission(),
+    required Result unableToUpdate(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result unexpected(),
     Result insufficientPermission(),
     Result unableToUpdate(),
-    @required Result orElse(),
+    required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result unexpected(_Unexpected value),
-    @required Result insufficientPermission(_InsufficientPermission value),
-    @required Result unableToUpdate(_UnableToUpdate value),
+    required Result unexpected(_Unexpected value),
+    required Result insufficientPermission(_InsufficientPermission value),
+    required Result unableToUpdate(_UnableToUpdate value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result unexpected(_Unexpected value),
     Result insufficientPermission(_InsufficientPermission value),
     Result unableToUpdate(_UnableToUpdate value),
-    @required Result orElse(),
+    required Result orElse(),
   });
 }
 
@@ -108,9 +108,9 @@ class _$_Unexpected implements _Unexpected {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result unexpected(),
-    @required Result insufficientPermission(),
-    @required Result unableToUpdate(),
+    required Result unexpected(),
+    required Result insufficientPermission(),
+    required Result unableToUpdate(),
   }) {
     assert(unexpected != null);
     assert(insufficientPermission != null);
@@ -124,7 +124,7 @@ class _$_Unexpected implements _Unexpected {
     Result unexpected(),
     Result insufficientPermission(),
     Result unableToUpdate(),
-    @required Result orElse(),
+    required Result orElse(),
   }) {
     assert(orElse != null);
     if (unexpected != null) {
@@ -136,9 +136,9 @@ class _$_Unexpected implements _Unexpected {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result unexpected(_Unexpected value),
-    @required Result insufficientPermission(_InsufficientPermission value),
-    @required Result unableToUpdate(_UnableToUpdate value),
+    required Result unexpected(_Unexpected value),
+    required Result insufficientPermission(_InsufficientPermission value),
+    required Result unableToUpdate(_UnableToUpdate value),
   }) {
     assert(unexpected != null);
     assert(insufficientPermission != null);
@@ -152,7 +152,7 @@ class _$_Unexpected implements _Unexpected {
     Result unexpected(_Unexpected value),
     Result insufficientPermission(_InsufficientPermission value),
     Result unableToUpdate(_UnableToUpdate value),
-    @required Result orElse(),
+    required Result orElse(),
   }) {
     assert(orElse != null);
     if (unexpected != null) {
@@ -202,9 +202,9 @@ class _$_InsufficientPermission implements _InsufficientPermission {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result unexpected(),
-    @required Result insufficientPermission(),
-    @required Result unableToUpdate(),
+    required Result unexpected(),
+    required Result insufficientPermission(),
+    required Result unableToUpdate(),
   }) {
     assert(unexpected != null);
     assert(insufficientPermission != null);
@@ -218,7 +218,7 @@ class _$_InsufficientPermission implements _InsufficientPermission {
     Result unexpected(),
     Result insufficientPermission(),
     Result unableToUpdate(),
-    @required Result orElse(),
+    required Result orElse(),
   }) {
     assert(orElse != null);
     if (insufficientPermission != null) {
@@ -230,9 +230,9 @@ class _$_InsufficientPermission implements _InsufficientPermission {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result unexpected(_Unexpected value),
-    @required Result insufficientPermission(_InsufficientPermission value),
-    @required Result unableToUpdate(_UnableToUpdate value),
+    required Result unexpected(_Unexpected value),
+    required Result insufficientPermission(_InsufficientPermission value),
+    required Result unableToUpdate(_UnableToUpdate value),
   }) {
     assert(unexpected != null);
     assert(insufficientPermission != null);
@@ -246,7 +246,7 @@ class _$_InsufficientPermission implements _InsufficientPermission {
     Result unexpected(_Unexpected value),
     Result insufficientPermission(_InsufficientPermission value),
     Result unableToUpdate(_UnableToUpdate value),
-    @required Result orElse(),
+    required Result orElse(),
   }) {
     assert(orElse != null);
     if (insufficientPermission != null) {
@@ -296,9 +296,9 @@ class _$_UnableToUpdate implements _UnableToUpdate {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result unexpected(),
-    @required Result insufficientPermission(),
-    @required Result unableToUpdate(),
+    required Result unexpected(),
+    required Result insufficientPermission(),
+    required Result unableToUpdate(),
   }) {
     assert(unexpected != null);
     assert(insufficientPermission != null);
@@ -312,7 +312,7 @@ class _$_UnableToUpdate implements _UnableToUpdate {
     Result unexpected(),
     Result insufficientPermission(),
     Result unableToUpdate(),
-    @required Result orElse(),
+    required Result orElse(),
   }) {
     assert(orElse != null);
     if (unableToUpdate != null) {
@@ -324,9 +324,9 @@ class _$_UnableToUpdate implements _UnableToUpdate {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result unexpected(_Unexpected value),
-    @required Result insufficientPermission(_InsufficientPermission value),
-    @required Result unableToUpdate(_UnableToUpdate value),
+    required Result unexpected(_Unexpected value),
+    required Result insufficientPermission(_InsufficientPermission value),
+    required Result unableToUpdate(_UnableToUpdate value),
   }) {
     assert(unexpected != null);
     assert(insufficientPermission != null);
@@ -340,7 +340,7 @@ class _$_UnableToUpdate implements _UnableToUpdate {
     Result unexpected(_Unexpected value),
     Result insufficientPermission(_InsufficientPermission value),
     Result unableToUpdate(_UnableToUpdate value),
-    @required Result orElse(),
+    required Result orElse(),
   }) {
     assert(orElse != null);
     if (unableToUpdate != null) {

@@ -19,7 +19,7 @@ class NoteWatcherBloc extends Bloc<NoteWatcherEvent, NoteWatcherState> {
 
   NoteWatcherBloc(this._noteRepository) : super(const NoteWatcherState.initial());
 
-  StreamSubscription<Either<NoteFailure, KtList<Note>>> _noteStreamSubscription;
+  StreamSubscription<Either<NoteFailure, KtList<Note>>>? _noteStreamSubscription;
 
   @override
   Stream<NoteWatcherState> mapEventToState(

@@ -14,7 +14,7 @@ class CharacterCard extends StatelessWidget {
 
   const CharacterCard({
     Key key,
-    @required this.character,
+    required this.character,
   }) : super(key: key);
 
   @override

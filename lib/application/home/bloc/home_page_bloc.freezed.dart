@@ -27,25 +27,25 @@ const $HomePageEvent = _$HomePageEventTearOff();
 mixin _$HomePageEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result cardPressed(),
-    @required Result cardReleased(),
+    required Result cardPressed(),
+    required Result cardReleased(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result cardPressed(),
     Result cardReleased(),
-    @required Result orElse(),
+    required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result cardPressed(CardPressed value),
-    @required Result cardReleased(CardReleased value),
+    required Result cardPressed(CardPressed value),
+    required Result cardReleased(CardReleased value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result cardPressed(CardPressed value),
     Result cardReleased(CardReleased value),
-    @required Result orElse(),
+    required Result orElse(),
   });
 }
 
@@ -99,8 +99,8 @@ class _$CardPressed implements CardPressed {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result cardPressed(),
-    @required Result cardReleased(),
+    required Result cardPressed(),
+    required Result cardReleased(),
   }) {
     assert(cardPressed != null);
     assert(cardReleased != null);
@@ -112,7 +112,7 @@ class _$CardPressed implements CardPressed {
   Result maybeWhen<Result extends Object>({
     Result cardPressed(),
     Result cardReleased(),
-    @required Result orElse(),
+    required Result orElse(),
   }) {
     assert(orElse != null);
     if (cardPressed != null) {
@@ -124,8 +124,8 @@ class _$CardPressed implements CardPressed {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result cardPressed(CardPressed value),
-    @required Result cardReleased(CardReleased value),
+    required Result cardPressed(CardPressed value),
+    required Result cardReleased(CardReleased value),
   }) {
     assert(cardPressed != null);
     assert(cardReleased != null);
@@ -137,7 +137,7 @@ class _$CardPressed implements CardPressed {
   Result maybeMap<Result extends Object>({
     Result cardPressed(CardPressed value),
     Result cardReleased(CardReleased value),
-    @required Result orElse(),
+    required Result orElse(),
   }) {
     assert(orElse != null);
     if (cardPressed != null) {
@@ -186,8 +186,8 @@ class _$CardReleased implements CardReleased {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result cardPressed(),
-    @required Result cardReleased(),
+    required Result cardPressed(),
+    required Result cardReleased(),
   }) {
     assert(cardPressed != null);
     assert(cardReleased != null);
@@ -199,7 +199,7 @@ class _$CardReleased implements CardReleased {
   Result maybeWhen<Result extends Object>({
     Result cardPressed(),
     Result cardReleased(),
-    @required Result orElse(),
+    required Result orElse(),
   }) {
     assert(orElse != null);
     if (cardReleased != null) {
@@ -211,8 +211,8 @@ class _$CardReleased implements CardReleased {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result cardPressed(CardPressed value),
-    @required Result cardReleased(CardReleased value),
+    required Result cardPressed(CardPressed value),
+    required Result cardReleased(CardReleased value),
   }) {
     assert(cardPressed != null);
     assert(cardReleased != null);
@@ -224,7 +224,7 @@ class _$CardReleased implements CardReleased {
   Result maybeMap<Result extends Object>({
     Result cardPressed(CardPressed value),
     Result cardReleased(CardReleased value),
-    @required Result orElse(),
+    required Result orElse(),
   }) {
     assert(orElse != null);
     if (cardReleased != null) {
@@ -260,29 +260,29 @@ const $HomePageState = _$HomePageStateTearOff();
 mixin _$HomePageState {
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result cardPressed(),
-    @required Result cardReleased(),
+    required Result initial(),
+    required Result cardPressed(),
+    required Result cardReleased(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result cardPressed(),
     Result cardReleased(),
-    @required Result orElse(),
+    required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result initial(HomePageInitial value),
-    @required Result cardPressed(HomePageCardPressed value),
-    @required Result cardReleased(HomePageCardReleased value),
+    required Result initial(HomePageInitial value),
+    required Result cardPressed(HomePageCardPressed value),
+    required Result cardReleased(HomePageCardReleased value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initial(HomePageInitial value),
     Result cardPressed(HomePageCardPressed value),
     Result cardReleased(HomePageCardReleased value),
-    @required Result orElse(),
+    required Result orElse(),
   });
 }
 
@@ -337,9 +337,9 @@ class _$HomePageInitial implements HomePageInitial {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result cardPressed(),
-    @required Result cardReleased(),
+    required Result initial(),
+    required Result cardPressed(),
+    required Result cardReleased(),
   }) {
     assert(initial != null);
     assert(cardPressed != null);
@@ -353,7 +353,7 @@ class _$HomePageInitial implements HomePageInitial {
     Result initial(),
     Result cardPressed(),
     Result cardReleased(),
-    @required Result orElse(),
+    required Result orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
@@ -365,9 +365,9 @@ class _$HomePageInitial implements HomePageInitial {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result initial(HomePageInitial value),
-    @required Result cardPressed(HomePageCardPressed value),
-    @required Result cardReleased(HomePageCardReleased value),
+    required Result initial(HomePageInitial value),
+    required Result cardPressed(HomePageCardPressed value),
+    required Result cardReleased(HomePageCardReleased value),
   }) {
     assert(initial != null);
     assert(cardPressed != null);
@@ -381,7 +381,7 @@ class _$HomePageInitial implements HomePageInitial {
     Result initial(HomePageInitial value),
     Result cardPressed(HomePageCardPressed value),
     Result cardReleased(HomePageCardReleased value),
-    @required Result orElse(),
+    required Result orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
@@ -431,9 +431,9 @@ class _$HomePageCardPressed implements HomePageCardPressed {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result cardPressed(),
-    @required Result cardReleased(),
+    required Result initial(),
+    required Result cardPressed(),
+    required Result cardReleased(),
   }) {
     assert(initial != null);
     assert(cardPressed != null);
@@ -447,7 +447,7 @@ class _$HomePageCardPressed implements HomePageCardPressed {
     Result initial(),
     Result cardPressed(),
     Result cardReleased(),
-    @required Result orElse(),
+    required Result orElse(),
   }) {
     assert(orElse != null);
     if (cardPressed != null) {
@@ -459,9 +459,9 @@ class _$HomePageCardPressed implements HomePageCardPressed {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result initial(HomePageInitial value),
-    @required Result cardPressed(HomePageCardPressed value),
-    @required Result cardReleased(HomePageCardReleased value),
+    required Result initial(HomePageInitial value),
+    required Result cardPressed(HomePageCardPressed value),
+    required Result cardReleased(HomePageCardReleased value),
   }) {
     assert(initial != null);
     assert(cardPressed != null);
@@ -475,7 +475,7 @@ class _$HomePageCardPressed implements HomePageCardPressed {
     Result initial(HomePageInitial value),
     Result cardPressed(HomePageCardPressed value),
     Result cardReleased(HomePageCardReleased value),
-    @required Result orElse(),
+    required Result orElse(),
   }) {
     assert(orElse != null);
     if (cardPressed != null) {
@@ -525,9 +525,9 @@ class _$HomePageCardReleased implements HomePageCardReleased {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result cardPressed(),
-    @required Result cardReleased(),
+    required Result initial(),
+    required Result cardPressed(),
+    required Result cardReleased(),
   }) {
     assert(initial != null);
     assert(cardPressed != null);
@@ -541,7 +541,7 @@ class _$HomePageCardReleased implements HomePageCardReleased {
     Result initial(),
     Result cardPressed(),
     Result cardReleased(),
-    @required Result orElse(),
+    required Result orElse(),
   }) {
     assert(orElse != null);
     if (cardReleased != null) {
@@ -553,9 +553,9 @@ class _$HomePageCardReleased implements HomePageCardReleased {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result initial(HomePageInitial value),
-    @required Result cardPressed(HomePageCardPressed value),
-    @required Result cardReleased(HomePageCardReleased value),
+    required Result initial(HomePageInitial value),
+    required Result cardPressed(HomePageCardPressed value),
+    required Result cardReleased(HomePageCardReleased value),
   }) {
     assert(initial != null);
     assert(cardPressed != null);
@@ -569,7 +569,7 @@ class _$HomePageCardReleased implements HomePageCardReleased {
     Result initial(HomePageInitial value),
     Result cardPressed(HomePageCardPressed value),
     Result cardReleased(HomePageCardReleased value),
-    @required Result orElse(),
+    required Result orElse(),
   }) {
     assert(orElse != null);
     if (cardReleased != null) {

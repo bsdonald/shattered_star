@@ -10,7 +10,7 @@ import 'package:shattered_star/presentation/routes/router.gr.dart';
 class HomePage extends StatelessWidget {
   final Character character;
 
-  const HomePage({Key key, @required this.character}) : super(key: key);
+  const HomePage({Key key, required this.character}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(

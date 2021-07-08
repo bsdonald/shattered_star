@@ -10,6 +10,7 @@ import 'package:shattered_star/presentation/routes/router.gr.dart' as app_router
 class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final _appRouter = app_router.Router();
     final colors = getIt<SSColors>();
 
     return MultiBlocProvider(
@@ -19,10 +20,13 @@ class AppWidget extends StatelessWidget {
         ),
         BlocProvider<CharacterFormBloc>(create: (context) => getIt<CharacterFormBloc>()),
       ],
-      child: MaterialApp(
+      child: MaterialApp.router(
+        routeInformationParser: _appRouter.defaultRouteParser(),
+        routerDelegate: _appRouter.delegate(
+          initialRoutes: [const app_router.SignInPageRoute()],
+        ),
         debugShowCheckedModeBanner: false,
         title: "Shattered Star Player's Guide",
-        builder: ExtendedNavigator.builder(router: app_router.Router()),
         theme: ThemeData.light().copyWith(
           primaryColor: colors.lightBlue,
           accentColor: colors.darkOrange,

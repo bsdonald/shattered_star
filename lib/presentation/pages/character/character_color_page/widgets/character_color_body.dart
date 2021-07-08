@@ -10,7 +10,7 @@ const Color _kPlaceholderColor = Color(0x80404040);
 
 class CharacterColorBody extends StatefulWidget {
   final Character character;
-  const CharacterColorBody({Key key, @required this.character}) : super(key: key);
+  const CharacterColorBody({Key key, required this.character}) : super(key: key);
 
   @override
   _CharacterColorBodyState createState() => _CharacterColorBodyState();

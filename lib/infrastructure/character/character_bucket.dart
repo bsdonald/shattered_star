@@ -22,9 +22,8 @@ class CharacterBucket implements ICharacterBucket {
       type: FileType.image,
     );
 
-    if (pickedImage != null) {
-      file = File(pickedImage.files.first.path);
-    }
+      file = File(pickedImage!.files.first.path!);
+    
     return file;
   }
 
@@ -36,9 +35,7 @@ class CharacterBucket implements ICharacterBucket {
       allowedExtensions: ['png', 'jpeg', 'jpg'],
     );
 
-    if (pickedImage != null) {
-      file = File(pickedImage.files.first.path);
-    }
+      file = File(pickedImage!.files.first.path!);
     return file;
   }
 
@@ -65,7 +62,7 @@ class CharacterBucket implements ICharacterBucket {
 
       return right(unit);
     } on FirebaseException catch (e) {
-      if (e.message.contains('PERMISSION_DENIED')) {
+      if (e.message!.contains('PERMISSION_DENIED')) {
         return left(const CharacterFailure.insufficientPermission());
       } else {
         return left(const CharacterFailure.unexpected());
@@ -94,9 +91,9 @@ class CharacterBucket implements ICharacterBucket {
       print('image wad deleted');
       return right(unit);
     } on FirebaseException catch (e) {
-      if (e.message.contains('PERMISSION_DENIED')) {
+      if (e.message!.contains('PERMISSION_DENIED')) {
         return left(const CharacterFailure.insufficientPermission());
-      } else if (e.message.contains('NOT_FOUND')) {
+      } else if (e.message!.contains('NOT_FOUND')) {
         return left(const CharacterFailure.unableToUpdate());
       } else {
         return left(const CharacterFailure.unexpected());

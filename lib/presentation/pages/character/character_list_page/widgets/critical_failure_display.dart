@@ -6,7 +6,7 @@ class CriticalFailureDisplay extends StatelessWidget {
 
   const CriticalFailureDisplay({
     Key key,
-    @required this.failure,
+    required this.failure,
   }) : super(key: key);
 
   @override
