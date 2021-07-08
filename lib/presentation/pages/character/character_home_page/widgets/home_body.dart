@@ -16,7 +16,7 @@ class HomeBody extends StatelessWidget {
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: CharacterCard(character),
+          child: CharacterCard(character: character),
         ),
         Expanded(
           child: GridView.count(
@@ -31,7 +31,7 @@ class HomeBody extends StatelessWidget {
                 image: 'assets/images/inventory.png',
                 title: 'Inventory',
                 onTap: () {
-                  ExtendedNavigator.of(context).push(Routes.test);
+                  AutoRouter.of(context).push(const TestRoute());
                 },
                 gradientAlignment: Alignment.bottomRight,
               ),
@@ -40,7 +40,7 @@ class HomeBody extends StatelessWidget {
                 image: 'assets/images/quest_items.png',
                 title: 'Quest Items',
                 onTap: () {
-                  ExtendedNavigator.of(context).push(Routes.test);
+                  AutoRouter.of(context).push(const TestRoute());
                 },
                 gradientAlignment: Alignment.bottomLeft,
               ),
@@ -49,7 +49,7 @@ class HomeBody extends StatelessWidget {
                 image: 'assets/images/characters_npcs.png',
                 title: 'Characters/NPCs',
                 onTap: () {
-                  ExtendedNavigator.of(context).push(Routes.test);
+                  AutoRouter.of(context).push(const TestRoute());
                 },
                 gradientAlignment: Alignment.topRight,
               ),
@@ -58,7 +58,7 @@ class HomeBody extends StatelessWidget {
                 image: 'assets/images/journal1.png',
                 title: 'Journal',
                 onTap: () {
-                  ExtendedNavigator.of(context).push(Routes.test);
+                  AutoRouter.of(context).push(const TestRoute());
                 },
                 gradientAlignment: Alignment.topLeft,
               ),

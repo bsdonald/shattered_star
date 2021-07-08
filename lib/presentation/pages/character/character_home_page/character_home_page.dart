@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
           BlocListener<AuthBloc, AuthState>(
             listener: (context, state) {
               state.maybeMap(
-                unauthenticated: (_) => ExtendedNavigator.of(context).replace(Routes.signInPage),
+                unauthenticated: (_) => AutoRouter.of(context).replace(const SignInPageRoute()),
                 orElse: () {},
               );
             },
@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
             leading: IconButton(
               icon: Icon(Icons.exit_to_app),
               onPressed: () {
-                ExtendedNavigator.of(context).replace(Routes.characterListPage);
+                AutoRouter.of(context).replace(const CharacterListPageRoute());
               },
             ),
             actions: <Widget>[

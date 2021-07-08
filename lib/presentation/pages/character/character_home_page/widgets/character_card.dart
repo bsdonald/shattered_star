@@ -7,7 +7,7 @@ import 'package:shattered_star/presentation/pages/character/widgets/player_chara
 class CharacterCard extends StatelessWidget {
   final Character character;
 
-  const CharacterCard(this.character);
+  const CharacterCard({Key? key, required this.character}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

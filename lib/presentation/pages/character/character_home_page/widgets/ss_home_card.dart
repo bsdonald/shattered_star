@@ -6,17 +6,18 @@ import 'package:shattered_star/domain/character/character.dart';
 class SSHomeCard extends StatelessWidget {
   final String title;
   final String image;
-  final Function onTap;
+  final void Function()? onTap;
   final Alignment gradientAlignment;
   final Character character;
 
-  SSHomeCard({
+  const SSHomeCard({
+    Key? key,
     required this.title,
     required this.image,
     required this.onTap,
     required this.gradientAlignment,
     required this.character,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
