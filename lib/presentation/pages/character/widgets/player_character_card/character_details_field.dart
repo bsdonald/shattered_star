@@ -12,7 +12,7 @@ class CharacterDetailsField extends HookWidget {
   final Color color;
 
   const CharacterDetailsField({
-    Key key,
+    Key? key,
     required this.isEditing,
     required this.character,
     required this.color,
@@ -34,7 +34,7 @@ class CharacterDetailsField extends HookWidget {
 
 class DetailBlocList extends StatelessWidget {
   const DetailBlocList({
-    Key key,
+    Key?  key,
     required this.character,
   }) : super(key: key);
 

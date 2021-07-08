@@ -8,7 +8,7 @@ import 'package:shattered_star/presentation/routes/router.gr.dart';
 class HomeBody extends StatelessWidget {
   final Character character;
 
-  const HomeBody({Key key, required this.character}) : super(key: key);
+  const HomeBody({Key? key, required this.character}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

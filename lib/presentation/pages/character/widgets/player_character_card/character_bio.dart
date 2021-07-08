@@ -11,7 +11,7 @@ class CharacterBio extends HookWidget {
   final Color color;
 
   const CharacterBio({
-    Key key,
+    Key? key,
     required this.isEditing,
     required this.character,
     required this.color,

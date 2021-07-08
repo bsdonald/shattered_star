@@ -11,7 +11,7 @@ class CharacterStatsField extends StatelessWidget {
   final Color color;
 
   const CharacterStatsField({
-    Key key,
+    Key? key,
     required this.isEditing,
     required this.character,
     required this.color,
@@ -31,7 +31,7 @@ class StatBlocGrid extends StatelessWidget {
   final Character character;
 
   const StatBlocGrid({
-    Key key,
+    Key? key,
     required this.character,
   }) : super(key: key);
 

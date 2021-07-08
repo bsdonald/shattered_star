@@ -31,7 +31,7 @@ class Router extends _i1.RootStackRouter {
     SignInPageRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
         routeData: routeData,
         builder: (_) {
-          return _i4.SignInPage();
+          return const _i4.SignInPage();
         }),
     HomePageRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
         routeData: routeData,
@@ -61,7 +61,8 @@ class Router extends _i1.RootStackRouter {
     CharacterColorPageRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
         routeData: routeData,
         builder: (data) {
-          final args = data.argsAs<CharacterColorPageRouteArgs>();
+          final args = data.argsAs<CharacterColorPageRouteArgs>(
+              orElse: () => const CharacterColorPageRouteArgs());
           return _i9.CharacterColorPage(
               key: args.key, character: args.character);
         })
@@ -95,7 +96,7 @@ class SignInPageRoute extends _i1.PageRouteInfo {
 }
 
 class HomePageRoute extends _i1.PageRouteInfo<HomePageRouteArgs> {
-  HomePageRoute({_i2.Key key, required _i10.Character character})
+  HomePageRoute({_i2.Key? key, required _i10.Character character})
       : super(name,
             path: '/home-page',
             args: HomePageRouteArgs(key: key, character: character));
@@ -106,7 +107,7 @@ class HomePageRoute extends _i1.PageRouteInfo<HomePageRouteArgs> {
 class HomePageRouteArgs {
   const HomePageRouteArgs({this.key, required this.character});
 
-  final _i2.Key key;
+  final _i2.Key? key;
 
   final _i10.Character character;
 }
@@ -125,7 +126,7 @@ class CharacterListPageRoute extends _i1.PageRouteInfo {
 
 class CharacterFormPageRoute
     extends _i1.PageRouteInfo<CharacterFormPageRouteArgs> {
-  CharacterFormPageRoute({_i2.Key key, _i10.Character editedCharacter})
+  CharacterFormPageRoute({_i2.Key? key, _i10.Character? editedCharacter})
       : super(name,
             path: '/character-form-page',
             args: CharacterFormPageRouteArgs(
@@ -137,14 +138,14 @@ class CharacterFormPageRoute
 class CharacterFormPageRouteArgs {
   const CharacterFormPageRouteArgs({this.key, this.editedCharacter});
 
-  final _i2.Key key;
+  final _i2.Key? key;
 
-  final _i10.Character editedCharacter;
+  final _i10.Character? editedCharacter;
 }
 
 class CharacterColorPageRoute
     extends _i1.PageRouteInfo<CharacterColorPageRouteArgs> {
-  CharacterColorPageRoute({_i2.Key key, required _i10.Character character})
+  CharacterColorPageRoute({_i2.Key? key, _i10.Character character})
       : super(name,
             path: '/character-color-page',
             args: CharacterColorPageRouteArgs(key: key, character: character));
@@ -153,9 +154,9 @@ class CharacterColorPageRoute
 }
 
 class CharacterColorPageRouteArgs {
-  const CharacterColorPageRouteArgs({this.key, required this.character});
+  const CharacterColorPageRouteArgs({this.key, this.character});
 
-  final _i2.Key key;
+  final _i2.Key? key;
 
   final _i10.Character character;
 }

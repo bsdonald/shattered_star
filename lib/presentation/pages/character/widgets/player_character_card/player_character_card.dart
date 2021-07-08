@@ -11,7 +11,7 @@ class PlayerCharacterCard extends StatelessWidget {
   final Character character;
 
   const PlayerCharacterCard({
-    Key key,
+    Key? key,
     required this.isEditing,
     required this.character,
   }) : super(key: key);

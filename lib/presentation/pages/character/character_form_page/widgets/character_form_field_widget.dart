@@ -10,7 +10,7 @@ class CharacterFormField extends StatelessWidget {
   final String initialValue;
 
   const CharacterFormField({
-    Key key,
+    Key? key,
     required this.onChanged,
     required this.validator,
     required this.label,

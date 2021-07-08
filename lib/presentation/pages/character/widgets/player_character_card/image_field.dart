@@ -7,7 +7,7 @@ class ImageField extends StatelessWidget {
   final bool isEditing;
   final Character character;
   const ImageField({
-    Key key,
+    Key? key,
     required this.character,
     required this.isEditing,
   }) : super(key: key);

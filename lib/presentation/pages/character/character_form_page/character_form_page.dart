@@ -10,10 +10,10 @@ import 'package:shattered_star/presentation/pages/character/widgets/player_chara
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 class CharacterFormPage extends StatelessWidget {
-  final Character editedCharacter;
+  final Character? editedCharacter;
 
   const CharacterFormPage({
-    Key key,
+    Key? key,
     this.editedCharacter,
   }) : super(key: key);
 
@@ -38,8 +38,8 @@ class CharacterFormPage extends StatelessWidget {
                   ).show(context);
                 },
                 (_) {
-                  ExtendedNavigator.of(context).popUntil(
-                    (route) => route.settings.name == Routes.characterListPage,
+                  AutoRouter.of(context).popUntil(
+                    (route) => route.settings.name == const CharacterListPageRoute().routeName,
                   );
                 },
               );
@@ -62,7 +62,7 @@ class CharacterFormPage extends StatelessWidget {
 
 class CharacterFormScaffold extends StatelessWidget {
   const CharacterFormScaffold({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -73,7 +73,7 @@ class CharacterFormScaffold extends StatelessWidget {
           icon: Icon(Icons.clear),
           onPressed: () {
             context.read<CharacterFormBloc>().add(const CharacterFormEvent.cancelButtonPressed());
-            ExtendedNavigator.of(context).pop();
+            AutoRouter.of(context).pop();
           },
         ),
         title: BlocBuilder<CharacterFormBloc, CharacterFormState>(
@@ -95,7 +95,9 @@ class CharacterFormScaffold extends StatelessWidget {
         buildWhen: (p, c) => p.showErrorMessages != c.showErrorMessages,
         builder: (context, state) {
           return Form(
-            autovalidate: state.showErrorMessages,
+            autovalidateMode: state.showErrorMessages
+                  ? AutovalidateMode.always
+                  : AutovalidateMode.disabled,
             child: PlayerCharacterCard(isEditing: true, character: null),
           );
         },
@@ -107,7 +109,7 @@ class CharacterFormScaffold extends StatelessWidget {
 class SavingInProgressOverlay extends StatelessWidget {
   final bool isSaving;
   const SavingInProgressOverlay({
-    Key key,
+    Key? key,
     required this.isSaving,
   }) : super(key: key);
 
@@ -131,7 +133,7 @@ class SavingInProgressOverlay extends StatelessWidget {
                 const SizedBox(height: 8),
                 Text(
                   'Saving',
-                  style: Theme.of(context).textTheme.bodyText2.copyWith(
+                  style: Theme.of(context).textTheme.bodyText2!.copyWith(
                         color: Colors.white,
                         fontSize: 16,
                       ),

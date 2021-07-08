@@ -4,7 +4,7 @@ import 'package:shattered_star/presentation/pages/character/character_color_page
 
 class CharacterColorPage extends StatelessWidget {
   final Character character;
-  CharacterColorPage({Key key, @required this.character}) : super(key: key);
+  CharacterColorPage({Key?key, @required this.character}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

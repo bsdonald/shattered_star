@@ -13,7 +13,7 @@ class CharacterCard extends StatelessWidget {
   final Character character;
 
   const CharacterCard({
-    Key key,
+    Key? key,
     required this.character,
   }) : super(key: key);
 

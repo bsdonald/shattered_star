@@ -10,7 +10,7 @@ class SlideActionButton extends StatelessWidget {
   BorderRadiusGeometry borderRadius;
 
   SlideActionButton({
-    Key key,
+    Key? key,
     required this.color,
     required this.caption,
     required this.icon,

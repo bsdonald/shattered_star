@@ -10,7 +10,7 @@ const Color _kPlaceholderColor = Color(0x80404040);
 
 class CharacterColorBody extends StatefulWidget {
   final Character character;
-  const CharacterColorBody({Key key, required this.character}) : super(key: key);
+  const CharacterColorBody({Key? key, required this.character}) : super(key: key);
 
   @override
   _CharacterColorBodyState createState() => _CharacterColorBodyState();
@@ -54,7 +54,7 @@ class PaletteSwatches extends StatelessWidget {
   ///
   /// The [generator] is optional. If it is null, then the display will
   /// just be an empty container.
-  const PaletteSwatches({Key key, this.generator, this.character}) : super(key: key);
+  const PaletteSwatches({Key? key, this.generator, this.character}) : super(key: key);
 
   /// The [PaletteGenerator] that contains all of the swatches that we're going
   /// to display.
@@ -96,7 +96,7 @@ class PaletteSwatch extends StatelessWidget {
   /// If the [color] argument is omitted, then the swatch will show a
   /// placeholder instead, to indicate that there is no color.
   const PaletteSwatch({
-    Key key,
+    Key? key,
     this.color,
     this.label,
   }) : super(key: key);

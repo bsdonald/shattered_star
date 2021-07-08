@@ -5,7 +5,7 @@ class CriticalFailureDisplay extends StatelessWidget {
   final CharacterFailure failure;
 
   const CriticalFailureDisplay({
-    Key key,
+    Key? key,
     required this.failure,
   }) : super(key: key);
 
