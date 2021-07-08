@@ -4,13 +4,14 @@ import 'package:shattered_star/presentation/pages/character/character_color_page
 
 class CharacterColorPage extends StatelessWidget {
   final Character character;
-  CharacterColorPage({Key?key, @required this.character}) : super(key: key);
+  const CharacterColorPage({Key?key, required this.character}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Choose Colors')),
-      body: CharacterColorBody(character: character),
+      body: Container(),
+      // CharacterColorBody(character: character),
     );
   }
 }
