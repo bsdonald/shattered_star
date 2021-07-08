@@ -115,7 +115,7 @@ class SavingInProgressOverlay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isSaving = false;
+    const isSaving = false;
 
     return IgnorePointer(
       ignoring: !isSaving,

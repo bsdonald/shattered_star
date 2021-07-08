@@ -8,7 +8,7 @@ import 'package:shattered_star/presentation/pages/character/widgets/player_chara
 
 class PlayerCharacterCard extends StatelessWidget {
   final bool isEditing;
-  final Character character;
+  final Character? character;
 
   const PlayerCharacterCard({
     Key? key,
