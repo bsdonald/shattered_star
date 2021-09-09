@@ -1,6 +1,6 @@
+import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:dartz/dartz.dart';
-import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
@@ -10,10 +10,10 @@ import 'package:shattered_star/presentation/pages/character/widgets/player_chara
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 class CharacterFormPage extends StatelessWidget {
-  final Character editedCharacter;
+  final Character? editedCharacter;
 
   const CharacterFormPage({
-    Key key,
+    Key? key,
     this.editedCharacter,
   }) : super(key: key);
 
@@ -38,8 +38,8 @@ class CharacterFormPage extends StatelessWidget {
                   ).show(context);
                 },
                 (_) {
-                  ExtendedNavigator.of(context).popUntil(
-                    (route) => route.settings.name == Routes.characterListPage,
+                  AutoRouter.of(context).popUntil(
+                    (route) => route.settings.name == const CharacterListPageRoute().routeName,
                   );
                 },
               );
@@ -62,7 +62,7 @@ class CharacterFormPage extends StatelessWidget {
 
 class CharacterFormScaffold extends StatelessWidget {
   const CharacterFormScaffold({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -73,7 +73,7 @@ class CharacterFormScaffold extends StatelessWidget {
           icon: Icon(Icons.clear),
           onPressed: () {
             context.read<CharacterFormBloc>().add(const CharacterFormEvent.cancelButtonPressed());
-            ExtendedNavigator.of(context).pop();
+            AutoRouter.of(context).pop();
           },
         ),
         title: BlocBuilder<CharacterFormBloc, CharacterFormState>(
@@ -95,8 +95,10 @@ class CharacterFormScaffold extends StatelessWidget {
         buildWhen: (p, c) => p.showErrorMessages != c.showErrorMessages,
         builder: (context, state) {
           return Form(
-            autovalidate: state.showErrorMessages,
-            child: PlayerCharacterCard(isEditing: true, character: null),
+            autovalidateMode: state.showErrorMessages
+                  ? AutovalidateMode.always
+                  : AutovalidateMode.disabled,
+            child: PlayerCharacterCard(isEditing: true, character: Character.empty()),
           );
         },
       ),
@@ -107,13 +109,13 @@ class CharacterFormScaffold extends StatelessWidget {
 class SavingInProgressOverlay extends StatelessWidget {
   final bool isSaving;
   const SavingInProgressOverlay({
-    Key key,
-    @required this.isSaving,
+    Key? key,
+    required this.isSaving,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final isSaving = false;
+    const isSaving = false;
 
     return IgnorePointer(
       ignoring: !isSaving,
@@ -131,7 +133,7 @@ class SavingInProgressOverlay extends StatelessWidget {
                 const SizedBox(height: 8),
                 Text(
                   'Saving',
-                  style: Theme.of(context).textTheme.bodyText2.copyWith(
+                  style: Theme.of(context).textTheme.bodyText2!.copyWith(
                         color: Colors.white,
                         fontSize: 16,
                       ),

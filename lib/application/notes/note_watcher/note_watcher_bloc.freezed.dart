@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'note_watcher_bloc.dart';
 
@@ -9,6 +9,10 @@ part of 'note_watcher_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$NoteWatcherEventTearOff {
   const _$NoteWatcherEventTearOff();
 
@@ -28,45 +32,54 @@ class _$NoteWatcherEventTearOff {
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $NoteWatcherEvent = _$NoteWatcherEventTearOff();
 
+/// @nodoc
 mixin _$NoteWatcherEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result watchAllStarted(),
-    @required Result watchUncompletedStarted(),
-    @required
-        Result notesReceived(Either<NoteFailure, KtList<Note>> failureOrNotes),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() watchAllStarted,
+    required TResult Function() watchUncompletedStarted,
+    required TResult Function(Either<NoteFailure, KtList<Note>> failureOrNotes)
+        notesReceived,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result watchAllStarted(),
-    Result watchUncompletedStarted(),
-    Result notesReceived(Either<NoteFailure, KtList<Note>> failureOrNotes),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? watchAllStarted,
+    TResult Function()? watchUncompletedStarted,
+    TResult Function(Either<NoteFailure, KtList<Note>> failureOrNotes)?
+        notesReceived,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result watchAllStarted(_WatchAllStarted value),
-    @required Result watchUncompletedStarted(_WatchUncompletedStarted value),
-    @required Result notesReceived(_NotesReceived value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_WatchAllStarted value) watchAllStarted,
+    required TResult Function(_WatchUncompletedStarted value)
+        watchUncompletedStarted,
+    required TResult Function(_NotesReceived value) notesReceived,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result watchAllStarted(_WatchAllStarted value),
-    Result watchUncompletedStarted(_WatchUncompletedStarted value),
-    Result notesReceived(_NotesReceived value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_WatchAllStarted value)? watchAllStarted,
+    TResult Function(_WatchUncompletedStarted value)? watchUncompletedStarted,
+    TResult Function(_NotesReceived value)? notesReceived,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $NoteWatcherEventCopyWith<$Res> {
   factory $NoteWatcherEventCopyWith(
           NoteWatcherEvent value, $Res Function(NoteWatcherEvent) then) =
       _$NoteWatcherEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$NoteWatcherEventCopyWithImpl<$Res>
     implements $NoteWatcherEventCopyWith<$Res> {
   _$NoteWatcherEventCopyWithImpl(this._value, this._then);
@@ -76,12 +89,14 @@ class _$NoteWatcherEventCopyWithImpl<$Res>
   final $Res Function(NoteWatcherEvent) _then;
 }
 
+/// @nodoc
 abstract class _$WatchAllStartedCopyWith<$Res> {
   factory _$WatchAllStartedCopyWith(
           _WatchAllStarted value, $Res Function(_WatchAllStarted) then) =
       __$WatchAllStartedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$WatchAllStartedCopyWithImpl<$Res>
     extends _$NoteWatcherEventCopyWithImpl<$Res>
     implements _$WatchAllStartedCopyWith<$Res> {
@@ -92,6 +107,8 @@ class __$WatchAllStartedCopyWithImpl<$Res>
   @override
   _WatchAllStarted get _value => super._value as _WatchAllStarted;
 }
+
+/// @nodoc
 
 class _$_WatchAllStarted implements _WatchAllStarted {
   const _$_WatchAllStarted();
@@ -111,27 +128,24 @@ class _$_WatchAllStarted implements _WatchAllStarted {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result watchAllStarted(),
-    @required Result watchUncompletedStarted(),
-    @required
-        Result notesReceived(Either<NoteFailure, KtList<Note>> failureOrNotes),
+  TResult when<TResult extends Object?>({
+    required TResult Function() watchAllStarted,
+    required TResult Function() watchUncompletedStarted,
+    required TResult Function(Either<NoteFailure, KtList<Note>> failureOrNotes)
+        notesReceived,
   }) {
-    assert(watchAllStarted != null);
-    assert(watchUncompletedStarted != null);
-    assert(notesReceived != null);
     return watchAllStarted();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result watchAllStarted(),
-    Result watchUncompletedStarted(),
-    Result notesReceived(Either<NoteFailure, KtList<Note>> failureOrNotes),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? watchAllStarted,
+    TResult Function()? watchUncompletedStarted,
+    TResult Function(Either<NoteFailure, KtList<Note>> failureOrNotes)?
+        notesReceived,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (watchAllStarted != null) {
       return watchAllStarted();
     }
@@ -140,26 +154,23 @@ class _$_WatchAllStarted implements _WatchAllStarted {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result watchAllStarted(_WatchAllStarted value),
-    @required Result watchUncompletedStarted(_WatchUncompletedStarted value),
-    @required Result notesReceived(_NotesReceived value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_WatchAllStarted value) watchAllStarted,
+    required TResult Function(_WatchUncompletedStarted value)
+        watchUncompletedStarted,
+    required TResult Function(_NotesReceived value) notesReceived,
   }) {
-    assert(watchAllStarted != null);
-    assert(watchUncompletedStarted != null);
-    assert(notesReceived != null);
     return watchAllStarted(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result watchAllStarted(_WatchAllStarted value),
-    Result watchUncompletedStarted(_WatchUncompletedStarted value),
-    Result notesReceived(_NotesReceived value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_WatchAllStarted value)? watchAllStarted,
+    TResult Function(_WatchUncompletedStarted value)? watchUncompletedStarted,
+    TResult Function(_NotesReceived value)? notesReceived,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (watchAllStarted != null) {
       return watchAllStarted(this);
     }
@@ -171,12 +182,14 @@ abstract class _WatchAllStarted implements NoteWatcherEvent {
   const factory _WatchAllStarted() = _$_WatchAllStarted;
 }
 
+/// @nodoc
 abstract class _$WatchUncompletedStartedCopyWith<$Res> {
   factory _$WatchUncompletedStartedCopyWith(_WatchUncompletedStarted value,
           $Res Function(_WatchUncompletedStarted) then) =
       __$WatchUncompletedStartedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$WatchUncompletedStartedCopyWithImpl<$Res>
     extends _$NoteWatcherEventCopyWithImpl<$Res>
     implements _$WatchUncompletedStartedCopyWith<$Res> {
@@ -188,6 +201,8 @@ class __$WatchUncompletedStartedCopyWithImpl<$Res>
   _WatchUncompletedStarted get _value =>
       super._value as _WatchUncompletedStarted;
 }
+
+/// @nodoc
 
 class _$_WatchUncompletedStarted implements _WatchUncompletedStarted {
   const _$_WatchUncompletedStarted();
@@ -207,27 +222,24 @@ class _$_WatchUncompletedStarted implements _WatchUncompletedStarted {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result watchAllStarted(),
-    @required Result watchUncompletedStarted(),
-    @required
-        Result notesReceived(Either<NoteFailure, KtList<Note>> failureOrNotes),
+  TResult when<TResult extends Object?>({
+    required TResult Function() watchAllStarted,
+    required TResult Function() watchUncompletedStarted,
+    required TResult Function(Either<NoteFailure, KtList<Note>> failureOrNotes)
+        notesReceived,
   }) {
-    assert(watchAllStarted != null);
-    assert(watchUncompletedStarted != null);
-    assert(notesReceived != null);
     return watchUncompletedStarted();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result watchAllStarted(),
-    Result watchUncompletedStarted(),
-    Result notesReceived(Either<NoteFailure, KtList<Note>> failureOrNotes),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? watchAllStarted,
+    TResult Function()? watchUncompletedStarted,
+    TResult Function(Either<NoteFailure, KtList<Note>> failureOrNotes)?
+        notesReceived,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (watchUncompletedStarted != null) {
       return watchUncompletedStarted();
     }
@@ -236,26 +248,23 @@ class _$_WatchUncompletedStarted implements _WatchUncompletedStarted {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result watchAllStarted(_WatchAllStarted value),
-    @required Result watchUncompletedStarted(_WatchUncompletedStarted value),
-    @required Result notesReceived(_NotesReceived value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_WatchAllStarted value) watchAllStarted,
+    required TResult Function(_WatchUncompletedStarted value)
+        watchUncompletedStarted,
+    required TResult Function(_NotesReceived value) notesReceived,
   }) {
-    assert(watchAllStarted != null);
-    assert(watchUncompletedStarted != null);
-    assert(notesReceived != null);
     return watchUncompletedStarted(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result watchAllStarted(_WatchAllStarted value),
-    Result watchUncompletedStarted(_WatchUncompletedStarted value),
-    Result notesReceived(_NotesReceived value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_WatchAllStarted value)? watchAllStarted,
+    TResult Function(_WatchUncompletedStarted value)? watchUncompletedStarted,
+    TResult Function(_NotesReceived value)? notesReceived,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (watchUncompletedStarted != null) {
       return watchUncompletedStarted(this);
     }
@@ -267,6 +276,7 @@ abstract class _WatchUncompletedStarted implements NoteWatcherEvent {
   const factory _WatchUncompletedStarted() = _$_WatchUncompletedStarted;
 }
 
+/// @nodoc
 abstract class _$NotesReceivedCopyWith<$Res> {
   factory _$NotesReceivedCopyWith(
           _NotesReceived value, $Res Function(_NotesReceived) then) =
@@ -274,6 +284,7 @@ abstract class _$NotesReceivedCopyWith<$Res> {
   $Res call({Either<NoteFailure, KtList<Note>> failureOrNotes});
 }
 
+/// @nodoc
 class __$NotesReceivedCopyWithImpl<$Res>
     extends _$NoteWatcherEventCopyWithImpl<$Res>
     implements _$NotesReceivedCopyWith<$Res> {
@@ -286,18 +297,21 @@ class __$NotesReceivedCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object failureOrNotes = freezed,
+    Object? failureOrNotes = freezed,
   }) {
     return _then(_NotesReceived(
       failureOrNotes == freezed
           ? _value.failureOrNotes
-          : failureOrNotes as Either<NoteFailure, KtList<Note>>,
+          : failureOrNotes // ignore: cast_nullable_to_non_nullable
+              as Either<NoteFailure, KtList<Note>>,
     ));
   }
 }
 
+/// @nodoc
+
 class _$_NotesReceived implements _NotesReceived {
-  const _$_NotesReceived(this.failureOrNotes) : assert(failureOrNotes != null);
+  const _$_NotesReceived(this.failureOrNotes);
 
   @override
   final Either<NoteFailure, KtList<Note>> failureOrNotes;
@@ -321,33 +335,31 @@ class _$_NotesReceived implements _NotesReceived {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(failureOrNotes);
 
+  @JsonKey(ignore: true)
   @override
   _$NotesReceivedCopyWith<_NotesReceived> get copyWith =>
       __$NotesReceivedCopyWithImpl<_NotesReceived>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result watchAllStarted(),
-    @required Result watchUncompletedStarted(),
-    @required
-        Result notesReceived(Either<NoteFailure, KtList<Note>> failureOrNotes),
+  TResult when<TResult extends Object?>({
+    required TResult Function() watchAllStarted,
+    required TResult Function() watchUncompletedStarted,
+    required TResult Function(Either<NoteFailure, KtList<Note>> failureOrNotes)
+        notesReceived,
   }) {
-    assert(watchAllStarted != null);
-    assert(watchUncompletedStarted != null);
-    assert(notesReceived != null);
     return notesReceived(failureOrNotes);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result watchAllStarted(),
-    Result watchUncompletedStarted(),
-    Result notesReceived(Either<NoteFailure, KtList<Note>> failureOrNotes),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? watchAllStarted,
+    TResult Function()? watchUncompletedStarted,
+    TResult Function(Either<NoteFailure, KtList<Note>> failureOrNotes)?
+        notesReceived,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (notesReceived != null) {
       return notesReceived(failureOrNotes);
     }
@@ -356,26 +368,23 @@ class _$_NotesReceived implements _NotesReceived {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result watchAllStarted(_WatchAllStarted value),
-    @required Result watchUncompletedStarted(_WatchUncompletedStarted value),
-    @required Result notesReceived(_NotesReceived value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_WatchAllStarted value) watchAllStarted,
+    required TResult Function(_WatchUncompletedStarted value)
+        watchUncompletedStarted,
+    required TResult Function(_NotesReceived value) notesReceived,
   }) {
-    assert(watchAllStarted != null);
-    assert(watchUncompletedStarted != null);
-    assert(notesReceived != null);
     return notesReceived(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result watchAllStarted(_WatchAllStarted value),
-    Result watchUncompletedStarted(_WatchUncompletedStarted value),
-    Result notesReceived(_NotesReceived value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_WatchAllStarted value)? watchAllStarted,
+    TResult Function(_WatchUncompletedStarted value)? watchUncompletedStarted,
+    TResult Function(_NotesReceived value)? notesReceived,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (notesReceived != null) {
       return notesReceived(this);
     }
@@ -387,10 +396,14 @@ abstract class _NotesReceived implements NoteWatcherEvent {
   const factory _NotesReceived(
       Either<NoteFailure, KtList<Note>> failureOrNotes) = _$_NotesReceived;
 
-  Either<NoteFailure, KtList<Note>> get failureOrNotes;
-  _$NotesReceivedCopyWith<_NotesReceived> get copyWith;
+  Either<NoteFailure, KtList<Note>> get failureOrNotes =>
+      throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$NotesReceivedCopyWith<_NotesReceived> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 class _$NoteWatcherStateTearOff {
   const _$NoteWatcherStateTearOff();
 
@@ -415,48 +428,55 @@ class _$NoteWatcherStateTearOff {
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $NoteWatcherState = _$NoteWatcherStateTearOff();
 
+/// @nodoc
 mixin _$NoteWatcherState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loadInProgress(),
-    @required Result loadSuccess(KtList<Note> notes),
-    @required Result loadFailure(NoteFailure noteFailure),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadInProgress,
+    required TResult Function(KtList<Note> notes) loadSuccess,
+    required TResult Function(NoteFailure noteFailure) loadFailure,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loadInProgress(),
-    Result loadSuccess(KtList<Note> notes),
-    Result loadFailure(NoteFailure noteFailure),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadInProgress,
+    TResult Function(KtList<Note> notes)? loadSuccess,
+    TResult Function(NoteFailure noteFailure)? loadFailure,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loadInProgress(_LoadInProgress value),
-    @required Result loadSuccess(_LoadSuccess value),
-    @required Result loadFailure(_LoadFailure value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_LoadSuccess value) loadSuccess,
+    required TResult Function(_LoadFailure value) loadFailure,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loadInProgress(_LoadInProgress value),
-    Result loadSuccess(_LoadSuccess value),
-    Result loadFailure(_LoadFailure value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadSuccess value)? loadSuccess,
+    TResult Function(_LoadFailure value)? loadFailure,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $NoteWatcherStateCopyWith<$Res> {
   factory $NoteWatcherStateCopyWith(
           NoteWatcherState value, $Res Function(NoteWatcherState) then) =
       _$NoteWatcherStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$NoteWatcherStateCopyWithImpl<$Res>
     implements $NoteWatcherStateCopyWith<$Res> {
   _$NoteWatcherStateCopyWithImpl(this._value, this._then);
@@ -466,11 +486,13 @@ class _$NoteWatcherStateCopyWithImpl<$Res>
   final $Res Function(NoteWatcherState) _then;
 }
 
+/// @nodoc
 abstract class _$InitialCopyWith<$Res> {
   factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
       __$InitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$InitialCopyWithImpl<$Res> extends _$NoteWatcherStateCopyWithImpl<$Res>
     implements _$InitialCopyWith<$Res> {
   __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
@@ -479,6 +501,8 @@ class __$InitialCopyWithImpl<$Res> extends _$NoteWatcherStateCopyWithImpl<$Res>
   @override
   _Initial get _value => super._value as _Initial;
 }
+
+/// @nodoc
 
 class _$_Initial implements _Initial {
   const _$_Initial();
@@ -498,29 +522,24 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loadInProgress(),
-    @required Result loadSuccess(KtList<Note> notes),
-    @required Result loadFailure(NoteFailure noteFailure),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadInProgress,
+    required TResult Function(KtList<Note> notes) loadSuccess,
+    required TResult Function(NoteFailure noteFailure) loadFailure,
   }) {
-    assert(initial != null);
-    assert(loadInProgress != null);
-    assert(loadSuccess != null);
-    assert(loadFailure != null);
     return initial();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loadInProgress(),
-    Result loadSuccess(KtList<Note> notes),
-    Result loadFailure(NoteFailure noteFailure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadInProgress,
+    TResult Function(KtList<Note> notes)? loadSuccess,
+    TResult Function(NoteFailure noteFailure)? loadFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial();
     }
@@ -529,29 +548,24 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loadInProgress(_LoadInProgress value),
-    @required Result loadSuccess(_LoadSuccess value),
-    @required Result loadFailure(_LoadFailure value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_LoadSuccess value) loadSuccess,
+    required TResult Function(_LoadFailure value) loadFailure,
   }) {
-    assert(initial != null);
-    assert(loadInProgress != null);
-    assert(loadSuccess != null);
-    assert(loadFailure != null);
     return initial(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loadInProgress(_LoadInProgress value),
-    Result loadSuccess(_LoadSuccess value),
-    Result loadFailure(_LoadFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadSuccess value)? loadSuccess,
+    TResult Function(_LoadFailure value)? loadFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial(this);
     }
@@ -563,12 +577,14 @@ abstract class _Initial implements NoteWatcherState {
   const factory _Initial() = _$_Initial;
 }
 
+/// @nodoc
 abstract class _$LoadInProgressCopyWith<$Res> {
   factory _$LoadInProgressCopyWith(
           _LoadInProgress value, $Res Function(_LoadInProgress) then) =
       __$LoadInProgressCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$LoadInProgressCopyWithImpl<$Res>
     extends _$NoteWatcherStateCopyWithImpl<$Res>
     implements _$LoadInProgressCopyWith<$Res> {
@@ -579,6 +595,8 @@ class __$LoadInProgressCopyWithImpl<$Res>
   @override
   _LoadInProgress get _value => super._value as _LoadInProgress;
 }
+
+/// @nodoc
 
 class _$_LoadInProgress implements _LoadInProgress {
   const _$_LoadInProgress();
@@ -598,29 +616,24 @@ class _$_LoadInProgress implements _LoadInProgress {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loadInProgress(),
-    @required Result loadSuccess(KtList<Note> notes),
-    @required Result loadFailure(NoteFailure noteFailure),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadInProgress,
+    required TResult Function(KtList<Note> notes) loadSuccess,
+    required TResult Function(NoteFailure noteFailure) loadFailure,
   }) {
-    assert(initial != null);
-    assert(loadInProgress != null);
-    assert(loadSuccess != null);
-    assert(loadFailure != null);
     return loadInProgress();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loadInProgress(),
-    Result loadSuccess(KtList<Note> notes),
-    Result loadFailure(NoteFailure noteFailure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadInProgress,
+    TResult Function(KtList<Note> notes)? loadSuccess,
+    TResult Function(NoteFailure noteFailure)? loadFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loadInProgress != null) {
       return loadInProgress();
     }
@@ -629,29 +642,24 @@ class _$_LoadInProgress implements _LoadInProgress {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loadInProgress(_LoadInProgress value),
-    @required Result loadSuccess(_LoadSuccess value),
-    @required Result loadFailure(_LoadFailure value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_LoadSuccess value) loadSuccess,
+    required TResult Function(_LoadFailure value) loadFailure,
   }) {
-    assert(initial != null);
-    assert(loadInProgress != null);
-    assert(loadSuccess != null);
-    assert(loadFailure != null);
     return loadInProgress(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loadInProgress(_LoadInProgress value),
-    Result loadSuccess(_LoadSuccess value),
-    Result loadFailure(_LoadFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadSuccess value)? loadSuccess,
+    TResult Function(_LoadFailure value)? loadFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loadInProgress != null) {
       return loadInProgress(this);
     }
@@ -663,6 +671,7 @@ abstract class _LoadInProgress implements NoteWatcherState {
   const factory _LoadInProgress() = _$_LoadInProgress;
 }
 
+/// @nodoc
 abstract class _$LoadSuccessCopyWith<$Res> {
   factory _$LoadSuccessCopyWith(
           _LoadSuccess value, $Res Function(_LoadSuccess) then) =
@@ -670,6 +679,7 @@ abstract class _$LoadSuccessCopyWith<$Res> {
   $Res call({KtList<Note> notes});
 }
 
+/// @nodoc
 class __$LoadSuccessCopyWithImpl<$Res>
     extends _$NoteWatcherStateCopyWithImpl<$Res>
     implements _$LoadSuccessCopyWith<$Res> {
@@ -682,16 +692,21 @@ class __$LoadSuccessCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object notes = freezed,
+    Object? notes = freezed,
   }) {
     return _then(_LoadSuccess(
-      notes == freezed ? _value.notes : notes as KtList<Note>,
+      notes == freezed
+          ? _value.notes
+          : notes // ignore: cast_nullable_to_non_nullable
+              as KtList<Note>,
     ));
   }
 }
 
+/// @nodoc
+
 class _$_LoadSuccess implements _LoadSuccess {
-  const _$_LoadSuccess(this.notes) : assert(notes != null);
+  const _$_LoadSuccess(this.notes);
 
   @override
   final KtList<Note> notes;
@@ -713,35 +728,31 @@ class _$_LoadSuccess implements _LoadSuccess {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(notes);
 
+  @JsonKey(ignore: true)
   @override
   _$LoadSuccessCopyWith<_LoadSuccess> get copyWith =>
       __$LoadSuccessCopyWithImpl<_LoadSuccess>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loadInProgress(),
-    @required Result loadSuccess(KtList<Note> notes),
-    @required Result loadFailure(NoteFailure noteFailure),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadInProgress,
+    required TResult Function(KtList<Note> notes) loadSuccess,
+    required TResult Function(NoteFailure noteFailure) loadFailure,
   }) {
-    assert(initial != null);
-    assert(loadInProgress != null);
-    assert(loadSuccess != null);
-    assert(loadFailure != null);
     return loadSuccess(notes);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loadInProgress(),
-    Result loadSuccess(KtList<Note> notes),
-    Result loadFailure(NoteFailure noteFailure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadInProgress,
+    TResult Function(KtList<Note> notes)? loadSuccess,
+    TResult Function(NoteFailure noteFailure)? loadFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loadSuccess != null) {
       return loadSuccess(notes);
     }
@@ -750,29 +761,24 @@ class _$_LoadSuccess implements _LoadSuccess {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loadInProgress(_LoadInProgress value),
-    @required Result loadSuccess(_LoadSuccess value),
-    @required Result loadFailure(_LoadFailure value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_LoadSuccess value) loadSuccess,
+    required TResult Function(_LoadFailure value) loadFailure,
   }) {
-    assert(initial != null);
-    assert(loadInProgress != null);
-    assert(loadSuccess != null);
-    assert(loadFailure != null);
     return loadSuccess(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loadInProgress(_LoadInProgress value),
-    Result loadSuccess(_LoadSuccess value),
-    Result loadFailure(_LoadFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadSuccess value)? loadSuccess,
+    TResult Function(_LoadFailure value)? loadFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loadSuccess != null) {
       return loadSuccess(this);
     }
@@ -783,10 +789,13 @@ class _$_LoadSuccess implements _LoadSuccess {
 abstract class _LoadSuccess implements NoteWatcherState {
   const factory _LoadSuccess(KtList<Note> notes) = _$_LoadSuccess;
 
-  KtList<Note> get notes;
-  _$LoadSuccessCopyWith<_LoadSuccess> get copyWith;
+  KtList<Note> get notes => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$LoadSuccessCopyWith<_LoadSuccess> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class _$LoadFailureCopyWith<$Res> {
   factory _$LoadFailureCopyWith(
           _LoadFailure value, $Res Function(_LoadFailure) then) =
@@ -796,6 +805,7 @@ abstract class _$LoadFailureCopyWith<$Res> {
   $NoteFailureCopyWith<$Res> get noteFailure;
 }
 
+/// @nodoc
 class __$LoadFailureCopyWithImpl<$Res>
     extends _$NoteWatcherStateCopyWithImpl<$Res>
     implements _$LoadFailureCopyWith<$Res> {
@@ -808,26 +818,28 @@ class __$LoadFailureCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object noteFailure = freezed,
+    Object? noteFailure = freezed,
   }) {
     return _then(_LoadFailure(
-      noteFailure == freezed ? _value.noteFailure : noteFailure as NoteFailure,
+      noteFailure == freezed
+          ? _value.noteFailure
+          : noteFailure // ignore: cast_nullable_to_non_nullable
+              as NoteFailure,
     ));
   }
 
   @override
   $NoteFailureCopyWith<$Res> get noteFailure {
-    if (_value.noteFailure == null) {
-      return null;
-    }
     return $NoteFailureCopyWith<$Res>(_value.noteFailure, (value) {
       return _then(_value.copyWith(noteFailure: value));
     });
   }
 }
 
+/// @nodoc
+
 class _$_LoadFailure implements _LoadFailure {
-  const _$_LoadFailure(this.noteFailure) : assert(noteFailure != null);
+  const _$_LoadFailure(this.noteFailure);
 
   @override
   final NoteFailure noteFailure;
@@ -850,35 +862,31 @@ class _$_LoadFailure implements _LoadFailure {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(noteFailure);
 
+  @JsonKey(ignore: true)
   @override
   _$LoadFailureCopyWith<_LoadFailure> get copyWith =>
       __$LoadFailureCopyWithImpl<_LoadFailure>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loadInProgress(),
-    @required Result loadSuccess(KtList<Note> notes),
-    @required Result loadFailure(NoteFailure noteFailure),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadInProgress,
+    required TResult Function(KtList<Note> notes) loadSuccess,
+    required TResult Function(NoteFailure noteFailure) loadFailure,
   }) {
-    assert(initial != null);
-    assert(loadInProgress != null);
-    assert(loadSuccess != null);
-    assert(loadFailure != null);
     return loadFailure(noteFailure);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loadInProgress(),
-    Result loadSuccess(KtList<Note> notes),
-    Result loadFailure(NoteFailure noteFailure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadInProgress,
+    TResult Function(KtList<Note> notes)? loadSuccess,
+    TResult Function(NoteFailure noteFailure)? loadFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loadFailure != null) {
       return loadFailure(noteFailure);
     }
@@ -887,29 +895,24 @@ class _$_LoadFailure implements _LoadFailure {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loadInProgress(_LoadInProgress value),
-    @required Result loadSuccess(_LoadSuccess value),
-    @required Result loadFailure(_LoadFailure value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_LoadSuccess value) loadSuccess,
+    required TResult Function(_LoadFailure value) loadFailure,
   }) {
-    assert(initial != null);
-    assert(loadInProgress != null);
-    assert(loadSuccess != null);
-    assert(loadFailure != null);
     return loadFailure(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loadInProgress(_LoadInProgress value),
-    Result loadSuccess(_LoadSuccess value),
-    Result loadFailure(_LoadFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadSuccess value)? loadSuccess,
+    TResult Function(_LoadFailure value)? loadFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loadFailure != null) {
       return loadFailure(this);
     }
@@ -920,6 +923,8 @@ class _$_LoadFailure implements _LoadFailure {
 abstract class _LoadFailure implements NoteWatcherState {
   const factory _LoadFailure(NoteFailure noteFailure) = _$_LoadFailure;
 
-  NoteFailure get noteFailure;
-  _$LoadFailureCopyWith<_LoadFailure> get copyWith;
+  NoteFailure get noteFailure => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$LoadFailureCopyWith<_LoadFailure> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -12,10 +12,10 @@ class NamePlate extends HookWidget {
   final Color color;
 
   const NamePlate({
-    Key key,
-    @required this.isEditing,
-    @required this.character,
-    @required this.color,
+    Key? key,
+    required this.isEditing,
+    required this.character,
+    required this.color,
   }) : super(key: key);
 
   @override

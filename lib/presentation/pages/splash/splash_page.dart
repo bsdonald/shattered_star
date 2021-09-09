@@ -5,15 +5,16 @@ import 'package:shattered_star/application/auth/auth_bloc.dart';
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 class SplashPage extends StatelessWidget {
+  const SplashPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return BlocListener<AuthBloc, AuthState>(
       listener: (context, state) {
         state.map(
           initial: (_) {},
-          authenticated: (_) => ExtendedNavigator.of(context).replace(Routes.characterListPage)
-,
-          unauthenticated: (_) => ExtendedNavigator.of(context).replace(Routes.signInPage),
+          authenticated: (_) => AutoRouter.of(context).replace(const CharacterListPageRoute()),
+          unauthenticated: (_) => AutoRouter.of(context).replace(const SignInPageRoute()),
         );
       },
       child: const Scaffold(
@@ -24,4 +25,3 @@ class SplashPage extends StatelessWidget {
     );
   }
 }
-

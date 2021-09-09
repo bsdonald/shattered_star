@@ -11,10 +11,10 @@ class CharacterBio extends HookWidget {
   final Color color;
 
   const CharacterBio({
-    Key key,
-    @required this.isEditing,
-    @required this.character,
-    @required this.color,
+    Key? key,
+    required this.isEditing,
+    required this.character,
+    required this.color,
   }) : super(key: key);
 
   @override

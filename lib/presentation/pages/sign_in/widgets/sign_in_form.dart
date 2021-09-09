@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shattered_star/application/auth/auth_bloc.dart';
@@ -7,6 +6,8 @@ import 'package:shattered_star/application/auth/sign_in_form/sign_in_form_bloc.d
 import 'package:shattered_star/presentation/routes/router.gr.dart';
 
 class SignInForm extends StatelessWidget {
+  const SignInForm({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<SignInFormBloc, SignInFormState>(
@@ -15,16 +16,25 @@ class SignInForm extends StatelessWidget {
           () {},
           (either) => either.fold(
             (failure) {
-              FlushbarHelper.createError(
-                  message: failure.map(
-                cancelledByUser: (_) => 'Cancelled',
-                invalidEmailAndPasswordCombination: (_) => 'Invalid email and password combination',
-                serverError: (_) => 'Server error',
-                emailAlreadyInUse: (_) => 'Email already in use',
-              )).show(context);
+              final snackBar = SnackBar(
+                behavior: SnackBarBehavior.floating,
+                content: Text(
+                  failure.map(
+                    cancelledByUser: (_) => 'Cancelled',
+                    invalidEmailAndPasswordCombination: (_) => 'Invalid email and password combination',
+                    serverError: (_) => 'Server error',
+                    emailAlreadyInUse: (_) => 'Email already in use',
+                  ),
+                ),
+                action: SnackBarAction(
+                  label: 'Action',
+                  onPressed: () {},
+                ),
+              );
+              ScaffoldMessenger.of(context).showSnackBar(snackBar);
             },
             (_) {
-              ExtendedNavigator.of(context).replace(Routes.characterListPage);
+              AutoRouter.of(context).replace(const CharacterListPageRoute());
               context.read<AuthBloc>().add(const AuthEvent.authCheckRequested());
             },
           ),
@@ -32,7 +42,7 @@ class SignInForm extends StatelessWidget {
       },
       builder: (context, state) {
         return Form(
-          autovalidate: state.showErrorMessages,
+          autovalidateMode: state.showErrorMessages ? AutovalidateMode.always : AutovalidateMode.disabled,
           child: ListView(
             physics: const NeverScrollableScrollPhysics(),
             children: <Widget>[
@@ -81,8 +91,7 @@ class SignInForm extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: FlatButton(
-                      splashColor: Theme.of(context).accentColor,
+                    child: TextButton(
                       onPressed: () {
                         context.read<SignInFormBloc>().add(
                               const SignInFormEvent.signInWithEmailAndPasswordPressed(),
@@ -92,8 +101,7 @@ class SignInForm extends StatelessWidget {
                     ),
                   ),
                   Expanded(
-                    child: FlatButton(
-                      splashColor: Theme.of(context).accentColor,
+                    child: TextButton(
                       onPressed: () {
                         context.read<SignInFormBloc>().add(
                               const SignInFormEvent.registerWithEmailAndPasswordPressed(),
@@ -105,13 +113,12 @@ class SignInForm extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 8),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () {
                   context.read<SignInFormBloc>().add(
                         const SignInFormEvent.signInWithGooglePressed(),
                       );
                 },
-                color: Theme.of(context).accentColor,
                 child: const Text(
                   'SIGN IN WITH GOOGLE',
                   style: TextStyle(

@@ -1,5 +1,5 @@
+import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
@@ -13,8 +13,8 @@ class CharacterCard extends StatelessWidget {
   final Character character;
 
   const CharacterCard({
-    Key key,
-    @required this.character,
+    Key? key,
+    required this.character,
   }) : super(key: key);
 
   @override
@@ -35,7 +35,7 @@ class CharacterCard extends StatelessWidget {
             caption: 'Edit',
             icon: Icons.edit,
             onTap: () {
-              ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character);
+              AutoRouter.of(context).push(CharacterFormPageRoute(editedCharacter: character));
             },
           ),
           SlideActionButton(
@@ -43,7 +43,7 @@ class CharacterCard extends StatelessWidget {
             color: Theme.of(context).accentColor,
             icon: Icons.colorize,
             onTap: () {
-              ExtendedNavigator.of(context).pushCharacterColorPage(character: character);
+              AutoRouter.of(context).push(CharacterColorPageRoute(character: character));
             },
           ),
           SlideActionButton.right(
@@ -57,14 +57,14 @@ class CharacterCard extends StatelessWidget {
                   title: Text('Are you sure?'),
                   content: Text('Do you really want to delete ${character.name.getOrCrash()}?'),
                   actions: <Widget>[
-                    FlatButton(
+                    TextButton(
                       onPressed: () {
                         Navigator.of(context).pop(false);
                         // print(confirmDelete);
                       },
                       child: Text('No'),
                     ),
-                    FlatButton(
+                    TextButton(
                       onPressed: () {
                         Navigator.of(context).pop(true);
                         // print(confirmDelete);
@@ -87,10 +87,10 @@ class CharacterCard extends StatelessWidget {
         ],
         child: InkWell(
           onTap: () {
-            ExtendedNavigator.of(context).pushHomePage(character: character);
+            AutoRouter.of(context).push(HomePageRoute(character: character));
           },
           onLongPress: () {
-            ExtendedNavigator.of(context).pushCharacterFormPage(editedCharacter: character);
+            AutoRouter.of(context).push(CharacterFormPageRoute(editedCharacter: character));
           },
           child: CharacterOverviewCard(character),
         ),

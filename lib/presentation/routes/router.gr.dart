@@ -4,178 +4,158 @@
 // AutoRouteGenerator
 // **************************************************************************
 
-// ignore_for_file: public_member_api_docs
+import 'package:auto_route/auto_route.dart' as _i1;
+import 'package:flutter/material.dart' as _i2;
 
-import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
+import '../../domain/character/character.dart' as _i10;
+import '../pages/character/character_color_page/character_color_page.dart'
+    as _i9;
+import '../pages/character/character_form_page/character_form_page.dart' as _i8;
+import '../pages/character/character_home_page/character_home_page.dart' as _i5;
+import '../pages/character/character_list_page/character_list_page.dart' as _i7;
+import '../pages/sign_in/sign_in_page.dart' as _i4;
+import '../pages/splash/splash_page.dart' as _i3;
+import '../test/test.dart' as _i6;
 
-import '../../domain/character/character.dart';
-import '../pages/character/character_color_page/character_color_page.dart';
-import '../pages/character/character_form_page/character_form_page.dart';
-import '../pages/character/character_home_page/character_home_page.dart';
-import '../pages/character/character_list_page/character_list_page.dart';
-import '../pages/sign_in/sign_in_page.dart';
-import '../pages/splash/splash_page.dart';
-import '../test/test.dart';
+class Router extends _i1.RootStackRouter {
+  Router([_i2.GlobalKey<_i2.NavigatorState>? navigatorKey])
+      : super(navigatorKey);
 
-class Routes {
-  static const String splashPage = '/';
-  static const String signInPage = '/sign-in-page';
-  static const String homePage = '/home-page';
-  static const String test = '/Test';
-  static const String characterListPage = '/character-list-page';
-  static const String characterFormPage = '/character-form-page';
-  static const String characterColorPage = '/character-color-page';
-  static const all = <String>{
-    splashPage,
-    signInPage,
-    homePage,
-    test,
-    characterListPage,
-    characterFormPage,
-    characterColorPage,
-  };
-}
-
-class Router extends RouterBase {
   @override
-  List<RouteDef> get routes => _routes;
-  final _routes = <RouteDef>[
-    RouteDef(Routes.splashPage, page: SplashPage),
-    RouteDef(Routes.signInPage, page: SignInPage),
-    RouteDef(Routes.homePage, page: HomePage),
-    RouteDef(Routes.test, page: Test),
-    RouteDef(Routes.characterListPage, page: CharacterListPage),
-    RouteDef(Routes.characterFormPage, page: CharacterFormPage),
-    RouteDef(Routes.characterColorPage, page: CharacterColorPage),
-  ];
-  @override
-  Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
-  final _pagesMap = <Type, AutoRouteFactory>{
-    SplashPage: (data) {
-      return MaterialPageRoute<dynamic>(
-        builder: (context) => SplashPage(),
-        settings: data,
-      );
-    },
-    SignInPage: (data) {
-      return MaterialPageRoute<dynamic>(
-        builder: (context) => SignInPage(),
-        settings: data,
-      );
-    },
-    HomePage: (data) {
-      final args = data.getArgs<HomePageArguments>(nullOk: false);
-      return MaterialPageRoute<dynamic>(
-        builder: (context) => HomePage(
-          key: args.key,
-          character: args.character,
-        ),
-        settings: data,
-      );
-    },
-    Test: (data) {
-      return MaterialPageRoute<dynamic>(
-        builder: (context) => Test(),
-        settings: data,
-      );
-    },
-    CharacterListPage: (data) {
-      return MaterialPageRoute<dynamic>(
-        builder: (context) => CharacterListPage(),
-        settings: data,
-      );
-    },
-    CharacterFormPage: (data) {
-      final args = data.getArgs<CharacterFormPageArguments>(
-        orElse: () => CharacterFormPageArguments(),
-      );
-      return MaterialPageRoute<dynamic>(
-        builder: (context) => CharacterFormPage(
-          key: args.key,
-          editedCharacter: args.editedCharacter,
-        ),
-        settings: data,
-        fullscreenDialog: true,
-      );
-    },
-    CharacterColorPage: (data) {
-      final args = data.getArgs<CharacterColorPageArguments>(nullOk: false);
-      return MaterialPageRoute<dynamic>(
-        builder: (context) => CharacterColorPage(
-          key: args.key,
-          character: args.character,
-        ),
-        settings: data,
-      );
-    },
+  final Map<String, _i1.PageFactory> pagesMap = {
+    SplashPageRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
+        routeData: routeData,
+        builder: (_) {
+          return const _i3.SplashPage();
+        }),
+    SignInPageRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
+        routeData: routeData,
+        builder: (_) {
+          return const _i4.SignInPage();
+        }),
+    HomePageRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
+        routeData: routeData,
+        builder: (data) {
+          final args = data.argsAs<HomePageRouteArgs>();
+          return _i5.HomePage(key: args.key, character: args.character);
+        }),
+    TestRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
+        routeData: routeData,
+        builder: (_) {
+          return _i6.Test();
+        }),
+    CharacterListPageRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
+        routeData: routeData,
+        builder: (_) {
+          return const _i7.CharacterListPage();
+        }),
+    CharacterFormPageRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
+        routeData: routeData,
+        builder: (data) {
+          final args = data.argsAs<CharacterFormPageRouteArgs>(
+              orElse: () => const CharacterFormPageRouteArgs());
+          return _i8.CharacterFormPage(
+              key: args.key, editedCharacter: args.editedCharacter);
+        },
+        fullscreenDialog: true),
+    CharacterColorPageRoute.name: (routeData) => _i1.MaterialPageX<dynamic>(
+        routeData: routeData,
+        builder: (data) {
+          final args = data.argsAs<CharacterColorPageRouteArgs>();
+          return _i9.CharacterColorPage(
+              key: args.key, character: args.character);
+        })
   };
+
+  @override
+  List<_i1.RouteConfig> get routes => [
+        _i1.RouteConfig(SplashPageRoute.name, path: '/'),
+        _i1.RouteConfig(SignInPageRoute.name, path: '/sign-in-page'),
+        _i1.RouteConfig(HomePageRoute.name, path: '/home-page'),
+        _i1.RouteConfig(TestRoute.name, path: '/Test'),
+        _i1.RouteConfig(CharacterListPageRoute.name,
+            path: '/character-list-page'),
+        _i1.RouteConfig(CharacterFormPageRoute.name,
+            path: '/character-form-page'),
+        _i1.RouteConfig(CharacterColorPageRoute.name,
+            path: '/character-color-page')
+      ];
 }
 
-/// ************************************************************************
-/// Navigation helper methods extension
-/// *************************************************************************
+class SplashPageRoute extends _i1.PageRouteInfo {
+  const SplashPageRoute() : super(name, path: '/');
 
-extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
-  Future<dynamic> pushSplashPage() => push<dynamic>(Routes.splashPage);
-
-  Future<dynamic> pushSignInPage() => push<dynamic>(Routes.signInPage);
-
-  Future<dynamic> pushHomePage({
-    Key key,
-    @required Character character,
-  }) =>
-      push<dynamic>(
-        Routes.homePage,
-        arguments: HomePageArguments(key: key, character: character),
-      );
-
-  Future<dynamic> pushTest() => push<dynamic>(Routes.test);
-
-  Future<dynamic> pushCharacterListPage() =>
-      push<dynamic>(Routes.characterListPage);
-
-  Future<dynamic> pushCharacterFormPage({
-    Key key,
-    Character editedCharacter,
-  }) =>
-      push<dynamic>(
-        Routes.characterFormPage,
-        arguments: CharacterFormPageArguments(
-            key: key, editedCharacter: editedCharacter),
-      );
-
-  Future<dynamic> pushCharacterColorPage({
-    Key key,
-    @required Character character,
-  }) =>
-      push<dynamic>(
-        Routes.characterColorPage,
-        arguments: CharacterColorPageArguments(key: key, character: character),
-      );
+  static const String name = 'SplashPageRoute';
 }
 
-/// ************************************************************************
-/// Arguments holder classes
-/// *************************************************************************
+class SignInPageRoute extends _i1.PageRouteInfo {
+  const SignInPageRoute() : super(name, path: '/sign-in-page');
 
-/// HomePage arguments holder class
-class HomePageArguments {
-  final Key key;
-  final Character character;
-  HomePageArguments({this.key, @required this.character});
+  static const String name = 'SignInPageRoute';
 }
 
-/// CharacterFormPage arguments holder class
-class CharacterFormPageArguments {
-  final Key key;
-  final Character editedCharacter;
-  CharacterFormPageArguments({this.key, this.editedCharacter});
+class HomePageRoute extends _i1.PageRouteInfo<HomePageRouteArgs> {
+  HomePageRoute({_i2.Key? key, required _i10.Character character})
+      : super(name,
+            path: '/home-page',
+            args: HomePageRouteArgs(key: key, character: character));
+
+  static const String name = 'HomePageRoute';
 }
 
-/// CharacterColorPage arguments holder class
-class CharacterColorPageArguments {
-  final Key key;
-  final Character character;
-  CharacterColorPageArguments({this.key, @required this.character});
+class HomePageRouteArgs {
+  const HomePageRouteArgs({this.key, required this.character});
+
+  final _i2.Key? key;
+
+  final _i10.Character character;
+}
+
+class TestRoute extends _i1.PageRouteInfo {
+  const TestRoute() : super(name, path: '/Test');
+
+  static const String name = 'TestRoute';
+}
+
+class CharacterListPageRoute extends _i1.PageRouteInfo {
+  const CharacterListPageRoute() : super(name, path: '/character-list-page');
+
+  static const String name = 'CharacterListPageRoute';
+}
+
+class CharacterFormPageRoute
+    extends _i1.PageRouteInfo<CharacterFormPageRouteArgs> {
+  CharacterFormPageRoute({_i2.Key? key, _i10.Character? editedCharacter})
+      : super(name,
+            path: '/character-form-page',
+            args: CharacterFormPageRouteArgs(
+                key: key, editedCharacter: editedCharacter));
+
+  static const String name = 'CharacterFormPageRoute';
+}
+
+class CharacterFormPageRouteArgs {
+  const CharacterFormPageRouteArgs({this.key, this.editedCharacter});
+
+  final _i2.Key? key;
+
+  final _i10.Character? editedCharacter;
+}
+
+class CharacterColorPageRoute
+    extends _i1.PageRouteInfo<CharacterColorPageRouteArgs> {
+  CharacterColorPageRoute({_i2.Key? key, required _i10.Character character})
+      : super(name,
+            path: '/character-color-page',
+            args: CharacterColorPageRouteArgs(key: key, character: character));
+
+  static const String name = 'CharacterColorPageRoute';
+}
+
+class CharacterColorPageRouteArgs {
+  const CharacterColorPageRouteArgs({this.key, required this.character});
+
+  final _i2.Key? key;
+
+  final _i10.Character character;
 }

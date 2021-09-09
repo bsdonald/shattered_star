@@ -25,16 +25,21 @@ class CharacterRepository implements ICharacterRepository {
         .snapshots()
         .map(
           (snapshot) => right<CharacterFailure, KtList<Character>>(
-            snapshot.docs.map((doc) => CharacterDto.fromFirestore(doc).toDomain()).toImmutableList(),
+            snapshot.docs.map((doc) {
+              return CharacterDto.fromFirestore(doc).toDomain();
+            }).toImmutableList(),
           ),
         )
-        .onErrorReturnWith((e) {
-      if (e is FirebaseException && e.message.contains('PERMISSION_DENIED')) {
-        return left(const CharacterFailure.insufficientPermission());
-      } else {
-        return left(const CharacterFailure.unexpected());
-      }
-    });
+        .onErrorReturnWith(
+      (e, s) {
+        if (e is FirebaseException &&
+            e.message!.contains('PERMISSION_DENIED')) {
+          return left(const CharacterFailure.insufficientPermission());
+        } else {
+          return left(const CharacterFailure.unexpected());
+        }
+      },
+    );
   }
 
   @override
@@ -47,7 +52,7 @@ class CharacterRepository implements ICharacterRepository {
 
       return right(unit);
     } on FirebaseException catch (e) {
-      if (e.message.contains('PERMISSION_DENIED')) {
+      if (e.message!.contains('PERMISSION_DENIED')) {
         return left(const CharacterFailure.insufficientPermission());
       } else {
         return left(const CharacterFailure.unexpected());
@@ -65,9 +70,9 @@ class CharacterRepository implements ICharacterRepository {
 
       return right(unit);
     } on FirebaseException catch (e) {
-      if (e.message.contains('PERMISSION_DENIED')) {
+      if (e.message!.contains('PERMISSION_DENIED')) {
         return left(const CharacterFailure.insufficientPermission());
-      } else if (e.message.contains('NOT_FOUND')) {
+      } else if (e.message!.contains('NOT_FOUND')) {
         return left(const CharacterFailure.unableToUpdate());
       } else {
         return left(const CharacterFailure.unexpected());
@@ -85,9 +90,9 @@ class CharacterRepository implements ICharacterRepository {
 
       return right(unit);
     } on FirebaseException catch (e) {
-      if (e.message.contains('PERMISSION_DENIED')) {
+      if (e.message!.contains('PERMISSION_DENIED')) {
         return left(const CharacterFailure.insufficientPermission());
-      } else if (e.message.contains('NOT_FOUND')) {
+      } else if (e.message!.contains('NOT_FOUND')) {
         return left(const CharacterFailure.unableToUpdate());
       } else {
         return left(const CharacterFailure.unexpected());

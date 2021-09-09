@@ -5,6 +5,7 @@ import 'package:shattered_star/presentation/pages/character/character_list_page/
 import 'package:shattered_star/presentation/pages/character/character_list_page/widgets/critical_failure_display.dart';
 
 class CharacterListBody extends StatelessWidget {
+  const CharacterListBody({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<CharacterWatcherBloc, CharacterWatcherState>(

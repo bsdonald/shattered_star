@@ -14,38 +14,38 @@ abstract class CharacterDto implements _$CharacterDto {
   const CharacterDto._();
 
   const factory CharacterDto({
-    @JsonKey(ignore: true) String id,
-    @required String name,
-    @required String race,
-    @required String favoredClass,
-    @required String level,
-    @required String gender,
-    @required String age,
-    @required String height,
-    @required String weight,
-    @required String home,
-    @required String alignment,
-    @required String deity,
-    @required String languages,
-    @required String strength,
-    @required String dexterity,
-    @required String constitution,
-    @required String intelligence,
-    @required String wisdom,
-    @required String charisma,
-    @required String maxHP,
-    @required String armorClass,
-    @required String combatManeuverDefense,
-    @required String meleeMod,
-    @required String rangedMod,
-    @required String combatManeuverBonus,
-    @required String description,
-    @required String imagePath,
-    @required int primaryGradientColor,
-    @required int secondaryGradientColor,
-    @required int tertiaryGradientColor,
-    @required int primaryTextColor,
-    @required int secondaryTextColor,
+    @JsonKey(ignore: true) String? id,
+    required String name,
+    required String race,
+    required String favoredClass,
+    required String level,
+    required String gender,
+    required String age,
+    required String height,
+    required String weight,
+    required String home,
+    required String alignment,
+    required String deity,
+    required String languages,
+    required String strength,
+    required String dexterity,
+    required String constitution,
+    required String intelligence,
+    required String wisdom,
+    required String charisma,
+    required String maxHP,
+    required String armorClass,
+    required String combatManeuverDefense,
+    required String meleeMod,
+    required String rangedMod,
+    required String combatManeuverBonus,
+    required String description,
+    required String imagePath,
+    required int primaryGradientColor,
+    required int secondaryGradientColor,
+    required int tertiaryGradientColor,
+    required int primaryTextColor,
+    required int secondaryTextColor,
   }) = _Character;
 
   factory CharacterDto.fromDomain(Character character) {
@@ -87,7 +87,7 @@ abstract class CharacterDto implements _$CharacterDto {
 
   Character toDomain() {
     return Character(
-      id: UniqueId.fromUniqueString(id),
+      id: UniqueId.fromUniqueString(id!),
       name: Name(name),
       race: Race(race),
       favoredClass: FavoredClass(favoredClass),
@@ -125,6 +125,6 @@ abstract class CharacterDto implements _$CharacterDto {
   factory CharacterDto.fromJson(Map<String, dynamic> json) => _$CharacterDtoFromJson(json);
 
   factory CharacterDto.fromFirestore(DocumentSnapshot doc) {
-    return CharacterDto.fromJson(doc.data()).copyWith(id: doc.id);
+    return CharacterDto.fromJson(doc.data()! as Map<String, dynamic>).copyWith(id: doc.id);
   }
 }

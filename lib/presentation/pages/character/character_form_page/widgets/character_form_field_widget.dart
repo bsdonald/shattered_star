@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 class CharacterFormField extends StatelessWidget {
-  final Function onChanged;
-  final Function validator;
+  final void Function(String) onChanged;
+  final String? Function(String?) validator;
   final String label;
-  final int maxLength;
+  final int? maxLength;
   final int maxLines;
-  final TextEditingController controller;
-  final String initialValue;
+  final TextEditingController? controller;
+  final String? initialValue;
 
   const CharacterFormField({
-    Key key,
-    @required this.onChanged,
-    @required this.validator,
-    @required this.label,
+    Key? key,
+    required this.onChanged,
+    required this.validator,
+    required this.label,
     this.maxLength,
     this.maxLines = 1,
     this.controller,

@@ -3,7 +3,7 @@
 // import 'package:shattered_star/application/characters/character_form/character_form_bloc.dart';
 
 // class ImageBottomSheet extends StatelessWidget {
-//   const ImageBottomSheet({Key key}) : super(key: key);
+//   const ImageBottomSheet({Key? key}) : super(key: key);
 
 //   @override
 //   Widget build(BuildContext context) {

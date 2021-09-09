@@ -7,15 +7,15 @@ class ImageField extends StatelessWidget {
   final bool isEditing;
   final Character character;
   const ImageField({
-    Key key,
-    @required this.character,
-    @required this.isEditing,
+    Key? key,
+    required this.character,
+    required this.isEditing,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     const backgroundImage = 'assets/images/forest.jpg';
-    Image image;
+    Image? image;
     String imagePath;
     return isEditing
         ? BlocConsumer<CharacterFormBloc, CharacterFormState>(
@@ -45,24 +45,24 @@ class ImageField extends StatelessWidget {
                       )
                     : CircularProgressIndicator(),
                 SizedBox(),
-                RaisedButton(
-                  child: Text('Select Image'),
+                ElevatedButton(
                   onPressed: (state.isEditing)
                       ? () {
                           context.read<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed());
                           context.read<CharacterFormBloc>().add(CharacterFormEvent.saved());
                         }
                       : () => context.read<CharacterFormBloc>().add(CharacterFormEvent.imageButtonPressed()),
+                  child: Text('Select Image'),
                 ),
                 Text('OR'),
-                RaisedButton(
-                  child: Text('Select File'),
+                ElevatedButton(
                   onPressed: (state.isEditing)
                       ? () {
                           context.read<CharacterFormBloc>().add(CharacterFormEvent.fileButtonPressed());
                           context.read<CharacterFormBloc>().add(CharacterFormEvent.saved());
                         }
                       : () => context.read<CharacterFormBloc>().add(CharacterFormEvent.fileButtonPressed()),
+                  child: Text('Select File'),
                 ),
               ],
             );

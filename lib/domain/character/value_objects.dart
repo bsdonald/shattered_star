@@ -12,7 +12,6 @@ class Name extends ValueObject<String> {
   static const maxLength = 30;
 
   factory Name(String input) {
-    assert(input != null);
     return Name._(
       validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty).flatMap(validateSingleLine),
     );
@@ -28,7 +27,6 @@ class Race extends ValueObject<String> {
   static const maxLength = 10;
 
   factory Race(String input) {
-    assert(input != null);
     return Race._(
       validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty).flatMap(validateSingleLine),
     );
@@ -44,7 +42,6 @@ class FavoredClass extends ValueObject<String> {
   static const maxLength = 20;
 
   factory FavoredClass(String input) {
-    assert(input != null);
     return FavoredClass._(
       validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty).flatMap(validateSingleLine),
     );
@@ -58,7 +55,6 @@ class Level extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory Level(String input) {
-    assert(input != null);
     return Level._(
       validateIsNumber(input),
     );
@@ -74,7 +70,6 @@ class Gender extends ValueObject<String> {
   static const maxLength = 10;
 
   factory Gender(String input) {
-    assert(input != null);
     return Gender._(
       validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty).flatMap(validateSingleLine),
     );
@@ -88,7 +83,6 @@ class Age extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory Age(String input) {
-    assert(input != null);
     return Age._(
       validateIsNumber(input),
     );
@@ -104,7 +98,6 @@ class Height extends ValueObject<String> {
   static const maxLength = 8;
 
   factory Height(String input) {
-    assert(input != null);
     return Height._(
       validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty).flatMap(validateSingleLine),
     );
@@ -120,7 +113,6 @@ class Weight extends ValueObject<String> {
   static const maxLength = 10;
 
   factory Weight(String input) {
-    assert(input != null);
     return Weight._(
       validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty).flatMap(validateSingleLine),
     );
@@ -136,7 +128,6 @@ class Home extends ValueObject<String> {
   static const maxLength = 15;
 
   factory Home(String input) {
-    assert(input != null);
     return Home._(
       validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty).flatMap(validateSingleLine),
     );
@@ -152,7 +143,6 @@ class Alignment extends ValueObject<String> {
   static const maxLength = 15;
 
   factory Alignment(String input) {
-    assert(input != null);
     return Alignment._(
       validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty).flatMap(validateSingleLine),
     );
@@ -168,7 +158,6 @@ class Deity extends ValueObject<String> {
   static const maxLength = 15;
 
   factory Deity(String input) {
-    assert(input != null);
     return Deity._(
       validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty).flatMap(validateSingleLine),
     );
@@ -184,7 +173,6 @@ class Languages extends ValueObject<String> {
   static const maxLength = 100;
 
   factory Languages(String input) {
-    assert(input != null);
 
     return Languages._(
       validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty).flatMap(validateSingleLine),
@@ -199,7 +187,6 @@ class Strength extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory Strength(String input) {
-    assert(input != null);
     return Strength._(
       validateStatNumber(input),
     );
@@ -213,7 +200,6 @@ class Dexterity extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory Dexterity(String input) {
-    assert(input != null);
     return Dexterity._(
       validateStatNumber(input),
     );
@@ -227,7 +213,6 @@ class Constitution extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory Constitution(String input) {
-    assert(input != null);
     return Constitution._(
       validateStatNumber(input),
     );
@@ -241,7 +226,6 @@ class Intelligence extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory Intelligence(String input) {
-    assert(input != null);
     return Intelligence._(
       validateStatNumber(input),
     );
@@ -255,7 +239,6 @@ class Wisdom extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory Wisdom(String input) {
-    assert(input != null);
     return Wisdom._(
       validateStatNumber(input),
     );
@@ -269,7 +252,6 @@ class Charisma extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory Charisma(String input) {
-    assert(input != null);
     return Charisma._(
       validateStatNumber(input),
     );
@@ -283,7 +265,6 @@ class MaxHP extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory MaxHP(String input) {
-    assert(input != null);
     return MaxHP._(
       validateIsNumber(input),
     );
@@ -297,7 +278,6 @@ class ArmorClass extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory ArmorClass(String input) {
-    assert(input != null);
     return ArmorClass._(
       validateIsNumber(input),
     );
@@ -311,7 +291,6 @@ class CombatManeuverDefense extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory CombatManeuverDefense(String input) {
-    assert(input != null);
     return CombatManeuverDefense._(
       validateIsNumber(input),
     );
@@ -325,7 +304,6 @@ class MeleeMod extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory MeleeMod(String input) {
-    assert(input != null);
     return MeleeMod._(
       validateIsNumber(input),
     );
@@ -339,7 +317,6 @@ class RangedMod extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory RangedMod(String input) {
-    assert(input != null);
     return RangedMod._(
       validateIsNumber(input),
     );
@@ -353,7 +330,6 @@ class CombatManeuverBonus extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory CombatManeuverBonus(String input) {
-    assert(input != null);
     return CombatManeuverBonus._(
       validateIsNumber(input),
     );
@@ -369,7 +345,6 @@ class Description extends ValueObject<String> {
   static const maxLength = 1000;
 
   factory Description(String input) {
-    assert(input != null);
     return Description._(
       validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty),
     );
@@ -383,7 +358,6 @@ class ImagePath extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory ImagePath(String input) {
-    assert(input != null);
     return ImagePath._(
       validateStringNotEmpty(input),
     );
@@ -397,7 +371,6 @@ class PrimaryGradientColor extends ValueObject<Color> {
   final Either<ValueFailure<Color>, Color> value;
 
   factory PrimaryGradientColor(Color input) {
-    assert(input != null);
     return PrimaryGradientColor._(
       right(makeColorOpaque(input)),
     );
@@ -411,7 +384,6 @@ class SecondaryGradientColor extends ValueObject<Color> {
   final Either<ValueFailure<Color>, Color> value;
 
   factory SecondaryGradientColor(Color input) {
-    assert(input != null);
     return SecondaryGradientColor._(
       right(makeColorOpaque(input)),
     );
@@ -425,7 +397,6 @@ class TertiaryGradientColor extends ValueObject<Color> {
   final Either<ValueFailure<Color>, Color> value;
 
   factory TertiaryGradientColor(Color input) {
-    assert(input != null);
     return TertiaryGradientColor._(
       right(makeColorOpaque(input)),
     );
@@ -439,7 +410,6 @@ class PrimaryTextColor extends ValueObject<Color> {
   final Either<ValueFailure<Color>, Color> value;
 
   factory PrimaryTextColor(Color input) {
-    assert(input != null);
     return PrimaryTextColor._(
       right(makeColorOpaque(input)),
     );
@@ -453,7 +423,6 @@ class SecondaryTextColor extends ValueObject<Color> {
   final Either<ValueFailure<Color>, Color> value;
 
   factory SecondaryTextColor(Color input) {
-    assert(input != null);
     return SecondaryTextColor._(
       right(makeColorOpaque(input)),
     );

@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shattered_star/application/auth/auth_bloc.dart';
@@ -10,6 +9,7 @@ import 'package:shattered_star/presentation/routes/router.gr.dart' as app_router
 class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final _appRouter = app_router.Router();
     final colors = getIt<SSColors>();
     final key = GlobalKey();
 
@@ -20,11 +20,13 @@ class AppWidget extends StatelessWidget {
         ),
         BlocProvider<CharacterFormBloc>(create: (context) => getIt<CharacterFormBloc>()),
       ],
-      child: MaterialApp(
-        key: key,
+      child: MaterialApp.router(
+        routeInformationParser: _appRouter.defaultRouteParser(),
+        routerDelegate: _appRouter.delegate(
+          initialRoutes: [const app_router.SignInPageRoute()],
+        ),
         debugShowCheckedModeBanner: false,
         title: "Shattered Star Player's Guide",
-        builder: ExtendedNavigator(router: app_router.Router()),
         theme: ThemeData.light().copyWith(
           primaryColor: colors.lightBlue,
           accentColor: colors.darkOrange,

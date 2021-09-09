@@ -5,6 +5,7 @@ import 'package:shattered_star/injection.dart';
 import 'package:shattered_star/presentation/pages/sign_in/widgets/sign_in_form.dart';
 
 class SignInPage extends StatelessWidget {
+  const SignInPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
