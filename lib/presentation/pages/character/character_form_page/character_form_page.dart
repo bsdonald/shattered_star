@@ -98,7 +98,7 @@ class CharacterFormScaffold extends StatelessWidget {
             autovalidateMode: state.showErrorMessages
                   ? AutovalidateMode.always
                   : AutovalidateMode.disabled,
-            child: PlayerCharacterCard(isEditing: true, character: null),
+            child: PlayerCharacterCard(isEditing: true, character: Character.empty()),
           );
         },
       ),
