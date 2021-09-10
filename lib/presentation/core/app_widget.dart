@@ -13,7 +13,8 @@ class AppWidget extends StatelessWidget {
     final colors = getIt<SSColors>();
     final key = GlobalKey();
 
-    return MultiBlocProvider(
+    return 
+    MultiBlocProvider(
       providers: [
         BlocProvider(
           create: (context) => getIt<AuthBloc>()..add(const AuthEvent.authCheckRequested()),

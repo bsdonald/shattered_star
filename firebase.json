@@ -1,0 +1,14 @@
+{
+  "firestore": {
+    "rules": "firebase.rules",
+    "indexes": "firestore.indexes"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "hosting": {
+    "site": "dragonswhodance",
+
+    "public": "public"
+  }
+}
