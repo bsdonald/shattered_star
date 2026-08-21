@@ -1,0 +1,386 @@
+{
+  "meta": {
+    "name": "Shattered Star Firebase data map example",
+    "version": 1,
+    "timestampFormat": "ISO-8601 strings in this fixture; use Firestore Timestamp values in production",
+    "designNotes": [
+      "Characters are global records and join campaigns through characterParticipants.",
+      "Item definitions describe item types; item instances describe actual campaign-owned items or stacks.",
+      "An item instance has one current owner: either a character or a campaign DM stockpile.",
+      "Inventory transfers and character movements are append-only audit records."
+    ]
+  },
+  "recommendedDataMap": {
+    "users": {
+      "path": "users/{userId}",
+      "purpose": "User profile and app preferences. Firebase Auth remains the source of authentication identity.",
+      "keyFields": ["displayName", "email", "createdAt", "updatedAt"]
+    },
+    "campaigns": {
+      "path": "campaigns/{campaignId}",
+      "purpose": "Campaign metadata and settings.",
+      "keyFields": ["name", "description", "dmUserIds", "status", "createdAt", "updatedAt"],
+      "subcollections": {
+        "members": {
+          "path": "campaigns/{campaignId}/members/{userId}",
+          "purpose": "Campaign membership and role.",
+          "keyFields": ["role", "status", "joinedAt", "leftAt"]
+        },
+        "characterParticipants": {
+          "path": "campaigns/{campaignId}/characterParticipants/{characterId}",
+          "purpose": "A character's participation and campaign-specific state.",
+          "keyFields": ["characterId", "ownerUserId", "status", "campaignOverrides", "joinedAt", "leftAt"]
+        },
+        "characterSnapshots": {
+          "path": "campaigns/{campaignId}/characterSnapshots/{snapshotId}",
+          "purpose": "Read-only historical state after a character leaves or changes campaign context.",
+          "keyFields": ["characterId", "capturedAt", "characterState", "inventoryInstanceIds"]
+        }
+      }
+    },
+    "characters": {
+      "path": "characters/{characterId}",
+      "purpose": "Global character identity and reusable canonical character data.",
+      "keyFields": ["playerId", "name", "race", "favoredClass", "level", "gender", "age", "height", "weight", "home", "alignment", "deity", "languages", "stats", "imageLink", "createdAt", "updatedAt"],
+      "subcollections": {
+        "notes": {
+          "path": "characters/{characterId}/notes/{noteId}",
+          "purpose": "Character notes. Store visibility as private or campaign-visible when that feature is added.",
+          "keyFields": ["authorUserId", "visibility", "body", "createdAt", "updatedAt"]
+        }
+      }
+    },
+    "itemDefinitions": {
+      "path": "itemDefinitions/{definitionId}",
+      "purpose": "Reusable item templates, including standard or DM-created custom items.",
+      "keyFields": ["name", "category", "description", "stackable", "weight"]
+    },
+    "itemInstances": {
+      "path": "itemInstances/{instanceId}",
+      "purpose": "Actual campaign-owned items or quantity stacks.",
+      "keyFields": ["campaignId", "definitionId", "ownerType", "ownerId", "quantity", "state", "provenance", "createdAt", "updatedAt"],
+      "ownerTypes": {
+        "character": "ownerId is a characterId",
+        "campaign": "ownerId is the campaignId and represents DM stock"
+      }
+    },
+    "inventoryTransfers": {
+      "path": "inventoryTransfers/{transferId}",
+      "purpose": "Immutable audit trail for grants, transfers, splits, merges, and removals.",
+      "keyFields": ["operationId", "campaignId", "itemInstanceId", "sourceOwner", "destinationOwner", "quantity", "initiatedBy", "createdAt"]
+    },
+    "characterMovements": {
+      "path": "characterMovements/{movementId}",
+      "purpose": "Immutable history of a character joining, leaving, or moving between campaigns.",
+      "keyFields": ["operationId", "characterId", "fromCampaignId", "toCampaignId", "inventoryPolicy", "initiatedBy", "createdAt"]
+    }
+  },
+  "dummyData": {
+    "users": {
+      "user-jacob": {
+        "displayName": "Jacob",
+        "email": "jacob@example.com",
+        "createdAt": "2026-01-05T14:00:00Z",
+        "updatedAt": "2026-08-01T10:30:00Z"
+      },
+      "user-riley": {
+        "displayName": "Riley",
+        "email": "riley@example.com",
+        "createdAt": "2026-01-06T14:00:00Z",
+        "updatedAt": "2026-08-01T10:30:00Z"
+      },
+      "user-morgan": {
+        "displayName": "Morgan",
+        "email": "morgan@example.com",
+        "createdAt": "2026-01-02T09:00:00Z",
+        "updatedAt": "2026-08-01T10:30:00Z"
+      }
+    },
+    "campaigns": {
+      "campaign-ashen-crown": {
+        "name": "The Ashen Crown",
+        "description": "A campaign through the burned kingdoms of Veyr.",
+        "dmUserIds": ["user-morgan"],
+        "status": "active",
+        "createdAt": "2026-02-01T18:00:00Z",
+        "updatedAt": "2026-08-20T21:15:00Z",
+        "members": {
+          "user-jacob": {
+            "role": "player",
+            "status": "active",
+            "joinedAt": "2026-02-02T18:00:00Z",
+            "leftAt": null
+          },
+          "user-riley": {
+            "role": "player",
+            "status": "active",
+            "joinedAt": "2026-02-02T18:00:00Z",
+            "leftAt": null
+          },
+          "user-morgan": {
+            "role": "dm",
+            "status": "active",
+            "joinedAt": "2026-02-01T18:00:00Z",
+            "leftAt": null
+          }
+        },
+        "characterParticipants": {
+          "character-john-jacob-jingle": {
+            "characterId": "character-john-jacob-jingle",
+            "ownerUserId": "user-jacob",
+            "status": "active",
+            "joinedAt": "2026-02-02T18:10:00Z",
+            "leftAt": null,
+            "campaignOverrides": {
+              "level": 5,
+              "currentHitPoints": 31,
+              "conditions": [],
+              "sessionNotes": "Owes the ferryman 20 silver."
+            }
+          },
+          "character-aut-o-parts": {
+            "characterId": "character-aut-o-parts",
+            "ownerUserId": "user-riley",
+            "status": "active",
+            "joinedAt": "2026-02-02T18:10:00Z",
+            "leftAt": null,
+            "campaignOverrides": {
+              "level": 5,
+              "currentHitPoints": 27,
+              "conditions": ["exhausted"],
+              "sessionNotes": "Has volunteered to inspect the sealed foundry."
+            }
+          }
+        },
+        "characterSnapshots": {}
+      },
+      "campaign-moonlit-ruins": {
+        "name": "The Moonlit Ruins",
+        "description": "A smaller expedition into the ruins beneath Lake Orin.",
+        "dmUserIds": ["user-riley"],
+        "status": "active",
+        "createdAt": "2026-04-12T18:00:00Z",
+        "updatedAt": "2026-08-18T20:00:00Z",
+        "members": {
+          "user-jacob": {
+            "role": "player",
+            "status": "active",
+            "joinedAt": "2026-04-13T18:00:00Z",
+            "leftAt": null
+          },
+          "user-riley": {
+            "role": "dm",
+            "status": "active",
+            "joinedAt": "2026-04-12T18:00:00Z",
+            "leftAt": null
+          }
+        },
+        "characterParticipants": {
+          "character-john-jacob-jingle": {
+            "characterId": "character-john-jacob-jingle",
+            "ownerUserId": "user-jacob",
+            "status": "active",
+            "joinedAt": "2026-04-13T18:15:00Z",
+            "leftAt": null,
+            "campaignOverrides": {
+              "level": 3,
+              "currentHitPoints": 19,
+              "conditions": [],
+              "sessionNotes": "Different campaign version of John."
+            }
+          }
+        },
+        "characterSnapshots": {}
+      }
+    },
+    "characters": {
+      "character-john-jacob-jingle": {
+        "playerId": "user-jacob",
+        "name": "John Jacob Jingle",
+        "race": "Human",
+        "favoredClass": "Fighter",
+        "level": 5,
+        "gender": "Male",
+        "age": 35,
+        "height": "6 ft 1 in",
+        "weight": 190,
+        "home": "Veyr",
+        "alignment": "Chaotic Good",
+        "deity": "Cayden Cailean",
+        "languages": ["Common", "Dwarven"],
+        "stats": {
+          "abilityScores": {
+            "str": 16,
+            "dex": 12,
+            "con": 15,
+            "int": 10,
+            "wis": 11,
+            "cha": 13
+          },
+          "maxHp": 47,
+          "ac": 18,
+          "cmd": 21,
+          "cmb": 8,
+          "rangeAttackBonus": 6,
+          "meleeAttackBonus": 8
+        },
+        "imageLink": "https://example.com/images/john-jacob-jingle.png",
+        "createdAt": "2026-01-10T12:00:00Z",
+        "updatedAt": "2026-08-01T10:30:00Z",
+        "notes": {
+          "note-backstory": {
+            "authorUserId": "user-jacob",
+            "visibility": "private",
+            "body": "John grew up around traveling smiths and distrusts noble titles.",
+            "createdAt": "2026-01-10T12:30:00Z",
+            "updatedAt": "2026-01-10T12:30:00Z"
+          }
+        }
+      },
+      "character-aut-o-parts": {
+        "playerId": "user-riley",
+        "name": "Aut O Parts",
+        "race": "Warforged",
+        "favoredClass": "Artificer",
+        "level": 5,
+        "gender": "Non-binary",
+        "age": 42,
+        "height": "6 ft 4 in",
+        "weight": 280,
+        "home": "The Brassworks of Orin",
+        "alignment": "Neutral Good",
+        "deity": "Brigh",
+        "languages": ["Common", "Dwarven", "Gnomish"],
+        "stats": {
+          "abilityScores": {
+            "str": 10,
+            "dex": 14,
+            "con": 16,
+            "int": 17,
+            "wis": 12,
+            "cha": 8
+          },
+          "maxHp": 39,
+          "ac": 16,
+          "cmd": 18,
+          "cmb": 5,
+          "rangeAttackBonus": 7,
+          "meleeAttackBonus": 5
+        },
+        "imageLink": "https://example.com/images/aut-o-parts.png",
+        "createdAt": "2026-01-11T12:00:00Z",
+        "updatedAt": "2026-08-01T10:30:00Z",
+        "notes": {}
+      }
+    },
+    "itemDefinitions": {
+      "item-potion-cure-moderate-wounds": {
+        "name": "Potion of Cure Moderate Wounds",
+        "category": "consumable",
+        "description": "Restores a moderate amount of hit points when consumed.",
+        "stackable": true,
+        "weight": 0.5
+      },
+      "item-silvered-longsword": {
+        "name": "Silvered Longsword",
+        "category": "weapon",
+        "description": "A longsword coated in alchemical silver.",
+        "stackable": false,
+        "weight": 3
+      },
+      "item-ancient-key": {
+        "name": "Ancient Observatory Key",
+        "category": "quest",
+        "description": "A brass key marked with a three-eyed moon.",
+        "stackable": false,
+        "weight": 0.2
+      }
+    },
+    "itemInstances": {
+      "instance-potion-aut": {
+        "campaignId": "campaign-ashen-crown",
+        "definitionId": "item-potion-cure-moderate-wounds",
+        "ownerType": "character",
+        "ownerId": "character-aut-o-parts",
+        "quantity": 1,
+        "state": {
+          "charges": 1
+        },
+        "provenance": {
+          "source": "character-transfer",
+          "originalOwnerId": "character-john-jacob-jingle",
+          "originalCampaignId": "campaign-ashen-crown"
+        },
+        "createdAt": "2026-03-15T20:00:00Z",
+        "updatedAt": "2026-03-15T20:00:00Z"
+      },
+      "instance-silvered-longsword": {
+        "campaignId": "campaign-ashen-crown",
+        "definitionId": "item-silvered-longsword",
+        "ownerType": "character",
+        "ownerId": "character-john-jacob-jingle",
+        "quantity": 1,
+        "state": {
+          "equipped": true,
+          "durability": 100
+        },
+        "provenance": {
+          "source": "starting-equipment"
+        },
+        "createdAt": "2026-02-02T18:20:00Z",
+        "updatedAt": "2026-08-20T21:00:00Z"
+      },
+      "instance-dm-ancient-key": {
+        "campaignId": "campaign-ashen-crown",
+        "definitionId": "item-ancient-key",
+        "ownerType": "campaign",
+        "ownerId": "campaign-ashen-crown",
+        "quantity": 1,
+        "state": {
+          "location": "Morgan's DM stock"
+        },
+        "provenance": {
+          "source": "planned-reward",
+          "sessionNumber": 8
+        },
+        "createdAt": "2026-08-20T19:00:00Z",
+        "updatedAt": "2026-08-20T19:00:00Z"
+      },
+      "instance-potion-john-moonlit": {
+        "campaignId": "campaign-moonlit-ruins",
+        "definitionId": "item-potion-cure-moderate-wounds",
+        "ownerType": "character",
+        "ownerId": "character-john-jacob-jingle",
+        "quantity": 2,
+        "state": {
+          "charges": 1
+        },
+        "provenance": {
+          "source": "starting-equipment"
+        },
+        "createdAt": "2026-04-13T18:20:00Z",
+        "updatedAt": "2026-04-13T18:20:00Z"
+      }
+    },
+    "inventoryTransfers": {
+      "transfer-2026-03-15-001": {
+        "operationId": "transfer-2026-03-15-001",
+        "campaignId": "campaign-ashen-crown",
+        "itemInstanceId": "instance-potion-aut",
+        "sourceOwner": {
+          "type": "character",
+          "id": "character-john-jacob-jingle"
+        },
+        "destinationOwner": {
+          "type": "character",
+          "id": "character-aut-o-parts"
+        },
+        "quantity": 1,
+        "initiatedBy": "user-jacob",
+        "reason": "John gave the potion to Aut after the crypt fight.",
+        "createdAt": "2026-03-15T20:00:00Z"
+      }
+    },
+    "characterMovements": {}
+  }
+}
