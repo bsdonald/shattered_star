@@ -88,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                       ? 'Demo mode · Firebase config pending'
                       : 'Your campaign companion',
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.white.withOpacity(.65)),
+                  style: TextStyle(color: Colors.white.withValues(alpha: .65)),
                 ),
                 const SizedBox(height: 44),
                 Text(

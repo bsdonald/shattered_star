@@ -21,7 +21,7 @@ class CharacterTile extends StatelessWidget {
       decoration: BoxDecoration(
         color: const Color(0xFF252B28),
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: character.color.withOpacity(.55)),
+        border: Border.all(color: character.color.withValues(alpha: .55)),
       ),
       child: Row(
         children: [
@@ -57,7 +57,7 @@ class CharacterTile extends StatelessWidget {
                   const SizedBox(height: 8),
                   Text(
                     'Level ${character.level}  ·  HP ${character.stats.maxHp}  ·  AC ${character.stats.ac}',
-                    style: TextStyle(color: Colors.white.withOpacity(.6)),
+                    style: TextStyle(color: Colors.white.withValues(alpha: .6)),
                   ),
                 ],
               ),
