@@ -15,7 +15,7 @@ const characters = [
     race: 'Awoken',
     className: 'Warlock',
     level: 1100,
-    image: 'assets/images/IMG_2211.JPG',
+    image: 'assets/images/Warlock.webp',
     color: Color(0xFF80B1A2),
     gender: 'Female',
     age: 5,

@@ -5,6 +5,7 @@ import '../services/firebase/firebase_auth_service.dart';
 import '../services/models/demo_data.dart';
 import 'widgets/campaign_tile.dart';
 import 'widgets/character_tile.dart';
+import 'widgets/new_character_tile.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -72,6 +73,7 @@ class DashboardPage extends StatelessWidget {
                 child: CharacterTile(character: character),
               ),
             ),
+            const NewCharacterTile(),
           ],
         ),
       );
